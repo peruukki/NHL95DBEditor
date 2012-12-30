@@ -2,7 +2,7 @@
 #define MAX_DATA_LENGTH 65000
 
 /* Number value of one byte */
-#define NUMBER1 unsigned char
+typedef unsigned char number_1;
 
 /* Number value of two bytes */
-#define NUMBER2 unsigned short
+typedef unsigned short number_2;

@@ -49,15 +49,14 @@ void show_key_player(key_player *key)
 {
   size_t i;
 
-  printf("T: %2u NO: %2u POS: %c UNKNOWN: %2u NAME: %-15s %-15s UNKNOWN: ",
-         key->team, key->jersey, key->position, key->unknown_1,
-         key->first, key->last);
+  printf("T: %2u NO: %2u POS: %c NAME: %-15s %-15s UNKNOWN: ",
+         key->team, key->jersey, key->position, key->first, key->last);
 
-  show_in_binary(key->unknown_2[0]);
+  show_in_binary(key->unknown[0]);
 
-  for (i = 1; i < sizeof(key->unknown_2); i++)
+  for (i = 1; i < sizeof(key->unknown); i++)
     {
-      printf("%3u ", key->unknown_2[i]);
+      printf("%3u ", key->unknown[i]);
     }
 }
 
