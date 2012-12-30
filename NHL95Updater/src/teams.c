@@ -17,6 +17,39 @@ static void show_team_stats(team_stats *stats)
          stats->pp_advantages, stats->times_shorthanded);
 }
 
+static void show_offsets(offset offsets[], int count, char *title)
+{
+  int i;
+
+  for (i = 0; i < count; i++)
+    {
+      if (offsets[i] == 0xFFFFFFFF)
+        {
+          printf(" %s%2u:     ", title, i);
+        }
+      else
+        {
+          printf(" %s%2u: %4x", title, i, offsets[i]);
+        }
+    }
+}
+
+static void show_team_players(team_data *team)
+{
+  int count;
+
+  count = sizeof(team->players) / sizeof(team->players[0]);
+  show_offsets(team->players, count, "P");
+}
+
+static void show_team_goalies(team_data *team)
+{
+  int count;
+
+  count = sizeof(team->goalies) / sizeof(team->goalies[0]);
+  show_offsets(team->goalies, count, "G");
+}
+
 static void show_team_lines(team_lines *lines)
 {
   int i;
@@ -59,28 +92,31 @@ static void show_team_scouting_report(team_scouting_report *report)
          report->checking, report->goaltending, report->overall);
 }
 
-void show_team_data(team_data *team)
+static void show_unknown_data(number_1 *data, size_t length, char *title)
 {
   size_t i;
 
+  printf(" %s:", title);
+  for (i = 0; i < length; i++)
+    {
+      printf(" %3u", data[i]);
+    }
+}
+
+void show_team_data(team_data *team)
+{
   printf("TEAM: %-3s DIV: %3u", team->abbr, team->division);
 
   show_team_stats(&team->regular_season_stats);
   show_team_stats(&team->playoff_stats);
 
-  printf(" DATA:");
-  for (i = 0; i < sizeof(team->unknown_1); i++)
-    {
-      printf(" %3u", team->unknown_1[i]);
-    }
+  show_team_players(team);
+  show_team_goalies(team);
 
   show_team_lines(&team->lines);
+  show_team_lines(&team->original_lines);
 
-  printf(" DATA:");
-  for (i = 0; i < sizeof(team->unknown_2); i++)
-    {
-      printf(" %3u", team->unknown_2[i]);
-    }
+  show_unknown_data(team->unknown_1, sizeof(team->unknown_1), "DATA1");
 
   show_team_scouting_report(&team->scouting_report);
 

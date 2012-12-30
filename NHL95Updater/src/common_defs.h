@@ -9,3 +9,6 @@ typedef unsigned short number_2;
 
 /* Index value */
 typedef unsigned char index;
+
+/* File offset */
+typedef unsigned int offset;

@@ -84,6 +84,7 @@ typedef struct team_lines_t
   team_pk_line pk_lines[2];
   team_goalie_line goalies;
   team_extra_attackers extra_attackers;
+  index scratches[8];
 } team_lines;
 
 typedef struct team_data_t
@@ -94,11 +95,14 @@ typedef struct team_data_t
   number_1 division;
   team_stats regular_season_stats;
   team_stats playoff_stats;
-  number_1 unknown_1[112];
+  offset players[25];
+  offset goalies[3];
   team_lines lines;
-  number_1 unknown_2[TEAM_DATA_SIZE - 112 -
+  team_lines original_lines;
+  number_1 unknown_1[TEAM_DATA_SIZE -
+                     (25 + 3) * sizeof(offset) -
                      2 * sizeof(team_stats) -
-                     sizeof(team_lines) -
+                     2 * sizeof(team_lines) -
                      sizeof(team_scouting_report)];
   team_scouting_report scouting_report;
 } team_data;
