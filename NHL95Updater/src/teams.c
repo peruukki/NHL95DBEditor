@@ -7,7 +7,7 @@
 
 unsigned char teamfile[MAX_DATA_LENGTH];
 
-static void show_team_stats(struct team_stats *stats)
+static void show_team_stats(team_stats *stats)
 {
   printf(" GP: %2u W: %2u L: %2u T: %2u GF: %3u GA: %3u PIM: %3u "
          "PPGF: %3u PPGA: %3u ADV: %3u TSH: %3u",
@@ -17,7 +17,7 @@ static void show_team_stats(struct team_stats *stats)
          stats->pp_advantages, stats->times_shorthanded);
 }
 
-void show_team_data(struct team_data *team)
+void show_team_data(team_data *team)
 {
   size_t i;
 
@@ -42,11 +42,11 @@ void read_team_data(void)
 
   teamsize = read_file(teamfile, sizeof(teamfile), FILE_TEAMS);
 
-  for (i = 0; i < teamsize; i += sizeof(struct team_data))
+  for (i = 0; i < teamsize; i += sizeof(team_data))
     {
-      struct team_data *team;
+      team_data *team;
 
-      team = (struct team_data *) &teamfile[i];
+      team = (team_data *) &teamfile[i];
       show_team_data(team);
     }
 }

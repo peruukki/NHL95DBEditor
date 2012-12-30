@@ -45,7 +45,7 @@ static void show_in_binary(unsigned char value)
   printf("=%3u ", value);
 }
 
-void show_key_player(struct key_player *key)
+void show_key_player(key_player *key)
 {
   size_t i;
 
@@ -61,7 +61,7 @@ void show_key_player(struct key_player *key)
     }
 }
 
-void show_att_player(struct att_player *att)
+void show_att_player(att_player *att)
 {
   if (att->stick_hand == 0)
     {
@@ -93,7 +93,7 @@ void show_att_player(struct att_player *att)
   printf("\n");
 }
 
-void show_att_goalie(struct att_goalie *att)
+void show_att_goalie(att_goalie *att)
 {
   if (att->glove_hand == 0)
     {
@@ -130,20 +130,20 @@ void read_player_data(void)
   keysize = read_file(keyfile, sizeof(keyfile), FILE_KEYS);
   attsize = read_file(attfile, sizeof(attfile), FILE_ATTRIBUTES);
 
-  for (i = 0; i < keysize; i += sizeof(struct key_player))
+  for (i = 0; i < keysize; i += sizeof(key_player))
     {
-      struct key_player *key;
+      key_player *key;
 
-      key = (struct key_player *) &keyfile[i];
+      key = (key_player *) &keyfile[i];
       show_key_player(key);
       if (key->position == 'G')
         {
-          struct att_goalie *att = (struct att_goalie *) &attfile[key->addr_1];
+          att_goalie *att = (att_goalie *) &attfile[key->addr_1];
           show_att_goalie(att);
         }
       else
         {
-          struct att_player *att = (struct att_player *) &attfile[key->addr_1];
+          att_player *att = (att_player *) &attfile[key->addr_1];
           show_att_player(att);
         }
     }
