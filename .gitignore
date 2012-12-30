@@ -1,0 +1,10 @@
+# Ignore object files
+release/*
+debug/*
+*/Release/*
+*/Debug/*
+
+# Ignore Visual Studio settings files
+*.ncb
+*.suo
+*/*.user
