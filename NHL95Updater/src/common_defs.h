@@ -6,3 +6,6 @@ typedef unsigned char number_1;
 
 /* Number value of two bytes */
 typedef unsigned short number_2;
+
+/* Index value */
+typedef unsigned char index;

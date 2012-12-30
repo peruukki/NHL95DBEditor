@@ -17,6 +17,39 @@ static void show_team_stats(team_stats *stats)
          stats->pp_advantages, stats->times_shorthanded);
 }
 
+static void show_team_lines(team_lines *lines)
+{
+  int i;
+  int count;
+
+  /* Forward lines */
+  count = sizeof(lines->fwd_lines) / sizeof(lines->fwd_lines[0]);
+  for (i = 0; i < count; i++)
+    {
+      team_forward_line *line = &lines->fwd_lines[i];
+
+      printf(" F%u: %2u %2u %2u", i + 1,
+             line->left_wing, line->center, line->right_wing);
+    }
+
+  /* Defense lines */
+  count = sizeof(lines->def_lines) / sizeof(lines->def_lines[0]);
+  for (i = 0; i < count; i++)
+    {
+      team_defense_line *line = &lines->def_lines[i];
+
+      printf(" D%u: %2u %2u", i + 1,
+             line->left_defense, line->right_defense);
+    }
+
+  /* Goalies */
+  printf(" G1: %u G2: %u",
+         lines->goalies.starting_goalie, lines->goalies.backup_goalie);
+
+  /* Don't show everything, there's too much... */
+  printf(" ...");
+}
+
 static void show_team_scouting_report(team_scouting_report *report)
 {
   printf(" PK: %2u PP: %2u SH: %2u SK: %2u PS: %2u DE: %2u "
@@ -36,9 +69,17 @@ void show_team_data(team_data *team)
   show_team_stats(&team->playoff_stats);
 
   printf(" DATA:");
-  for (i = 0; i < sizeof(team->rest); i++)
+  for (i = 0; i < sizeof(team->unknown_1); i++)
     {
-      printf(" %3u", team->rest[i]);
+      printf(" %3u", team->unknown_1[i]);
+    }
+
+  show_team_lines(&team->lines);
+
+  printf(" DATA:");
+  for (i = 0; i < sizeof(team->unknown_2); i++)
+    {
+      printf(" %3u", team->unknown_2[i]);
     }
 
   show_team_scouting_report(&team->scouting_report);

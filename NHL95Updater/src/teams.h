@@ -33,6 +33,59 @@ typedef struct team_scouting_report_t
   number_1 overall;
 } team_scouting_report;
 
+typedef struct team_forward_line_t
+{
+  index left_wing;
+  index center;
+  index right_wing;
+} team_forward_line;
+
+typedef struct team_pk_forward_line_t
+{
+  index left_wing;
+  index center;
+} team_pk_forward_line;
+
+typedef struct team_defense_line_t
+{
+  index left_defense;
+  index right_defense;
+} team_defense_line;
+
+typedef struct team_goalie_line_t
+{
+  index starting_goalie;
+  index backup_goalie;
+} team_goalie_line;
+
+typedef struct team_extra_attackers_t
+{
+  index first_choice;
+  index second_choice;
+} team_extra_attackers;
+
+typedef struct team_pp_line_t
+{
+  team_forward_line forwards;
+  team_defense_line defensemen;
+} team_pp_line;
+
+typedef struct team_pk_line_t
+{
+  team_pk_forward_line forwards;
+  team_defense_line defensemen;
+} team_pk_line;
+
+typedef struct team_lines_t
+{
+  team_forward_line fwd_lines[4];
+  team_defense_line def_lines[3];
+  team_pp_line pp_lines[2];
+  team_pk_line pk_lines[2];
+  team_goalie_line goalies;
+  team_extra_attackers extra_attackers;
+} team_lines;
+
 typedef struct team_data_t
 {
   char abbr[5];
@@ -41,7 +94,12 @@ typedef struct team_data_t
   number_1 division;
   team_stats regular_season_stats;
   team_stats playoff_stats;
-  number_1 rest[TEAM_DATA_SIZE - 2 * sizeof(team_stats) - sizeof(team_scouting_report)];
+  number_1 unknown_1[112];
+  team_lines lines;
+  number_1 unknown_2[TEAM_DATA_SIZE - 112 -
+                     2 * sizeof(team_stats) -
+                     sizeof(team_lines) -
+                     sizeof(team_scouting_report)];
   team_scouting_report scouting_report;
 } team_data;
 
