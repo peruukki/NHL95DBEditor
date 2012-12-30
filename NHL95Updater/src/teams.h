@@ -17,6 +17,22 @@ typedef struct team_stats_t
   number_2 penalty_minutes;
 } team_stats;
 
+typedef struct team_scouting_report_t
+{
+  number_1 penalty_killing;
+  number_1 power_play;
+  number_1 unknown_1;
+  number_1 unknown_2;
+  number_1 shooting;
+  number_1 skating;
+  number_1 passing;
+  number_1 defense;
+  number_1 checking;
+  number_1 unknown_3;
+  number_1 goaltending;
+  number_1 overall;
+} team_scouting_report;
+
 typedef struct team_data_t
 {
   char abbr[5];
@@ -25,7 +41,8 @@ typedef struct team_data_t
   number_1 division;
   team_stats regular_season_stats;
   team_stats playoff_stats;
-  number_1 rest[TEAM_DATA_SIZE - 2 * sizeof(team_stats)];
+  number_1 rest[TEAM_DATA_SIZE - 2 * sizeof(team_stats) - sizeof(team_scouting_report)];
+  team_scouting_report scouting_report;
 } team_data;
 
 void show_team_data(team_data *team);

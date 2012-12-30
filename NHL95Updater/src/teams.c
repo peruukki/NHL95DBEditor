@@ -17,6 +17,15 @@ static void show_team_stats(team_stats *stats)
          stats->pp_advantages, stats->times_shorthanded);
 }
 
+static void show_team_scouting_report(team_scouting_report *report)
+{
+  printf(" PK: %2u PP: %2u SH: %2u SK: %2u PS: %2u DE: %2u "
+         "CH: %2u GT: %2u OA: %2u",
+         report->penalty_killing, report->power_play, report->shooting,
+         report->skating, report->passing, report->defense,
+         report->checking, report->goaltending, report->overall);
+}
+
 void show_team_data(team_data *team)
 {
   size_t i;
@@ -31,6 +40,8 @@ void show_team_data(team_data *team)
     {
       printf(" %3u", team->rest[i]);
     }
+
+  show_team_scouting_report(&team->scouting_report);
 
   printf("\n");
 }
