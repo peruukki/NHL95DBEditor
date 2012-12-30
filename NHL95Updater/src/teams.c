@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include "constants.h"
+#include "file_utils.h"
+#include "teams.h"
+
+#define FILE_TEAMS "TEAMS.DB"
+
+unsigned char teamfile[MAX_DATA_LENGTH];
+
+static void show_team_stats(struct team_stats *stats)
+{
+  printf(" GP: %2u W: %2u L: %2u T: %2u GF: %3u GA: %3u PIM: %3u "
+         "PPGF: %3u PPGA: %3u ADV: %3u TSH: %3u",
+         stats->games_played, stats->wins, stats->losses, stats->ties,
+         stats->goals_for, stats->goals_against, stats->penalty_minutes,
+         stats->pp_goals_for, stats->pp_goals_against,
+         stats->pp_advantages, stats->times_shorthanded);
+}
+
+void show_team_data(struct team_data *team)
+{
+  size_t i;
+
+  printf("TEAM: %-3s DIV: %3u", team->abbr, team->division);
+
+  show_team_stats(&team->regular_season_stats);
+  show_team_stats(&team->playoff_stats);
+
+  printf(" DATA:");
+  for (i = 0; i < sizeof(team->rest); i++)
+    {
+      printf(" %3u", team->rest[i]);
+    }
+
+  printf("\n");
+}
+
+void read_team_data(void)
+{
+  size_t teamsize;
+  size_t i;
+
+  teamsize = read_file(teamfile, sizeof(teamfile), FILE_TEAMS);
+
+  for (i = 0; i < teamsize; i += sizeof(struct team_data))
+    {
+      struct team_data *team;
+
+      team = (struct team_data *) &teamfile[i];
+      show_team_data(team);
+    }
+}
