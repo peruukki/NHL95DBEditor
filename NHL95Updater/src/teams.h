@@ -99,11 +99,7 @@ typedef struct team_data_t
   offset goalies[3];
   team_lines lines;
   team_lines original_lines;
-  number_1 unknown_1[TEAM_DATA_SIZE -
-                     (25 + 3) * sizeof(offset) -
-                     2 * sizeof(team_stats) -
-                     2 * sizeof(team_lines) -
-                     sizeof(team_scouting_report)];
+  number_1 padding[448];
   team_scouting_report scouting_report;
 } team_data;
 

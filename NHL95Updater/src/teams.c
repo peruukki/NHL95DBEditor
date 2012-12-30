@@ -92,14 +92,17 @@ static void show_team_scouting_report(team_scouting_report *report)
          report->checking, report->goaltending, report->overall);
 }
 
-static void show_unknown_data(number_1 *data, size_t length, char *title)
+static void show_raw_data(number_1 *data, size_t length, char *title)
 {
   size_t i;
 
   printf(" %s:", title);
   for (i = 0; i < length; i++)
     {
-      printf(" %3u", data[i]);
+      if (data[i] != 0xFF)
+        {
+          printf(" %u: %3u", i, data[i]);
+        }
     }
 }
 
@@ -116,9 +119,9 @@ void show_team_data(team_data *team)
   show_team_lines(&team->lines);
   show_team_lines(&team->original_lines);
 
-  show_unknown_data(team->unknown_1, sizeof(team->unknown_1), "DATA1");
-
   show_team_scouting_report(&team->scouting_report);
+
+  show_raw_data(team->padding, sizeof(team->padding), "PADDING");
 
   printf("\n");
 }
