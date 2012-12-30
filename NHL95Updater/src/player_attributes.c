@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "constants.h"
+#include "common_defs.h"
 #include "file_utils.h"
 #include "player_attributes.h"
 
