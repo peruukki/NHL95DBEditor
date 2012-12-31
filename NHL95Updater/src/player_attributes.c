@@ -1,16 +1,8 @@
 #include <stdio.h>
-#include "common_defs.h"
-#include "file_utils.h"
 #include "player_attributes.h"
-
-#define FILE_ATTRIBUTES "ATT.DB"
-#define FILE_KEYS "KEY.DB"
 
 #define ATT_MIN 25
 #define ATT_SCALE 5
-
-unsigned char attfile[MAX_DATA_LENGTH];
-unsigned char keyfile[MAX_DATA_LENGTH];
 
 static int convert(int x)
 {
@@ -34,24 +26,7 @@ static int convert(int x)
   return ATT_MIN + (ATT_SCALE * x);
 }
 
-void show_key_player(key_player *key)
-{
-  size_t i;
-
-  printf("T: %2u NO: %2u POS: %c NAME: %-15s %-15s",
-         key->team, key->jersey, key->position, key->first, key->last);
-
-  printf(" OFS_ATT: %4x OFS_CAR: %4x OFS_SEA: %4x",
-         key->ofs_attributes, key->ofs_career_stats, key->ofs_season_stats);
-
-  printf(" UNKNOWN: ");
-  for (i = 0; i < sizeof(key->unknown); i++)
-    {
-      printf("%3u ", key->unknown[i]);
-    }
-}
-
-void show_att_player(att_player *att)
+static void show_att_player(att_player *att)
 {
   if (att->stick_hand == 0)
     {
@@ -83,7 +58,7 @@ void show_att_player(att_player *att)
   printf("\n");
 }
 
-void show_att_goalie(att_goalie *att)
+static void show_att_goalie(att_goalie *att)
 {
   if (att->glove_hand == 0)
     {
@@ -111,32 +86,16 @@ void show_att_goalie(att_goalie *att)
   printf("\n");
 }
 
-void read_player_data(void)
+void show_attributes(unsigned char *att_data, key_player *key)
 {
-  size_t keysize;
-  size_t attsize;
-  size_t i;
-
-  keysize = read_file(keyfile, sizeof(keyfile), FILE_KEYS);
-  attsize = read_file(attfile, sizeof(attfile), FILE_ATTRIBUTES);
-
-  for (i = 0; i < keysize; i += sizeof(key_player))
+  if (key->position == 'G')
     {
-      key_player *key;
-
-      key = (key_player *) &keyfile[i];
-      show_key_player(key);
-      if (key->position == 'G')
-        {
-          att_goalie *att = (att_goalie *) &attfile[key->ofs_attributes];
-          show_att_goalie(att);
-        }
-      else
-        {
-          att_player *att = (att_player *) &attfile[key->ofs_attributes];
-          show_att_player(att);
-        }
+      att_goalie *att = (att_goalie *) &att_data[key->ofs_attributes];
+      show_att_goalie(att);
     }
-
-  write_file(attfile, attsize, FILE_ATTRIBUTES);
+  else
+    {
+      att_player *att = (att_player *) &att_data[key->ofs_attributes];
+      show_att_player(att);
+    }
 }
