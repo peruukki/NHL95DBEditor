@@ -1,6 +1,6 @@
-#include "common_defs.h"
+#pragma once
 
-#define TEAM_DATA_SIZE 704
+#include "common_defs.h"
 
 typedef struct team_stats_t
 {

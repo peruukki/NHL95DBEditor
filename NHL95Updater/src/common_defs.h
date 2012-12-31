@@ -1,3 +1,5 @@
+#pragma once
+
 /* Maximum size of a database file */
 #define MAX_DATA_LENGTH 65000
 

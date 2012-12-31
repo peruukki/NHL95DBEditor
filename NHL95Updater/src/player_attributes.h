@@ -1,3 +1,7 @@
+#pragma once
+
+#include "common_defs.h"
+
 typedef struct key_player_t
 {
   char team;
