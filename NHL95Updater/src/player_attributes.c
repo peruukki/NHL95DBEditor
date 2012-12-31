@@ -34,27 +34,18 @@ static int convert(int x)
   return ATT_MIN + (ATT_SCALE * x);
 }
 
-static void show_in_binary(unsigned char value)
-{
-  unsigned char mask;
-
-  for (mask = 1 << 7; mask; mask = mask >> 1)
-    {
-      printf("%c", (value & mask) ? '1' : '0');
-    }
-  printf("=%3u ", value);
-}
-
 void show_key_player(key_player *key)
 {
   size_t i;
 
-  printf("T: %2u NO: %2u POS: %c NAME: %-15s %-15s UNKNOWN: ",
+  printf("T: %2u NO: %2u POS: %c NAME: %-15s %-15s",
          key->team, key->jersey, key->position, key->first, key->last);
 
-  show_in_binary(key->unknown[0]);
+  printf(" OFS_ATT: %4x OFS_CAR: %4x OFS_SEA: %4x",
+         key->ofs_attributes, key->ofs_career_stats, key->ofs_season_stats);
 
-  for (i = 1; i < sizeof(key->unknown); i++)
+  printf(" UNKNOWN: ");
+  for (i = 0; i < sizeof(key->unknown); i++)
     {
       printf("%3u ", key->unknown[i]);
     }
@@ -137,12 +128,12 @@ void read_player_data(void)
       show_key_player(key);
       if (key->position == 'G')
         {
-          att_goalie *att = (att_goalie *) &attfile[key->addr_1];
+          att_goalie *att = (att_goalie *) &attfile[key->ofs_attributes];
           show_att_goalie(att);
         }
       else
         {
-          att_player *att = (att_player *) &attfile[key->addr_1];
+          att_player *att = (att_player *) &attfile[key->ofs_attributes];
           show_att_player(att);
         }
     }

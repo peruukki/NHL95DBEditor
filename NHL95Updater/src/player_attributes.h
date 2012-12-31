@@ -5,9 +5,10 @@ typedef struct key_player_t
   char position;
   char first[16];
   char last[17];
-  int addr_1;
-  int addr_2;
-  number_1 unknown[8];
+  offset ofs_attributes;
+  offset ofs_career_stats;
+  offset ofs_season_stats;
+  number_1 unknown[4];
 } key_player;
 
 typedef struct att_player_t
