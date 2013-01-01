@@ -12,6 +12,9 @@ typedef unsigned char number_1;
 /* Number value of two bytes */
 typedef unsigned short number_2;
 
+/* Signed number value of two bytes */
+typedef signed short number_s_2;
+
 /* Index value */
 typedef unsigned char index;
 

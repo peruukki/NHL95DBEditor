@@ -191,6 +191,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\player_stats.c"
+				>
+			</File>
+			<File
 				RelativePath=".\src\players.c"
 				>
 			</File>
@@ -218,6 +222,10 @@
 			</File>
 			<File
 				RelativePath=".\src\player_key.h"
+				>
+			</File>
+			<File
+				RelativePath=".\src\player_stats.h"
 				>
 			</File>
 			<File

@@ -55,7 +55,6 @@ static void show_att_player(att_player *att)
   printf(" END %3d", convert(att->endurance));
   printf(" S/P %3d", convert(att->shoot_pass_bias));
   printf(" FAC %3d", convert(att->face_offs));
-  printf("\n");
 }
 
 static void show_att_goalie(att_goalie *att)
@@ -83,7 +82,6 @@ static void show_att_goalie(att_goalie *att)
   printf(" WGT %3d", convert(att->weight));
   printf(" OFF %3d", convert(att->offensive_awareness));
   printf(" DEF %3d", convert(att->defensive_awareness));
-  printf("\n");
 }
 
 void show_attributes(unsigned char *att_data, key_player *key)
