@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "player_key.h"
 
+bool key_is_goalie(key_player *key)
+{
+  return key->position == 'G';
+}
+
 void show_key_player(key_player *key)
 {
   size_t i;

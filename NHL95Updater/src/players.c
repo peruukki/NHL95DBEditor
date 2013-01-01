@@ -8,26 +8,26 @@
 #define FILE_ATTRIBUTES "ATT.DB"
 #define FILE_KEYS "KEY.DB"
 
-unsigned char attfile[MAX_DATA_LENGTH];
-unsigned char keyfile[MAX_DATA_LENGTH];
+unsigned char att_data[MAX_DATA_LENGTH];
+unsigned char key_data[MAX_DATA_LENGTH];
 
 void read_player_data(void)
 {
-  size_t keysize;
-  size_t attsize;
+  size_t key_size;
+  size_t att_size;
   size_t i;
 
-  keysize = read_file(keyfile, sizeof(keyfile), FILE_KEYS);
-  attsize = read_file(attfile, sizeof(attfile), FILE_ATTRIBUTES);
+  key_size = read_file(key_data, sizeof(key_data), FILE_KEYS);
+  att_size = read_file(att_data, sizeof(att_data), FILE_ATTRIBUTES);
 
-  for (i = 0; i < keysize; i += sizeof(key_player))
+  for (i = 0; i < key_size; i += sizeof(key_player))
     {
       key_player *key;
 
-      key = (key_player *) &keyfile[i];
+      key = (key_player *) &key_data[i];
       show_key_player(key);
-      show_attributes(attfile, key);
+      show_attributes(att_data, key);
     }
 
-  write_file(attfile, attsize, FILE_ATTRIBUTES);
+  write_file(att_data, att_size, FILE_ATTRIBUTES);
 }

@@ -15,4 +15,6 @@ typedef struct key_player_t
   number_1 unknown[4];
 } key_player;
 
+bool key_is_goalie(key_player *key);
+
 void show_key_player(key_player *key);

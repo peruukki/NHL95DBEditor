@@ -88,14 +88,14 @@ static void show_att_goalie(att_goalie *att)
 
 void show_attributes(unsigned char *att_data, key_player *key)
 {
-  if (key->position == 'G')
+  unsigned char *att = &att_data[key->ofs_attributes];
+
+  if (key_is_goalie(key))
     {
-      att_goalie *att = (att_goalie *) &att_data[key->ofs_attributes];
-      show_att_goalie(att);
+      show_att_goalie((att_goalie *) att);
     }
   else
     {
-      att_player *att = (att_player *) &att_data[key->ofs_attributes];
-      show_att_player(att);
+      show_att_player((att_player *) att);
     }
 }
