@@ -3,13 +3,15 @@
 #include "file_utils.h"
 #include "teams.h"
 
+#define FILE_CARTEAMS "CARTEAMS.DB"
 #define FILE_TEAMS "TEAMS.DB"
 
+unsigned char carteam_data[MAX_DATA_LENGTH];
 unsigned char team_data[MAX_DATA_LENGTH];
 
 static void show_team_stats(team_stats_t *stats)
 {
-  printf(" GP: %2u W: %2u L: %2u T: %2u GF: %3u GA: %3u PIM: %3u "
+  printf(" GP: %2u W: %2u L: %2u T: %2u GF: %3u GA: %3u PIM: %4u "
          "PPGF: %3u PPGA: %3u ADV: %3u TSH: %3u",
          stats->games_played, stats->wins, stats->losses, stats->ties,
          stats->goals_for, stats->goals_against, stats->penalty_minutes,
@@ -106,9 +108,9 @@ static void show_raw_data(number_1_t *data, size_t length, char *title)
     }
 }
 
-void show_team_data(team_data_t *team)
+static void show_team_data(team_data_t *team)
 {
-  printf("TEAM: %-3s DIV: %3u", team->abbr, team->division);
+  printf("TEAM: %-3s DIV: %3u", team->abbreviation, team->division);
 
   show_team_stats(&team->regular_season_stats);
   show_team_stats(&team->playoff_stats);
@@ -126,18 +128,37 @@ void show_team_data(team_data_t *team)
   printf("\n");
 }
 
+static void show_team_career_stats(team_stats_career_t *stats)
+{
+  printf("TEAM: %-3s DIV: %3u", stats->abbreviation, stats->division);
+
+  show_team_stats(&stats->regular_season_stats);
+  show_team_stats(&stats->playoff_stats);
+
+  printf("\n");
+}
+
 void read_team_data(void)
 {
   size_t team_size;
+  size_t carteam_size;
   size_t i;
 
   team_size = read_file(team_data, sizeof(team_data), FILE_TEAMS);
-
   for (i = 0; i < team_size; i += sizeof(team_data_t))
     {
       team_data_t *team;
 
       team = (team_data_t *) &team_data[i];
       show_team_data(team);
+    }
+
+  carteam_size = read_file(carteam_data, sizeof(carteam_data), FILE_CARTEAMS);
+  for (i = 0; i < carteam_size; i += sizeof(team_stats_career_t))
+    {
+      team_stats_career_t *stats;
+
+      stats = (team_stats_career_t *) &carteam_data[i];
+      show_team_career_stats(stats);
     }
 }

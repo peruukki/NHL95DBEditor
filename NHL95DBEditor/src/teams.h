@@ -89,7 +89,7 @@ typedef struct
 
 typedef struct
 {
-  char abbr[5];
+  char abbreviation[5];
   char long_name[21];
   char short_name[13];
   number_1_t division;
@@ -103,6 +103,14 @@ typedef struct
   team_scouting_report_t scouting_report;
 } team_data_t;
 
-void show_team_data(team_data_t *team);
+typedef struct
+{
+  char abbreviation[5];
+  char long_name[21];
+  char short_name[13];
+  number_1_t division;
+  team_stats_t regular_season_stats;
+  team_stats_t playoff_stats;
+} team_stats_career_t;
 
 void read_team_data(void);
