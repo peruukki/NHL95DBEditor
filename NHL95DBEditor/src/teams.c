@@ -5,7 +5,7 @@
 
 #define FILE_TEAMS "TEAMS.DB"
 
-unsigned char teamfile[MAX_DATA_LENGTH];
+unsigned char team_data[MAX_DATA_LENGTH];
 
 static void show_team_stats(team_stats_t *stats)
 {
@@ -128,16 +128,16 @@ void show_team_data(team_data_t *team)
 
 void read_team_data(void)
 {
-  size_t teamsize;
+  size_t team_size;
   size_t i;
 
-  teamsize = read_file(teamfile, sizeof(teamfile), FILE_TEAMS);
+  team_size = read_file(team_data, sizeof(team_data), FILE_TEAMS);
 
-  for (i = 0; i < teamsize; i += sizeof(team_data_t))
+  for (i = 0; i < team_size; i += sizeof(team_data_t))
     {
       team_data_t *team;
 
-      team = (team_data_t *) &teamfile[i];
+      team = (team_data_t *) &team_data[i];
       show_team_data(team);
     }
 }
