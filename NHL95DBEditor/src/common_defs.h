@@ -4,19 +4,19 @@
 #define MAX_DATA_LENGTH 65000
 
 /* Boolean value */
-typedef int bool;
+typedef int bool_t;
 
 /* Number value of one byte */
-typedef unsigned char number_1;
+typedef unsigned char number_1_t;
 
 /* Number value of two bytes */
-typedef unsigned short number_2;
+typedef unsigned short number_2_t;
 
 /* Signed number value of two bytes */
-typedef signed short number_s_2;
+typedef signed short number_s_2_t;
 
 /* Index value */
-typedef unsigned char index;
+typedef unsigned char index_t;
 
 /* File offset */
-typedef unsigned int offset;
+typedef unsigned int offset_t;

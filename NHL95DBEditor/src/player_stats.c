@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "player_stats.h"
 
-static void show_unknown_data(number_1 *data, size_t length)
+static void show_unknown_data(number_1_t *data, size_t length)
 {
   size_t i;
 
@@ -12,7 +12,7 @@ static void show_unknown_data(number_1 *data, size_t length)
     }
 }
 
-static void show_stats_goalie(stats_goalie *stats)
+static void show_stats_goalie(goalie_stats_t *stats)
 {
   printf(" GP: %2u W: %2u L: %2u T: %2u SH: %2u EN: %2u MIN: %4u"
          " GA: %3u GAA: %u.%02u SA: %4u SV%%: .%03u",
@@ -22,7 +22,7 @@ static void show_stats_goalie(stats_goalie *stats)
          stats->saves, stats->save_pct);
 }
 
-static void show_stats_player(stats_player *stats)
+static void show_stats_player(player_stats_t *stats)
 {
   printf(" GP: %2u G: %2u A: %2u P: %3u PPG: %2u SHG: %2u"
          " PIM: %3u SH: %3u +/-: %+3d",
@@ -31,9 +31,9 @@ static void show_stats_player(stats_player *stats)
          stats->shots, stats->plus_minus);
 }
 
-static void show_stats_data_goalie(stats_goalie *regular_season,
-                                   stats_goalie *playoffs,
-                                   number_1 *unknown,
+static void show_stats_data_goalie(goalie_stats_t *regular_season,
+                                   goalie_stats_t *playoffs,
+                                   number_1_t *unknown,
                                    size_t unknown_length)
 {
   show_stats_goalie(regular_season);
@@ -41,9 +41,9 @@ static void show_stats_data_goalie(stats_goalie *regular_season,
   show_unknown_data(unknown, unknown_length);
 }
 
-static void show_stats_data_player(stats_player *regular_season,
-                                   stats_player *playoffs,
-                                   number_1 *unknown,
+static void show_stats_data_player(player_stats_t *regular_season,
+                                   player_stats_t *playoffs,
+                                   number_1_t *unknown,
                                    size_t unknown_length)
 {
   show_stats_player(regular_season);
@@ -51,37 +51,37 @@ static void show_stats_data_player(stats_player *regular_season,
   show_unknown_data(unknown, unknown_length);
 }
 
-void show_stats_career(unsigned char *stats_data, key_player *key)
+void show_stats_career(unsigned char *stats_data, player_key_t *key)
 {
   if (key_is_goalie(key))
     {
-      stats_career_goalie *stats =
-        (stats_career_goalie *) &stats_data[key->ofs_career_stats];
+      goalie_stats_career_t *stats =
+        (goalie_stats_career_t *) &stats_data[key->ofs_career_stats];
       show_stats_data_goalie(&stats->regular_season, &stats->playoffs,
                              stats->unknown, sizeof(stats->unknown));
     }
   else
     {
-      stats_career_player *stats =
-        (stats_career_player *) &stats_data[key->ofs_career_stats];
+      player_stats_career_t *stats =
+        (player_stats_career_t *) &stats_data[key->ofs_career_stats];
       show_stats_data_player(&stats->regular_season, &stats->playoffs,
                              stats->unknown, sizeof(stats->unknown));
     }
 }
 
-void show_stats_season(unsigned char *stats_data, key_player *key)
+void show_stats_season(unsigned char *stats_data, player_key_t *key)
 {
   if (key_is_goalie(key))
     {
-      stats_season_goalie *stats =
-        (stats_season_goalie *) &stats_data[key->ofs_season_stats];
+      goalie_stats_season_t *stats =
+        (goalie_stats_season_t *) &stats_data[key->ofs_season_stats];
       show_stats_data_goalie(&stats->regular_season, &stats->playoffs,
                              stats->unknown, sizeof(stats->unknown));
     }
   else
     {
-      stats_season_player *stats =
-        (stats_season_player *) &stats_data[key->ofs_season_stats];
+      player_stats_season_t *stats =
+        (player_stats_season_t *) &stats_data[key->ofs_season_stats];
       show_stats_data_player(&stats->regular_season, &stats->playoffs,
                              stats->unknown, sizeof(stats->unknown));
     }

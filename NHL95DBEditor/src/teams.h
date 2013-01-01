@@ -2,107 +2,107 @@
 
 #include "common_defs.h"
 
-typedef struct team_stats_t
+typedef struct
 {
-  number_1 games_played;
-  number_1 wins;
-  number_1 losses;
-  number_1 ties;
-  number_2 goals_for;
-  number_2 goals_against;
-  number_2 pp_goals_for;
-  number_2 pp_advantages;
-  number_2 pp_goals_against;
-  number_2 times_shorthanded;
-  number_2 penalty_minutes;
-} team_stats;
+  number_1_t games_played;
+  number_1_t wins;
+  number_1_t losses;
+  number_1_t ties;
+  number_2_t goals_for;
+  number_2_t goals_against;
+  number_2_t pp_goals_for;
+  number_2_t pp_advantages;
+  number_2_t pp_goals_against;
+  number_2_t times_shorthanded;
+  number_2_t penalty_minutes;
+} team_stats_t;
 
-typedef struct team_scouting_report_t
+typedef struct
 {
-  number_1 penalty_killing;
-  number_1 power_play;
-  number_1 unknown_1;
-  number_1 unknown_2;
-  number_1 shooting;
-  number_1 skating;
-  number_1 passing;
-  number_1 defense;
-  number_1 checking;
-  number_1 unknown_3;
-  number_1 goaltending;
-  number_1 overall;
-} team_scouting_report;
+  number_1_t penalty_killing;
+  number_1_t power_play;
+  number_1_t unknown_1;
+  number_1_t unknown_2;
+  number_1_t shooting;
+  number_1_t skating;
+  number_1_t passing;
+  number_1_t defense;
+  number_1_t checking;
+  number_1_t unknown_3;
+  number_1_t goaltending;
+  number_1_t overall;
+} team_scouting_report_t;
 
-typedef struct team_forward_line_t
+typedef struct
 {
-  index left_wing;
-  index center;
-  index right_wing;
-} team_forward_line;
+  index_t left_wing;
+  index_t center;
+  index_t right_wing;
+} team_forward_line_t;
 
-typedef struct team_pk_forward_line_t
+typedef struct
 {
-  index left_wing;
-  index center;
-} team_pk_forward_line;
+  index_t left_wing;
+  index_t center;
+} team_pk_forward_line_t;
 
-typedef struct team_defense_line_t
+typedef struct
 {
-  index left_defense;
-  index right_defense;
-} team_defense_line;
+  index_t left_defense;
+  index_t right_defense;
+} team_defense_line_t;
 
-typedef struct team_goalie_line_t
+typedef struct
 {
-  index starting_goalie;
-  index backup_goalie;
-} team_goalie_line;
+  index_t starting_goalie;
+  index_t backup_goalie;
+} team_goalie_line_t;
 
-typedef struct team_extra_attackers_t
+typedef struct
 {
-  index first_choice;
-  index second_choice;
-} team_extra_attackers;
+  index_t first_choice;
+  index_t second_choice;
+} team_extra_attackers_t;
 
-typedef struct team_pp_line_t
+typedef struct
 {
-  team_forward_line forwards;
-  team_defense_line defensemen;
-} team_pp_line;
+  team_forward_line_t forwards;
+  team_defense_line_t defensemen;
+} team_pp_line_t;
 
-typedef struct team_pk_line_t
+typedef struct
 {
-  team_pk_forward_line forwards;
-  team_defense_line defensemen;
-} team_pk_line;
+  team_pk_forward_line_t forwards;
+  team_defense_line_t defensemen;
+} team_pk_line_t;
 
-typedef struct team_lines_t
+typedef struct
 {
-  team_forward_line fwd_lines[4];
-  team_defense_line def_lines[3];
-  team_pp_line pp_lines[2];
-  team_pk_line pk_lines[2];
-  team_goalie_line goalies;
-  team_extra_attackers extra_attackers;
-  index scratches[8];
-} team_lines;
+  team_forward_line_t fwd_lines[4];
+  team_defense_line_t def_lines[3];
+  team_pp_line_t pp_lines[2];
+  team_pk_line_t pk_lines[2];
+  team_goalie_line_t goalies;
+  team_extra_attackers_t extra_attackers;
+  index_t scratches[8];
+} team_lines_t;
 
-typedef struct team_data_t
+typedef struct
 {
   char abbr[5];
   char long_name[21];
   char short_name[13];
-  number_1 division;
-  team_stats regular_season_stats;
-  team_stats playoff_stats;
-  offset players[25];
-  offset goalies[3];
-  team_lines lines;
-  team_lines original_lines;
-  number_1 padding[448];
-  team_scouting_report scouting_report;
-} team_data;
+  number_1_t division;
+  team_stats_t regular_season_stats;
+  team_stats_t playoff_stats;
+  offset_t players[25];
+  offset_t goalies[3];
+  team_lines_t lines;
+  team_lines_t original_lines;
+  number_1_t padding[448];
+  team_scouting_report_t scouting_report;
+} team_data_t;
 
-void show_team_data(team_data *team);
+void show_team_data(team_data_t *team);
 
 void read_team_data(void);

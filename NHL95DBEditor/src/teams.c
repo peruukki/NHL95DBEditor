@@ -7,7 +7,7 @@
 
 unsigned char teamfile[MAX_DATA_LENGTH];
 
-static void show_team_stats(team_stats *stats)
+static void show_team_stats(team_stats_t *stats)
 {
   printf(" GP: %2u W: %2u L: %2u T: %2u GF: %3u GA: %3u PIM: %3u "
          "PPGF: %3u PPGA: %3u ADV: %3u TSH: %3u",
@@ -17,7 +17,7 @@ static void show_team_stats(team_stats *stats)
          stats->pp_advantages, stats->times_shorthanded);
 }
 
-static void show_offsets(offset offsets[], int count, char *title)
+static void show_offsets(offset_t offsets[], int count, char *title)
 {
   int i;
 
@@ -34,7 +34,7 @@ static void show_offsets(offset offsets[], int count, char *title)
     }
 }
 
-static void show_team_players(team_data *team)
+static void show_team_players(team_data_t *team)
 {
   int count;
 
@@ -42,7 +42,7 @@ static void show_team_players(team_data *team)
   show_offsets(team->players, count, "P");
 }
 
-static void show_team_goalies(team_data *team)
+static void show_team_goalies(team_data_t *team)
 {
   int count;
 
@@ -50,7 +50,7 @@ static void show_team_goalies(team_data *team)
   show_offsets(team->goalies, count, "G");
 }
 
-static void show_team_lines(team_lines *lines)
+static void show_team_lines(team_lines_t *lines)
 {
   int i;
   int count;
@@ -59,7 +59,7 @@ static void show_team_lines(team_lines *lines)
   count = sizeof(lines->fwd_lines) / sizeof(lines->fwd_lines[0]);
   for (i = 0; i < count; i++)
     {
-      team_forward_line *line = &lines->fwd_lines[i];
+      team_forward_line_t *line = &lines->fwd_lines[i];
 
       printf(" F%u: %2u %2u %2u", i + 1,
              line->left_wing, line->center, line->right_wing);
@@ -69,7 +69,7 @@ static void show_team_lines(team_lines *lines)
   count = sizeof(lines->def_lines) / sizeof(lines->def_lines[0]);
   for (i = 0; i < count; i++)
     {
-      team_defense_line *line = &lines->def_lines[i];
+      team_defense_line_t *line = &lines->def_lines[i];
 
       printf(" D%u: %2u %2u", i + 1,
              line->left_defense, line->right_defense);
@@ -83,7 +83,7 @@ static void show_team_lines(team_lines *lines)
   printf(" ...");
 }
 
-static void show_team_scouting_report(team_scouting_report *report)
+static void show_team_scouting_report(team_scouting_report_t *report)
 {
   printf(" PK: %2u PP: %2u SH: %2u SK: %2u PS: %2u DE: %2u "
          "CH: %2u GT: %2u OA: %2u",
@@ -92,7 +92,7 @@ static void show_team_scouting_report(team_scouting_report *report)
          report->checking, report->goaltending, report->overall);
 }
 
-static void show_raw_data(number_1 *data, size_t length, char *title)
+static void show_raw_data(number_1_t *data, size_t length, char *title)
 {
   size_t i;
 
@@ -106,7 +106,7 @@ static void show_raw_data(number_1 *data, size_t length, char *title)
     }
 }
 
-void show_team_data(team_data *team)
+void show_team_data(team_data_t *team)
 {
   printf("TEAM: %-3s DIV: %3u", team->abbr, team->division);
 
@@ -133,11 +133,11 @@ void read_team_data(void)
 
   teamsize = read_file(teamfile, sizeof(teamfile), FILE_TEAMS);
 
-  for (i = 0; i < teamsize; i += sizeof(team_data))
+  for (i = 0; i < teamsize; i += sizeof(team_data_t))
     {
-      team_data *team;
+      team_data_t *team;
 
-      team = (team_data *) &teamfile[i];
+      team = (team_data_t *) &teamfile[i];
       show_team_data(team);
     }
 }

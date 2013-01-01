@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "player_key.h"
 
-bool key_is_goalie(key_player *key)
+bool_t key_is_goalie(player_key_t *key)
 {
   return key->position == 'G';
 }
 
-void show_key_player(key_player *key)
+void show_key_player(player_key_t *key)
 {
   size_t i;
 

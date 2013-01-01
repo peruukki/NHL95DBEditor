@@ -2,19 +2,19 @@
 
 #include "common_defs.h"
 
-typedef struct key_player_t
+typedef struct
 {
   char team;
   char jersey;
   char position;
   char first[16];
   char last[17];
-  offset ofs_attributes;
-  offset ofs_career_stats;
-  offset ofs_season_stats;
-  number_1 unknown[4];
-} key_player;
+  offset_t ofs_attributes;
+  offset_t ofs_career_stats;
+  offset_t ofs_season_stats;
+  number_1_t unknown[4];
+} player_key_t;
 
-bool key_is_goalie(key_player *key);
+bool_t key_is_goalie(player_key_t *key);
 
-void show_key_player(key_player *key);
+void show_key_player(player_key_t *key);

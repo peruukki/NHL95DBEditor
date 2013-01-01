@@ -28,11 +28,11 @@ void read_player_data(void)
   career_size = read_file(career_data, sizeof(career_data), FILE_CAREER);
   season_size = read_file(season_data, sizeof(season_data), FILE_SEASON);
 
-  for (i = 0; i < key_size; i += sizeof(key_player))
+  for (i = 0; i < key_size; i += sizeof(player_key_t))
     {
-      key_player *key;
+      player_key_t *key;
 
-      key = (key_player *) &key_data[i];
+      key = (player_key_t *) &key_data[i];
       show_key_player(key);
       show_attributes(att_data, key);
       show_stats_career(career_data, key);

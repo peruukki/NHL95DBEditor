@@ -26,7 +26,7 @@ static int convert(int x)
   return ATT_MIN + (ATT_SCALE * x);
 }
 
-static void show_att_player(att_player *att)
+static void show_att_player(player_att_t *att)
 {
   if (att->stick_hand == 0)
     {
@@ -57,7 +57,7 @@ static void show_att_player(att_player *att)
   printf(" FAC %3d", convert(att->face_offs));
 }
 
-static void show_att_goalie(att_goalie *att)
+static void show_att_goalie(goalie_att_t *att)
 {
   if (att->glove_hand == 0)
     {
@@ -84,16 +84,16 @@ static void show_att_goalie(att_goalie *att)
   printf(" DEF %3d", convert(att->defensive_awareness));
 }
 
-void show_attributes(unsigned char *att_data, key_player *key)
+void show_attributes(unsigned char *att_data, player_key_t *key)
 {
   unsigned char *att = &att_data[key->ofs_attributes];
 
   if (key_is_goalie(key))
     {
-      show_att_goalie((att_goalie *) att);
+      show_att_goalie((goalie_att_t *) att);
     }
   else
     {
-      show_att_player((att_player *) att);
+      show_att_player((player_att_t *) att);
     }
 }

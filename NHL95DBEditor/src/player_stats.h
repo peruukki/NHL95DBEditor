@@ -3,55 +3,55 @@
 #include "common_defs.h"
 #include "player_key.h"
 
-typedef struct stats_player_t
+typedef struct
 {
-  number_2 games_played;
-  number_2 goals;
-  number_2 assists;
-  number_2 points;
-  number_2 pp_goals;
-  number_2 sh_goals;
-  number_2 penalty_minutes;
-  number_2 shots;
-  number_s_2 plus_minus;
-} stats_player;
+  number_2_t games_played;
+  number_2_t goals;
+  number_2_t assists;
+  number_2_t points;
+  number_2_t pp_goals;
+  number_2_t sh_goals;
+  number_2_t penalty_minutes;
+  number_2_t shots;
+  number_s_2_t plus_minus;
+} player_stats_t;
 
-typedef struct stats_goalie_t
+typedef struct
 {
-  number_2 games_played;
-  number_2 wins;
-  number_2 losses;
-  number_2 ties;
-  number_2 shutouts;
-  number_2 empty_nets;
-  number_2 minutes;
-  number_2 goals_against;
-  number_2 gaa;
-  number_2 saves;
-  number_2 save_pct;
-} stats_goalie;
+  number_2_t games_played;
+  number_2_t wins;
+  number_2_t losses;
+  number_2_t ties;
+  number_2_t shutouts;
+  number_2_t empty_nets;
+  number_2_t minutes;
+  number_2_t goals_against;
+  number_2_t gaa;
+  number_2_t saves;
+  number_2_t save_pct;
+} goalie_stats_t;
 
-typedef struct stats_career_player_t
+typedef struct
 {
-  stats_player regular_season;
-  stats_player playoffs;
-  number_1 unknown[4];
-} stats_career_player;
+  player_stats_t regular_season;
+  player_stats_t playoffs;
+  number_1_t unknown[4];
+} player_stats_career_t;
 
-typedef struct stats_season_player_t
+typedef struct
 {
-  stats_player regular_season;
-  stats_player playoffs;
-  number_1 unknown[11];
-} stats_season_player;
+  player_stats_t regular_season;
+  player_stats_t playoffs;
+  number_1_t unknown[11];
+} player_stats_season_t;
 
-typedef struct stats_career_goalie_t
+typedef struct
 {
-  stats_goalie regular_season;
-  stats_goalie playoffs;
-  number_1 unknown[10];
-} stats_career_goalie, stats_season_goalie;
+  goalie_stats_t regular_season;
+  goalie_stats_t playoffs;
+  number_1_t unknown[10];
+} goalie_stats_career_t, goalie_stats_season_t;
 
-void show_stats_career(unsigned char *stats_data, key_player *key);
+void show_stats_career(unsigned char *stats_data, player_key_t *key);
 
-void show_stats_season(unsigned char *stats_data, key_player *key);
+void show_stats_season(unsigned char *stats_data, player_key_t *key);
