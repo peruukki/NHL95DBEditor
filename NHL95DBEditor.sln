@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual C++ Express 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NHL95Updater", "NHL95Updater\NHL95Updater.vcproj", "{1322E063-E4E1-4F68-B240-F3D5EF69E6AF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NHL95DBEditor", "NHL95DBEditor\NHL95DBEditor.vcproj", "{1322E063-E4E1-4F68-B240-F3D5EF69E6AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

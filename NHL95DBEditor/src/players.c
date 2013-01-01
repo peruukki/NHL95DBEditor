@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdio.h>
 #include "common_defs.h"
 #include "file_utils.h"
 #include "player_attributes.h"

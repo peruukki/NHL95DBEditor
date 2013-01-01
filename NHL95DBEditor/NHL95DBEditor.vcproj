@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="NHL95Updater"
+	Name="NHL95DBEditor"
 	ProjectGUID="{1322E063-E4E1-4F68-B240-F3D5EF69E6AF}"
-	RootNamespace="NHL95UpdateTool"
+	RootNamespace="NHL95DBEditor"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -88,6 +88,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy $(TargetPath) E:\Projects\Temp"
 			/>
 		</Configuration>
 		<Configuration
@@ -163,6 +164,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy $(TargetPath) E:\Projects\Temp"
 			/>
 		</Configuration>
 	</Configurations>
