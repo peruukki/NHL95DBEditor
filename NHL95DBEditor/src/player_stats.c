@@ -31,30 +31,58 @@ static void show_stats_player(stats_player *stats)
          stats->shots, stats->plus_minus);
 }
 
-static void show_stats_career_goalie(stats_career_goalie *stats)
+static void show_stats_data_goalie(stats_goalie *regular_season,
+                                   stats_goalie *playoffs,
+                                   number_1 *unknown,
+                                   size_t unknown_length)
 {
-  show_stats_goalie(&stats->regular_season);
-  show_stats_goalie(&stats->playoffs);
-  show_unknown_data(stats->unknown, sizeof(stats->unknown));
+  show_stats_goalie(regular_season);
+  show_stats_goalie(playoffs);
+  show_unknown_data(unknown, unknown_length);
 }
 
-static void show_stats_career_player(stats_career_player *stats)
+static void show_stats_data_player(stats_player *regular_season,
+                                   stats_player *playoffs,
+                                   number_1 *unknown,
+                                   size_t unknown_length)
 {
-  show_stats_player(&stats->regular_season);
-  show_stats_player(&stats->playoffs);
-  show_unknown_data(stats->unknown, sizeof(stats->unknown));
+  show_stats_player(regular_season);
+  show_stats_player(playoffs);
+  show_unknown_data(unknown, unknown_length);
 }
 
 void show_stats_career(unsigned char *stats_data, key_player *key)
 {
-  unsigned char *stats = &stats_data[key->ofs_career_stats];
-
   if (key_is_goalie(key))
     {
-      show_stats_career_goalie((stats_career_goalie *) stats);
+      stats_career_goalie *stats =
+        (stats_career_goalie *) &stats_data[key->ofs_career_stats];
+      show_stats_data_goalie(&stats->regular_season, &stats->playoffs,
+                             stats->unknown, sizeof(stats->unknown));
     }
   else
     {
-      show_stats_career_player((stats_career_player *) stats);
+      stats_career_player *stats =
+        (stats_career_player *) &stats_data[key->ofs_career_stats];
+      show_stats_data_player(&stats->regular_season, &stats->playoffs,
+                             stats->unknown, sizeof(stats->unknown));
+    }
+}
+
+void show_stats_season(unsigned char *stats_data, key_player *key)
+{
+  if (key_is_goalie(key))
+    {
+      stats_season_goalie *stats =
+        (stats_season_goalie *) &stats_data[key->ofs_season_stats];
+      show_stats_data_goalie(&stats->regular_season, &stats->playoffs,
+                             stats->unknown, sizeof(stats->unknown));
+    }
+  else
+    {
+      stats_season_player *stats =
+        (stats_season_player *) &stats_data[key->ofs_season_stats];
+      show_stats_data_player(&stats->regular_season, &stats->playoffs,
+                             stats->unknown, sizeof(stats->unknown));
     }
 }

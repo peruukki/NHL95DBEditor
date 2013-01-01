@@ -38,11 +38,20 @@ typedef struct stats_career_player_t
   number_1 unknown[4];
 } stats_career_player;
 
+typedef struct stats_season_player_t
+{
+  stats_player regular_season;
+  stats_player playoffs;
+  number_1 unknown[11];
+} stats_season_player;
+
 typedef struct stats_career_goalie_t
 {
   stats_goalie regular_season;
   stats_goalie playoffs;
   number_1 unknown[10];
-} stats_career_goalie;
+} stats_career_goalie, stats_season_goalie;
 
 void show_stats_career(unsigned char *stats_data, key_player *key);
+
+void show_stats_season(unsigned char *stats_data, key_player *key);
