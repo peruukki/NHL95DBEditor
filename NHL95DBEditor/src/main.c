@@ -4,13 +4,14 @@
 int main(int argc, char *argv[])
 {
   team_db_data_t team_data;
+  player_db_data_t player_data;
 
-  db_data_init(&team_data.teams);
-  db_data_init(&team_data.carteams);
+  db_data_init(&team_data, sizeof(team_data));
+  db_data_init(&player_data, sizeof(player_data));
 
   if (!read_team_data(&team_data))
     goto error;
-  if (!read_player_data())
+  if (!read_player_data(&player_data))
     goto error;
 
   return 0;
