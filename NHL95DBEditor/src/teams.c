@@ -33,18 +33,12 @@ static void show_offsets(offset_t offsets[], int count, char *title)
 
 static void show_team_players(team_data_t *team)
 {
-  int count;
-
-  count = sizeof(team->players) / sizeof(team->players[0]);
-  show_offsets(team->players, count, "P");
+  show_offsets(team->players, ELEM_COUNT(team->players), "P");
 }
 
 static void show_team_goalies(team_data_t *team)
 {
-  int count;
-
-  count = sizeof(team->goalies) / sizeof(team->goalies[0]);
-  show_offsets(team->goalies, count, "G");
+  show_offsets(team->goalies, ELEM_COUNT(team->goalies), "G");
 }
 
 static void show_team_lines(team_lines_t *lines)
@@ -53,7 +47,7 @@ static void show_team_lines(team_lines_t *lines)
   int count;
 
   /* Forward lines */
-  count = sizeof(lines->fwd_lines) / sizeof(lines->fwd_lines[0]);
+  count = ELEM_COUNT(lines->fwd_lines);
   for (i = 0; i < count; i++)
     {
       team_forward_line_t *line = &lines->fwd_lines[i];
@@ -63,7 +57,7 @@ static void show_team_lines(team_lines_t *lines)
     }
 
   /* Defense lines */
-  count = sizeof(lines->def_lines) / sizeof(lines->def_lines[0]);
+  count = ELEM_COUNT(lines->def_lines);
   for (i = 0; i < count; i++)
     {
       team_defense_line_t *line = &lines->def_lines[i];

@@ -4,6 +4,9 @@
 #define TRUE 1
 #define FALSE 0
 
+/* Number of elements in an array */
+#define ELEM_COUNT(x) sizeof(x) / sizeof(x[0])
+
 /* Boolean value type */
 typedef int bool_t;
 
