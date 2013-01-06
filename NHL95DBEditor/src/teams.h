@@ -1,6 +1,7 @@
 #pragma once
 
 #include "common_defs.h"
+#include "db_data.h"
 
 typedef struct
 {
@@ -113,4 +114,13 @@ typedef struct
   team_stats_t playoff_stats;
 } team_stats_career_t;
 
-void read_team_data(void);
+typedef struct
+{
+  db_data_t teams;
+  db_data_t carteams;
+} team_db_data_t;
+
+#define FILE_TEAMS "TEAMS.DB"
+#define FILE_CARTEAMS "CARTEAMS.DB"
+
+void read_team_data(team_db_data_t *db_data);

@@ -17,28 +17,37 @@ unsigned char season_data[MAX_DATA_LENGTH];
 
 void read_player_data(void)
 {
-  size_t key_size;
-  size_t att_size;
-  size_t career_size;
-  size_t season_size;
+  db_data_t key_data;
+  db_data_t att_data;
+  db_data_t career_data;
+  db_data_t season_data;
   size_t i;
 
-  key_size = read_file(key_data, sizeof(key_data), FILE_KEYS);
-  att_size = read_file(att_data, sizeof(att_data), FILE_ATTRIBUTES);
-  career_size = read_file(career_data, sizeof(career_data), FILE_CAREER);
-  season_size = read_file(season_data, sizeof(season_data), FILE_SEASON);
+  db_data_init(&key_data);
+  db_data_init(&att_data);
+  db_data_init(&career_data);
+  db_data_init(&season_data);
 
-  for (i = 0; i < key_size; i += sizeof(player_key_t))
+  if (read_db_file(&key_data, FILE_KEYS) == INVALID_DB_DATA_OFFSET)
+    return;
+  if (read_db_file(&att_data, FILE_ATTRIBUTES) == INVALID_DB_DATA_OFFSET)
+    return;
+  if (read_db_file(&career_data, FILE_CAREER) == INVALID_DB_DATA_OFFSET)
+    return;
+  if (read_db_file(&season_data, FILE_SEASON) == INVALID_DB_DATA_OFFSET)
+    return;
+
+  for (i = 0; i < key_data.length; i += sizeof(player_key_t))
     {
       player_key_t *key;
 
-      key = (player_key_t *) &key_data[i];
+      key = (player_key_t *) &key_data.data[i];
       show_key_player(key);
-      show_attributes(att_data, key);
-      show_stats_career(career_data, key);
-      show_stats_season(season_data, key);
+      show_attributes(att_data.data, key);
+      show_stats_career(career_data.data, key);
+      show_stats_season(season_data.data, key);
       printf("\n");
     }
 
-  write_file(att_data, att_size, FILE_ATTRIBUTES);
+  write_db_file(&att_data, FILE_ATTRIBUTES);
 }

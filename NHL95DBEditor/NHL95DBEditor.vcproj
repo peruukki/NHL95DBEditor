@@ -177,6 +177,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\src\db_data.c"
+				>
+			</File>
+			<File
 				RelativePath=".\src\file_utils.c"
 				>
 			</File>
@@ -212,6 +216,10 @@
 			>
 			<File
 				RelativePath=".\src\common_defs.h"
+				>
+			</File>
+			<File
+				RelativePath=".\src\db_data.h"
 				>
 			</File>
 			<File

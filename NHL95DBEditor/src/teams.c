@@ -1,13 +1,8 @@
 #include <stdio.h>
+#include <string.h>
 #include "common_defs.h"
 #include "file_utils.h"
 #include "teams.h"
-
-#define FILE_CARTEAMS "CARTEAMS.DB"
-#define FILE_TEAMS "TEAMS.DB"
-
-unsigned char carteam_data[MAX_DATA_LENGTH];
-unsigned char team_data[MAX_DATA_LENGTH];
 
 static void show_team_stats(team_stats_t *stats)
 {
@@ -138,27 +133,28 @@ static void show_team_career_stats(team_stats_career_t *stats)
   printf("\n");
 }
 
-void read_team_data(void)
+void read_team_data(team_db_data_t *db_data)
 {
-  size_t team_size;
-  size_t carteam_size;
   size_t i;
 
-  team_size = read_file(team_data, sizeof(team_data), FILE_TEAMS);
-  for (i = 0; i < team_size; i += sizeof(team_data_t))
+  if (read_db_file(&db_data->teams, FILE_TEAMS) == INVALID_DB_DATA_OFFSET)
+    return;
+  if (read_db_file(&db_data->carteams, FILE_CARTEAMS) == INVALID_DB_DATA_OFFSET)
+    return;
+
+  for (i = 0; i < db_data->teams.length; i += sizeof(team_data_t))
     {
       team_data_t *team;
 
-      team = (team_data_t *) &team_data[i];
+      team = (team_data_t *) &db_data->teams.data[i];
       show_team_data(team);
     }
 
-  carteam_size = read_file(carteam_data, sizeof(carteam_data), FILE_CARTEAMS);
-  for (i = 0; i < carteam_size; i += sizeof(team_stats_career_t))
+  for (i = 0; i < db_data->carteams.length; i += sizeof(team_stats_career_t))
     {
       team_stats_career_t *stats;
 
-      stats = (team_stats_career_t *) &carteam_data[i];
+      stats = (team_stats_career_t *) &db_data->carteams.data[i];
       show_team_career_stats(stats);
     }
 }
