@@ -28,13 +28,13 @@ bool_t read_player_data(void)
   db_data_init(&career_data);
   db_data_init(&season_data);
 
-  if (read_db_file(&key_data, FILE_KEYS) == INVALID_DB_DATA_OFFSET)
+  if (!read_db_file(&key_data, FILE_KEYS))
     return FALSE;
-  if (read_db_file(&att_data, FILE_ATTRIBUTES) == INVALID_DB_DATA_OFFSET)
+  if (!read_db_file(&att_data, FILE_ATTRIBUTES))
     return FALSE;
-  if (read_db_file(&career_data, FILE_CAREER) == INVALID_DB_DATA_OFFSET)
+  if (!read_db_file(&career_data, FILE_CAREER))
     return FALSE;
-  if (read_db_file(&season_data, FILE_SEASON) == INVALID_DB_DATA_OFFSET)
+  if (!read_db_file(&season_data, FILE_SEASON))
     return FALSE;
 
   for (i = 0; i < key_data.length; i += sizeof(player_key_t))

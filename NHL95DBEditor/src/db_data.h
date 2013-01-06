@@ -1,7 +1,5 @@
 #pragma once
 
-#define INVALID_DB_DATA_OFFSET ((size_t) -1)
-
 typedef struct
 {
   unsigned char data[65000];
