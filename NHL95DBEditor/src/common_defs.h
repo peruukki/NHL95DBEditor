@@ -3,7 +3,11 @@
 /* Maximum size of a database file */
 #define MAX_DATA_LENGTH 65000
 
-/* Boolean value */
+/* Boolean values */
+#define TRUE 1
+#define FALSE 0
+
+/* Boolean value type */
 typedef int bool_t;
 
 /* Number value of one byte */

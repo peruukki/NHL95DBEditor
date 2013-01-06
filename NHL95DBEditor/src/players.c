@@ -15,7 +15,7 @@ unsigned char career_data[MAX_DATA_LENGTH];
 unsigned char key_data[MAX_DATA_LENGTH];
 unsigned char season_data[MAX_DATA_LENGTH];
 
-void read_player_data(void)
+bool_t read_player_data(void)
 {
   db_data_t key_data;
   db_data_t att_data;
@@ -29,13 +29,13 @@ void read_player_data(void)
   db_data_init(&season_data);
 
   if (read_db_file(&key_data, FILE_KEYS) == INVALID_DB_DATA_OFFSET)
-    return;
+    return FALSE;
   if (read_db_file(&att_data, FILE_ATTRIBUTES) == INVALID_DB_DATA_OFFSET)
-    return;
+    return FALSE;
   if (read_db_file(&career_data, FILE_CAREER) == INVALID_DB_DATA_OFFSET)
-    return;
+    return FALSE;
   if (read_db_file(&season_data, FILE_SEASON) == INVALID_DB_DATA_OFFSET)
-    return;
+    return FALSE;
 
   for (i = 0; i < key_data.length; i += sizeof(player_key_t))
     {
@@ -50,4 +50,5 @@ void read_player_data(void)
     }
 
   write_db_file(&att_data, FILE_ATTRIBUTES);
+  return TRUE;
 }

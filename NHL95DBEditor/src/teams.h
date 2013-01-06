@@ -123,4 +123,4 @@ typedef struct
 #define FILE_TEAMS "TEAMS.DB"
 #define FILE_CARTEAMS "CARTEAMS.DB"
 
-void read_team_data(team_db_data_t *db_data);
+bool_t read_team_data(team_db_data_t *db_data);

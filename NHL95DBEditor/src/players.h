@@ -1,3 +1,3 @@
 #pragma once
 
-void read_player_data(void);
+bool_t read_player_data(void);
