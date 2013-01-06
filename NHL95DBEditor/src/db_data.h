@@ -1,5 +1,7 @@
 #pragma once
 
+#define INVALID_DB_DATA_OFFSET ((offset_t) -1)
+
 typedef struct
 {
   unsigned char data[65000];
@@ -8,4 +10,4 @@ typedef struct
 
 void db_data_init(void *data, size_t data_length);
 
-unsigned char *db_data_append_space(db_data_t *db_data, size_t length);
+offset_t db_data_append_space(db_data_t *db_data, size_t length);
