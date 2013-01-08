@@ -114,13 +114,10 @@ typedef struct
   team_stats_t playoff_stats;
 } team_stats_career_t;
 
-typedef struct
-{
-  db_data_t teams;
-  db_data_t carteams;
-} team_db_data_t;
-
 #define FILE_TEAMS "TEAMS.DB"
 #define FILE_CARTEAMS "CARTEAMS.DB"
 
 bool_t read_team_data(team_db_data_t *db_data);
+
+bool_t add_team(team_db_data_t *team_data,
+                player_db_data_t *player_data);

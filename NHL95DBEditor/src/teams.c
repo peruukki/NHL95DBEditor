@@ -3,6 +3,7 @@
 #include "common_defs.h"
 #include "file_utils.h"
 #include "teams.h"
+#include "players.h"
 
 static void show_team_stats(team_stats_t *stats)
 {
@@ -20,7 +21,7 @@ static void show_offsets(offset_t offsets[], int count, char *title)
 
   for (i = 0; i < count; i++)
     {
-      if (offsets[i] == 0xFFFFFFFF)
+      if (offsets[i] == INVALID_DB_DATA_OFFSET)
         {
           printf(" %s%2u:     ", title, i);
         }
@@ -151,6 +152,74 @@ bool_t read_team_data(team_db_data_t *db_data)
       stats = (team_stats_career_t *) &db_data->carteams.data[i];
       show_team_career_stats(stats);
     }
+
+  return TRUE;
+}
+
+static number_1_t get_new_team_index(db_data_t *team_db_data)
+{
+  size_t i;
+  number_1_t team_index = 0;
+
+  for (i = 0; i < team_db_data->length; i += sizeof(team_data_t))
+    {
+      team_data_t *team = (team_data_t *) &team_db_data->data[i];
+
+      /* Return the index of the first the all-star team */
+      if (team->division == 0xFF)
+        break;
+
+      team_index++;
+    }
+
+  return team_index;
+}
+
+bool_t add_team(team_db_data_t *team_data,
+                player_db_data_t *player_data)
+{
+  team_data_t *new_team;
+  team_stats_career_t *new_team_career;
+  size_t new_team_ofs;
+  size_t new_team_career_ofs;
+  number_1_t new_team_index;
+
+  /* Append new data */
+  new_team_index = get_new_team_index(&team_data->teams);
+  new_team_ofs = db_data_append_space(&team_data->teams,
+                                      new_team_index * sizeof(*new_team),
+                                      sizeof(*new_team));
+  new_team_career_ofs = db_data_append_space(&team_data->carteams,
+                                             new_team_index * sizeof(*new_team_career),
+                                             sizeof(*new_team_career));
+
+  if ((new_team_ofs == INVALID_DB_DATA_OFFSET) ||
+      (new_team_career_ofs == INVALID_DB_DATA_OFFSET))
+    return FALSE;
+
+  new_team = (team_data_t *) &team_data->teams.data[new_team_ofs];
+  new_team_career = (team_stats_career_t *)
+    &team_data->carteams.data[new_team_career_ofs];
+
+  /* Duplicate existing team */
+  memcpy(new_team, &team_data->teams, sizeof(*new_team));
+  memcpy(new_team_career, &team_data->carteams, sizeof(*new_team_career));
+
+  /* Overwrite team data */
+  sprintf(new_team->short_name, "New Team");
+  sprintf(new_team->long_name, "New Team Katit");
+  new_team->division = 1;
+  if (!add_duplicate_player_data((team_data_t *) &team_data->teams.data,
+                                 new_team, new_team_index, player_data))
+    return FALSE;
+  write_db_file(&team_data->teams, FILE_TEAMS);
+
+  /* Overwrite team career data */
+  sprintf(new_team_career->abbreviation, "NEW");
+  sprintf(new_team_career->short_name, "New Team");
+  sprintf(new_team_career->long_name, "New Team Katit");
+  new_team_career->division = 1;
+  write_db_file(&team_data->carteams, FILE_CARTEAMS);
 
   return TRUE;
 }

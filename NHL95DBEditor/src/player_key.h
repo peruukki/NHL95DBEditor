@@ -4,8 +4,8 @@
 
 typedef struct
 {
-  char team;
-  char jersey;
+  number_1_t team;
+  number_1_t jersey;
   char position;
   char first[16];
   char last[17];
@@ -17,4 +17,4 @@ typedef struct
 
 bool_t key_is_goalie(player_key_t *key);
 
-void show_key_player(player_key_t *key);
+void show_key_player(player_key_t *key, size_t ofs_key);

@@ -14,6 +14,15 @@ int main(int argc, char *argv[])
   if (!read_player_data(&player_data))
     goto error;
 
+  if (!add_team(&team_data, &player_data))
+    goto error;
+
+  /* Show the updated data */
+  if (!read_team_data(&team_data))
+    goto error;
+  if (!read_player_data(&player_data))
+    goto error;
+
   return 0;
 
 error:
