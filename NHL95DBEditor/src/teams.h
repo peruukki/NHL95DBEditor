@@ -119,5 +119,7 @@ typedef struct
 
 bool_t read_team_data(team_db_data_t *db_data);
 
+bool_t dump_team_data(team_db_data_t *db_data);
+
 bool_t add_team(team_db_data_t *team_data,
                 player_db_data_t *player_data);

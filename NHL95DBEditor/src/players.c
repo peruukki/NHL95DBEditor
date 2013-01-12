@@ -14,8 +14,6 @@
 
 bool_t read_player_data(player_db_data_t *db_data)
 {
-  size_t i;
-
   if (!read_db_file(&db_data->key_data, FILE_KEYS))
     return FALSE;
   if (!read_db_file(&db_data->att_data, FILE_ATTRIBUTES))
@@ -24,6 +22,12 @@ bool_t read_player_data(player_db_data_t *db_data)
     return FALSE;
   if (!read_db_file(&db_data->season_data, FILE_SEASON))
     return FALSE;
+  return TRUE;
+}
+
+bool_t dump_player_data(player_db_data_t *db_data)
+{
+  size_t i;
 
   for (i = 0; i < db_data->key_data.length; i += sizeof(player_key_t))
     {

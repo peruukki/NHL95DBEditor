@@ -130,12 +130,16 @@ static void show_team_career_stats(team_stats_career_t *stats)
 
 bool_t read_team_data(team_db_data_t *db_data)
 {
-  size_t i;
-
   if (!read_db_file(&db_data->teams, FILE_TEAMS))
     return FALSE;
   if (!read_db_file(&db_data->carteams, FILE_CARTEAMS))
     return FALSE;
+  return TRUE;
+}
+
+bool_t dump_team_data(team_db_data_t *db_data)
+{
+  size_t i;
 
   for (i = 0; i < db_data->teams.length; i += sizeof(team_data_t))
     {
