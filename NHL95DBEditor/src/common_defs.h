@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stddef.h>
+
 /* Boolean values */
 #define TRUE 1
 #define FALSE 0
