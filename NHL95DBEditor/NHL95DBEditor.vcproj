@@ -88,7 +88,6 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy $(TargetPath) E:\Projects\Temp"
 			/>
 		</Configuration>
 		<Configuration
@@ -164,7 +163,6 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy $(TargetPath) E:\Projects\Temp"
 			/>
 		</Configuration>
 	</Configurations>
