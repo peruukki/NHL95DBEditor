@@ -219,7 +219,6 @@ bool_t add_team(team_db_data_t *team_data,
   write_db_file(&team_data->teams, FILE_TEAMS);
 
   /* Overwrite team career data */
-  sprintf(new_team_career->abbreviation, "NEW");
   sprintf(new_team_career->short_name, "New Team");
   sprintf(new_team_career->long_name, "New Team Katit");
   new_team_career->division = 1;
