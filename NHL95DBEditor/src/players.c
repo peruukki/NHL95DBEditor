@@ -147,6 +147,11 @@ bool_t add_duplicate_player_data(team_data_t *src_team,
                              sizeof(goalie_stats_career_t)))
     return FALSE;
 
+  return write_player_data(db_data);
+}
+
+bool_t write_player_data(player_db_data_t *db_data)
+{
   write_db_file(&db_data->key_data, FILE_KEYS);
   write_db_file(&db_data->att_data, FILE_ATTRIBUTES);
   write_db_file(&db_data->career_data, FILE_CAREER);
