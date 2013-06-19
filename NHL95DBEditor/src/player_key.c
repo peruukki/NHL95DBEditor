@@ -10,7 +10,7 @@ void show_key_player(player_key_t *key, size_t ofs_key)
 {
   size_t i;
 
-  printf("T: %2u NO: %2u POS: %c NAME: %-15s %-15s",
+  printf("T: %3u NO: %2u POS: %c NAME: %-15s %-15s",
          key->team, key->jersey, key->position, key->first, key->last);
 
   printf(" OFS_KEY: %4x OFS_ATT: %4x OFS_CAR: %4x OFS_SEA: %4x",
