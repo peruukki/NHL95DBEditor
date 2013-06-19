@@ -150,6 +150,31 @@ bool_t add_duplicate_player_data(team_data_t *src_team,
   return write_player_data(db_data);
 }
 
+bool_t modify_player_data(player_db_data_t *db_data)
+{
+  size_t i;
+
+  for (i = 0; i < db_data->key_data.length; i += sizeof(player_key_t))
+    {
+      player_key_t *key;
+
+      key = (player_key_t *) &db_data->key_data.data[i];
+      if (!key_is_goalie(key))
+        {
+          player_att_t *att = (player_att_t *)
+            &db_data->att_data.data[key->ofs_attributes];
+          modify_player_attribute(att, ATT_NAME_PASSING, 25);
+          modify_player_attribute(att, ATT_NAME_SPEED, 25);
+          modify_player_attribute(att, ATT_NAME_SHOT_POWER, 25);
+          modify_player_attribute(att, ATT_NAME_ACCURACY, 25);
+          modify_player_attribute(att, ATT_NAME_STICK_HANDLING, 25);
+          modify_player_attribute(att, ATT_NAME_SHOOT_PASS_BIAS, -50);
+        }
+    }
+
+  return TRUE;
+}
+
 bool_t write_player_data(player_db_data_t *db_data)
 {
   write_db_file(&db_data->key_data, FILE_KEYS);

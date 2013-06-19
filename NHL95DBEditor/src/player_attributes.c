@@ -167,3 +167,21 @@ void show_attributes(unsigned char *att_data, player_key_t *key)
       show_att_player((player_att_t *) att);
     }
 }
+
+void modify_player_attribute(player_att_t *att, const char *att_name,
+                             int value_change)
+{
+  number_1_t *attribute = get_att_player(att, att_name);
+  int new_value = deserialize(*attribute) + value_change;
+
+  if (new_value < ATT_MIN)
+    {
+      new_value = ATT_MIN;
+    }
+  else if (new_value > ATT_MAX)
+    {
+      new_value = ATT_MAX;
+    }
+
+  *attribute = serialize(new_value);
+}

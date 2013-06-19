@@ -74,3 +74,6 @@ typedef struct
 } goalie_att_t;
 
 void show_attributes(unsigned char *att_data, player_key_t *key);
+
+void modify_player_attribute(player_att_t *att, const char *att_name,
+                             int value_change);
