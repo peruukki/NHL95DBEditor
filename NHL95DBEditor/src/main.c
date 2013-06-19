@@ -11,11 +11,12 @@ typedef enum
 {
   CMD_ADD_TEAM,
   CMD_DUMP_DATA,
+  CMD_GOALIE_ATTRIBUTES,
   CMD_PLAYER_ATTRIBUTES,
   CMD_UNKNOWN /* Must be last */
 } command_t;
 
-static const char *commands[] = { "addteam", "dump", "playeratt" };
+static const char *commands[] = { "addteam", "dump", "goalieatt", "playeratt" };
 
 static int usage(void)
 {
@@ -24,6 +25,7 @@ static int usage(void)
   printf("Available commands:\n");
   printf("%-15s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
   printf("%-15s - Dumps all database information to stdout.\n", commands[CMD_DUMP_DATA]);
+  printf("%-15s - Modifies goalie attributes.\n", commands[CMD_GOALIE_ATTRIBUTES]);
   printf("%-15s - Modifies player attributes.\n", commands[CMD_PLAYER_ATTRIBUTES]);
   return 0;
 }
@@ -70,6 +72,11 @@ int main(int argc, char *argv[])
     case CMD_DUMP_DATA:
       EXIT_IF_FAIL(dump_team_data(&team_data));
       EXIT_IF_FAIL(dump_player_data(&player_data));
+      break;
+
+    case CMD_GOALIE_ATTRIBUTES:
+      EXIT_IF_FAIL(modify_goalie_data(&player_data));
+      EXIT_IF_FAIL(write_player_data(&player_data));
       break;
 
     case CMD_PLAYER_ATTRIBUTES:

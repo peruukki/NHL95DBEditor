@@ -15,4 +15,6 @@ bool_t add_duplicate_player_data(team_data_t *src_team,
 
 bool_t modify_player_data(player_db_data_t *db_data);
 
+bool_t modify_goalie_data(player_db_data_t *db_data);
+
 bool_t write_player_data(player_db_data_t *db_data);

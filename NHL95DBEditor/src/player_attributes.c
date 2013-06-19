@@ -168,20 +168,28 @@ void show_attributes(unsigned char *att_data, player_key_t *key)
     }
 }
 
+static void modify_attribute(number_1_t *att, int value_change)
+{
+  int new_value = deserialize(*att) + value_change;
+
+  if (new_value < ATT_MIN)
+    new_value = ATT_MIN;
+  else if (new_value > ATT_MAX)
+    new_value = ATT_MAX;
+
+  *att = serialize(new_value);
+}
+
 void modify_player_attribute(player_att_t *att, const char *att_name,
                              int value_change)
 {
   number_1_t *attribute = get_att_player(att, att_name);
-  int new_value = deserialize(*attribute) + value_change;
+  modify_attribute(attribute, value_change);
+}
 
-  if (new_value < ATT_MIN)
-    {
-      new_value = ATT_MIN;
-    }
-  else if (new_value > ATT_MAX)
-    {
-      new_value = ATT_MAX;
-    }
-
-  *attribute = serialize(new_value);
+void modify_goalie_attribute(goalie_att_t *att, const char *att_name,
+                             int value_change)
+{
+  number_1_t *attribute = get_att_goalie(att, att_name);
+  modify_attribute(attribute, value_change);
 }
