@@ -130,12 +130,16 @@ static void show_team_career_stats(team_stats_career_t *stats)
 
 bool_t read_team_data(team_db_data_t *db_data)
 {
-  size_t i;
-
   if (!read_db_file(&db_data->teams, FILE_TEAMS))
     return FALSE;
   if (!read_db_file(&db_data->carteams, FILE_CARTEAMS))
     return FALSE;
+  return TRUE;
+}
+
+bool_t dump_team_data(team_db_data_t *db_data)
+{
+  size_t i;
 
   for (i = 0; i < db_data->teams.length; i += sizeof(team_data_t))
     {
@@ -215,7 +219,6 @@ bool_t add_team(team_db_data_t *team_data,
   write_db_file(&team_data->teams, FILE_TEAMS);
 
   /* Overwrite team career data */
-  sprintf(new_team_career->abbreviation, "NEW");
   sprintf(new_team_career->short_name, "New Team");
   sprintf(new_team_career->long_name, "New Team Katit");
   new_team_career->division = 1;
