@@ -6,7 +6,7 @@
 #define ATT_MAX 200
 #define ATT_SCALE 5
 
-#define CASE(str, ret) if (!strcmp(att_name, str)) return ret
+#define CASE(str, ret) if (strcmp(att_name, str) == 0) return ret
 #define DEFAULT(ret) return ret
 
 static int deserialize(number_1_t value)
