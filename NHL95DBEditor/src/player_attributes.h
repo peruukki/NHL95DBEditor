@@ -31,6 +31,12 @@
 
 typedef struct
 {
+  const char *att_name;
+  int att_value_change;
+} player_att_change_t;
+
+typedef struct
+{
   number_1_t stick_hand; /* 0 = right, 1 = left */
   number_1_t speed;
   number_1_t agility;

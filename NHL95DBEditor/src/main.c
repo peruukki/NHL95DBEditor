@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "teams.h"
 #include "players.h"
+#include "player_attributes.h"
 
 #define PROGRAM_NAME "NHL95DBEditor"
+#define CMD_ARG_INDEX 1
 
 #define EXIT_IF_FAIL(x) if (!(x)) return 1
 
@@ -30,15 +33,23 @@ static int usage(void)
   return 0;
 }
 
+static int cmd_attributes_usage(const char *filename, const char *command)
+{
+  printf("\nInvalid command parameters, usage:\n");
+  printf("%s %s <ATT 1> <CHANGE 1> <ATT 2> <CHANGE 2> ...\n", filename, command);
+  printf("Example: %s %s SPD 25 WGT -50\n", filename, command);
+  return 1;
+}
+
 static command_t get_command(int argc, char *argv[])
 {
   char *cmd_str;
   int i;
 
-  if (argc < 2)
+  if (argc <= CMD_ARG_INDEX)
     return CMD_UNKNOWN;
 
-  cmd_str = argv[1];
+  cmd_str = argv[CMD_ARG_INDEX];
   for (i = 0; i < CMD_UNKNOWN; i++)
     {
       if (strcmp(cmd_str, commands[i]) == 0)
@@ -46,6 +57,26 @@ static command_t get_command(int argc, char *argv[])
     }
 
   return CMD_UNKNOWN;
+}
+
+/* The returned array must be freed by the caller. */
+static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_count)
+{
+  player_att_change_t *att_changes = NULL;
+  int param_count = argc - 1 - CMD_ARG_INDEX;
+  int i, j;
+
+  if ((param_count == 0) || (param_count % 2 != 0))
+    return NULL;
+
+  *change_count = param_count / 2;
+  att_changes = calloc(*change_count, sizeof(*att_changes));
+  for (i = 0, j = CMD_ARG_INDEX + 1; i < *change_count; i++)
+    {
+      att_changes[i].att_name = argv[j++];
+      att_changes[i].att_value_change = atoi(argv[j++]);
+    }
+  return att_changes;
 }
 
 int main(int argc, char *argv[])
@@ -75,13 +106,24 @@ int main(int argc, char *argv[])
       break;
 
     case CMD_GOALIE_ATTRIBUTES:
-      EXIT_IF_FAIL(modify_goalie_data(&player_data));
-      EXIT_IF_FAIL(write_player_data(&player_data));
-      break;
-
     case CMD_PLAYER_ATTRIBUTES:
-      EXIT_IF_FAIL(modify_player_data(&player_data));
-      EXIT_IF_FAIL(write_player_data(&player_data));
+      {
+        player_att_change_t *changes;
+        int change_count = 0;
+        bool_t success = FALSE;
+
+        if ((changes = get_att_changes(argc, argv, &change_count)) == NULL)
+          return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX]);
+
+        if (command == CMD_GOALIE_ATTRIBUTES)
+          success = modify_goalie_data(&player_data);
+        else
+          success = modify_player_data(&player_data);
+        free(changes);
+        EXIT_IF_FAIL(success);
+
+        EXIT_IF_FAIL(write_player_data(&player_data));
+      }
       break;
 
     default:
