@@ -114,7 +114,7 @@ static bool_t add_duplicate_players(team_data_t *src_team,
       memset(dst_key.unknown, 0, sizeof(dst_key.unknown));
       dst_key_ofs = add_player_data(db_data, &dst_key,
                                     &db_data->att_data.data[src_key->ofs_attributes],
-                                    sizeof(player_att_t),
+                                    sizeof(player_atts_t),
                                     &db_data->season_data.data[src_key->ofs_season_stats],
                                     sizeof(player_stats_season_t),
                                     &db_data->career_data.data[src_key->ofs_career_stats],
@@ -140,14 +140,14 @@ bool_t add_duplicate_player_data(team_data_t *src_team,
   /* Players */
   if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data,
                              dst_team->players, ELEM_COUNT(dst_team->players),
-                             sizeof(player_att_t), sizeof(player_stats_season_t),
+                             sizeof(player_atts_t), sizeof(player_stats_season_t),
                              sizeof(player_stats_career_t)))
     return FALSE;
 
   /* Goalies */
   if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data,
                              dst_team->goalies, ELEM_COUNT(dst_team->goalies),
-                             sizeof(goalie_att_t), sizeof(goalie_stats_season_t),
+                             sizeof(goalie_atts_t), sizeof(goalie_stats_season_t),
                              sizeof(goalie_stats_career_t)))
     return FALSE;
 
@@ -165,7 +165,7 @@ bool_t modify_player_data(player_db_data_t *db_data)
       key = (player_key_t *) &db_data->key_data.data[i];
       if (!key_is_goalie(key))
         {
-          player_att_t *att = (player_att_t *)
+          player_atts_t *att = (player_atts_t *)
             &db_data->att_data.data[key->ofs_attributes];
           modify_player_attribute(att, ATT_NAME_PASSING, 25);
           modify_player_attribute(att, ATT_NAME_SPEED, 25);
@@ -190,7 +190,7 @@ bool_t modify_goalie_data(player_db_data_t *db_data)
       key = (player_key_t *) &db_data->key_data.data[i];
       if (key_is_goalie(key))
         {
-          goalie_att_t *att = (goalie_att_t *)
+          goalie_atts_t *att = (goalie_atts_t *)
             &db_data->att_data.data[key->ofs_attributes];
           modify_goalie_attribute(att, ATT_NAME_PUCK_CONTROL, -50);
         }

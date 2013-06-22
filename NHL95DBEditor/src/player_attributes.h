@@ -57,7 +57,7 @@ typedef struct
   number_1_t unknown_4;
   number_1_t unknown_5;
   number_1_t face_offs;
-} player_att_t;
+} player_atts_t;
 
 typedef struct
 {
@@ -77,12 +77,12 @@ typedef struct
   number_1_t unknown_3;
   number_1_t unknown_4;
   number_1_t unknown_5;
-} goalie_att_t;
+} goalie_atts_t;
 
 void show_attributes(unsigned char *att_data, player_key_t *key);
 
-void modify_player_attribute(player_att_t *att, const char *att_name,
+void modify_player_attribute(player_atts_t *att, const char *att_name,
                              int value_change);
 
-void modify_goalie_attribute(goalie_att_t *att, const char *att_name,
+void modify_goalie_attribute(goalie_atts_t *att, const char *att_name,
                              int value_change);

@@ -53,7 +53,7 @@ static number_1_t serialize(int value)
   return (value - ATT_MIN) / ATT_SCALE;
 }
 
-static number_1_t *get_att_player(player_att_t *att, const char *att_name)
+static number_1_t *get_att_player(player_atts_t *att, const char *att_name)
 {
   CASE(ATT_NAME_ACCURACY, &att->accuracy);
   CASE(ATT_NAME_AGGRESSIVENESS, &att->aggressiveness);
@@ -78,7 +78,7 @@ static number_1_t *get_att_player(player_att_t *att, const char *att_name)
   DEFAULT(NULL);
 }
 
-static number_1_t *get_att_goalie(goalie_att_t *att, const char *att_name)
+static number_1_t *get_att_goalie(goalie_atts_t *att, const char *att_name)
 {
   CASE(ATT_NAME_AGILITY, &att->agility);
   CASE(ATT_NAME_DEF_AWARENESS, &att->defensive_awareness);
@@ -99,12 +99,12 @@ static number_1_t *get_att_goalie(goalie_att_t *att, const char *att_name)
   DEFAULT(NULL);
 }
 
-static void print_att_player(player_att_t *att, const char *att_name)
+static void print_att_player(player_atts_t *att, const char *att_name)
 {
   printf(" %s %3d", att_name, deserialize(*get_att_player(att, att_name)));
 }
 
-static void print_att_goalie(goalie_att_t *att, const char *att_name)
+static void print_att_goalie(goalie_atts_t *att, const char *att_name)
 {
   printf(" %s %3d", att_name, deserialize(*get_att_goalie(att, att_name)));
 }
@@ -120,7 +120,7 @@ static void print_att_handedness(number_1_t value)
     printf("%u", value);
 }
 
-static void show_att_player(player_att_t *att)
+static void show_att_player(player_atts_t *att)
 {
   print_att_handedness(att->stick_hand);
   print_att_player(att, ATT_NAME_SPEED);
@@ -139,7 +139,7 @@ static void show_att_player(player_att_t *att)
   print_att_player(att, ATT_NAME_FACEOFFS);
 }
 
-static void show_att_goalie(goalie_att_t *att)
+static void show_att_goalie(goalie_atts_t *att)
 {
   print_att_handedness(att->glove_hand);
   print_att_goalie(att, ATT_NAME_GLOVE_LEFT);
@@ -160,11 +160,11 @@ void show_attributes(unsigned char *att_data, player_key_t *key)
 
   if (key_is_goalie(key))
     {
-      show_att_goalie((goalie_att_t *) att);
+      show_att_goalie((goalie_atts_t *) att);
     }
   else
     {
-      show_att_player((player_att_t *) att);
+      show_att_player((player_atts_t *) att);
     }
 }
 
@@ -180,14 +180,14 @@ static void modify_attribute(number_1_t *att, int value_change)
   *att = serialize(new_value);
 }
 
-void modify_player_attribute(player_att_t *att, const char *att_name,
+void modify_player_attribute(player_atts_t *att, const char *att_name,
                              int value_change)
 {
   number_1_t *attribute = get_att_player(att, att_name);
   modify_attribute(attribute, value_change);
 }
 
-void modify_goalie_attribute(goalie_att_t *att, const char *att_name,
+void modify_goalie_attribute(goalie_atts_t *att, const char *att_name,
                              int value_change)
 {
   number_1_t *attribute = get_att_goalie(att, att_name);
