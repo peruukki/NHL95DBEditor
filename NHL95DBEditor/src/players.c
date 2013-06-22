@@ -167,12 +167,12 @@ bool_t modify_player_data(player_db_data_t *db_data)
         {
           player_atts_t *att = (player_atts_t *)
             &db_data->att_data.data[key->ofs_attributes];
-          modify_player_attribute(att, ATT_NAME_PASSING, 25);
-          modify_player_attribute(att, ATT_NAME_SPEED, 25);
-          modify_player_attribute(att, ATT_NAME_SHOT_POWER, 25);
-          modify_player_attribute(att, ATT_NAME_ACCURACY, 25);
-          modify_player_attribute(att, ATT_NAME_STICK_HANDLING, 25);
-          modify_player_attribute(att, ATT_NAME_SHOOT_PASS_BIAS, -50);
+          modify_player_attribute(att, PLAYER_ATT_PASSING, 25);
+          modify_player_attribute(att, PLAYER_ATT_SPEED, 25);
+          modify_player_attribute(att, PLAYER_ATT_SHOT_POWER, 25);
+          modify_player_attribute(att, PLAYER_ATT_ACCURACY, 25);
+          modify_player_attribute(att, PLAYER_ATT_STICK_HANDLING, 25);
+          modify_player_attribute(att, PLAYER_ATT_SHOOT_PASS_BIAS, -50);
         }
     }
 
@@ -192,7 +192,7 @@ bool_t modify_goalie_data(player_db_data_t *db_data)
         {
           goalie_atts_t *att = (goalie_atts_t *)
             &db_data->att_data.data[key->ofs_attributes];
-          modify_goalie_attribute(att, ATT_NAME_PUCK_CONTROL, -50);
+          modify_goalie_attribute(att, PLAYER_ATT_PUCK_CONTROL, -50);
         }
     }
 

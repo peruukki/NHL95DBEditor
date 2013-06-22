@@ -6,8 +6,11 @@
 #define ATT_MAX 200
 #define ATT_SCALE 5
 
-#define CASE(str, ret) if (strcmp(att_name, str) == 0) return ret
-#define DEFAULT(ret) return ret
+typedef struct
+{
+  player_att_t value;
+  const char *name;
+} player_att_name_t;
 
 static int deserialize(number_1_t value)
 {
@@ -53,65 +56,128 @@ static number_1_t serialize(int value)
   return (value - ATT_MIN) / ATT_SCALE;
 }
 
-static number_1_t *get_att_player(player_atts_t *att, const char *att_name)
+static player_att_name_t player_att_names[] =
 {
-  CASE(ATT_NAME_ACCURACY, &att->accuracy);
-  CASE(ATT_NAME_AGGRESSIVENESS, &att->aggressiveness);
-  CASE(ATT_NAME_AGILITY, &att->agility);
-  CASE(ATT_NAME_CHECKING, &att->checking);
-  CASE(ATT_NAME_DEF_AWARENESS, &att->defensive_awareness);
-  CASE(ATT_NAME_ENDURANCE, &att->endurance);
-  CASE(ATT_NAME_FACEOFFS, &att->face_offs);
-  CASE(ATT_NAME_HANDEDNESS, &att->stick_hand);
-  CASE(ATT_NAME_OFF_AWARENESS, &att->offensive_awareness);
-  CASE(ATT_NAME_PASSING, &att->passing);
-  CASE(ATT_NAME_SHOOT_PASS_BIAS, &att->shoot_pass_bias);
-  CASE(ATT_NAME_SHOT_POWER, &att->shot_power);
-  CASE(ATT_NAME_SPEED, &att->speed);
-  CASE(ATT_NAME_STICK_HANDLING, &att->stick_handling);
-  CASE(ATT_NAME_UNKNOWN_1, &att->unknown_1);
-  CASE(ATT_NAME_UNKNOWN_2, &att->unknown_2);
-  CASE(ATT_NAME_UNKNOWN_3, &att->unknown_3);
-  CASE(ATT_NAME_UNKNOWN_4, &att->unknown_4);
-  CASE(ATT_NAME_UNKNOWN_5, &att->unknown_5);
-  CASE(ATT_NAME_WEIGHT, &att->weight);
-  DEFAULT(NULL);
+  { PLAYER_ATT_ACCURACY, "ACC" },
+  { PLAYER_ATT_AGGRESSIVENESS, "AGG" },
+  { PLAYER_ATT_AGILITY, "AGI" },
+  { PLAYER_ATT_CHECKING, "CHK" },
+  { PLAYER_ATT_DEF_AWARENESS, "DEF" },
+  { PLAYER_ATT_ENDURANCE, "END" },
+  { PLAYER_ATT_FACEOFFS, "FAC" },
+  { PLAYER_ATT_GLOVE_LEFT, "GLE" },
+  { PLAYER_ATT_GLOVE_RIGHT, "GRI" },
+  { PLAYER_ATT_HANDEDNESS, "HND" },
+  { PLAYER_ATT_OFF_AWARENESS, "OFF" },
+  { PLAYER_ATT_PASSING, "PAS" },
+  { PLAYER_ATT_PUCK_CONTROL, "PUC" },
+  { PLAYER_ATT_SHOOT_PASS_BIAS, "S/P" },
+  { PLAYER_ATT_SHOT_POWER, "SHO" },
+  { PLAYER_ATT_SPEED, "SPD" },
+  { PLAYER_ATT_STICK_HANDLING, "STI" },
+  { PLAYER_ATT_STICK_LEFT, "SLE" },
+  { PLAYER_ATT_STICK_RIGHT, "SRI" },
+  { PLAYER_ATT_UNKNOWN_1, "UN1" },
+  { PLAYER_ATT_UNKNOWN_2, "UN2" },
+  { PLAYER_ATT_UNKNOWN_3, "UN3" },
+  { PLAYER_ATT_UNKNOWN_4, "UN4" },
+  { PLAYER_ATT_UNKNOWN_5, "UN5" },
+  { PLAYER_ATT_WEIGHT, "WGT" }
+};
+
+player_att_t get_player_att_enum(const char *att_name)
+{
+  int i;
+
+  for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
+    {
+      if (strcmp(player_att_names[i].name, att_name) == 0)
+        return player_att_names[i].value;
+    }
+
+  return PLAYER_ATT_NUM_VALUES;
 }
 
-static number_1_t *get_att_goalie(goalie_atts_t *att, const char *att_name)
+const char *get_player_att_name(player_att_t att_enum)
 {
-  CASE(ATT_NAME_AGILITY, &att->agility);
-  CASE(ATT_NAME_DEF_AWARENESS, &att->defensive_awareness);
-  CASE(ATT_NAME_GLOVE_LEFT, &att->glove_left);
-  CASE(ATT_NAME_GLOVE_RIGHT, &att->glove_right);
-  CASE(ATT_NAME_HANDEDNESS, &att->glove_hand);
-  CASE(ATT_NAME_OFF_AWARENESS, &att->offensive_awareness);
-  CASE(ATT_NAME_PUCK_CONTROL, &att->puck_control);
-  CASE(ATT_NAME_SPEED, &att->speed);
-  CASE(ATT_NAME_STICK_LEFT, &att->stick_left);
-  CASE(ATT_NAME_STICK_RIGHT, &att->stick_right);
-  CASE(ATT_NAME_UNKNOWN_1, &att->unknown_1);
-  CASE(ATT_NAME_UNKNOWN_2, &att->unknown_2);
-  CASE(ATT_NAME_UNKNOWN_3, &att->unknown_3);
-  CASE(ATT_NAME_UNKNOWN_4, &att->unknown_4);
-  CASE(ATT_NAME_UNKNOWN_5, &att->unknown_5);
-  CASE(ATT_NAME_WEIGHT, &att->weight);
-  DEFAULT(NULL);
+  int i;
+
+  for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
+    {
+      if (player_att_names[i].value == att_enum)
+        return player_att_names[i].name;
+    }
+
+  return NULL;
 }
 
-static void print_att_player(player_atts_t *att, const char *att_name)
+static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
 {
-  printf(" %s %3d", att_name, deserialize(*get_att_player(att, att_name)));
+  switch (att_enum)
+    {
+    case PLAYER_ATT_ACCURACY: return &atts->accuracy;
+    case PLAYER_ATT_AGGRESSIVENESS: return &atts->aggressiveness;
+    case PLAYER_ATT_AGILITY: return &atts->agility;
+    case PLAYER_ATT_CHECKING: return &atts->checking;
+    case PLAYER_ATT_DEF_AWARENESS: return &atts->defensive_awareness;
+    case PLAYER_ATT_ENDURANCE: return &atts->endurance;
+    case PLAYER_ATT_FACEOFFS: return &atts->face_offs;
+    case PLAYER_ATT_HANDEDNESS: return &atts->stick_hand;
+    case PLAYER_ATT_OFF_AWARENESS: return &atts->offensive_awareness;
+    case PLAYER_ATT_PASSING: return &atts->passing;
+    case PLAYER_ATT_SHOOT_PASS_BIAS: return &atts->shoot_pass_bias;
+    case PLAYER_ATT_SHOT_POWER: return &atts->shot_power;
+    case PLAYER_ATT_SPEED: return &atts->speed;
+    case PLAYER_ATT_STICK_HANDLING: return &atts->stick_handling;
+    case PLAYER_ATT_UNKNOWN_1: return &atts->unknown_1;
+    case PLAYER_ATT_UNKNOWN_2: return &atts->unknown_2;
+    case PLAYER_ATT_UNKNOWN_3: return &atts->unknown_3;
+    case PLAYER_ATT_UNKNOWN_4: return &atts->unknown_4;
+    case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
+    case PLAYER_ATT_WEIGHT: return &atts->weight;
+    default: return NULL;
+    }
 }
 
-static void print_att_goalie(goalie_atts_t *att, const char *att_name)
+static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
 {
-  printf(" %s %3d", att_name, deserialize(*get_att_goalie(att, att_name)));
+  switch (att_enum)
+    {
+    case PLAYER_ATT_AGILITY: return &atts->agility;
+    case PLAYER_ATT_DEF_AWARENESS: return &atts->defensive_awareness;
+    case PLAYER_ATT_GLOVE_LEFT: return &atts->glove_left;
+    case PLAYER_ATT_GLOVE_RIGHT: return &atts->glove_right;
+    case PLAYER_ATT_HANDEDNESS: return &atts->glove_hand;
+    case PLAYER_ATT_OFF_AWARENESS: return &atts->offensive_awareness;
+    case PLAYER_ATT_PUCK_CONTROL: return &atts->puck_control;
+    case PLAYER_ATT_SPEED: return &atts->speed;
+    case PLAYER_ATT_STICK_LEFT: return &atts->stick_left;
+    case PLAYER_ATT_STICK_RIGHT: return &atts->stick_right;
+    case PLAYER_ATT_UNKNOWN_1: return &atts->unknown_1;
+    case PLAYER_ATT_UNKNOWN_2: return &atts->unknown_2;
+    case PLAYER_ATT_UNKNOWN_3: return &atts->unknown_3;
+    case PLAYER_ATT_UNKNOWN_4: return &atts->unknown_4;
+    case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
+    case PLAYER_ATT_WEIGHT: return &atts->weight;
+    default: return NULL;
+    }
+}
+
+static void print_att_player(player_atts_t *atts, player_att_t att_enum)
+{
+  printf(" %s %3d", get_player_att_name(att_enum),
+         deserialize(*get_att_player(atts, att_enum)));
+}
+
+static void print_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
+{
+  printf(" %s %3d", get_player_att_name(att_enum),
+         deserialize(*get_att_goalie(atts, att_enum)));
 }
 
 static void print_att_handedness(number_1_t value)
 {
-  printf(" %s ", ATT_NAME_HANDEDNESS);
+  printf(" %s ", get_player_att_name(PLAYER_ATT_HANDEDNESS));
   if (value == 0)
     printf("R");
   else if (value == 1)
@@ -123,35 +189,35 @@ static void print_att_handedness(number_1_t value)
 static void show_att_player(player_atts_t *att)
 {
   print_att_handedness(att->stick_hand);
-  print_att_player(att, ATT_NAME_SPEED);
-  print_att_player(att, ATT_NAME_AGILITY);
-  print_att_player(att, ATT_NAME_WEIGHT);
-  print_att_player(att, ATT_NAME_SHOT_POWER);
-  print_att_player(att, ATT_NAME_CHECKING);
-  print_att_player(att, ATT_NAME_STICK_HANDLING);
-  print_att_player(att, ATT_NAME_ACCURACY);
-  print_att_player(att, ATT_NAME_PASSING);
-  print_att_player(att, ATT_NAME_OFF_AWARENESS);
-  print_att_player(att, ATT_NAME_DEF_AWARENESS);
-  print_att_player(att, ATT_NAME_AGGRESSIVENESS);
-  print_att_player(att, ATT_NAME_ENDURANCE);
-  print_att_player(att, ATT_NAME_SHOOT_PASS_BIAS);
-  print_att_player(att, ATT_NAME_FACEOFFS);
+  print_att_player(att, PLAYER_ATT_SPEED);
+  print_att_player(att, PLAYER_ATT_AGILITY);
+  print_att_player(att, PLAYER_ATT_WEIGHT);
+  print_att_player(att, PLAYER_ATT_SHOT_POWER);
+  print_att_player(att, PLAYER_ATT_CHECKING);
+  print_att_player(att, PLAYER_ATT_STICK_HANDLING);
+  print_att_player(att, PLAYER_ATT_ACCURACY);
+  print_att_player(att, PLAYER_ATT_PASSING);
+  print_att_player(att, PLAYER_ATT_OFF_AWARENESS);
+  print_att_player(att, PLAYER_ATT_DEF_AWARENESS);
+  print_att_player(att, PLAYER_ATT_AGGRESSIVENESS);
+  print_att_player(att, PLAYER_ATT_ENDURANCE);
+  print_att_player(att, PLAYER_ATT_SHOOT_PASS_BIAS);
+  print_att_player(att, PLAYER_ATT_FACEOFFS);
 }
 
 static void show_att_goalie(goalie_atts_t *att)
 {
   print_att_handedness(att->glove_hand);
-  print_att_goalie(att, ATT_NAME_GLOVE_LEFT);
-  print_att_goalie(att, ATT_NAME_GLOVE_RIGHT);
-  print_att_goalie(att, ATT_NAME_STICK_LEFT);
-  print_att_goalie(att, ATT_NAME_STICK_RIGHT);
-  print_att_goalie(att, ATT_NAME_PUCK_CONTROL);
-  print_att_goalie(att, ATT_NAME_SPEED);
-  print_att_goalie(att, ATT_NAME_AGILITY);
-  print_att_goalie(att, ATT_NAME_WEIGHT);
-  print_att_goalie(att, ATT_NAME_OFF_AWARENESS);
-  print_att_goalie(att, ATT_NAME_DEF_AWARENESS);
+  print_att_goalie(att, PLAYER_ATT_GLOVE_LEFT);
+  print_att_goalie(att, PLAYER_ATT_GLOVE_RIGHT);
+  print_att_goalie(att, PLAYER_ATT_STICK_LEFT);
+  print_att_goalie(att, PLAYER_ATT_STICK_RIGHT);
+  print_att_goalie(att, PLAYER_ATT_PUCK_CONTROL);
+  print_att_goalie(att, PLAYER_ATT_SPEED);
+  print_att_goalie(att, PLAYER_ATT_AGILITY);
+  print_att_goalie(att, PLAYER_ATT_WEIGHT);
+  print_att_goalie(att, PLAYER_ATT_OFF_AWARENESS);
+  print_att_goalie(att, PLAYER_ATT_DEF_AWARENESS);
 }
 
 void show_attributes(unsigned char *att_data, player_key_t *key)
@@ -180,16 +246,16 @@ static void modify_attribute(number_1_t *att, int value_change)
   *att = serialize(new_value);
 }
 
-void modify_player_attribute(player_atts_t *att, const char *att_name,
+void modify_player_attribute(player_atts_t *atts, player_att_t att_enum,
                              int value_change)
 {
-  number_1_t *attribute = get_att_player(att, att_name);
+  number_1_t *attribute = get_att_player(atts, att_enum);
   modify_attribute(attribute, value_change);
 }
 
-void modify_goalie_attribute(goalie_atts_t *att, const char *att_name,
+void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum,
                              int value_change)
 {
-  number_1_t *attribute = get_att_goalie(att, att_name);
+  number_1_t *attribute = get_att_goalie(atts, att_enum);
   modify_attribute(attribute, value_change);
 }

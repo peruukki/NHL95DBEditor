@@ -3,31 +3,35 @@
 #include "common_defs.h"
 #include "player_key.h"
 
-#define ATT_NAME_ACCURACY "ACC"
-#define ATT_NAME_AGGRESSIVENESS "AGG"
-#define ATT_NAME_AGILITY "AGI"
-#define ATT_NAME_CHECKING "CHK"
-#define ATT_NAME_DEF_AWARENESS "DEF"
-#define ATT_NAME_ENDURANCE "END"
-#define ATT_NAME_FACEOFFS "FAC"
-#define ATT_NAME_GLOVE_LEFT "GLE"
-#define ATT_NAME_GLOVE_RIGHT "GRI"
-#define ATT_NAME_HANDEDNESS "HND"
-#define ATT_NAME_OFF_AWARENESS "OFF"
-#define ATT_NAME_PASSING "PAS"
-#define ATT_NAME_PUCK_CONTROL "PUC"
-#define ATT_NAME_SHOOT_PASS_BIAS "S/P"
-#define ATT_NAME_SHOT_POWER "SHO"
-#define ATT_NAME_SPEED "SPD"
-#define ATT_NAME_STICK_HANDLING "STI"
-#define ATT_NAME_STICK_LEFT "SLE"
-#define ATT_NAME_STICK_RIGHT "SRI"
-#define ATT_NAME_UNKNOWN_1 "UN1"
-#define ATT_NAME_UNKNOWN_2 "UN2"
-#define ATT_NAME_UNKNOWN_3 "UN3"
-#define ATT_NAME_UNKNOWN_4 "UN4"
-#define ATT_NAME_UNKNOWN_5 "UN5"
-#define ATT_NAME_WEIGHT "WGT"
+typedef enum
+{
+  PLAYER_ATT_ACCURACY,
+  PLAYER_ATT_AGGRESSIVENESS,
+  PLAYER_ATT_AGILITY,
+  PLAYER_ATT_CHECKING,
+  PLAYER_ATT_DEF_AWARENESS,
+  PLAYER_ATT_ENDURANCE,
+  PLAYER_ATT_FACEOFFS,
+  PLAYER_ATT_GLOVE_LEFT,
+  PLAYER_ATT_GLOVE_RIGHT,
+  PLAYER_ATT_HANDEDNESS,
+  PLAYER_ATT_OFF_AWARENESS,
+  PLAYER_ATT_PASSING,
+  PLAYER_ATT_PUCK_CONTROL,
+  PLAYER_ATT_SHOOT_PASS_BIAS,
+  PLAYER_ATT_SHOT_POWER,
+  PLAYER_ATT_SPEED,
+  PLAYER_ATT_STICK_HANDLING,
+  PLAYER_ATT_STICK_LEFT,
+  PLAYER_ATT_STICK_RIGHT,
+  PLAYER_ATT_UNKNOWN_1,
+  PLAYER_ATT_UNKNOWN_2,
+  PLAYER_ATT_UNKNOWN_3,
+  PLAYER_ATT_UNKNOWN_4,
+  PLAYER_ATT_UNKNOWN_5,
+  PLAYER_ATT_WEIGHT,
+  PLAYER_ATT_NUM_VALUES /* Must be last */
+} player_att_t;
 
 typedef struct
 {
@@ -79,10 +83,14 @@ typedef struct
   number_1_t unknown_5;
 } goalie_atts_t;
 
+player_att_t get_player_att_enum(const char *att_name);
+
+const char *get_player_att_name(player_att_t att_enum);
+
 void show_attributes(unsigned char *att_data, player_key_t *key);
 
-void modify_player_attribute(player_atts_t *att, const char *att_name,
+void modify_player_attribute(player_atts_t *atts, player_att_t att_enum,
                              int value_change);
 
-void modify_goalie_attribute(goalie_atts_t *att, const char *att_name,
+void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum,
                              int value_change);
