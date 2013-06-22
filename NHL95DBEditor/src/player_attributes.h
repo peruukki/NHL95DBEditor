@@ -35,8 +35,9 @@ typedef enum
 
 typedef struct
 {
+  player_att_t att_enum;
   const char *att_name;
-  int att_value_change;
+  int att_change;
 } player_att_change_t;
 
 typedef struct
@@ -86,6 +87,8 @@ typedef struct
 player_att_t get_player_att_enum(const char *att_name);
 
 const char *get_player_att_name(player_att_t att_enum);
+
+bool_t validate_att_change(player_att_change_t *change);
 
 void show_attributes(unsigned char *att_data, player_key_t *key);
 

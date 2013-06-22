@@ -154,49 +154,49 @@ bool_t add_duplicate_player_data(team_data_t *src_team,
   return write_player_data(db_data);
 }
 
-bool_t modify_player_data(player_db_data_t *db_data)
+static bool_t modify_player_atts(player_db_data_t *db_data,
+                                 player_att_change_t *changes, int change_count,
+                                 bool_t is_goalie)
 {
   size_t i;
 
   for (i = 0; i < db_data->key_data.length; i += sizeof(player_key_t))
     {
       player_key_t *key;
+      int j;
 
       key = (player_key_t *) &db_data->key_data.data[i];
-      if (!key_is_goalie(key))
+      if (is_goalie && key_is_goalie(key))
         {
-          player_atts_t *att = (player_atts_t *)
-            &db_data->att_data.data[key->ofs_attributes];
-          modify_player_attribute(att, PLAYER_ATT_PASSING, 25);
-          modify_player_attribute(att, PLAYER_ATT_SPEED, 25);
-          modify_player_attribute(att, PLAYER_ATT_SHOT_POWER, 25);
-          modify_player_attribute(att, PLAYER_ATT_ACCURACY, 25);
-          modify_player_attribute(att, PLAYER_ATT_STICK_HANDLING, 25);
-          modify_player_attribute(att, PLAYER_ATT_SHOOT_PASS_BIAS, -50);
+          goalie_atts_t *atts;
+
+          atts = (goalie_atts_t *) &db_data->att_data.data[key->ofs_attributes];
+          for (j = 0; j < change_count; j++)
+            modify_goalie_attribute(atts, changes[j].att_enum, changes[j].att_change);
+        }
+      else if (!is_goalie && !key_is_goalie(key))
+        {
+          player_atts_t *atts;
+
+          atts = (player_atts_t *) &db_data->att_data.data[key->ofs_attributes];
+          for (j = 0; j < change_count; j++)
+            modify_player_attribute(atts, changes[j].att_enum, changes[j].att_change);
         }
     }
 
   return TRUE;
 }
 
-bool_t modify_goalie_data(player_db_data_t *db_data)
+bool_t modify_player_data(player_db_data_t *db_data, player_att_change_t *changes,
+                          int change_count)
 {
-  size_t i;
+  return modify_player_atts(db_data, changes, change_count, FALSE);
+}
 
-  for (i = 0; i < db_data->key_data.length; i += sizeof(player_key_t))
-    {
-      player_key_t *key;
-
-      key = (player_key_t *) &db_data->key_data.data[i];
-      if (key_is_goalie(key))
-        {
-          goalie_atts_t *att = (goalie_atts_t *)
-            &db_data->att_data.data[key->ofs_attributes];
-          modify_goalie_attribute(att, PLAYER_ATT_PUCK_CONTROL, -50);
-        }
-    }
-
-  return TRUE;
+bool_t modify_goalie_data(player_db_data_t *db_data, player_att_change_t *changes,
+                          int change_count)
+{
+  return modify_player_atts(db_data, changes, change_count, TRUE);
 }
 
 bool_t write_player_data(player_db_data_t *db_data)

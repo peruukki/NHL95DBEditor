@@ -67,16 +67,24 @@ static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_
   int i, j;
 
   if ((param_count == 0) || (param_count % 2 != 0))
-    return NULL;
+    goto error;
 
   *change_count = param_count / 2;
   att_changes = calloc(*change_count, sizeof(*att_changes));
   for (i = 0, j = CMD_ARG_INDEX + 1; i < *change_count; i++)
     {
       att_changes[i].att_name = argv[j++];
-      att_changes[i].att_value_change = atoi(argv[j++]);
+      att_changes[i].att_enum = get_player_att_enum(att_changes[i].att_name);
+      att_changes[i].att_change = atoi(argv[j++]);
+
+      if (!validate_att_change(&att_changes[i]))
+        goto error;
     }
   return att_changes;
+
+error:
+  free(att_changes);
+  return NULL;
 }
 
 int main(int argc, char *argv[])
@@ -116,9 +124,9 @@ int main(int argc, char *argv[])
           return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX]);
 
         if (command == CMD_GOALIE_ATTRIBUTES)
-          success = modify_goalie_data(&player_data);
+          success = modify_goalie_data(&player_data, changes, change_count);
         else
-          success = modify_player_data(&player_data);
+          success = modify_player_data(&player_data, changes, change_count);
         free(changes);
         EXIT_IF_FAIL(success);
 

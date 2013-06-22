@@ -111,6 +111,22 @@ const char *get_player_att_name(player_att_t att_enum)
   return NULL;
 }
 
+bool_t validate_att_change(player_att_change_t *change)
+{
+  if (change->att_enum >= PLAYER_ATT_NUM_VALUES)
+    {
+      printf("Unknown attribute name '%s'\n", change->att_name);
+      return FALSE;
+    }
+  if (change->att_change % ATT_SCALE != 0)
+    {
+      printf("Attribute change value '%d' is not a multiplier of %d\n",
+             change->att_change, ATT_SCALE);
+      return FALSE;
+    }
+  return TRUE;
+}
+
 static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
 {
   switch (att_enum)
@@ -135,7 +151,9 @@ static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_4: return &atts->unknown_4;
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
-    default: return NULL;
+    default:
+      printf("Unknown attribute value %d\n", att_enum);
+      return NULL;
     }
 }
 
@@ -159,7 +177,9 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_4: return &atts->unknown_4;
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
-    default: return NULL;
+    default:
+      printf("Unknown attribute value %d\n", att_enum);
+      return NULL;
     }
 }
 
@@ -236,7 +256,12 @@ void show_attributes(unsigned char *att_data, player_key_t *key)
 
 static void modify_attribute(number_1_t *att, int value_change)
 {
-  int new_value = deserialize(*att) + value_change;
+  int new_value;
+
+  if (!att)
+    return;
+
+  new_value = deserialize(*att) + value_change;
 
   if (new_value < ATT_MIN)
     new_value = ATT_MIN;
