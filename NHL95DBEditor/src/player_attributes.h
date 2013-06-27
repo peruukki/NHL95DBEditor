@@ -37,6 +37,7 @@ typedef struct
 {
   player_att_t value;
   const char *name;
+  const char *description;
 } player_att_name_t;
 
 typedef struct

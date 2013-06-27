@@ -45,7 +45,7 @@ static int cmd_attributes_usage(const char *filename, const char *command)
 
   printf("\nAvailable attributes:\n");
   for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
-    printf("  %s\n", player_att_names[i].name);
+    printf("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
 
   return 1;
 }
