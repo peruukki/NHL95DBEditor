@@ -39,11 +39,22 @@ static int cmd_attributes_usage(const char *filename, const char *command)
 {
   int i;
 
-  printf("\nInvalid command parameters, usage:\n");
+  printf("\n");
+  printf("Invalid command parameters, usage:\n");
   printf("%s %s <ATT 1> <CHANGE 1> <ATT 2> <CHANGE 2> ...\n", filename, command);
+  printf("\n");
   printf("Example: %s %s SPD +25 WGT -50\n", filename, command);
-
-  printf("\nAvailable attributes:\n");
+  printf("\n");
+  printf("Change values must be multipliers of %d, e.g. +%d, +%d, or -%d.\n",
+         ATT_SCALE, ATT_SCALE, 2 * ATT_SCALE, 5 * ATT_SCALE);
+  printf("\n");
+  printf("The minimum resulting attribute value is %d and the maximum %d.\n",
+         ATT_MIN, ATT_MAX);
+  printf("For example, if a player would get an attribute value of %d after\n"
+         "applying the change, the value is set to %d.\n",
+         ATT_MIN - ATT_SCALE, ATT_MIN);
+  printf("\n");
+  printf("Available attributes:\n");
   for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
     printf("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
 

@@ -3,6 +3,10 @@
 #include "common_defs.h"
 #include "player_key.h"
 
+#define ATT_MIN 25
+#define ATT_MAX 200
+#define ATT_SCALE 5
+
 typedef enum
 {
   PLAYER_ATT_ACCURACY,

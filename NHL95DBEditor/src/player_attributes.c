@@ -2,10 +2,6 @@
 #include <string.h>
 #include "player_attributes.h"
 
-#define ATT_MIN 25
-#define ATT_MAX 200
-#define ATT_SCALE 5
-
 static int deserialize(number_1_t value)
 {
   /* Conversion:
