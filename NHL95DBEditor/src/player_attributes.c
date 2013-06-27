@@ -6,12 +6,6 @@
 #define ATT_MAX 200
 #define ATT_SCALE 5
 
-typedef struct
-{
-  player_att_t value;
-  const char *name;
-} player_att_name_t;
-
 static int deserialize(number_1_t value)
 {
   /* Conversion:
@@ -56,7 +50,7 @@ static number_1_t serialize(int value)
   return (value - ATT_MIN) / ATT_SCALE;
 }
 
-static player_att_name_t player_att_names[] =
+player_att_name_t player_att_names[] =
 {
   { PLAYER_ATT_ACCURACY, "ACC" },
   { PLAYER_ATT_AGGRESSIVENESS, "AGG" },
@@ -82,7 +76,8 @@ static player_att_name_t player_att_names[] =
   { PLAYER_ATT_UNKNOWN_3, "UN3" },
   { PLAYER_ATT_UNKNOWN_4, "UN4" },
   { PLAYER_ATT_UNKNOWN_5, "UN5" },
-  { PLAYER_ATT_WEIGHT, "WGT" }
+  { PLAYER_ATT_WEIGHT, "WGT" },
+  { PLAYER_ATT_NUM_VALUES, NULL }
 };
 
 player_att_t get_player_att_enum(const char *att_name)

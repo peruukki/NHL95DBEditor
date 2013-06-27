@@ -35,6 +35,12 @@ typedef enum
 
 typedef struct
 {
+  player_att_t value;
+  const char *name;
+} player_att_name_t;
+
+typedef struct
+{
   player_att_t att_enum;
   const char *att_name;
   int att_change;

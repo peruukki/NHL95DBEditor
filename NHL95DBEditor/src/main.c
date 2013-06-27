@@ -5,6 +5,8 @@
 #include "players.h"
 #include "player_attributes.h"
 
+extern player_att_name_t player_att_names[];
+
 #define PROGRAM_NAME "NHL95DBEditor"
 #define CMD_ARG_INDEX 1
 
@@ -28,16 +30,23 @@ static int usage(void)
   printf("Available commands:\n");
   printf("%-15s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
   printf("%-15s - Dumps all database information to stdout.\n", commands[CMD_DUMP_DATA]);
-  printf("%-15s - Modifies goalie attributes.\n", commands[CMD_GOALIE_ATTRIBUTES]);
-  printf("%-15s - Modifies player attributes.\n", commands[CMD_PLAYER_ATTRIBUTES]);
+  printf("%-15s - Modifies goalie attributes by given amount.\n", commands[CMD_GOALIE_ATTRIBUTES]);
+  printf("%-15s - Modifies player attributes by given amount.\n", commands[CMD_PLAYER_ATTRIBUTES]);
   return 0;
 }
 
 static int cmd_attributes_usage(const char *filename, const char *command)
 {
+  int i;
+
   printf("\nInvalid command parameters, usage:\n");
   printf("%s %s <ATT 1> <CHANGE 1> <ATT 2> <CHANGE 2> ...\n", filename, command);
-  printf("Example: %s %s SPD 25 WGT -50\n", filename, command);
+  printf("Example: %s %s SPD +25 WGT -50\n", filename, command);
+
+  printf("\nAvailable attributes:\n");
+  for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
+    printf("  %s\n", player_att_names[i].name);
+
   return 1;
 }
 
