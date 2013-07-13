@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "change_log.h"
 #include "teams.h"
 #include "players.h"
 #include "player_attributes.h"
@@ -28,10 +29,12 @@ static int usage(void)
   printf("%s is a tool for editing/displaying NHL Hockey 95 databases.\n", PROGRAM_NAME);
   printf("The database files must be in the current directory.\n\n");
   printf("Available commands:\n");
-  printf("%-15s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
-  printf("%-15s - Dumps all database information to stdout.\n", commands[CMD_DUMP_DATA]);
-  printf("%-15s - Modifies goalie attributes by given amount.\n", commands[CMD_GOALIE_ATTRIBUTES]);
-  printf("%-15s - Modifies player attributes by given amount.\n", commands[CMD_PLAYER_ATTRIBUTES]);
+  printf("%-10s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
+  printf("%-10s - Dumps all database information to stdout.\n", commands[CMD_DUMP_DATA]);
+  printf("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
+         commands[CMD_GOALIE_ATTRIBUTES], CHANGE_LOG_FILE);
+  printf("%-10s - Changes player attributes. Changes are logged to %s.\n",
+         commands[CMD_PLAYER_ATTRIBUTES], CHANGE_LOG_FILE);
   return 0;
 }
 
@@ -107,6 +110,15 @@ error:
   return NULL;
 }
 
+static void write_changes_to_log(const char *cmd, player_att_change_t *changes,
+                                 int change_count)
+{
+  int i;
+
+  for (i = 0; i < change_count; i++)
+    add_log_entry(cmd, changes[i].att_name, changes[i].att_change);
+}
+
 int main(int argc, char *argv[])
 {
   team_db_data_t team_data;
@@ -147,10 +159,13 @@ int main(int argc, char *argv[])
           success = modify_goalie_data(&player_data, changes, change_count);
         else
           success = modify_player_data(&player_data, changes, change_count);
-        free(changes);
         EXIT_IF_FAIL(success);
 
         EXIT_IF_FAIL(write_player_data(&player_data));
+
+        write_changes_to_log(command == CMD_GOALIE_ATTRIBUTES ? "goalies" : "players",
+                             changes, change_count);
+        free(changes);
       }
       break;
 
