@@ -57,7 +57,7 @@ player_att_name_t player_att_names[] =
   { PLAYER_ATT_FACEOFFS, "FAC", "faceoffs" },
   { PLAYER_ATT_GLOVE_LEFT, "GLE", "glove left" },
   { PLAYER_ATT_GLOVE_RIGHT, "GRI", "glove right" },
-  { PLAYER_ATT_HANDEDNESS, "HND", "handedness (shoots from / glove hand)" },
+  { PLAYER_ATT_HANDEDNESS, "HND", "handedness (shoots/catches)" },
   { PLAYER_ATT_OFF_AWARENESS, "OFF", "offensive awareness" },
   { PLAYER_ATT_PASSING, "PAS", "passing" },
   { PLAYER_ATT_PUCK_CONTROL, "PUC", "puck control" },
