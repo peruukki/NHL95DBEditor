@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "backup.h"
 #include "change_log.h"
 #include "teams.h"
 #include "players.h"
@@ -164,6 +165,8 @@ int main(int argc, char *argv[])
 
         if ((changes = get_att_changes(argc, argv, &change_count)) == NULL)
           return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX]);
+
+        EXIT_IF_FAIL(backup_database_files());
 
         if (command == CMD_GOALIE_ATTRIBUTES)
           success = modify_goalie_data(&player_data, changes, change_count);
