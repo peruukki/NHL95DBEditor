@@ -1,26 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 #include "common_defs.h"
+#include "db_files.h"
 #include "file_utils.h"
 #include "player_attributes.h"
 #include "player_key.h"
 #include "player_stats.h"
 #include "players.h"
 
-#define FILE_ATTRIBUTES "ATT.DB"
-#define FILE_CAREER "CAREER.DB"
-#define FILE_KEYS "KEY.DB"
-#define FILE_SEASON "SEASON.DB"
-
 bool_t read_player_data(player_db_data_t *db_data)
 {
-  if (!read_db_file(&db_data->key_data, FILE_KEYS))
+  if (!read_db_file(&db_data->key_data, get_db_file(DB_FILE_KEYS)))
     return FALSE;
-  if (!read_db_file(&db_data->att_data, FILE_ATTRIBUTES))
+  if (!read_db_file(&db_data->att_data, get_db_file(DB_FILE_ATTRIBUTES)))
     return FALSE;
-  if (!read_db_file(&db_data->career_data, FILE_CAREER))
+  if (!read_db_file(&db_data->career_data, get_db_file(DB_FILE_CAREER)))
     return FALSE;
-  if (!read_db_file(&db_data->season_data, FILE_SEASON))
+  if (!read_db_file(&db_data->season_data, get_db_file(DB_FILE_SEASON)))
     return FALSE;
   return TRUE;
 }
@@ -201,9 +197,9 @@ bool_t modify_goalie_data(player_db_data_t *db_data, player_att_change_t *change
 
 bool_t write_player_data(player_db_data_t *db_data)
 {
-  write_db_file(&db_data->key_data, FILE_KEYS);
-  write_db_file(&db_data->att_data, FILE_ATTRIBUTES);
-  write_db_file(&db_data->career_data, FILE_CAREER);
-  write_db_file(&db_data->season_data, FILE_SEASON);
+  write_db_file(&db_data->key_data, get_db_file(DB_FILE_KEYS));
+  write_db_file(&db_data->att_data, get_db_file(DB_FILE_ATTRIBUTES));
+  write_db_file(&db_data->career_data, get_db_file(DB_FILE_CAREER));
+  write_db_file(&db_data->season_data, get_db_file(DB_FILE_SEASON));
   return TRUE;
 }

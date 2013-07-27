@@ -183,6 +183,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\db_files.c"
+				>
+			</File>
+			<File
 				RelativePath=".\src\file_utils.c"
 				>
 			</File>
@@ -226,6 +230,10 @@
 			</File>
 			<File
 				RelativePath=".\src\db_data.h"
+				>
+			</File>
+			<File
+				RelativePath=".\src\db_files.h"
 				>
 			</File>
 			<File

@@ -114,9 +114,6 @@ typedef struct
   team_stats_t playoff_stats;
 } team_stats_career_t;
 
-#define FILE_TEAMS "TEAMS.DB"
-#define FILE_CARTEAMS "CARTEAMS.DB"
-
 bool_t read_team_data(team_db_data_t *db_data);
 
 bool_t dump_team_data(team_db_data_t *db_data);
