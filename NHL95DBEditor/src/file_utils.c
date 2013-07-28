@@ -83,3 +83,15 @@ error:
   printf("failed to copy file %s to %s\n", src_name, dst_name);
   return FALSE;
 }
+
+bool_t delete_file(const char *file_name)
+{
+  printf("Deleting file %s\n", file_name);
+  if (remove(file_name) != 0)
+    {
+      printf("Failed to delete file %s: error %d\n", file_name, errno);
+      return FALSE;
+    }
+
+  return TRUE;
+}

@@ -21,10 +21,14 @@ typedef enum
   CMD_DUMP_CHANGES,
   CMD_GOALIE_ATTRIBUTES,
   CMD_PLAYER_ATTRIBUTES,
+  CMD_RESET,
   CMD_UNKNOWN /* Must be last */
 } command_t;
 
-static const char *commands[] = { "addteam", "data", "changes", "goalieatt", "playeratt" };
+static const char *commands[] =
+{
+  "addteam", "data", "changes", "goalieatt", "playeratt", "reset"
+};
 
 static int usage(void)
 {
@@ -39,6 +43,7 @@ static int usage(void)
          commands[CMD_GOALIE_ATTRIBUTES], CHANGE_LOG_FILE);
   printf("%-10s - Changes player attributes. Changes are logged to %s.\n",
          commands[CMD_PLAYER_ATTRIBUTES], CHANGE_LOG_FILE);
+  printf("%-10s - Resets database files to the original ones.\n", commands[CMD_RESET]);
   return 0;
 }
 
@@ -123,6 +128,13 @@ static void write_changes_to_log(const char *cmd, player_att_change_t *changes,
     add_change_log_entry(cmd, changes[i].att_name, changes[i].att_change);
 }
 
+static bool_t read_data(team_db_data_t *team_data, player_db_data_t *player_data)
+{
+  if (!read_team_data(team_data))
+    return FALSE;
+  return read_player_data(player_data);
+}
+
 int main(int argc, char *argv[])
 {
   team_db_data_t team_data;
@@ -135,19 +147,15 @@ int main(int argc, char *argv[])
   db_data_init(&team_data, sizeof(team_data));
   db_data_init(&player_data, sizeof(player_data));
 
-  if (command != CMD_DUMP_CHANGES)
-    {
-      EXIT_IF_FAIL(read_team_data(&team_data));
-      EXIT_IF_FAIL(read_player_data(&player_data));
-    }
-
   switch (command)
     {
     case CMD_ADD_TEAM:
+      EXIT_IF_FAIL(read_data(&team_data, &player_data));
       EXIT_IF_FAIL(add_team(&team_data, &player_data));
       break;
 
     case CMD_DUMP_DATA:
+      EXIT_IF_FAIL(read_data(&team_data, &player_data));
       EXIT_IF_FAIL(dump_team_data(&team_data));
       EXIT_IF_FAIL(dump_player_data(&player_data));
       break;
@@ -163,10 +171,11 @@ int main(int argc, char *argv[])
         int change_count = 0;
         bool_t success = FALSE;
 
+        EXIT_IF_FAIL(backup_database_files());
+        EXIT_IF_FAIL(read_data(&team_data, &player_data));
+
         if ((changes = get_att_changes(argc, argv, &change_count)) == NULL)
           return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX]);
-
-        EXIT_IF_FAIL(backup_database_files());
 
         if (command == CMD_GOALIE_ATTRIBUTES)
           success = modify_goalie_data(&player_data, changes, change_count);
@@ -180,6 +189,14 @@ int main(int argc, char *argv[])
                              changes, change_count);
         free(changes);
       }
+      break;
+
+    case CMD_RESET:
+      if (!restore_database_backup_files())
+        {
+          printf("Failed to restore backup files\n");
+          EXIT_IF_FAIL(FALSE);
+        }
       break;
 
     default:
