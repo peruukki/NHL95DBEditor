@@ -47,7 +47,7 @@ static int usage(void)
   return 0;
 }
 
-static int cmd_attributes_usage(const char *filename, const char *command)
+static int cmd_attributes_usage(const char *filename, const char *command, bool_t for_goalie)
 {
   int i;
 
@@ -68,7 +68,9 @@ static int cmd_attributes_usage(const char *filename, const char *command)
   printf("\n");
   printf("Available attributes:\n");
   for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
-    printf("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
+    if ((for_goalie && player_att_names[i].for_goalie) ||
+        (!for_goalie && player_att_names[i].for_player))
+      printf("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
 
   return 1;
 }
@@ -176,7 +178,7 @@ int main(int argc, char *argv[])
         EXIT_IF_FAIL(read_data(&team_data, &player_data));
 
         if ((changes = get_att_changes(argc, argv, &change_count, for_goalie)) == NULL)
-          return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX]);
+          return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX], for_goalie);
 
         if (for_goalie)
           success = modify_goalie_data(&player_data, changes, change_count);
