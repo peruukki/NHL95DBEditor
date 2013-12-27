@@ -15,7 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\backup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\change_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\db_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db_files.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\file_utils.c">
@@ -41,10 +50,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\backup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\change_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\common_defs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\db_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db_files.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\file_utils.h">
