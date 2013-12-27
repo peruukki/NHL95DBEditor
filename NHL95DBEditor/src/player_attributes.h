@@ -42,6 +42,8 @@ typedef struct
   player_att_t value;
   const char *name;
   const char *description;
+  bool_t for_player;
+  bool_t for_goalie;
 } player_att_name_t;
 
 typedef struct
@@ -95,7 +97,7 @@ typedef struct
   number_1_t unknown_5;
 } goalie_atts_t;
 
-player_att_t get_player_att_enum(const char *att_name);
+player_att_t get_player_att_enum(const char *att_name, bool_t for_goalie);
 
 const char *get_player_att_name(player_att_t att_enum);
 

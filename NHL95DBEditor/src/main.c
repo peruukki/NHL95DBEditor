@@ -92,7 +92,7 @@ static command_t get_command(int argc, char *argv[])
 }
 
 /* The returned array must be freed by the caller. */
-static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_count)
+static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_count, bool_t for_goalie)
 {
   player_att_change_t *att_changes = NULL;
   int param_count = argc - 1 - CMD_ARG_INDEX;
@@ -106,7 +106,7 @@ static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_
   for (i = 0, j = CMD_ARG_INDEX + 1; i < *change_count; i++)
     {
       att_changes[i].att_name = argv[j++];
-      att_changes[i].att_enum = get_player_att_enum(att_changes[i].att_name);
+      att_changes[i].att_enum = get_player_att_enum(att_changes[i].att_name, for_goalie);
       att_changes[i].att_change = atoi(argv[j++]);
 
       if (!validate_att_change(&att_changes[i]))
@@ -170,14 +170,15 @@ int main(int argc, char *argv[])
         player_att_change_t *changes;
         int change_count = 0;
         bool_t success = FALSE;
+        bool_t for_goalie = (command == CMD_GOALIE_ATTRIBUTES);
 
         EXIT_IF_FAIL(backup_database_files());
         EXIT_IF_FAIL(read_data(&team_data, &player_data));
 
-        if ((changes = get_att_changes(argc, argv, &change_count)) == NULL)
+        if ((changes = get_att_changes(argc, argv, &change_count, for_goalie)) == NULL)
           return cmd_attributes_usage(argv[0], argv[CMD_ARG_INDEX]);
 
-        if (command == CMD_GOALIE_ATTRIBUTES)
+        if (for_goalie)
           success = modify_goalie_data(&player_data, changes, change_count);
         else
           success = modify_player_data(&player_data, changes, change_count);

@@ -48,41 +48,44 @@ static number_1_t serialize(int value)
 
 player_att_name_t player_att_names[] =
 {
-  { PLAYER_ATT_ACCURACY, "ACC", "accuracy" },
-  { PLAYER_ATT_AGGRESSIVENESS, "AGG", "aggressiveness" },
-  { PLAYER_ATT_AGILITY, "AGI", "agility" },
-  { PLAYER_ATT_CHECKING, "CHK", "checking" },
-  { PLAYER_ATT_DEF_AWARENESS, "DEF", "defensive awareness" },
-  { PLAYER_ATT_ENDURANCE, "END", "endurance" },
-  { PLAYER_ATT_FACEOFFS, "FAC", "faceoffs" },
-  { PLAYER_ATT_GLOVE_LEFT, "GLE", "glove left" },
-  { PLAYER_ATT_GLOVE_RIGHT, "GRI", "glove right" },
-  { PLAYER_ATT_HANDEDNESS, "HND", "handedness (shoots/catches)" },
-  { PLAYER_ATT_OFF_AWARENESS, "OFF", "offensive awareness" },
-  { PLAYER_ATT_PASSING, "PAS", "passing" },
-  { PLAYER_ATT_PUCK_CONTROL, "PUC", "puck control" },
-  { PLAYER_ATT_SHOOT_PASS_BIAS, "S/P", "shoot/pass bias" },
-  { PLAYER_ATT_SHOT_POWER, "SHO", "shot power" },
-  { PLAYER_ATT_SPEED, "SPD", "speed" },
-  { PLAYER_ATT_STICK_HANDLING, "STI", "stick handling" },
-  { PLAYER_ATT_STICK_LEFT, "SLE", "stick left" },
-  { PLAYER_ATT_STICK_RIGHT, "SRI", "stick right" },
-  { PLAYER_ATT_UNKNOWN_1, "UN1", "unknown 1" },
-  { PLAYER_ATT_UNKNOWN_2, "UN2", "unknown 2" },
-  { PLAYER_ATT_UNKNOWN_3, "UN3", "unknown 3" },
-  { PLAYER_ATT_UNKNOWN_4, "UN4", "unknown 4" },
-  { PLAYER_ATT_UNKNOWN_5, "UN5", "unknown 5" },
-  { PLAYER_ATT_WEIGHT, "WGT", "weight" },
-  { PLAYER_ATT_NUM_VALUES, NULL, NULL }
+  /* Value, name, description, for player, for goalie */
+  { PLAYER_ATT_ACCURACY, "ACC", "accuracy", TRUE, FALSE },
+  { PLAYER_ATT_AGGRESSIVENESS, "AGG", "aggressiveness", TRUE, FALSE },
+  { PLAYER_ATT_AGILITY, "AGI", "agility", TRUE, TRUE },
+  { PLAYER_ATT_CHECKING, "CHK", "checking", TRUE, FALSE },
+  { PLAYER_ATT_DEF_AWARENESS, "DEF", "defensive awareness", TRUE, TRUE },
+  { PLAYER_ATT_ENDURANCE, "END", "endurance", TRUE, FALSE },
+  { PLAYER_ATT_FACEOFFS, "FAC", "faceoffs", TRUE, FALSE },
+  { PLAYER_ATT_GLOVE_LEFT, "GLE", "glove left", FALSE, TRUE },
+  { PLAYER_ATT_GLOVE_RIGHT, "GRI", "glove right", FALSE, TRUE },
+  { PLAYER_ATT_HANDEDNESS, "HND", "handedness (shoots/catches)", TRUE, TRUE },
+  { PLAYER_ATT_OFF_AWARENESS, "OFF", "offensive awareness", TRUE, TRUE },
+  { PLAYER_ATT_PASSING, "PAS", "passing", TRUE, FALSE },
+  { PLAYER_ATT_PUCK_CONTROL, "PUC", "puck control", FALSE, TRUE },
+  { PLAYER_ATT_SHOOT_PASS_BIAS, "S/P", "shoot/pass bias", TRUE, FALSE },
+  { PLAYER_ATT_SHOT_POWER, "SHO", "shot power", TRUE, FALSE },
+  { PLAYER_ATT_SPEED, "SPD", "speed", TRUE, TRUE },
+  { PLAYER_ATT_STICK_HANDLING, "STI", "stick handling", TRUE, FALSE },
+  { PLAYER_ATT_STICK_LEFT, "SLE", "stick left", FALSE, TRUE },
+  { PLAYER_ATT_STICK_RIGHT, "SRI", "stick right", FALSE, TRUE },
+  { PLAYER_ATT_UNKNOWN_1, "UN1", "unknown 1", TRUE, TRUE },
+  { PLAYER_ATT_UNKNOWN_2, "UN2", "unknown 2", TRUE, TRUE },
+  { PLAYER_ATT_UNKNOWN_3, "UN3", "unknown 3", TRUE, TRUE },
+  { PLAYER_ATT_UNKNOWN_4, "UN4", "unknown 4", TRUE, TRUE },
+  { PLAYER_ATT_UNKNOWN_5, "UN5", "unknown 5", TRUE, TRUE },
+  { PLAYER_ATT_WEIGHT, "WGT", "weight", TRUE, TRUE },
+  { PLAYER_ATT_NUM_VALUES, NULL, NULL, FALSE, FALSE }
 };
 
-player_att_t get_player_att_enum(const char *att_name)
+player_att_t get_player_att_enum(const char *att_name, bool_t for_goalie)
 {
   int i;
 
   for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
     {
-      if (strcmp(player_att_names[i].name, att_name) == 0)
+      if ((strcmp(player_att_names[i].name, att_name) == 0) &&
+          ((for_goalie && player_att_names[i].for_goalie) ||
+           (!for_goalie && player_att_names[i].for_player)))
         return player_att_names[i].value;
     }
 
@@ -143,7 +146,7 @@ static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
     default:
-      printf("Unknown attribute value %d\n", att_enum);
+      printf("Unknown player attribute value %d\n", att_enum);
       return NULL;
     }
 }
@@ -169,7 +172,7 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
     default:
-      printf("Unknown attribute value %d\n", att_enum);
+      printf("Unknown goalie attribute value %d\n", att_enum);
       return NULL;
     }
 }
