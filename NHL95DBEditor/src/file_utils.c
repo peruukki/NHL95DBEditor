@@ -23,7 +23,7 @@ bool_t read_db_file(db_data_t *data, const char *file_name)
   size_t bytes_read = read_db_data(data, file_name);
 
   if (bytes_read)
-    INFO("Read %lu bytes from file %s\n", bytes_read, file_name);
+    DEBUG("Read %lu bytes from file %s\n", bytes_read, file_name);
 
   return bytes_read != 0;
 }
@@ -50,7 +50,7 @@ bool_t write_db_file(db_data_t *data, const char *file_name)
   size_t bytes_written = read_db_data(data, file_name);
 
   if (bytes_written)
-    INFO("Wrote %u bytes to file %s\n", bytes_written, file_name);
+    DEBUG("Wrote %u bytes to file %s\n", bytes_written, file_name);
 
   return bytes_written != 0;
 }
