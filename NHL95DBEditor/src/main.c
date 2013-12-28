@@ -191,6 +191,9 @@ int main(int argc, char *argv[])
 
         write_changes_to_log(for_goalie ? "goalies" : "players", changes, change_count);
         free(changes);
+
+        INFO("Attributes changed successfully. All changes:\n");
+        dump_change_log_entries();
       }
       break;
 
