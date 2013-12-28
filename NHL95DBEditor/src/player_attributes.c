@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <string.h>
+#include "output.h"
 #include "player_attributes.h"
 
 static int deserialize(number_1_t value)
@@ -109,13 +109,13 @@ bool_t validate_att_change(player_att_change_t *change)
 {
   if (change->att_enum >= PLAYER_ATT_NUM_VALUES)
     {
-      printf("Unknown attribute name '%s'\n", change->att_name);
+      INFO("Unknown attribute name '%s'\n", change->att_name);
       return FALSE;
     }
   if (change->att_change % ATT_SCALE != 0)
     {
-      printf("Attribute change value '%d' is not a multiplier of %d\n",
-             change->att_change, ATT_SCALE);
+      INFO("Attribute change value '%d' is not a multiplier of %d\n",
+           change->att_change, ATT_SCALE);
       return FALSE;
     }
   return TRUE;
@@ -146,7 +146,7 @@ static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
     default:
-      printf("Unknown player attribute value %d\n", att_enum);
+      INFO("Unknown player attribute value %d\n", att_enum);
       return NULL;
     }
 }
@@ -172,32 +172,32 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
     default:
-      printf("Unknown goalie attribute value %d\n", att_enum);
+      INFO("Unknown goalie attribute value %d\n", att_enum);
       return NULL;
     }
 }
 
 static void print_att_player(player_atts_t *atts, player_att_t att_enum)
 {
-  printf(" %s %3d", get_player_att_name(att_enum),
-         deserialize(*get_att_player(atts, att_enum)));
+  INFO(" %s %3d", get_player_att_name(att_enum),
+       deserialize(*get_att_player(atts, att_enum)));
 }
 
 static void print_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
 {
-  printf(" %s %3d", get_player_att_name(att_enum),
-         deserialize(*get_att_goalie(atts, att_enum)));
+  INFO(" %s %3d", get_player_att_name(att_enum),
+       deserialize(*get_att_goalie(atts, att_enum)));
 }
 
 static void print_att_handedness(number_1_t value)
 {
-  printf(" %s ", get_player_att_name(PLAYER_ATT_HANDEDNESS));
+  INFO(" %s ", get_player_att_name(PLAYER_ATT_HANDEDNESS));
   if (value == 0)
-    printf("R");
+    INFO("R");
   else if (value == 1)
-    printf("L");
+    INFO("L");
   else
-    printf("%u", value);
+    INFO("%u", value);
 }
 
 static void show_att_player(player_atts_t *att)

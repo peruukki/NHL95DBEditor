@@ -1,34 +1,34 @@
-#include <stdio.h>
+#include "output.h"
 #include "player_stats.h"
 
 static void show_unknown_data(number_1_t *data, size_t length)
 {
   size_t i;
 
-  printf(" UNKNOWN:");
+  INFO(" UNKNOWN:");
   for (i = 0; i < length; i++)
     {
-      printf(" %3u", data[i]);
+      INFO(" %3u", data[i]);
     }
 }
 
 static void show_stats_goalie(goalie_stats_t *stats)
 {
-  printf(" GP: %2u W: %2u L: %2u T: %2u SH: %2u EN: %2u MIN: %4u"
-         " GA: %3u GAA: %u.%02u SA: %4u SV%%: .%03u",
-         stats->games_played, stats->wins, stats->losses, stats->ties,
-         stats->shutouts, stats->empty_nets, stats->minutes,
-         stats->goals_against, stats->gaa / 100, stats->gaa % 100,
-         stats->saves, stats->save_pct);
+  INFO(" GP: %2u W: %2u L: %2u T: %2u SH: %2u EN: %2u MIN: %4u"
+       " GA: %3u GAA: %u.%02u SA: %4u SV%%: .%03u",
+       stats->games_played, stats->wins, stats->losses, stats->ties,
+       stats->shutouts, stats->empty_nets, stats->minutes,
+       stats->goals_against, stats->gaa / 100, stats->gaa % 100,
+       stats->saves, stats->save_pct);
 }
 
 static void show_stats_player(player_stats_t *stats)
 {
-  printf(" GP: %2u G: %2u A: %2u P: %3u PPG: %2u SHG: %2u"
-         " PIM: %3u SH: %3u +/-: %+3d",
-         stats->games_played, stats->goals, stats->assists, stats->points,
-         stats->pp_goals, stats->sh_goals, stats->penalty_minutes,
-         stats->shots, stats->plus_minus);
+  INFO(" GP: %2u G: %2u A: %2u P: %3u PPG: %2u SHG: %2u"
+       " PIM: %3u SH: %3u +/-: %+3d",
+       stats->games_played, stats->goals, stats->assists, stats->points,
+       stats->pp_goals, stats->sh_goals, stats->penalty_minutes,
+       stats->shots, stats->plus_minus);
 }
 
 static void show_stats_data_goalie(goalie_stats_t *regular_season,

@@ -103,6 +103,7 @@
     <ClInclude Include="src\db_data.h" />
     <ClInclude Include="src\db_files.h" />
     <ClInclude Include="src\file_utils.h" />
+    <ClInclude Include="src\output.h" />
     <ClInclude Include="src\player_attributes.h" />
     <ClInclude Include="src\player_key.h" />
     <ClInclude Include="src\player_stats.h" />

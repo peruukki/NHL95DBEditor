@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include <string.h>
 #include "common_defs.h"
 #include "db_files.h"
 #include "file_utils.h"
+#include "output.h"
 #include "player_attributes.h"
 #include "player_key.h"
 #include "player_stats.h"
@@ -34,7 +34,7 @@ bool_t dump_player_data(player_db_data_t *db_data)
       show_attributes(db_data->att_data.data, key);
       show_stats_career(db_data->career_data.data, key);
       show_stats_season(db_data->season_data.data, key);
-      printf("\n");
+      INFO("\n");
     }
 
   return TRUE;

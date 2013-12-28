@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include <string.h>
 #include "change_log.h"
 #include "file_utils.h"
+#include "output.h"
 
 void add_change_log_entry(const char *cmd, const char *att_name, int att_change)
 {
@@ -9,7 +9,7 @@ void add_change_log_entry(const char *cmd, const char *att_name, int att_change)
 
   if ((fp = fopen(CHANGE_LOG_FILE, "a")) == NULL)
     {
-      printf("Failed to open change log file '%s' for appending", CHANGE_LOG_FILE);
+      INFO("Failed to open change log file '%s' for appending", CHANGE_LOG_FILE);
       return;
     }
 
@@ -26,7 +26,7 @@ void dump_change_log_entries(void)
 
   if ((fp = fopen(CHANGE_LOG_FILE, "r")) == NULL)
     {
-      printf("No attribute changes.\n");
+      INFO("No attribute changes.\n");
       return;
     }
 
@@ -34,7 +34,7 @@ void dump_change_log_entries(void)
     {
       memset(content, 0, sizeof(content));
       byte_count = fread(content, sizeof(*content), content_bytes, fp);
-      printf("%s", content);
+      INFO("%s", content);
     }
   while (byte_count == content_bytes);
   fclose(fp);

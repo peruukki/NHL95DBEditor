@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <errno.h>
 #include "file_utils.h"
+#include "output.h"
 
 static size_t read_db_data(db_data_t *data, const char *file_name)
 {
@@ -8,7 +8,7 @@ static size_t read_db_data(db_data_t *data, const char *file_name)
 
   if ((fp = fopen(file_name, "rb")) == NULL)
     {
-      printf("Failed to open file '%s' for reading", file_name);
+      INFO("Failed to open file '%s' for reading", file_name);
       return 0;
     }
 
@@ -23,7 +23,7 @@ bool_t read_db_file(db_data_t *data, const char *file_name)
   size_t bytes_read = read_db_data(data, file_name);
 
   if (bytes_read)
-    printf("Read %lu bytes from file %s\n", bytes_read, file_name);
+    INFO("Read %lu bytes from file %s\n", bytes_read, file_name);
 
   return bytes_read != 0;
 }
@@ -35,7 +35,7 @@ static size_t write_db_data(db_data_t *data, const char *file_name)
 
   if ((fp = fopen(file_name, "wb")) == NULL)
     {
-      printf("Failed to open file '%s' for writing", file_name);
+      INFO("Failed to open file '%s' for writing", file_name);
       return 0;
     }
 
@@ -50,7 +50,7 @@ bool_t write_db_file(db_data_t *data, const char *file_name)
   size_t bytes_written = read_db_data(data, file_name);
 
   if (bytes_written)
-    printf("Wrote %u bytes to file %s\n", bytes_written, file_name);
+    INFO("Wrote %u bytes to file %s\n", bytes_written, file_name);
 
   return bytes_written != 0;
 }
@@ -76,20 +76,20 @@ bool_t copy_file(const char *src_name, const char *dst_name)
   if (write_db_data(&data, dst_name) == 0)
     goto error;
 
-  printf("copied file %s to %s\n", src_name, dst_name);
+  INFO("copied file %s to %s\n", src_name, dst_name);
   return TRUE;
 
 error:
-  printf("failed to copy file %s to %s\n", src_name, dst_name);
+  INFO("failed to copy file %s to %s\n", src_name, dst_name);
   return FALSE;
 }
 
 bool_t delete_file(const char *file_name)
 {
-  printf("Deleting file %s\n", file_name);
+  INFO("Deleting file %s\n", file_name);
   if (remove(file_name) != 0)
     {
-      printf("Failed to delete file %s: error %d\n", file_name, errno);
+      INFO("Failed to delete file %s: error %d\n", file_name, errno);
       return FALSE;
     }
 

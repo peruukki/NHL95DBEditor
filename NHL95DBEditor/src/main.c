@@ -3,6 +3,7 @@
 #include <string.h>
 #include "backup.h"
 #include "change_log.h"
+#include "output.h"
 #include "teams.h"
 #include "players.h"
 #include "player_attributes.h"
@@ -32,18 +33,18 @@ static const char *commands[] =
 
 static int usage(void)
 {
-  printf("%s is a tool for editing/displaying NHL Hockey 95 databases.\n", PROGRAM_NAME);
-  printf("The database files must be in the current directory.\n\n");
-  printf("Available commands:\n");
-  printf("%-10s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
-  printf("%-10s - Dumps all database information to the screen.\n", commands[CMD_DUMP_DATA]);
-  printf("%-10s - Dumps attribute changes (%s) to the screen.\n",
-         commands[CMD_DUMP_CHANGES], CHANGE_LOG_FILE);
-  printf("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
-         commands[CMD_GOALIE_ATTRIBUTES], CHANGE_LOG_FILE);
-  printf("%-10s - Changes player attributes. Changes are logged to %s.\n",
-         commands[CMD_PLAYER_ATTRIBUTES], CHANGE_LOG_FILE);
-  printf("%-10s - Resets database files to the original ones.\n", commands[CMD_RESET]);
+  INFO("%s is a tool for editing/displaying NHL Hockey 95 databases.\n", PROGRAM_NAME);
+  INFO("The database files must be in the current directory.\n\n");
+  INFO("Available commands:\n");
+  INFO("%-10s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
+  INFO("%-10s - Dumps all database information to the screen.\n", commands[CMD_DUMP_DATA]);
+  INFO("%-10s - Dumps attribute changes (%s) to the screen.\n",
+       commands[CMD_DUMP_CHANGES], CHANGE_LOG_FILE);
+  INFO("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
+       commands[CMD_GOALIE_ATTRIBUTES], CHANGE_LOG_FILE);
+  INFO("%-10s - Changes player attributes. Changes are logged to %s.\n",
+       commands[CMD_PLAYER_ATTRIBUTES], CHANGE_LOG_FILE);
+  INFO("%-10s - Resets database files to the original ones.\n", commands[CMD_RESET]);
   return 0;
 }
 
@@ -51,26 +52,26 @@ static int cmd_attributes_usage(const char *filename, const char *command, bool_
 {
   int i;
 
-  printf("\n");
-  printf("Invalid command parameters, usage:\n");
-  printf("%s %s <ATT 1> <CHANGE 1> <ATT 2> <CHANGE 2> ...\n", filename, command);
-  printf("\n");
-  printf("Example: %s %s SPD +25 WGT -50\n", filename, command);
-  printf("\n");
-  printf("Change values must be multipliers of %d, e.g. +%d, +%d, or -%d.\n",
-         ATT_SCALE, ATT_SCALE, 2 * ATT_SCALE, 5 * ATT_SCALE);
-  printf("\n");
-  printf("The minimum resulting attribute value is %d and the maximum %d.\n",
-         ATT_MIN, ATT_MAX);
-  printf("For example, if a player would get an attribute value of %d after\n"
-         "applying the change, the value is set to %d.\n",
-         ATT_MIN - ATT_SCALE, ATT_MIN);
-  printf("\n");
-  printf("Available attributes:\n");
+  INFO("\n");
+  INFO("Invalid command parameters, usage:\n");
+  INFO("%s %s <ATT 1> <CHANGE 1> <ATT 2> <CHANGE 2> ...\n", filename, command);
+  INFO("\n");
+  INFO("Example: %s %s SPD +25 WGT -50\n", filename, command);
+  INFO("\n");
+  INFO("Change values must be multipliers of %d, e.g. +%d, +%d, or -%d.\n",
+       ATT_SCALE, ATT_SCALE, 2 * ATT_SCALE, 5 * ATT_SCALE);
+  INFO("\n");
+  INFO("The minimum resulting attribute value is %d and the maximum %d.\n",
+       ATT_MIN, ATT_MAX);
+  INFO("For example, if a player would get an attribute value of %d after\n"
+       "applying the change, the value is set to %d.\n",
+       ATT_MIN - ATT_SCALE, ATT_MIN);
+  INFO("\n");
+  INFO("Available attributes:\n");
   for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
     if ((for_goalie && player_att_names[i].for_goalie) ||
         (!for_goalie && player_att_names[i].for_player))
-      printf("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
+      INFO("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
 
   return 1;
 }
@@ -197,7 +198,7 @@ int main(int argc, char *argv[])
     case CMD_RESET:
       if (!restore_database_backup_files())
         {
-          printf("Failed to restore backup files\n");
+          INFO("Failed to restore backup files\n");
           EXIT_IF_FAIL(FALSE);
         }
       break;
