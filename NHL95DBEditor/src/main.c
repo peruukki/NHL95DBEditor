@@ -189,8 +189,7 @@ int main(int argc, char *argv[])
 
         EXIT_IF_FAIL(write_player_data(&player_data));
 
-        write_changes_to_log(command == CMD_GOALIE_ATTRIBUTES ? "goalies" : "players",
-                             changes, change_count);
+        write_changes_to_log(for_goalie ? "goalies" : "players", changes, change_count);
         free(changes);
       }
       break;
