@@ -31,12 +31,13 @@ static const char *commands[] =
   "addteam", "data", "changes", "goalieatt", "playeratt", "reset"
 };
 
-static int usage(void)
+static int usage(const char *filename)
 {
   INFO("\n%s is a tool for editing/displaying NHL Hockey 95 databases.\n", PROGRAM_NAME);
   INFO("The database files must be in the current directory.\n\n");
   INFO("Available commands:\n");
   INFO("%-10s - Dumps all database information to the screen.\n", commands[CMD_DUMP_DATA]);
+  INFO("%-10s   Dump to a file: %s %s > FILENAME.\n", "", filename, commands[CMD_DUMP_DATA]);
   INFO("%-10s - Dumps attribute changes (%s) to the screen.\n",
        commands[CMD_DUMP_CHANGES], CHANGE_LOG_FILE);
   INFO("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
@@ -148,7 +149,7 @@ int main(int argc, char *argv[])
   command_t command;
 
   if ((command = get_command(argc, argv)) == CMD_UNKNOWN)
-    return usage();
+    return usage(argv[0]);
 
   db_data_init(&team_data, sizeof(team_data));
   db_data_init(&player_data, sizeof(player_data));
