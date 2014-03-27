@@ -188,6 +188,8 @@ bool_t add_team(team_db_data_t *team_data,
   size_t new_team_ofs;
   size_t new_team_career_ofs;
   number_1_t new_team_index;
+  const char *team_name_short = "New Team";
+  const char *team_name_long = "New Team Newcomers";
 
   /* Append new data */
   new_team_index = get_new_team_index(&team_data->teams);
@@ -211,8 +213,8 @@ bool_t add_team(team_db_data_t *team_data,
   memcpy(new_team_career, &team_data->carteams, sizeof(*new_team_career));
 
   /* Overwrite team data */
-  sprintf(new_team->short_name, "New Team");
-  sprintf(new_team->long_name, "New Team Newcomers");
+  sprintf(new_team->short_name, team_name_short);
+  sprintf(new_team->long_name, team_name_long);
   new_team->division = 1;
   if (!add_duplicate_player_data((team_data_t *) &team_data->teams.data,
                                  new_team, new_team_index, player_data))
@@ -220,10 +222,11 @@ bool_t add_team(team_db_data_t *team_data,
   write_db_file(&team_data->teams, get_db_file(DB_FILE_TEAMS));
 
   /* Overwrite team career data */
-  sprintf(new_team_career->short_name, "New Team");
-  sprintf(new_team_career->long_name, "New Team Newcomers");
+  sprintf(new_team_career->short_name, team_name_short);
+  sprintf(new_team_career->long_name, team_name_long);
   new_team_career->division = 1;
   write_db_file(&team_data->carteams, get_db_file(DB_FILE_CARTEAMS));
 
+  INFO("Added team %s.\n", team_name_long);
   return TRUE;
 }
