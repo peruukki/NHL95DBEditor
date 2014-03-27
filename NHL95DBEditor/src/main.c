@@ -157,6 +157,7 @@ int main(int argc, char *argv[])
   switch (command)
     {
     case CMD_ADD_TEAM:
+      EXIT_IF_FAIL(backup_database_files());
       EXIT_IF_FAIL(read_data(&team_data, &player_data));
       EXIT_IF_FAIL(add_team(&team_data, &player_data));
       break;
