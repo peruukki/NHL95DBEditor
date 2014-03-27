@@ -33,10 +33,9 @@ static const char *commands[] =
 
 static int usage(void)
 {
-  INFO("%s is a tool for editing/displaying NHL Hockey 95 databases.\n", PROGRAM_NAME);
+  INFO("\n%s is a tool for editing/displaying NHL Hockey 95 databases.\n", PROGRAM_NAME);
   INFO("The database files must be in the current directory.\n\n");
   INFO("Available commands:\n");
-  INFO("%-10s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
   INFO("%-10s - Dumps all database information to the screen.\n", commands[CMD_DUMP_DATA]);
   INFO("%-10s - Dumps attribute changes (%s) to the screen.\n",
        commands[CMD_DUMP_CHANGES], CHANGE_LOG_FILE);
@@ -45,6 +44,10 @@ static int usage(void)
   INFO("%-10s - Changes player attributes. Changes are logged to %s.\n",
        commands[CMD_PLAYER_ATTRIBUTES], CHANGE_LOG_FILE);
   INFO("%-10s - Resets database files to the original ones.\n", commands[CMD_RESET]);
+  INFO("\nExperimental commands:\n");
+  INFO("%-10s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
+  INFO("%-10s   NOTE: The added team will not work in the game without some\n", "");
+  INFO("%-10s         serious hacking.\n", "");
   return 0;
 }
 
