@@ -181,6 +181,7 @@ sub {
 
 img {
   border: 0;
+  padding-top: 0.5em;
 }
 
 /**
@@ -456,7 +457,7 @@ h1.title {
 }
 
 .wrapper {
-  width: 675px;
+  width: 775px;
   margin: 0 auto;
 }
 
