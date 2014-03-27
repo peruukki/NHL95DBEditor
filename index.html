@@ -1,0 +1,115 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>NHL95DBEditor</title>
+  <meta name="description" content="Edit the database files of EA Sports NHL Hockey 95 for PC on the command line.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">NHL95DBEditor</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Edit the database files of EA Sports NHL Hockey 95 for PC on the command line.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/peruukki/NHL95DBEditor/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/peruukki/NHL95DBEditor/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/peruukki/NHL95DBEditor" class="code">View NHL95DBEditor on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p>NHL95DBEditor is a console program for editing the database files of EA Sports NHL Hockey 95 for PC. Its main use case is changing the attributes of all players or goalies, e.g. increasing the speed of all players by 25 to increase the game's tempo.</p>
+
+<p><strong>The program must be run in the same directory where the database files are.</strong> The default database files are in the NHL Hockey 95 installation directory.</p>
+
+<p>The program takes backups of all database files before making the first changes, and you can reset the database files back to the original ones with the <code>reset</code> command. You should still copy the database files somewhere else for extra safety if they contain valuable changes. The files are named ATT.DB, CAREER.DB, CARTEAMS.DB, KEY.DB, SEASON.DB, and TEAMS.DB.</p>
+
+<p>This project is currently abandoned due to other projects taking precedence.</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Run the program without arguments to see its usage information.
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-usage.png" alt="Usage screenshot"></p>
+
+<h3>
+<a name="dumping-database-information" class="anchor" href="#dumping-database-information"><span class="octicon octicon-link"></span></a>Dumping database information</h3>
+
+<p>All database information can be dumped to the screen in textual format with the <code>data</code> command. It spills out a lot of data, so you will probably want to write the data to a file. To do that, redirect the program output to a file like you would do for any Windows program by appending <code>&gt; FILENAME</code> to the command.
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-data-to-file.png" alt="Data to file screenshot"></p>
+
+<h3>
+<a name="changing-attributes-of-all-players-or-goalies" class="anchor" href="#changing-attributes-of-all-players-or-goalies"><span class="octicon octicon-link"></span></a>Changing attributes of all players or goalies</h3>
+
+<p>You can change attributes of all players or goalies with the <code>playeratt</code> or <code>goalieatt</code> command. Run the command without additional parameters to see more information about its usage.
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-playeratt-usage.png" alt="Playeratt screenshot"><img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-goalieatt-usage.png" alt="Goalieatt screenshot"></p>
+
+<p>Some examples:</p>
+
+<ul>
+<li>Increase all players' speed by 50 and decrease their checking by 25: <code>playeratt SPD +50 CHK -25</code>
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-playeratt-example.png" alt="Playeratt example screenshot">
+</li>
+<li>Increase all goalies' agility by 30 and decrease their puck control by 40: <code>goalieatt AGI +30 PUC -40</code>
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-goalieatt-example.png" alt="Goalieatt example screenshot">
+</li>
+</ul><h3>
+<a name="seeing-what-changes-have-been-made" class="anchor" href="#seeing-what-changes-have-been-made"><span class="octicon octicon-link"></span></a>Seeing what changes have been made</h3>
+
+<p>The program keeps track of the changes it makes in a file named change-log.txt in the directory it is run. The file's content is output after each <code>playeratt</code>/<code>goalieatt</code> command execution. You can also see the changes with the <code>changes</code> command.
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-changes.png" alt="Changes screenshot"></p>
+
+<h3>
+<a name="resetting-changes" class="anchor" href="#resetting-changes"><span class="octicon octicon-link"></span></a>Resetting changes</h3>
+
+<p>The program takes backups of all database files before making the first changes to them. You can reset the database files back to the original ones with the <code>reset</code> command.
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-reset.png" alt="Reset screenshot"></p>
+
+<h3>
+<a name="adding-a-team" class="anchor" href="#adding-a-team"><span class="octicon octicon-link"></span></a>Adding a team</h3>
+
+<p>You can add a new team to the database with the <code>addteam</code> command. It creates the team by duplicating the team and player data of the first team in the database (Boston Bruins), though the new team is called New Team Newcomers.
+<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-addteam.png" alt="Add team screenshot"></p>
+
+<p>The command only adds the team to the database, so it cannot be used in the game without adding new files and modifying existing ones. But it can be a useful first step if you want to figure out how to add teams to the game. After adding a team, you can try to access or use it in the game, see where the game crashes, and try to deduce from the crash what changes might be needed.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/peruukki" class="avatar"><img src="https://avatars3.githubusercontent.com/u/1781172?s=60" width="48" height="48"/></a> <a href="https://github.com/peruukki">peruukki</a> maintains <a href="https://github.com/peruukki/NHL95DBEditor">NHL95DBEditor</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/peruukki/NHL95DBEditor/tarball/master" class="tar">tar</a><a href="https://github.com/peruukki/NHL95DBEditor/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
