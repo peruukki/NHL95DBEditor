@@ -47,7 +47,7 @@ static size_t write_db_data(db_data_t *data, const char *file_name)
 
 bool_t write_db_file(db_data_t *data, const char *file_name)
 {
-  size_t bytes_written = read_db_data(data, file_name);
+  size_t bytes_written = write_db_data(data, file_name);
 
   if (bytes_written)
     DEBUG("Wrote %u bytes to file %s\n", bytes_written, file_name);
