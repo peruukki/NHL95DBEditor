@@ -50,8 +50,6 @@ static void update_team_indexes(int new_team_index, db_data_t *key_db_data)
 
       if (key->team >= new_team_index)
         key->team++;
-      if (key->team == 28)
-        key->team--;
     }
 }
 
