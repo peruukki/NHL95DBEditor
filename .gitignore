@@ -10,3 +10,6 @@ debug/*
 */*.user
 *.sdf
 *.opensdf
+
+# Ignore XCode settings files
+xcuserdata/

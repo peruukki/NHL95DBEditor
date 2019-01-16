@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29E99A1C21E683C0009D23BF /* player_key.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A0521E683BF009D23BF /* player_key.c */; };
+		29E99A1D21E683C0009D23BF /* backup.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A0C21E683BF009D23BF /* backup.c */; };
+		29E99A1E21E683C0009D23BF /* db_data.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A0F21E683BF009D23BF /* db_data.c */; };
+		29E99A1F21E683C0009D23BF /* player_stats.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1021E683BF009D23BF /* player_stats.c */; };
+		29E99A2021E683C0009D23BF /* change_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1121E683BF009D23BF /* change_log.c */; };
+		29E99A2121E683C0009D23BF /* file_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1221E683BF009D23BF /* file_utils.c */; };
+		29E99A2221E683C0009D23BF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1421E683BF009D23BF /* main.c */; };
+		29E99A2321E683C0009D23BF /* db_files.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1621E683BF009D23BF /* db_files.c */; };
+		29E99A2421E683C0009D23BF /* players.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1721E683BF009D23BF /* players.c */; };
+		29E99A2521E683C0009D23BF /* player_attributes.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1821E683C0009D23BF /* player_attributes.c */; };
+		29E99A2621E683C0009D23BF /* teams.c in Sources */ = {isa = PBXBuildFile; fileRef = 29E99A1921E683C0009D23BF /* teams.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2907919A21E67D7C00D30D16 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2907919C21E67D7C00D30D16 /* NHL95DBEditor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NHL95DBEditor; sourceTree = BUILT_PRODUCTS_DIR; };
+		29E99A0521E683BF009D23BF /* player_key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player_key.c; path = src/player_key.c; sourceTree = "<group>"; };
+		29E99A0621E683BF009D23BF /* output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = output.h; path = src/output.h; sourceTree = "<group>"; };
+		29E99A0721E683BF009D23BF /* common_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common_defs.h; path = src/common_defs.h; sourceTree = "<group>"; };
+		29E99A0821E683BF009D23BF /* db_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = db_data.h; path = src/db_data.h; sourceTree = "<group>"; };
+		29E99A0921E683BF009D23BF /* teams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = teams.h; path = src/teams.h; sourceTree = "<group>"; };
+		29E99A0A21E683BF009D23BF /* player_key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player_key.h; path = src/player_key.h; sourceTree = "<group>"; };
+		29E99A0B21E683BF009D23BF /* player_attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player_attributes.h; path = src/player_attributes.h; sourceTree = "<group>"; };
+		29E99A0C21E683BF009D23BF /* backup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = backup.c; path = src/backup.c; sourceTree = "<group>"; };
+		29E99A0D21E683BF009D23BF /* db_files.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = db_files.h; path = src/db_files.h; sourceTree = "<group>"; };
+		29E99A0E21E683BF009D23BF /* file_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_utils.h; path = src/file_utils.h; sourceTree = "<group>"; };
+		29E99A0F21E683BF009D23BF /* db_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = db_data.c; path = src/db_data.c; sourceTree = "<group>"; };
+		29E99A1021E683BF009D23BF /* player_stats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player_stats.c; path = src/player_stats.c; sourceTree = "<group>"; };
+		29E99A1121E683BF009D23BF /* change_log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = change_log.c; path = src/change_log.c; sourceTree = "<group>"; };
+		29E99A1221E683BF009D23BF /* file_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = file_utils.c; path = src/file_utils.c; sourceTree = "<group>"; };
+		29E99A1321E683BF009D23BF /* backup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = backup.h; path = src/backup.h; sourceTree = "<group>"; };
+		29E99A1421E683BF009D23BF /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
+		29E99A1521E683BF009D23BF /* players.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = players.h; path = src/players.h; sourceTree = "<group>"; };
+		29E99A1621E683BF009D23BF /* db_files.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = db_files.c; path = src/db_files.c; sourceTree = "<group>"; };
+		29E99A1721E683BF009D23BF /* players.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = players.c; path = src/players.c; sourceTree = "<group>"; };
+		29E99A1821E683C0009D23BF /* player_attributes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player_attributes.c; path = src/player_attributes.c; sourceTree = "<group>"; };
+		29E99A1921E683C0009D23BF /* teams.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = teams.c; path = src/teams.c; sourceTree = "<group>"; };
+		29E99A1A21E683C0009D23BF /* change_log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = change_log.h; path = src/change_log.h; sourceTree = "<group>"; };
+		29E99A1B21E683C0009D23BF /* player_stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player_stats.h; path = src/player_stats.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2907919921E67D7C00D30D16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2907919321E67D7C00D30D16 = {
+			isa = PBXGroup;
+			children = (
+				2907919E21E67D7C00D30D16 /* NHL95DBEditor */,
+				2907919D21E67D7C00D30D16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2907919D21E67D7C00D30D16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2907919C21E67D7C00D30D16 /* NHL95DBEditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2907919E21E67D7C00D30D16 /* NHL95DBEditor */ = {
+			isa = PBXGroup;
+			children = (
+				29E99A0C21E683BF009D23BF /* backup.c */,
+				29E99A1321E683BF009D23BF /* backup.h */,
+				29E99A1121E683BF009D23BF /* change_log.c */,
+				29E99A1A21E683C0009D23BF /* change_log.h */,
+				29E99A0721E683BF009D23BF /* common_defs.h */,
+				29E99A0F21E683BF009D23BF /* db_data.c */,
+				29E99A0821E683BF009D23BF /* db_data.h */,
+				29E99A1621E683BF009D23BF /* db_files.c */,
+				29E99A0D21E683BF009D23BF /* db_files.h */,
+				29E99A1221E683BF009D23BF /* file_utils.c */,
+				29E99A0E21E683BF009D23BF /* file_utils.h */,
+				29E99A1421E683BF009D23BF /* main.c */,
+				29E99A0621E683BF009D23BF /* output.h */,
+				29E99A1821E683C0009D23BF /* player_attributes.c */,
+				29E99A0B21E683BF009D23BF /* player_attributes.h */,
+				29E99A0521E683BF009D23BF /* player_key.c */,
+				29E99A0A21E683BF009D23BF /* player_key.h */,
+				29E99A1021E683BF009D23BF /* player_stats.c */,
+				29E99A1B21E683C0009D23BF /* player_stats.h */,
+				29E99A1721E683BF009D23BF /* players.c */,
+				29E99A1521E683BF009D23BF /* players.h */,
+				29E99A1921E683C0009D23BF /* teams.c */,
+				29E99A0921E683BF009D23BF /* teams.h */,
+			);
+			path = NHL95DBEditor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2907919B21E67D7C00D30D16 /* NHL95DBEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 290791A321E67D7C00D30D16 /* Build configuration list for PBXNativeTarget "NHL95DBEditor" */;
+			buildPhases = (
+				2907919821E67D7C00D30D16 /* Sources */,
+				2907919921E67D7C00D30D16 /* Frameworks */,
+				2907919A21E67D7C00D30D16 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NHL95DBEditor;
+			productName = NHL95DBEditor;
+			productReference = 2907919C21E67D7C00D30D16 /* NHL95DBEditor */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2907919421E67D7C00D30D16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = peruukki;
+				TargetAttributes = {
+					2907919B21E67D7C00D30D16 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 2907919721E67D7C00D30D16 /* Build configuration list for PBXProject "NHL95DBEditor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2907919321E67D7C00D30D16;
+			productRefGroup = 2907919D21E67D7C00D30D16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2907919B21E67D7C00D30D16 /* NHL95DBEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2907919821E67D7C00D30D16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E99A2621E683C0009D23BF /* teams.c in Sources */,
+				29E99A2021E683C0009D23BF /* change_log.c in Sources */,
+				29E99A1F21E683C0009D23BF /* player_stats.c in Sources */,
+				29E99A1D21E683C0009D23BF /* backup.c in Sources */,
+				29E99A2321E683C0009D23BF /* db_files.c in Sources */,
+				29E99A1C21E683C0009D23BF /* player_key.c in Sources */,
+				29E99A2421E683C0009D23BF /* players.c in Sources */,
+				29E99A2221E683C0009D23BF /* main.c in Sources */,
+				29E99A2121E683C0009D23BF /* file_utils.c in Sources */,
+				29E99A1E21E683C0009D23BF /* db_data.c in Sources */,
+				29E99A2521E683C0009D23BF /* player_attributes.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		290791A121E67D7C00D30D16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		290791A221E67D7C00D30D16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		290791A421E67D7C00D30D16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		290791A521E67D7C00D30D16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2907919721E67D7C00D30D16 /* Build configuration list for PBXProject "NHL95DBEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290791A121E67D7C00D30D16 /* Debug */,
+				290791A221E67D7C00D30D16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		290791A321E67D7C00D30D16 /* Build configuration list for PBXNativeTarget "NHL95DBEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290791A421E67D7C00D30D16 /* Debug */,
+				290791A521E67D7C00D30D16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2907919421E67D7C00D30D16 /* Project object */;
+}
