@@ -13,7 +13,7 @@ void show_key_player(player_key_t *key, size_t ofs_key)
   INFO("T: %3u NO: %2u POS: %c NAME: %-15s %-15s",
        key->team, key->jersey, key->position, key->first, key->last);
 
-  INFO(" OFS_KEY: %4x OFS_ATT: %4x OFS_CAR: %4x OFS_SEA: %4x",
+  INFO(" OFS_KEY: %4zx OFS_ATT: %4x OFS_CAR: %4x OFS_SEA: %4x",
        ofs_key, key->ofs_attributes, key->ofs_career_stats, key->ofs_season_stats);
 
   INFO(" UNKNOWN: ");
