@@ -57,46 +57,46 @@
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
 <p>Run the program without arguments to see its usage information.
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-usage.png" alt="Usage screenshot"></p>
+<img src="images/screenshot-usage.png" alt="Usage screenshot"></p>
 
 <h3>
 <a name="dumping-database-information" class="anchor" href="#dumping-database-information"><span class="octicon octicon-link"></span></a>Dumping database information</h3>
 
 <p>All database information can be dumped to the screen in textual format with the <code>data</code> command. It spills out a lot of data, so you will probably want to write the data to a file. To do that, redirect the program output to a file like you would do for any Windows program by appending <code>&gt; FILENAME</code> to the command.
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-data-to-file.png" alt="Data to file screenshot"></p>
+<img src="images/screenshot-data-to-file.png" alt="Data to file screenshot"></p>
 
 <h3>
 <a name="changing-attributes-of-all-players-or-goalies" class="anchor" href="#changing-attributes-of-all-players-or-goalies"><span class="octicon octicon-link"></span></a>Changing attributes of all players or goalies</h3>
 
 <p>You can change attributes of all players or goalies with the <code>playeratt</code> or <code>goalieatt</code> command. Run the command without additional parameters to see more information about its usage.
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-playeratt-usage.png" alt="Playeratt screenshot"><img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-goalieatt-usage.png" alt="Goalieatt screenshot"></p>
+<img src="images/screenshot-playeratt-usage.png" alt="Playeratt screenshot"><img src="images/screenshot-goalieatt-usage.png" alt="Goalieatt screenshot"></p>
 
 <p>Some examples:</p>
 
 <ul>
 <li>Increase all players' speed by 50 and decrease their checking by 25: <code>playeratt SPD +50 CHK -25</code>
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-playeratt-example.png" alt="Playeratt example screenshot">
+<img src="images/screenshot-playeratt-example.png" alt="Playeratt example screenshot">
 </li>
 <li>Increase all goalies' agility by 30 and decrease their puck control by 40: <code>goalieatt AGI +30 PUC -40</code>
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-goalieatt-example.png" alt="Goalieatt example screenshot">
+<img src="images/screenshot-goalieatt-example.png" alt="Goalieatt example screenshot">
 </li>
 </ul><h3>
 <a name="seeing-what-changes-have-been-made" class="anchor" href="#seeing-what-changes-have-been-made"><span class="octicon octicon-link"></span></a>Seeing what changes have been made</h3>
 
 <p>The program keeps track of the changes it makes in a file named change-log.txt in the directory it is run. The file's content is output after each <code>playeratt</code>/<code>goalieatt</code> command execution. You can also see the changes with the <code>changes</code> command.
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-changes.png" alt="Changes screenshot"></p>
+<img src="images/screenshot-changes.png" alt="Changes screenshot"></p>
 
 <h3>
 <a name="resetting-changes" class="anchor" href="#resetting-changes"><span class="octicon octicon-link"></span></a>Resetting changes</h3>
 
 <p>The program takes backups of all database files before making the first changes to them. You can reset the database files back to the original ones with the <code>reset</code> command.
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-reset.png" alt="Reset screenshot"></p>
+<img src="images/screenshot-reset.png" alt="Reset screenshot"></p>
 
 <h3>
 <a name="adding-a-team" class="anchor" href="#adding-a-team"><span class="octicon octicon-link"></span></a>Adding a team</h3>
 
 <p>You can add a new team to the database with the <code>addteam</code> command. It creates the team by duplicating the team and player data of the first team in the database (Boston Bruins), though the new team is called New Team Newcomers.
-<img src="http://peruukki.github.io/NHL95DBEditor/images/screenshot-addteam.png" alt="Add team screenshot"></p>
+<img src="images/screenshot-addteam.png" alt="Add team screenshot"></p>
 
 <p>The command only adds the team to the database, so it cannot be used in the game without adding new files and modifying existing ones. But it can be a useful first step if you want to figure out how to add teams to the game. After adding a team, you can try to access or use it in the game, see where the game crashes, and try to deduce from the crash what changes might be needed.</p>
         </article>
