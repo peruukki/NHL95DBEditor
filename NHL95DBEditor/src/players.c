@@ -152,7 +152,10 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
                                  player_att_change_t *changes, int change_count,
                                  bool_t is_goalie)
 {
+  bool_t modified_attributes[MAX_DB_DATA_SIZE];
   size_t i;
+
+  memset(modified_attributes, 0, sizeof(modified_attributes));
 
   for (i = 0; i < db_data->key_data.length; i += sizeof(player_key_t))
     {
@@ -160,6 +163,11 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
       int j;
 
       key = (player_key_t *) &db_data->key_data.data[i];
+
+      /* Players in all star teams appear twice in the data, don't modify them twice too */
+      if (modified_attributes[key->ofs_attributes])
+        continue;
+
       if (is_goalie && key_is_goalie(key))
         {
           goalie_atts_t *atts;
@@ -167,6 +175,7 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
           atts = (goalie_atts_t *) &db_data->att_data.data[key->ofs_attributes];
           for (j = 0; j < change_count; j++)
             modify_goalie_attribute(atts, changes[j].att_enum, changes[j].att_change);
+          modified_attributes[key->ofs_attributes] = TRUE;
         }
       else if (!is_goalie && !key_is_goalie(key))
         {
@@ -175,6 +184,7 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
           atts = (player_atts_t *) &db_data->att_data.data[key->ofs_attributes];
           for (j = 0; j < change_count; j++)
             modify_player_attribute(atts, changes[j].att_enum, changes[j].att_change);
+          modified_attributes[key->ofs_attributes] = TRUE;
         }
     }
 

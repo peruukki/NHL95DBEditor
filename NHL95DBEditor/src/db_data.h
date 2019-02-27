@@ -3,10 +3,11 @@
 #include "common_defs.h"
 
 #define INVALID_DB_DATA_OFFSET ((offset_t) -1)
+#define MAX_DB_DATA_SIZE 65000
 
 typedef struct
 {
-  unsigned char data[65000];
+  unsigned char data[MAX_DB_DATA_SIZE];
   size_t length;
 } db_data_t;
 
