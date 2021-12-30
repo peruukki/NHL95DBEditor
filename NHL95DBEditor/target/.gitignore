@@ -1,0 +1,6 @@
+# This directory is the compilation output directory for a rudimentary Visual Studio Code setup
+# that cannot create the directory if it doesn't exist.
+
+# Ignore other files than this one
+*
+!.gitignore
