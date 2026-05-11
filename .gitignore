@@ -1,15 +1,16 @@
 # Ignore object files
-release/*
-debug/*
-*/Release/*
-*/Debug/*
+release/
+debug/
+Release/
+Debug/
 
 # Ignore Visual Studio settings files
 *.ncb
 *.suo
-*/*.user
+*.user
 *.sdf
 *.opensdf
+.vs/
 
 # Ignore XCode settings files
 xcuserdata/
