@@ -28,6 +28,6 @@ Use the XCode project in [`NHL95DBEditor.xcodeproj`](NHL95DBEditor.xcodeproj).
 
 Several (old) solution files exist:
 
-1. [`NHL95DBEditor/NHL95DBEditor-VS2015.vcxproj`](NHL95DBEditor/NHL95DBEditor-VS2015.vcxproj) for Visual Studio 2015
-2. [`NHL95DBEditor/NHL95DBEditor.vcxproj`](NHL95DBEditor/NHL95DBEditor.vcxproj) for Visual Studio Express 2013
-3. [`NHL95DBEditor/NHL95DBEditor.vcproj`](NHL95DBEditor/NHL95DBEditor.vcproj) for Visual Studio Express 2012 or older (?)
+1. [`NHL95DBEditor-VS2015.sln`](NHL95DBEditor-VS2015.sln) for Visual Studio 2015 and newer
+2. [`NHL95DBEditor-VS2013.sln`](NHL95DBEditor-VS2013.sln) for Visual Studio Express 2013
+3. [`NHL95DBEditor-VS2005.sln`](NHL95DBEditor-VS2005.sln) for Visual Studio Express 2012 or older (?)
