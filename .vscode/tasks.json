@@ -10,7 +10,7 @@
 				"-g",
 				"*.c",
 				"-o",
-				"${fileDirname}/../target/NHL95DBEditor"
+				"${fileDirname}/../target"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

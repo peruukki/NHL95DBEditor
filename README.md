@@ -18,7 +18,7 @@ To compile the project:
 
 1. Select some `.c` file as the active file, e.g. [`main.c`](NHL95DBEditor/src/main.c)
 2. Click *Terminal > Run Build Task* and choose **Build NHL95DBEditor**.
-3. The compiled executable should be in `NHL95DBEditor/target/NHL95DBEditor`.
+3. The compiled executable should be in `NHL95DBEditor/target`.
 
 ### XCode (macOS)
 
