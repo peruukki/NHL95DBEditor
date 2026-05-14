@@ -110,6 +110,7 @@
     <ClInclude Include="src\player_stats.h" />
     <ClInclude Include="src\players.h" />
     <ClInclude Include="src\teams.h" />
+    <ClInclude Include="src\version.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

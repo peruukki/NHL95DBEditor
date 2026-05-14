@@ -7,6 +7,7 @@
 #include "teams.h"
 #include "players.h"
 #include "player_attributes.h"
+#include "version.h"
 
 extern player_att_name_t player_att_names[];
 
@@ -23,12 +24,13 @@ typedef enum
   CMD_GOALIE_ATTRIBUTES,
   CMD_PLAYER_ATTRIBUTES,
   CMD_RESET,
+  CMD_VERSION,
   CMD_UNKNOWN /* Must be last */
 } command_t;
 
 static const char *commands[] =
 {
-  "addteam", "data", "changes", "goalieatt", "playeratt", "reset"
+  "addteam", "data", "changes", "goalieatt", "playeratt", "reset", "version"
 };
 
 static int usage(const char *filename)
@@ -45,6 +47,7 @@ static int usage(const char *filename)
   INFO("%-10s - Dumps attribute changes (%s) on the screen.\n",
        commands[CMD_DUMP_CHANGES], CHANGE_LOG_FILE);
   INFO("%-10s - Resets database files to the original ones.\n", commands[CMD_RESET]);
+  INFO("%-10s - Shows the application version.\n", commands[CMD_VERSION]);
   INFO("\nExperimental commands:\n");
   INFO("%-10s - Adds a team by duplicating the data of the first team.\n", commands[CMD_ADD_TEAM]);
   INFO("%-10s   NOTE: The added team will not work in the game without some\n", "");
@@ -208,6 +211,10 @@ int main(int argc, char *argv[])
           INFO("Failed to restore backup files\n");
           EXIT_IF_FAIL(FALSE);
         }
+      break;
+
+    case CMD_VERSION:
+        INFO(VERSION "\n");
       break;
 
     default:
