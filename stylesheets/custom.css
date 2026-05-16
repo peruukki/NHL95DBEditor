@@ -1,0 +1,11 @@
+img {
+  padding-top: 1em;
+}
+
+.markdown-body h2 {
+  margin: 45px 0 15px;
+}
+
+.markdown-body li:not(:first-child) {
+  margin: 20px 0 0;
+}
