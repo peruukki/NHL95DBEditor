@@ -83,22 +83,23 @@ static int cmd_attributes_usage(const char *filename, const char *command, bool_
   return 1;
 }
 
-static command_t get_command(int argc, char *argv[])
+static int get_enum_value(int argc, char* argv[], int arg_index,
+                          const char* values[], int unknown_value)
 {
-  char *cmd_str;
+  char* arg_str;
   int i;
 
-  if (argc <= CMD_ARG_INDEX)
-    return CMD_UNKNOWN;
+  if (argc <= arg_index)
+    return unknown_value;
 
-  cmd_str = argv[CMD_ARG_INDEX];
-  for (i = 0; i < CMD_UNKNOWN; i++)
-    {
-      if (strcmp(cmd_str, commands[i]) == 0)
-        return (command_t) i;
-    }
+  arg_str = argv[arg_index];
+  for (i = 0; i < unknown_value; i++)
+  {
+    if (strcmp(arg_str, values[i]) == 0)
+      return i;
+  }
 
-  return CMD_UNKNOWN;
+  return unknown_value;
 }
 
 /* The returned array must be freed by the caller. */
@@ -149,9 +150,9 @@ int main(int argc, char *argv[])
 {
   team_db_data_t team_data;
   player_db_data_t player_data;
-  command_t command;
+  command_t command = (command_t) get_enum_value(argc, argv, CMD_ARG_INDEX, commands, CMD_UNKNOWN);
 
-  if ((command = get_command(argc, argv)) == CMD_UNKNOWN)
+  if (command == CMD_UNKNOWN)
     return usage(argv[0]);
 
   db_data_init(&team_data, sizeof(team_data));
