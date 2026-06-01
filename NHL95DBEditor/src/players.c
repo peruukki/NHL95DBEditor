@@ -108,7 +108,7 @@ static bool_t add_duplicate_players(team_data_t *src_team,
       memset(dst_key.unknown, 0, sizeof(dst_key.unknown));
       dst_key_ofs = add_player_data(db_data, &dst_key,
                                     &db_data->att_data.data[src_key->ofs_attributes],
-                                    sizeof(player_atts_t),
+                                    sizeof(skater_atts_t),
                                     &db_data->season_data.data[src_key->ofs_season_stats],
                                     sizeof(player_stats_season_t),
                                     &db_data->career_data.data[src_key->ofs_career_stats],
@@ -134,7 +134,7 @@ bool_t add_duplicate_player_data(team_data_t *src_team,
   /* Players */
   if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data,
                              dst_team->players, ELEM_COUNT(dst_team->players),
-                             sizeof(player_atts_t), sizeof(player_stats_season_t),
+                             sizeof(skater_atts_t), sizeof(player_stats_season_t),
                              sizeof(player_stats_career_t)))
     return FALSE;
 
@@ -179,11 +179,11 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
         }
       else if (!is_goalie && !key_is_goalie(key))
         {
-          player_atts_t *atts;
+          skater_atts_t *atts;
 
-          atts = (player_atts_t *) &db_data->att_data.data[key->ofs_attributes];
+          atts = (skater_atts_t *) &db_data->att_data.data[key->ofs_attributes];
           for (j = 0; j < change_count; j++)
-            modify_player_attribute(atts, changes[j].att_enum, changes[j].att_change);
+            modify_skater_attribute(atts, changes[j].att_enum, changes[j].att_change);
           modified_attributes[key->ofs_attributes] = TRUE;
         }
     }

@@ -75,7 +75,7 @@ typedef struct
   number_1_t unknown_4;
   number_1_t unknown_5;
   number_1_t face_offs;
-} player_atts_t;
+} skater_atts_t;
 
 typedef struct
 {
@@ -105,7 +105,7 @@ bool_t validate_att_change(player_att_change_t *change);
 
 void show_attributes(unsigned char *att_data, player_key_t *key);
 
-void modify_player_attribute(player_atts_t *atts, player_att_t att_enum,
+void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum,
                              int value_change);
 
 void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum,

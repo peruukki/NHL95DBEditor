@@ -24,13 +24,14 @@ typedef enum
   CMD_GOALIE_ATTRIBUTES,
   CMD_PLAYER_ATTRIBUTES,
   CMD_RESET,
+  CMD_SKATER_ATTRIBUTES,
   CMD_VERSION,
   CMD_UNKNOWN /* Must be last */
 } command_t;
 
 static const char *commands[] =
 {
-  "addteam", "data", "changes", "goalieatt", "playeratt", "reset", "version"
+  "addteam", "data", "changes", "goalieatt", "playeratt", "reset", "skateratt", "version"
 };
 
 static int usage(const char *filename)
@@ -40,8 +41,8 @@ static int usage(const char *filename)
   INFO("Available commands:\n");
   INFO("%-10s - Dumps all database information on the screen.\n", commands[CMD_DUMP_DATA]);
   INFO("%-10s   Dump to a file: %s %s > FILENAME.\n", "", filename, commands[CMD_DUMP_DATA]);
-  INFO("%-10s - Changes player attributes. Changes are logged to %s.\n",
-       commands[CMD_PLAYER_ATTRIBUTES], CHANGE_LOG_FILE);
+  INFO("%-10s - Changes skater attributes. Changes are logged to %s.\n",
+       commands[CMD_SKATER_ATTRIBUTES], CHANGE_LOG_FILE);
   INFO("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
        commands[CMD_GOALIE_ATTRIBUTES], CHANGE_LOG_FILE);
   INFO("%-10s - Dumps attribute changes (%s) on the screen.\n",
@@ -178,6 +179,7 @@ int main(int argc, char *argv[])
 
     case CMD_GOALIE_ATTRIBUTES:
     case CMD_PLAYER_ATTRIBUTES:
+    case CMD_SKATER_ATTRIBUTES:
       {
         player_att_change_t *changes;
         int change_count = 0;
@@ -198,7 +200,7 @@ int main(int argc, char *argv[])
 
         EXIT_IF_FAIL(write_player_data(&player_data));
 
-        write_changes_to_log(for_goalie ? "goalies" : "players", changes, change_count);
+        write_changes_to_log(for_goalie ? "goalies" : "skaters", changes, change_count);
         free(changes);
 
         INFO("Attributes changed successfully. All changes:\n");

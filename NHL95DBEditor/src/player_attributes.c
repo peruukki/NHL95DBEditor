@@ -121,7 +121,7 @@ bool_t validate_att_change(player_att_change_t *change)
   return TRUE;
 }
 
-static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
+static number_1_t *get_att_skater(skater_atts_t *atts, player_att_t att_enum)
 {
   switch (att_enum)
     {
@@ -146,7 +146,7 @@ static number_1_t *get_att_player(player_atts_t *atts, player_att_t att_enum)
     case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
     case PLAYER_ATT_WEIGHT: return &atts->weight;
     default:
-      INFO("Unknown player attribute value %d\n", att_enum);
+      INFO("Unknown skater attribute value %d\n", att_enum);
       return NULL;
     }
 }
@@ -177,10 +177,10 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
     }
 }
 
-static void print_att_player(player_atts_t *atts, player_att_t att_enum)
+static void print_att_skater(skater_atts_t *atts, player_att_t att_enum)
 {
   INFO(" %s %3d", get_player_att_name(att_enum),
-       deserialize(*get_att_player(atts, att_enum)));
+       deserialize(*get_att_skater(atts, att_enum)));
 }
 
 static void print_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
@@ -200,23 +200,23 @@ static void print_att_handedness(number_1_t value)
     INFO("%u", value);
 }
 
-static void show_att_player(player_atts_t *att)
+static void show_att_skater(skater_atts_t *att)
 {
   print_att_handedness(att->stick_hand);
-  print_att_player(att, PLAYER_ATT_SPEED);
-  print_att_player(att, PLAYER_ATT_AGILITY);
-  print_att_player(att, PLAYER_ATT_WEIGHT);
-  print_att_player(att, PLAYER_ATT_SHOT_POWER);
-  print_att_player(att, PLAYER_ATT_CHECKING);
-  print_att_player(att, PLAYER_ATT_STICK_HANDLING);
-  print_att_player(att, PLAYER_ATT_ACCURACY);
-  print_att_player(att, PLAYER_ATT_PASSING);
-  print_att_player(att, PLAYER_ATT_OFF_AWARENESS);
-  print_att_player(att, PLAYER_ATT_DEF_AWARENESS);
-  print_att_player(att, PLAYER_ATT_AGGRESSIVENESS);
-  print_att_player(att, PLAYER_ATT_ENDURANCE);
-  print_att_player(att, PLAYER_ATT_SHOOT_PASS_BIAS);
-  print_att_player(att, PLAYER_ATT_FACEOFFS);
+  print_att_skater(att, PLAYER_ATT_SPEED);
+  print_att_skater(att, PLAYER_ATT_AGILITY);
+  print_att_skater(att, PLAYER_ATT_WEIGHT);
+  print_att_skater(att, PLAYER_ATT_SHOT_POWER);
+  print_att_skater(att, PLAYER_ATT_CHECKING);
+  print_att_skater(att, PLAYER_ATT_STICK_HANDLING);
+  print_att_skater(att, PLAYER_ATT_ACCURACY);
+  print_att_skater(att, PLAYER_ATT_PASSING);
+  print_att_skater(att, PLAYER_ATT_OFF_AWARENESS);
+  print_att_skater(att, PLAYER_ATT_DEF_AWARENESS);
+  print_att_skater(att, PLAYER_ATT_AGGRESSIVENESS);
+  print_att_skater(att, PLAYER_ATT_ENDURANCE);
+  print_att_skater(att, PLAYER_ATT_SHOOT_PASS_BIAS);
+  print_att_skater(att, PLAYER_ATT_FACEOFFS);
 }
 
 static void show_att_goalie(goalie_atts_t *att)
@@ -244,7 +244,7 @@ void show_attributes(unsigned char *att_data, player_key_t *key)
     }
   else
     {
-      show_att_player((player_atts_t *) att);
+      show_att_skater((skater_atts_t *) att);
     }
 }
 
@@ -265,10 +265,10 @@ static void modify_attribute(number_1_t *att, int value_change)
   *att = serialize(new_value);
 }
 
-void modify_player_attribute(player_atts_t *atts, player_att_t att_enum,
+void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum,
                              int value_change)
 {
-  number_1_t *attribute = get_att_player(atts, att_enum);
+  number_1_t *attribute = get_att_skater(atts, att_enum);
   modify_attribute(attribute, value_change);
 }
 
