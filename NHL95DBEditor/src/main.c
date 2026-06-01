@@ -23,6 +23,7 @@ typedef enum
   CMD_ADD_TEAM,
   CMD_DUMP_DATA,
   CMD_DUMP_CHANGES,
+  CMD_EXPORT,
   CMD_GOALIE_ATTRIBUTES,
   CMD_PLAYER_ATTRIBUTES,
   CMD_RESET,
@@ -31,8 +32,22 @@ typedef enum
   CMD_UNKNOWN /* Must be last */
 } command_t;
 
-static const char *commands[] = { "addteam",   "data",  "changes",   "goalieatt",
+/* Keep in sync with command_t values */
+static const char *commands[] = { "addteam",   "data",  "changes",   "export", "goalieatt",
                                   "playeratt", "reset", "skateratt", "version" };
+
+/* Keep in sync with format_t values */
+static const char *formats[] = { "csv", "json", "plain" };
+
+typedef enum
+{
+  DATA_TYPE_GOALIE_ATTRIBUTES,
+  DATA_TYPE_SKATER_ATTRIBUTES,
+  DATA_TYPE_UNKNOWN /* Must be last */
+} data_type_t;
+
+/* Keep in sync with data_type_t values */
+static const char *data_types[] = { "goalieatt", "skateratt" };
 
 static int usage(const char *filename)
 {
@@ -41,6 +56,10 @@ static int usage(const char *filename)
   INFO("Available commands:\n");
   INFO("%-10s - Dumps all database information on the screen.\n", commands[CMD_DUMP_DATA]);
   INFO("%-10s   Dump to a file: %s %s > FILENAME.\n", "", filename, commands[CMD_DUMP_DATA]);
+  INFO("%-10s - Exports given database information on the screen in given format.\n",
+       commands[CMD_EXPORT]);
+  INFO("%-10s   Export to a file: %s %s csv|json skateratt|goalieatt > FILENAME.\n", "", filename,
+       commands[CMD_EXPORT]);
   INFO("%-10s - Changes skater attributes. Changes are logged to %s.\n",
        commands[CMD_SKATER_ATTRIBUTES], CHANGE_LOG_FILE);
   INFO("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
@@ -79,6 +98,17 @@ static int cmd_attributes_usage(const char *filename, const char *command, bool_
     if ((for_goalie && player_att_names[i].for_goalie) ||
         (!for_goalie && player_att_names[i].for_player))
       INFO("  %s - %s\n", player_att_names[i].name, player_att_names[i].description);
+
+  return 1;
+}
+
+static int cmd_export_usage(const char *filename, const char *command)
+{
+  INFO("\n");
+  INFO("Invalid command parameters, usage:\n");
+  INFO("%s %s csv|json skateratt|goalieatt\n", filename, command);
+  INFO("\n");
+  INFO("Example: %s %s json goalieatt\n", filename, command);
 
   return 1;
 }
@@ -175,6 +205,21 @@ int main(int argc, char *argv[])
     case CMD_DUMP_CHANGES:
       dump_change_log_entries();
       break;
+
+    case CMD_EXPORT:
+      {
+        format_t format = get_enum_value(argc, argv, CMD_ARG_INDEX + 1, formats, FORMAT_UNKNOWN);
+        data_type_t data_type =
+            get_enum_value(argc, argv, CMD_ARG_INDEX + 2, data_types, DATA_TYPE_UNKNOWN);
+
+        if (format == FORMAT_PLAIN || format == FORMAT_UNKNOWN || data_type == DATA_TYPE_UNKNOWN)
+          return cmd_export_usage(argv[0], argv[CMD_ARG_INDEX]);
+
+        EXIT_IF_FAIL(read_data(&team_data, &player_data));
+        EXIT_IF_FAIL(export_player_data(&player_data, data_type == DATA_TYPE_GOALIE_ATTRIBUTES,
+                                        &team_data, format));
+        break;
+      }
 
     case CMD_GOALIE_ATTRIBUTES:
     case CMD_PLAYER_ATTRIBUTES:

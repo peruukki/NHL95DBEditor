@@ -1,6 +1,8 @@
 #pragma once
 
 #include "common_defs.h"
+#include "output.h"
+#include "teams.h"
 
 typedef struct
 {
@@ -17,4 +19,8 @@ typedef struct
 
 bool_t key_is_goalie(player_key_t *key);
 
-void show_key_player(player_key_t *key, size_t ofs_key);
+void show_player_key(player_key_t *key, size_t ofs_key, team_data_t *team, format_t format);
+
+void print_player_key_footer(format_t format);
+
+void print_player_key_header(format_t format);

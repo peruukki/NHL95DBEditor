@@ -30,12 +30,78 @@ bool_t dump_player_data(player_db_data_t *db_data)
       player_key_t *key;
 
       key = (player_key_t *) &db_data->key_data.data[i];
-      show_key_player(key, i);
-      show_attributes(db_data->att_data.data, key);
+      show_player_key(key, i, NULL, FORMAT_PLAIN);
+      INFO(" ");
+      show_attributes(db_data->att_data.data, key, FORMAT_PLAIN);
       show_stats_career(db_data->career_data.data, key);
       show_stats_season(db_data->season_data.data, key);
       INFO("\n");
     }
+
+  return TRUE;
+}
+
+bool_t export_player_data(player_db_data_t *db_data, bool_t is_goalie, team_db_data_t *team_db_data,
+                          format_t format)
+{
+  size_t i;
+
+  if (format == FORMAT_JSON)
+    {
+      INFO("{\n  \"");
+      INFO(is_goalie ? "goalies" : "skaters");
+      INFO("\": [\n");
+    }
+  else if (format == FORMAT_CSV)
+    {
+      print_player_key_header(format);
+      print_delimiter(format);
+      print_attributes_header(is_goalie, format);
+      INFO("\n");
+    }
+
+  for (i = 0; i < db_data->key_data.length; i += sizeof(player_key_t))
+    {
+      player_key_t *key;
+      offset_t team_data_ofs;
+      team_data_t *team;
+      bool_t is_last_item;
+
+      key = (player_key_t *) &db_data->key_data.data[i];
+      team_data_ofs = key->team * sizeof(team_data_t);
+
+      if (team_data_ofs + sizeof(team_data_t) > team_db_data->teams.length)
+        {
+          INFO("Team index %u is out of bounds\n", key->team);
+          return FALSE;
+        }
+
+      team = (team_data_t *) &team_db_data->teams.data[team_data_ofs];
+      is_last_item = i == db_data->key_data.length - sizeof(player_key_t);
+
+      if (key_is_goalie(key) != is_goalie)
+        continue;
+
+      if (format == FORMAT_JSON)
+        {
+          INFO("    {\n");
+          print_player_key_header(format);
+        }
+      show_player_key(key, i, team, format);
+      print_player_key_footer(format);
+
+      if (format == FORMAT_JSON)
+        print_attributes_header(is_goalie, format);
+      show_attributes(db_data->att_data.data, key, format);
+
+      if (format == FORMAT_JSON)
+        print_attributes_footer(is_last_item, format);
+
+      INFO("\n");
+    }
+
+  if (format == FORMAT_JSON)
+    INFO("  ]\n}\n");
 
   return TRUE;
 }

@@ -57,7 +57,7 @@ player_att_name_t player_att_names[] = {
   { PLAYER_ATT_FACEOFFS, "FAC", "faceoffs", TRUE, FALSE },
   { PLAYER_ATT_GLOVE_LEFT, "GLE", "glove left", FALSE, TRUE },
   { PLAYER_ATT_GLOVE_RIGHT, "GRI", "glove right", FALSE, TRUE },
-  { PLAYER_ATT_HANDEDNESS, "HND", "handedness (shoots/catches)", TRUE, TRUE },
+  { PLAYER_ATT_HANDEDNESS, "HND", "handedness", TRUE, TRUE },
   { PLAYER_ATT_OFF_AWARENESS, "OFF", "offensive awareness", TRUE, TRUE },
   { PLAYER_ATT_PASSING, "PAS", "passing", TRUE, FALSE },
   { PLAYER_ATT_PUCK_CONTROL, "PUC", "puck control", FALSE, TRUE },
@@ -76,6 +76,20 @@ player_att_name_t player_att_names[] = {
   { PLAYER_ATT_NUM_VALUES, NULL, NULL, FALSE, FALSE }
 };
 
+player_att_t skater_atts[] = {
+  PLAYER_ATT_HANDEDNESS,     PLAYER_ATT_SPEED,           PLAYER_ATT_AGILITY,
+  PLAYER_ATT_WEIGHT,         PLAYER_ATT_SHOT_POWER,      PLAYER_ATT_CHECKING,
+  PLAYER_ATT_STICK_HANDLING, PLAYER_ATT_ACCURACY,        PLAYER_ATT_PASSING,
+  PLAYER_ATT_OFF_AWARENESS,  PLAYER_ATT_DEF_AWARENESS,   PLAYER_ATT_AGGRESSIVENESS,
+  PLAYER_ATT_ENDURANCE,      PLAYER_ATT_SHOOT_PASS_BIAS, PLAYER_ATT_FACEOFFS
+};
+
+player_att_t goalie_atts[] = {
+  PLAYER_ATT_HANDEDNESS,  PLAYER_ATT_GLOVE_LEFT,    PLAYER_ATT_GLOVE_RIGHT,  PLAYER_ATT_STICK_LEFT,
+  PLAYER_ATT_STICK_RIGHT, PLAYER_ATT_PUCK_CONTROL,  PLAYER_ATT_SPEED,        PLAYER_ATT_AGILITY,
+  PLAYER_ATT_WEIGHT,      PLAYER_ATT_OFF_AWARENESS, PLAYER_ATT_DEF_AWARENESS
+};
+
 player_att_t get_player_att_enum(const char *att_name, bool_t for_goalie)
 {
   int i;
@@ -89,6 +103,19 @@ player_att_t get_player_att_enum(const char *att_name, bool_t for_goalie)
     }
 
   return PLAYER_ATT_NUM_VALUES;
+}
+
+static const char *get_player_att_description(player_att_t att_enum)
+{
+  int i;
+
+  for (i = 0; i < PLAYER_ATT_NUM_VALUES; i++)
+    {
+      if (player_att_names[i].value == att_enum)
+        return player_att_names[i].description;
+    }
+
+  return NULL;
 }
 
 const char *get_player_att_name(player_att_t att_enum)
@@ -212,69 +239,105 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
     }
 }
 
-static void print_att_skater(skater_atts_t *atts, player_att_t att_enum)
+void print_attributes_footer(bool_t is_last_item, format_t format)
 {
-  INFO(" %s %3d", get_player_att_name(att_enum), deserialize(*get_att_skater(atts, att_enum)));
+  if (format == FORMAT_JSON)
+    {
+      INFO(" }\n    }");
+      INFO(is_last_item ? "" : ",");
+    }
 }
 
-static void print_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
+void print_attributes_header(bool_t is_goalie, format_t format)
 {
-  INFO(" %s %3d", get_player_att_name(att_enum), deserialize(*get_att_goalie(atts, att_enum)));
+  player_att_t *atts;
+  int att_count, i;
+
+  if (format == FORMAT_JSON)
+    INFO("      \"attributes\": { ");
+  else if (format == FORMAT_CSV)
+    {
+      atts = is_goalie ? goalie_atts : skater_atts;
+      att_count = is_goalie ? ELEM_COUNT(goalie_atts) : ELEM_COUNT(skater_atts);
+
+      for (i = 0; i < att_count; i++)
+        {
+          INFO("%s", get_player_att_description(atts[i]));
+
+          if (i < att_count - 1)
+            print_delimiter(FORMAT_CSV);
+        }
+    }
 }
 
-static void print_att_handedness(number_1_t value)
+static void print_att_skater(skater_atts_t *atts, player_att_t att_enum, format_t format)
 {
-  INFO(" %s ", get_player_att_name(PLAYER_ATT_HANDEDNESS));
+  print_field_name(get_player_att_name(att_enum), format);
+  print_field_value_number(deserialize(*get_att_skater(atts, att_enum)), format);
+}
+
+static void print_att_goalie(goalie_atts_t *atts, player_att_t att_enum, format_t format)
+{
+  print_field_name(get_player_att_name(att_enum), format);
+  print_field_value_number(deserialize(*get_att_goalie(atts, att_enum)), format);
+}
+
+static const char *get_handedness_str(number_1_t value)
+{
   if (value == 0)
-    INFO("R");
+    return "R";
   else if (value == 1)
-    INFO("L");
+    return "L";
   else
-    INFO("%u", value);
+    return "<Unknown handedness>";
 }
 
-static void show_att_skater(skater_atts_t *att)
+static void print_att_handedness(number_1_t value, format_t format)
 {
-  print_att_handedness(att->stick_hand);
-  print_att_skater(att, PLAYER_ATT_SPEED);
-  print_att_skater(att, PLAYER_ATT_AGILITY);
-  print_att_skater(att, PLAYER_ATT_WEIGHT);
-  print_att_skater(att, PLAYER_ATT_SHOT_POWER);
-  print_att_skater(att, PLAYER_ATT_CHECKING);
-  print_att_skater(att, PLAYER_ATT_STICK_HANDLING);
-  print_att_skater(att, PLAYER_ATT_ACCURACY);
-  print_att_skater(att, PLAYER_ATT_PASSING);
-  print_att_skater(att, PLAYER_ATT_OFF_AWARENESS);
-  print_att_skater(att, PLAYER_ATT_DEF_AWARENESS);
-  print_att_skater(att, PLAYER_ATT_AGGRESSIVENESS);
-  print_att_skater(att, PLAYER_ATT_ENDURANCE);
-  print_att_skater(att, PLAYER_ATT_SHOOT_PASS_BIAS);
-  print_att_skater(att, PLAYER_ATT_FACEOFFS);
+  print_field_name(get_player_att_name(PLAYER_ATT_HANDEDNESS), format);
+  print_field_value_string(get_handedness_str(value), format);
 }
 
-static void show_att_goalie(goalie_atts_t *att)
+static void show_att_skater(skater_atts_t *att, format_t format)
 {
-  print_att_handedness(att->glove_hand);
-  print_att_goalie(att, PLAYER_ATT_GLOVE_LEFT);
-  print_att_goalie(att, PLAYER_ATT_GLOVE_RIGHT);
-  print_att_goalie(att, PLAYER_ATT_STICK_LEFT);
-  print_att_goalie(att, PLAYER_ATT_STICK_RIGHT);
-  print_att_goalie(att, PLAYER_ATT_PUCK_CONTROL);
-  print_att_goalie(att, PLAYER_ATT_SPEED);
-  print_att_goalie(att, PLAYER_ATT_AGILITY);
-  print_att_goalie(att, PLAYER_ATT_WEIGHT);
-  print_att_goalie(att, PLAYER_ATT_OFF_AWARENESS);
-  print_att_goalie(att, PLAYER_ATT_DEF_AWARENESS);
+  int i;
+
+  for (i = 0; i < ELEM_COUNT(skater_atts); i++)
+    {
+      if (i > 0)
+        print_delimiter(format);
+
+      if (skater_atts[i] == PLAYER_ATT_HANDEDNESS)
+        print_att_handedness(att->stick_hand, format);
+      else
+        print_att_skater(att, skater_atts[i], format);
+    }
 }
 
-void show_attributes(unsigned char *att_data, player_key_t *key)
+static void show_att_goalie(goalie_atts_t *att, format_t format)
+{
+  int i;
+
+  for (i = 0; i < ELEM_COUNT(goalie_atts); i++)
+    {
+      if (i > 0)
+        print_delimiter(format);
+
+      if (goalie_atts[i] == PLAYER_ATT_HANDEDNESS)
+        print_att_handedness(att->glove_hand, format);
+      else
+        print_att_goalie(att, goalie_atts[i], format);
+    }
+}
+
+void show_attributes(unsigned char *att_data, player_key_t *key, format_t format)
 {
   unsigned char *att = &att_data[key->ofs_attributes];
 
   if (key_is_goalie(key))
-    show_att_goalie((goalie_atts_t *) att);
+    show_att_goalie((goalie_atts_t *) att, format);
   else
-    show_att_skater((skater_atts_t *) att);
+    show_att_skater((skater_atts_t *) att, format);
 }
 
 static void modify_attribute(number_1_t *att, int value_change)

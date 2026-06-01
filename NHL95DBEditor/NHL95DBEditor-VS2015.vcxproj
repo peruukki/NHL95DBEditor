@@ -91,6 +91,7 @@
     <ClCompile Include="src\db_files.c" />
     <ClCompile Include="src\file_utils.c" />
     <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\output.c" />
     <ClCompile Include="src\player_attributes.c" />
     <ClCompile Include="src\player_key.c" />
     <ClCompile Include="src\player_stats.c" />

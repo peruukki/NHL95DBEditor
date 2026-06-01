@@ -1,6 +1,7 @@
 #pragma once
 
 #include "common_defs.h"
+#include "output.h"
 #include "player_key.h"
 
 #define ATT_MIN 25
@@ -103,8 +104,12 @@ const char *get_player_att_name(player_att_t att_enum);
 
 bool_t validate_att_change(player_att_change_t *change);
 
-void show_attributes(unsigned char *att_data, player_key_t *key);
+void show_attributes(unsigned char *att_data, player_key_t *key, format_t format);
 
 void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum, int value_change);
 
 void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum, int value_change);
+
+void print_attributes_footer(bool_t is_last_item, format_t format);
+
+void print_attributes_header(bool_t is_goalie, format_t format);
