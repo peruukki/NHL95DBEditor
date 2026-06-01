@@ -239,13 +239,9 @@ void show_attributes(unsigned char *att_data, player_key_t *key)
   unsigned char *att = &att_data[key->ofs_attributes];
 
   if (key_is_goalie(key))
-    {
-      show_att_goalie((goalie_atts_t *) att);
-    }
+    show_att_goalie((goalie_atts_t *) att);
   else
-    {
-      show_att_skater((skater_atts_t *) att);
-    }
+    show_att_skater((skater_atts_t *) att);
 }
 
 static void modify_attribute(number_1_t *att, int value_change)
