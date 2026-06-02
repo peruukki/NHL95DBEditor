@@ -53,21 +53,17 @@ static void update_team_indexes(int new_team_index, db_data_t *key_db_data)
     }
 }
 
-static offset_t add_player_data(player_db_data_t *db_data,
-                                player_key_t *key,
-                                void *att_data, size_t att_data_length,
-                                void *season_data, size_t season_data_length,
-                                void *career_data, size_t career_data_length)
+static offset_t add_player_data(player_db_data_t *db_data, player_key_t *key, void *att_data,
+                                size_t att_data_length, void *season_data,
+                                size_t season_data_length, void *career_data,
+                                size_t career_data_length)
 {
   offset_t ofs_key, ofs_att, ofs_season, ofs_career;
 
   ofs_att = db_data_append_data(&db_data->att_data, att_data, att_data_length);
-  ofs_season = db_data_append_data(&db_data->season_data, season_data,
-                                   season_data_length);
-  ofs_career = db_data_append_data(&db_data->career_data, career_data,
-                                   career_data_length);
-  if ((ofs_att == INVALID_DB_DATA_OFFSET) ||
-      (ofs_season == INVALID_DB_DATA_OFFSET) ||
+  ofs_season = db_data_append_data(&db_data->season_data, season_data, season_data_length);
+  ofs_career = db_data_append_data(&db_data->career_data, career_data, career_data_length);
+  if ((ofs_att == INVALID_DB_DATA_OFFSET) || (ofs_season == INVALID_DB_DATA_OFFSET) ||
       (ofs_career == INVALID_DB_DATA_OFFSET))
     return INVALID_DB_DATA_OFFSET;
 
@@ -79,15 +75,10 @@ static offset_t add_player_data(player_db_data_t *db_data,
   return ofs_key;
 }
 
-static bool_t add_duplicate_players(team_data_t *src_team,
-                                    team_data_t *dst_team,
-                                    number_1_t new_team_index,
-                                    player_db_data_t *db_data,
-                                    offset_t *players,
-                                    int player_count,
-                                    size_t att_length,
-                                    size_t season_length,
-                                    size_t career_length)
+static bool_t add_duplicate_players(team_data_t *src_team, team_data_t *dst_team,
+                                    number_1_t new_team_index, player_db_data_t *db_data,
+                                    offset_t *players, int player_count, size_t att_length,
+                                    size_t season_length, size_t career_length)
 {
   int i;
 
@@ -106,13 +97,11 @@ static bool_t add_duplicate_players(team_data_t *src_team,
       memcpy(&dst_key, src_key, sizeof(dst_key));
       dst_key.team = new_team_index;
       memset(dst_key.unknown, 0, sizeof(dst_key.unknown));
-      dst_key_ofs = add_player_data(db_data, &dst_key,
-                                    &db_data->att_data.data[src_key->ofs_attributes],
-                                    sizeof(skater_atts_t),
-                                    &db_data->season_data.data[src_key->ofs_season_stats],
-                                    sizeof(player_stats_season_t),
-                                    &db_data->career_data.data[src_key->ofs_career_stats],
-                                    sizeof(player_stats_career_t));
+      dst_key_ofs = add_player_data(
+          db_data, &dst_key, &db_data->att_data.data[src_key->ofs_attributes],
+          sizeof(skater_atts_t), &db_data->season_data.data[src_key->ofs_season_stats],
+          sizeof(player_stats_season_t), &db_data->career_data.data[src_key->ofs_career_stats],
+          sizeof(player_stats_career_t));
       if (dst_key_ofs == INVALID_DB_DATA_OFFSET)
         return FALSE;
 
@@ -123,34 +112,29 @@ static bool_t add_duplicate_players(team_data_t *src_team,
   return TRUE;
 }
 
-bool_t add_duplicate_player_data(team_data_t *src_team,
-                                 team_data_t *dst_team,
-                                 number_1_t new_team_index,
-                                 player_db_data_t *db_data)
+bool_t add_duplicate_player_data(team_data_t *src_team, team_data_t *dst_team,
+                                 number_1_t new_team_index, player_db_data_t *db_data)
 {
   /* Update players of teams whose team index has increased */
   update_team_indexes(new_team_index, &db_data->key_data);
 
   /* Players */
-  if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data,
-                             dst_team->players, ELEM_COUNT(dst_team->players),
-                             sizeof(skater_atts_t), sizeof(player_stats_season_t),
-                             sizeof(player_stats_career_t)))
+  if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data, dst_team->players,
+                             ELEM_COUNT(dst_team->players), sizeof(skater_atts_t),
+                             sizeof(player_stats_season_t), sizeof(player_stats_career_t)))
     return FALSE;
 
   /* Goalies */
-  if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data,
-                             dst_team->goalies, ELEM_COUNT(dst_team->goalies),
-                             sizeof(goalie_atts_t), sizeof(goalie_stats_season_t),
-                             sizeof(goalie_stats_career_t)))
+  if (!add_duplicate_players(src_team, dst_team, new_team_index, db_data, dst_team->goalies,
+                             ELEM_COUNT(dst_team->goalies), sizeof(goalie_atts_t),
+                             sizeof(goalie_stats_season_t), sizeof(goalie_stats_career_t)))
     return FALSE;
 
   return write_player_data(db_data);
 }
 
-static bool_t modify_player_atts(player_db_data_t *db_data,
-                                 player_att_change_t *changes, int change_count,
-                                 bool_t is_goalie)
+static bool_t modify_player_atts(player_db_data_t *db_data, player_att_change_t *changes,
+                                 int change_count, bool_t is_goalie)
 {
   bool_t modified_attributes[MAX_DB_DATA_SIZE];
   size_t i;
@@ -164,7 +148,8 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
 
       key = (player_key_t *) &db_data->key_data.data[i];
 
-      /* Players in all star teams appear twice in the data, don't modify them twice too */
+      /* Players in all star teams appear twice in the data, don't modify them
+       * twice too */
       if (modified_attributes[key->ofs_attributes])
         continue;
 
@@ -191,14 +176,12 @@ static bool_t modify_player_atts(player_db_data_t *db_data,
   return TRUE;
 }
 
-bool_t modify_player_data(player_db_data_t *db_data, player_att_change_t *changes,
-                          int change_count)
+bool_t modify_player_data(player_db_data_t *db_data, player_att_change_t *changes, int change_count)
 {
   return modify_player_atts(db_data, changes, change_count, FALSE);
 }
 
-bool_t modify_goalie_data(player_db_data_t *db_data, player_att_change_t *changes,
-                          int change_count)
+bool_t modify_goalie_data(player_db_data_t *db_data, player_att_change_t *changes, int change_count)
 {
   return modify_player_atts(db_data, changes, change_count, TRUE);
 }

@@ -3,16 +3,15 @@
 #include "db_files.h"
 #include "file_utils.h"
 #include "output.h"
-#include "teams.h"
 #include "players.h"
+#include "teams.h"
 
 static void show_team_stats(team_stats_t *stats)
 {
   INFO(" GP: %2u W: %2u L: %2u T: %2u GF: %3u GA: %3u PIM: %4u "
        "PPGF: %3u PPGA: %3u ADV: %3u TSH: %3u",
-       stats->games_played, stats->wins, stats->losses, stats->ties,
-       stats->goals_for, stats->goals_against, stats->penalty_minutes,
-       stats->pp_goals_for, stats->pp_goals_against,
+       stats->games_played, stats->wins, stats->losses, stats->ties, stats->goals_for,
+       stats->goals_against, stats->penalty_minutes, stats->pp_goals_for, stats->pp_goals_against,
        stats->pp_advantages, stats->times_shorthanded);
 }
 
@@ -54,8 +53,7 @@ static void show_team_lines(team_lines_t *lines)
     {
       team_forward_line_t *line = &lines->fwd_lines[i];
 
-      INFO(" F%u: %2u %2u %2u", i + 1,
-           line->left_wing, line->center, line->right_wing);
+      INFO(" F%u: %2u %2u %2u", i + 1, line->left_wing, line->center, line->right_wing);
     }
 
   /* Defense lines */
@@ -64,13 +62,11 @@ static void show_team_lines(team_lines_t *lines)
     {
       team_defense_line_t *line = &lines->def_lines[i];
 
-      INFO(" D%u: %2u %2u", i + 1,
-           line->left_defense, line->right_defense);
+      INFO(" D%u: %2u %2u", i + 1, line->left_defense, line->right_defense);
     }
 
   /* Goalies */
-  INFO(" G1: %u G2: %u",
-       lines->goalies.starting_goalie, lines->goalies.backup_goalie);
+  INFO(" G1: %u G2: %u", lines->goalies.starting_goalie, lines->goalies.backup_goalie);
 
   /* Don't show everything, there's too much... */
   INFO(" ...");
@@ -80,9 +76,8 @@ static void show_team_scouting_report(team_scouting_report_t *report)
 {
   INFO(" PK: %2u PP: %2u SH: %2u SK: %2u PS: %2u DE: %2u "
        "CH: %2u GT: %2u OA: %2u",
-       report->penalty_killing, report->power_play, report->shooting,
-       report->skating, report->passing, report->defense,
-       report->checking, report->goaltending, report->overall);
+       report->penalty_killing, report->power_play, report->shooting, report->skating,
+       report->passing, report->defense, report->checking, report->goaltending, report->overall);
 }
 
 static void show_raw_data(number_1_t *data, size_t length, char *title)
@@ -180,8 +175,7 @@ static number_1_t get_new_team_index(db_data_t *team_db_data)
   return team_index;
 }
 
-bool_t add_team(team_db_data_t *team_data,
-                player_db_data_t *player_data)
+bool_t add_team(team_db_data_t *team_data, player_db_data_t *player_data)
 {
   team_data_t *new_team;
   team_stats_career_t *new_team_career;
@@ -194,20 +188,16 @@ bool_t add_team(team_db_data_t *team_data,
 
   /* Append new data */
   new_team_index = get_new_team_index(&team_data->teams);
-  new_team_ofs = db_data_append_space(&team_data->teams,
-                                      new_team_index * sizeof(*new_team),
+  new_team_ofs = db_data_append_space(&team_data->teams, new_team_index * sizeof(*new_team),
                                       sizeof(*new_team));
-  new_team_career_ofs = db_data_append_space(&team_data->carteams,
-                                             new_team_index * sizeof(*new_team_career),
-                                             sizeof(*new_team_career));
+  new_team_career_ofs = db_data_append_space(
+      &team_data->carteams, new_team_index * sizeof(*new_team_career), sizeof(*new_team_career));
 
-  if ((new_team_ofs == INVALID_DB_DATA_OFFSET) ||
-      (new_team_career_ofs == INVALID_DB_DATA_OFFSET))
+  if ((new_team_ofs == INVALID_DB_DATA_OFFSET) || (new_team_career_ofs == INVALID_DB_DATA_OFFSET))
     return FALSE;
 
   new_team = (team_data_t *) &team_data->teams.data[new_team_ofs];
-  new_team_career = (team_stats_career_t *)
-    &team_data->carteams.data[new_team_career_ofs];
+  new_team_career = (team_stats_career_t *) &team_data->carteams.data[new_team_career_ofs];
 
   /* Duplicate existing team */
   memcpy(new_team, &team_data->teams, sizeof(*new_team));
@@ -218,8 +208,8 @@ bool_t add_team(team_db_data_t *team_data,
   sprintf(new_team->long_name, "%s", team_name_long);
   sprintf(new_team->abbreviation, "%s", team_abbreviation);
   new_team->division = 1;
-  if (!add_duplicate_player_data((team_data_t *) &team_data->teams.data,
-                                 new_team, new_team_index, player_data))
+  if (!add_duplicate_player_data((team_data_t *) &team_data->teams.data, new_team, new_team_index,
+                                 player_data))
     return FALSE;
   write_db_file(&team_data->teams, get_db_file(DB_FILE_TEAMS));
 

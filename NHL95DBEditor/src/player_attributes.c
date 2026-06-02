@@ -46,8 +46,7 @@ static number_1_t serialize(int value)
   return (value - ATT_MIN) / ATT_SCALE;
 }
 
-player_att_name_t player_att_names[] =
-{
+player_att_name_t player_att_names[] = {
   /* Value, name, description, for player, for goalie */
   { PLAYER_ATT_ACCURACY, "ACC", "accuracy", TRUE, FALSE },
   { PLAYER_ATT_AGGRESSIVENESS, "AGG", "aggressiveness", TRUE, FALSE },
@@ -114,8 +113,8 @@ bool_t validate_att_change(player_att_change_t *change)
     }
   if (change->att_change % ATT_SCALE != 0)
     {
-      INFO("Attribute change value '%d' is not a multiplier of %d\n",
-           change->att_change, ATT_SCALE);
+      INFO("Attribute change value '%d' is not a multiplier of %d\n", change->att_change,
+           ATT_SCALE);
       return FALSE;
     }
   return TRUE;
@@ -125,26 +124,46 @@ static number_1_t *get_att_skater(skater_atts_t *atts, player_att_t att_enum)
 {
   switch (att_enum)
     {
-    case PLAYER_ATT_ACCURACY: return &atts->accuracy;
-    case PLAYER_ATT_AGGRESSIVENESS: return &atts->aggressiveness;
-    case PLAYER_ATT_AGILITY: return &atts->agility;
-    case PLAYER_ATT_CHECKING: return &atts->checking;
-    case PLAYER_ATT_DEF_AWARENESS: return &atts->defensive_awareness;
-    case PLAYER_ATT_ENDURANCE: return &atts->endurance;
-    case PLAYER_ATT_FACEOFFS: return &atts->face_offs;
-    case PLAYER_ATT_HANDEDNESS: return &atts->stick_hand;
-    case PLAYER_ATT_OFF_AWARENESS: return &atts->offensive_awareness;
-    case PLAYER_ATT_PASSING: return &atts->passing;
-    case PLAYER_ATT_SHOOT_PASS_BIAS: return &atts->shoot_pass_bias;
-    case PLAYER_ATT_SHOT_POWER: return &atts->shot_power;
-    case PLAYER_ATT_SPEED: return &atts->speed;
-    case PLAYER_ATT_STICK_HANDLING: return &atts->stick_handling;
-    case PLAYER_ATT_UNKNOWN_1: return &atts->unknown_1;
-    case PLAYER_ATT_UNKNOWN_2: return &atts->unknown_2;
-    case PLAYER_ATT_UNKNOWN_3: return &atts->unknown_3;
-    case PLAYER_ATT_UNKNOWN_4: return &atts->unknown_4;
-    case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
-    case PLAYER_ATT_WEIGHT: return &atts->weight;
+    case PLAYER_ATT_ACCURACY:
+      return &atts->accuracy;
+    case PLAYER_ATT_AGGRESSIVENESS:
+      return &atts->aggressiveness;
+    case PLAYER_ATT_AGILITY:
+      return &atts->agility;
+    case PLAYER_ATT_CHECKING:
+      return &atts->checking;
+    case PLAYER_ATT_DEF_AWARENESS:
+      return &atts->defensive_awareness;
+    case PLAYER_ATT_ENDURANCE:
+      return &atts->endurance;
+    case PLAYER_ATT_FACEOFFS:
+      return &atts->face_offs;
+    case PLAYER_ATT_HANDEDNESS:
+      return &atts->stick_hand;
+    case PLAYER_ATT_OFF_AWARENESS:
+      return &atts->offensive_awareness;
+    case PLAYER_ATT_PASSING:
+      return &atts->passing;
+    case PLAYER_ATT_SHOOT_PASS_BIAS:
+      return &atts->shoot_pass_bias;
+    case PLAYER_ATT_SHOT_POWER:
+      return &atts->shot_power;
+    case PLAYER_ATT_SPEED:
+      return &atts->speed;
+    case PLAYER_ATT_STICK_HANDLING:
+      return &atts->stick_handling;
+    case PLAYER_ATT_UNKNOWN_1:
+      return &atts->unknown_1;
+    case PLAYER_ATT_UNKNOWN_2:
+      return &atts->unknown_2;
+    case PLAYER_ATT_UNKNOWN_3:
+      return &atts->unknown_3;
+    case PLAYER_ATT_UNKNOWN_4:
+      return &atts->unknown_4;
+    case PLAYER_ATT_UNKNOWN_5:
+      return &atts->unknown_5;
+    case PLAYER_ATT_WEIGHT:
+      return &atts->weight;
     default:
       INFO("Unknown skater attribute value %d\n", att_enum);
       return NULL;
@@ -155,22 +174,38 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
 {
   switch (att_enum)
     {
-    case PLAYER_ATT_AGILITY: return &atts->agility;
-    case PLAYER_ATT_DEF_AWARENESS: return &atts->defensive_awareness;
-    case PLAYER_ATT_GLOVE_LEFT: return &atts->glove_left;
-    case PLAYER_ATT_GLOVE_RIGHT: return &atts->glove_right;
-    case PLAYER_ATT_HANDEDNESS: return &atts->glove_hand;
-    case PLAYER_ATT_OFF_AWARENESS: return &atts->offensive_awareness;
-    case PLAYER_ATT_PUCK_CONTROL: return &atts->puck_control;
-    case PLAYER_ATT_SPEED: return &atts->speed;
-    case PLAYER_ATT_STICK_LEFT: return &atts->stick_left;
-    case PLAYER_ATT_STICK_RIGHT: return &atts->stick_right;
-    case PLAYER_ATT_UNKNOWN_1: return &atts->unknown_1;
-    case PLAYER_ATT_UNKNOWN_2: return &atts->unknown_2;
-    case PLAYER_ATT_UNKNOWN_3: return &atts->unknown_3;
-    case PLAYER_ATT_UNKNOWN_4: return &atts->unknown_4;
-    case PLAYER_ATT_UNKNOWN_5: return &atts->unknown_5;
-    case PLAYER_ATT_WEIGHT: return &atts->weight;
+    case PLAYER_ATT_AGILITY:
+      return &atts->agility;
+    case PLAYER_ATT_DEF_AWARENESS:
+      return &atts->defensive_awareness;
+    case PLAYER_ATT_GLOVE_LEFT:
+      return &atts->glove_left;
+    case PLAYER_ATT_GLOVE_RIGHT:
+      return &atts->glove_right;
+    case PLAYER_ATT_HANDEDNESS:
+      return &atts->glove_hand;
+    case PLAYER_ATT_OFF_AWARENESS:
+      return &atts->offensive_awareness;
+    case PLAYER_ATT_PUCK_CONTROL:
+      return &atts->puck_control;
+    case PLAYER_ATT_SPEED:
+      return &atts->speed;
+    case PLAYER_ATT_STICK_LEFT:
+      return &atts->stick_left;
+    case PLAYER_ATT_STICK_RIGHT:
+      return &atts->stick_right;
+    case PLAYER_ATT_UNKNOWN_1:
+      return &atts->unknown_1;
+    case PLAYER_ATT_UNKNOWN_2:
+      return &atts->unknown_2;
+    case PLAYER_ATT_UNKNOWN_3:
+      return &atts->unknown_3;
+    case PLAYER_ATT_UNKNOWN_4:
+      return &atts->unknown_4;
+    case PLAYER_ATT_UNKNOWN_5:
+      return &atts->unknown_5;
+    case PLAYER_ATT_WEIGHT:
+      return &atts->weight;
     default:
       INFO("Unknown goalie attribute value %d\n", att_enum);
       return NULL;
@@ -179,14 +214,12 @@ static number_1_t *get_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
 
 static void print_att_skater(skater_atts_t *atts, player_att_t att_enum)
 {
-  INFO(" %s %3d", get_player_att_name(att_enum),
-       deserialize(*get_att_skater(atts, att_enum)));
+  INFO(" %s %3d", get_player_att_name(att_enum), deserialize(*get_att_skater(atts, att_enum)));
 }
 
 static void print_att_goalie(goalie_atts_t *atts, player_att_t att_enum)
 {
-  INFO(" %s %3d", get_player_att_name(att_enum),
-       deserialize(*get_att_goalie(atts, att_enum)));
+  INFO(" %s %3d", get_player_att_name(att_enum), deserialize(*get_att_goalie(atts, att_enum)));
 }
 
 static void print_att_handedness(number_1_t value)
@@ -261,15 +294,13 @@ static void modify_attribute(number_1_t *att, int value_change)
   *att = serialize(new_value);
 }
 
-void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum,
-                             int value_change)
+void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum, int value_change)
 {
   number_1_t *attribute = get_att_skater(atts, att_enum);
   modify_attribute(attribute, value_change);
 }
 
-void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum,
-                             int value_change)
+void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum, int value_change)
 {
   number_1_t *attribute = get_att_goalie(atts, att_enum);
   modify_attribute(attribute, value_change);

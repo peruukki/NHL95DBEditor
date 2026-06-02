@@ -4,9 +4,9 @@
 #include "backup.h"
 #include "change_log.h"
 #include "output.h"
-#include "teams.h"
-#include "players.h"
 #include "player_attributes.h"
+#include "players.h"
+#include "teams.h"
 #include "version.h"
 
 extern player_att_name_t player_att_names[];
@@ -14,7 +14,9 @@ extern player_att_name_t player_att_names[];
 #define PROGRAM_NAME "NHL95DBEditor"
 #define CMD_ARG_INDEX 1
 
-#define EXIT_IF_FAIL(x) if (!(x)) return 1
+#define EXIT_IF_FAIL(x)                                                                            \
+  if (!(x))                                                                                        \
+  return 1
 
 typedef enum
 {
@@ -29,10 +31,8 @@ typedef enum
   CMD_UNKNOWN /* Must be last */
 } command_t;
 
-static const char *commands[] =
-{
-  "addteam", "data", "changes", "goalieatt", "playeratt", "reset", "skateratt", "version"
-};
+static const char *commands[] = { "addteam",   "data",  "changes",   "goalieatt",
+                                  "playeratt", "reset", "skateratt", "version" };
 
 static int usage(const char *filename)
 {
@@ -45,8 +45,8 @@ static int usage(const char *filename)
        commands[CMD_SKATER_ATTRIBUTES], CHANGE_LOG_FILE);
   INFO("%-10s - Changes goalie attributes. Changes are logged to %s.\n",
        commands[CMD_GOALIE_ATTRIBUTES], CHANGE_LOG_FILE);
-  INFO("%-10s - Dumps attribute changes (%s) on the screen.\n",
-       commands[CMD_DUMP_CHANGES], CHANGE_LOG_FILE);
+  INFO("%-10s - Dumps attribute changes (%s) on the screen.\n", commands[CMD_DUMP_CHANGES],
+       CHANGE_LOG_FILE);
   INFO("%-10s - Resets database files to the original ones.\n", commands[CMD_RESET]);
   INFO("%-10s - Shows the application version.\n", commands[CMD_VERSION]);
   INFO("\nExperimental commands:\n");
@@ -66,11 +66,10 @@ static int cmd_attributes_usage(const char *filename, const char *command, bool_
   INFO("\n");
   INFO("Example: %s %s SPD +25 WGT -50\n", filename, command);
   INFO("\n");
-  INFO("Change values must be multipliers of %d, e.g. +%d, +%d, or -%d.\n",
-       ATT_SCALE, ATT_SCALE, 2 * ATT_SCALE, 5 * ATT_SCALE);
+  INFO("Change values must be multipliers of %d, e.g. +%d, +%d, or -%d.\n", ATT_SCALE, ATT_SCALE,
+       2 * ATT_SCALE, 5 * ATT_SCALE);
   INFO("\n");
-  INFO("The minimum resulting attribute value is %d and the maximum %d.\n",
-       ATT_MIN, ATT_MAX);
+  INFO("The minimum resulting attribute value is %d and the maximum %d.\n", ATT_MIN, ATT_MAX);
   INFO("For example, if a player would get an attribute value of %d after\n"
        "applying the change, the value is set to %d.\n",
        ATT_MIN - ATT_SCALE, ATT_MIN);
@@ -84,10 +83,10 @@ static int cmd_attributes_usage(const char *filename, const char *command, bool_
   return 1;
 }
 
-static int get_enum_value(int argc, char* argv[], int arg_index,
-                          const char* values[], int unknown_value)
+static int get_enum_value(int argc, char *argv[], int arg_index, const char *values[],
+                          int unknown_value)
 {
-  char* arg_str;
+  char *arg_str;
   int i;
 
   if (argc <= arg_index)
@@ -95,16 +94,17 @@ static int get_enum_value(int argc, char* argv[], int arg_index,
 
   arg_str = argv[arg_index];
   for (i = 0; i < unknown_value; i++)
-  {
-    if (strcmp(arg_str, values[i]) == 0)
-      return i;
-  }
+    {
+      if (strcmp(arg_str, values[i]) == 0)
+        return i;
+    }
 
   return unknown_value;
 }
 
 /* The returned array must be freed by the caller. */
-static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_count, bool_t for_goalie)
+static player_att_change_t *get_att_changes(int argc, char *argv[], int *change_count,
+                                            bool_t for_goalie)
 {
   player_att_change_t *att_changes = NULL;
   int param_count = argc - 1 - CMD_ARG_INDEX;
@@ -131,8 +131,7 @@ error:
   return NULL;
 }
 
-static void write_changes_to_log(const char *cmd, player_att_change_t *changes,
-                                 int change_count)
+static void write_changes_to_log(const char *cmd, player_att_change_t *changes, int change_count)
 {
   int i;
 
@@ -217,7 +216,7 @@ int main(int argc, char *argv[])
       break;
 
     case CMD_VERSION:
-        INFO(VERSION "\n");
+      INFO(VERSION "\n");
       break;
 
     default:

@@ -105,8 +105,6 @@ bool_t validate_att_change(player_att_change_t *change);
 
 void show_attributes(unsigned char *att_data, player_key_t *key);
 
-void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum,
-                             int value_change);
+void modify_skater_attribute(skater_atts_t *atts, player_att_t att_enum, int value_change);
 
-void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum,
-                             int value_change);
+void modify_goalie_attribute(goalie_atts_t *atts, player_att_t att_enum, int value_change);
