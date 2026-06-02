@@ -1,0 +1,51 @@
+---
+# clang-format configuration file for NHL95DBEditor
+# Created based on current project formatting style
+Language: Cpp
+BasedOnStyle: GNU
+
+# Indentation
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ContinuationIndentWidth: 4
+
+# Braces and Control Flow Blocks
+BreakBeforeBraces: GNU
+
+# Function declarations
+AllowShortFunctionsOnASingleLine: None
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+
+# Spacing and alignment
+PointerAlignment: Right
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles: false
+SpaceAfterCStyleCast: true
+Cpp11BracedListStyle: false
+
+# Cases
+IndentCaseLabels: false
+
+# Line limit and wrapping
+ColumnLimit: 100
+AlignAfterOpenBracket: Align
+BinPackParameters: true
+BinPackArguments: true
+BreakBeforeBinaryOperators: None
+
+# Blank lines
+MaxEmptyLinesToKeep: 1
+
+# Includes sorting
+IncludeCategories:
+  - Regex: '^<.*>$'
+    Priority: 1
+  - Regex: '^".*"$'
+    Priority: 2
+IncludeIsMainRegex: '$^'
+SortIncludes: true
+...
