@@ -22,10 +22,6 @@ To compile the project:
 2. Click *Terminal > Run Build Task* and choose **Build NHL95DBEditor**.
 3. The compiled executable should be at `NHL95DBEditor/target/NHL95DBEditor`.
 
-#### XCode (macOS)
-
-Use the XCode project in [`NHL95DBEditor.xcodeproj`](NHL95DBEditor.xcodeproj).
-
 #### Visual Studio (Windows)
 
 Use [`NHL95DBEditor-VS2015.sln`](NHL95DBEditor-VS2015.sln) for Visual Studio 2015 and newer.
