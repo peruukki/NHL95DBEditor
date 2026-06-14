@@ -44,3 +44,10 @@ npx clang-format -i NHL95DBEditor/src/*.c NHL95DBEditor/src/*.h
 ```
 
 The current files have been formatted with clang-format version 15.0.0.
+
+## Resources
+
+The [`NHL95DBEditor/res`](NHL95DBEditor/res) directory contains some possibly useful files:
+
+- The original game database files (`*.DB`)
+- Exported player attribute files for further analysis (`*.csv` and `*.json`)

@@ -1,0 +1,2452 @@
+{
+  "skaters": [
+    {
+      "info": { "team": "BOS", "number": 21, "position": "C", "firstName": "Ted", "lastName": "Donato" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 45, "SHO": 65, "CHK": 60, "STI": 45, "ACC": 65, "PAS": 65, "OFF": 70, "DEF": 80, "AGG": 55, "END": 65, "S/P": 70, "FAC": 75 }
+    },
+    {
+      "info": { "team": "BOS", "number": 20, "position": "C", "firstName": "Bryan", "lastName": "Smolinski" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 80, "WGT": 25, "SHO": 65, "CHK": 60, "STI": 70, "ACC": 70, "PAS": 70, "OFF": 80, "DEF": 70, "AGG": 70, "END": 70, "S/P": 75, "FAC": 90 }
+    },
+    {
+      "info": { "team": "BOS", "number": 17, "position": "L", "firstName": "Dave", "lastName": "Reid" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 70, "SHO": 65, "CHK": 55, "STI": 40, "ACC": 75, "PAS": 60, "OFF": 60, "DEF": 70, "AGG": 40, "END": 75, "S/P": 60, "FAC": 65 }
+    },
+    {
+      "info": { "team": "BOS", "number": 44, "position": "R", "firstName": "Glen", "lastName": "Murray" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 25, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 75, "PAS": 55, "OFF": 70, "DEF": 55, "AGG": 55, "END": 65, "S/P": 75, "FAC": 65 }
+    },
+    {
+      "info": { "team": "BOS", "number": 26, "position": "D", "firstName": "Glen", "lastName": "Wesley" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 90, "WGT": 65, "SHO": 75, "CHK": 65, "STI": 45, "ACC": 55, "PAS": 80, "OFF": 75, "DEF": 75, "AGG": 60, "END": 75, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "BOS", "number": 43, "position": "D", "firstName": "Al", "lastName": "Iafrate" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 80, "SHO": 100, "CHK": 80, "STI": 65, "ACC": 60, "PAS": 80, "OFF": 80, "DEF": 80, "AGG": 80, "END": 65, "S/P": 65, "FAC": 55 }
+    },
+    {
+      "info": { "team": "BOS", "number": 23, "position": "R", "firstName": "Stephen", "lastName": "Heinze" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 65, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 45, "ACC": 65, "PAS": 70, "OFF": 70, "DEF": 70, "AGG": 50, "END": 65, "S/P": 80, "FAC": 65 }
+    },
+    {
+      "info": { "team": "BOS", "number": 12, "position": "C", "firstName": "Adam", "lastName": "Oates" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 85, "WGT": 60, "SHO": 65, "CHK": 65, "STI": 45, "ACC": 75, "PAS": 95, "OFF": 100, "DEF": 90, "AGG": 45, "END": 90, "S/P": 40, "FAC": 85 }
+    },
+    {
+      "info": { "team": "BOS", "number": 18, "position": "L", "firstName": "Brent", "lastName": "Hughes" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 55, "PAS": 70, "OFF": 60, "DEF": 70, "AGG": 80, "END": 60, "S/P": 85, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BOS", "number": 32, "position": "D", "firstName": "Don", "lastName": "Sweeney" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 80, "WGT": 45, "SHO": 65, "CHK": 80, "STI": 65, "ACC": 50, "PAS": 80, "OFF": 65, "DEF": 75, "AGG": 60, "END": 75, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BOS", "number": 77, "position": "D", "firstName": "Ray", "lastName": "Bourque" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 90, "WGT": 75, "SHO": 90, "CHK": 75, "STI": 80, "ACC": 85, "PAS": 90, "OFF": 90, "DEF": 85, "AGG": 55, "END": 95, "S/P": 75, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BOS", "number": 25, "position": "D", "firstName": "Paul", "lastName": "Stanton" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 65, "SHO": 75, "CHK": 70, "STI": 40, "ACC": 50, "PAS": 80, "OFF": 55, "DEF": 65, "AGG": 70, "END": 65, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BOS", "number": 22, "position": "L", "firstName": "Jozef", "lastName": "Stumpel" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 50, "SHO": 60, "CHK": 50, "STI": 55, "ACC": 65, "PAS": 70, "OFF": 60, "DEF": 60, "AGG": 45, "END": 65, "S/P": 55, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BOS", "number": 14, "position": "D", "firstName": "Gordie", "lastName": "Roberts" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 60, "SHO": 50, "CHK": 65, "STI": 40, "ACC": 65, "PAS": 55, "OFF": 45, "DEF": 65, "AGG": 70, "END": 70, "S/P": 40, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BOS", "number": 6, "position": "D", "firstName": "Glen", "lastName": "Featherstone" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 80, "SHO": 60, "CHK": 75, "STI": 45, "ACC": 65, "PAS": 55, "OFF": 45, "DEF": 60, "AGG": 85, "END": 55, "S/P": 65, "FAC": 45 }
+    },
+    {
+      "info": { "team": "BOS", "number": 34, "position": "D", "firstName": "David", "lastName": "Shaw" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 80, "AGG": 65, "END": 75, "S/P": 85, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BOS", "number": 8, "position": "R", "firstName": "Cam", "lastName": "Neely" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 75, "SHO": 85, "CHK": 80, "STI": 45, "ACC": 90, "PAS": 80, "OFF": 85, "DEF": 80, "AGG": 75, "END": 90, "S/P": 80, "FAC": 80 }
+    },
+    {
+      "info": { "team": "BOS", "number": 27, "position": "R", "firstName": "Stephen", "lastName": "Leach" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 75, "CHK": 70, "STI": 55, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 65, "AGG": 65, "END": 75, "S/P": 75, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BOS", "number": 10, "position": "L", "firstName": "Dmitri", "lastName": "Kvartalnov" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 55, "SHO": 70, "CHK": 50, "STI": 65, "ACC": 75, "PAS": 80, "OFF": 80, "DEF": 50, "AGG": 45, "END": 75, "S/P": 55, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BOS", "number": 45, "position": "C", "firstName": "Andrew", "lastName": "McKim" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 65, "SHO": 50, "CHK": 45, "STI": 45, "ACC": 55, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 50, "END": 60, "S/P": 70, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BOS", "number": 33, "position": "R", "firstName": "Dan", "lastName": "Marois" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 60, "SHO": 70, "CHK": 45, "STI": 60, "ACC": 65, "PAS": 60, "OFF": 60, "DEF": 45, "AGG": 65, "END": 55, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BOS", "number": 19, "position": "R", "firstName": "Mariusz", "lastName": "Czerkawski" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 45, "STI": 60, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 60, "AGG": 55, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BUF", "number": 19, "position": "L", "firstName": "Randy", "lastName": "Wood" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 55, "WGT": 65, "SHO": 60, "CHK": 70, "STI": 50, "ACC": 65, "PAS": 55, "OFF": 70, "DEF": 80, "AGG": 70, "END": 80, "S/P": 80, "FAC": 65 }
+    },
+    {
+      "info": { "team": "BUF", "number": 42, "position": "D", "firstName": "Richard", "lastName": "Smehlik" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 75, "SHO": 80, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 65, "DEF": 80, "AGG": 55, "END": 70, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "BUF", "number": 27, "position": "L", "firstName": "Brad", "lastName": "May" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 65, "CHK": 75, "STI": 50, "ACC": 70, "PAS": 55, "OFF": 70, "DEF": 60, "AGG": 80, "END": 70, "S/P": 85, "FAC": 65 }
+    },
+    {
+      "info": { "team": "BUF", "number": 14, "position": "C", "firstName": "Dave", "lastName": "Hannan" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 55, "SHO": 60, "CHK": 60, "STI": 55, "ACC": 70, "PAS": 55, "OFF": 55, "DEF": 65, "AGG": 60, "END": 60, "S/P": 45, "FAC": 85 }
+    },
+    {
+      "info": { "team": "BUF", "number": 5, "position": "D", "firstName": "Craig", "lastName": "Muni" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 55, "CHK": 75, "STI": 55, "ACC": 45, "PAS": 60, "OFF": 45, "DEF": 85, "AGG": 70, "END": 80, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BUF", "number": 32, "position": "L", "firstName": "Rob", "lastName": "Ray" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 75, "SHO": 45, "CHK": 75, "STI": 45, "ACC": 55, "PAS": 50, "OFF": 50, "DEF": 55, "AGG": 85, "END": 50, "S/P": 90, "FAC": 50 }
+    },
+    {
+      "info": { "team": "BUF", "number": 10, "position": "C", "firstName": "Dale", "lastName": "Hawerchuk" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 100, "WGT": 55, "SHO": 80, "CHK": 55, "STI": 80, "ACC": 70, "PAS": 90, "OFF": 90, "DEF": 80, "AGG": 60, "END": 75, "S/P": 40, "FAC": 85 }
+    },
+    {
+      "info": { "team": "BUF", "number": 41, "position": "D", "firstName": "Ken", "lastName": "Sutton" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 65, "SHO": 60, "CHK": 50, "STI": 45, "ACC": 60, "PAS": 70, "OFF": 55, "DEF": 80, "AGG": 55, "END": 65, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BUF", "number": 24, "position": "D", "firstName": "Randy", "lastName": "Moller" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 75, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 45, "PAS": 55, "OFF": 55, "DEF": 45, "AGG": 75, "END": 50, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BUF", "number": 28, "position": "R", "firstName": "Donald", "lastName": "Audette" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 50, "SHO": 75, "CHK": 60, "STI": 60, "ACC": 80, "PAS": 70, "OFF": 80, "DEF": 65, "AGG": 55, "END": 65, "S/P": 85, "FAC": 75 }
+    },
+    {
+      "info": { "team": "BUF", "number": 26, "position": "C", "firstName": "Derek", "lastName": "Plante" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 45, "SHO": 65, "CHK": 60, "STI": 65, "ACC": 70, "PAS": 75, "OFF": 80, "DEF": 65, "AGG": 45, "END": 70, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "BUF", "number": 8, "position": "D", "firstName": "Doug", "lastName": "Bodger" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 75, "SHO": 60, "CHK": 60, "STI": 65, "ACC": 45, "PAS": 65, "OFF": 65, "DEF": 80, "AGG": 55, "END": 75, "S/P": 45, "FAC": 55 }
+    },
+    {
+      "info": { "team": "BUF", "number": 13, "position": "L", "firstName": "Yuri", "lastName": "Khmylev" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 80, "WGT": 60, "SHO": 80, "CHK": 65, "STI": 70, "ACC": 80, "PAS": 65, "OFF": 75, "DEF": 75, "AGG": 60, "END": 75, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "BUF", "number": 89, "position": "R", "firstName": "Alexander", "lastName": "Mogilny" },
+      "attributes": { "HND": "L", "SPD": 100, "AGI": 100, "WGT": 60, "SHO": 80, "CHK": 45, "STI": 65, "ACC": 80, "PAS": 90, "OFF": 95, "DEF": 70, "AGG": 50, "END": 75, "S/P": 80, "FAC": 75 }
+    },
+    {
+      "info": { "team": "BUF", "number": 18, "position": "R", "firstName": "Wayne", "lastName": "Presley" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 55, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 65, "DEF": 75, "AGG": 70, "END": 70, "S/P": 80, "FAC": 70 }
+    },
+    {
+      "info": { "team": "BUF", "number": 20, "position": "C", "firstName": "Bob", "lastName": "Sweeney" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 70, "SHO": 70, "CHK": 65, "STI": 45, "ACC": 75, "PAS": 70, "OFF": 70, "DEF": 90, "AGG": 65, "END": 80, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "BUF", "number": 7, "position": "D", "firstName": "Petr", "lastName": "Svoboda" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 50, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 40, "PAS": 65, "OFF": 60, "DEF": 80, "AGG": 65, "END": 80, "S/P": 40, "FAC": 40 }
+    },
+    {
+      "info": { "team": "BUF", "number": 4, "position": "D", "firstName": "Philippe", "lastName": "Boucher" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 65, "ACC": 60, "PAS": 75, "OFF": 65, "DEF": 55, "AGG": 70, "END": 70, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "BUF", "number": 36, "position": "L", "firstName": "Matthew", "lastName": "Barnaby" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 45, "AGG": 75, "END": 65, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "BUF", "number": 43, "position": "L", "firstName": "Jason", "lastName": "Dawe" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 65, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 75, "PAS": 65, "OFF": 65, "DEF": 60, "AGG": 45, "END": 65, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "BUF", "number": 22, "position": "L", "firstName": "Craig", "lastName": "Simpson" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 65, "SHO": 75, "CHK": 60, "STI": 55, "ACC": 80, "PAS": 70, "OFF": 75, "DEF": 70, "AGG": 60, "END": 70, "S/P": 45, "FAC": 70 }
+    },
+    {
+      "info": { "team": "BUF", "number": 16, "position": "C", "firstName": "Pat", "lastName": "LaFontaine" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 85, "WGT": 50, "SHO": 75, "CHK": 55, "STI": 80, "ACC": 80, "PAS": 85, "OFF": 95, "DEF": 80, "AGG": 55, "END": 95, "S/P": 60, "FAC": 100 }
+    },
+    {
+      "info": { "team": "CGY", "number": 26, "position": "C", "firstName": "Robert", "lastName": "Reichel" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 55, "SHO": 85, "CHK": 55, "STI": 65, "ACC": 85, "PAS": 80, "OFF": 80, "DEF": 65, "AGG": 60, "END": 65, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "CGY", "number": 14, "position": "R", "firstName": "Theoren", "lastName": "Fleury" },
+      "attributes": { "HND": "R", "SPD": 85, "AGI": 90, "WGT": 40, "SHO": 80, "CHK": 75, "STI": 70, "ACC": 75, "PAS": 70, "OFF": 80, "DEF": 75, "AGG": 65, "END": 75, "S/P": 65, "FAC": 70 }
+    },
+    {
+      "info": { "team": "CGY", "number": 29, "position": "C", "firstName": "Joel", "lastName": "Otto" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 65, "WGT": 80, "SHO": 70, "CHK": 85, "STI": 60, "ACC": 75, "PAS": 60, "OFF": 60, "DEF": 90, "AGG": 90, "END": 80, "S/P": 60, "FAC": 45 }
+    },
+    {
+      "info": { "team": "CGY", "number": 15, "position": "R", "firstName": "Sandy", "lastName": "McCarthy" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 45, "WGT": 60, "SHO": 60, "CHK": 70, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 55, "AGG": 90, "END": 70, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "CGY", "number": 5, "position": "D", "firstName": "Chris", "lastName": "Dahlquist" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 65, "SHO": 55, "CHK": 70, "STI": 55, "ACC": 45, "PAS": 55, "OFF": 45, "DEF": 80, "AGG": 70, "END": 70, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CGY", "number": 13, "position": "C", "firstName": "German", "lastName": "Titov" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 60, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 80, "PAS": 70, "OFF": 70, "DEF": 65, "AGG": 60, "END": 70, "S/P": 85, "FAC": 70 }
+    },
+    {
+      "info": { "team": "CGY", "number": 3, "position": "D", "firstName": "Frank", "lastName": "Musil" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 70, "SHO": 55, "CHK": 65, "STI": 45, "ACC": 45, "PAS": 55, "OFF": 50, "DEF": 75, "AGG": 65, "END": 65, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CGY", "number": 2, "position": "D", "firstName": "Al", "lastName": "MacInnis" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 65, "SHO": 95, "CHK": 70, "STI": 65, "ACC": 55, "PAS": 80, "OFF": 75, "DEF": 80, "AGG": 70, "END": 85, "S/P": 70, "FAC": 75 }
+    },
+    {
+      "info": { "team": "CGY", "number": 92, "position": "C", "firstName": "Michael", "lastName": "Nylander" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 50, "SHO": 65, "CHK": 55, "STI": 70, "ACC": 55, "PAS": 80, "OFF": 75, "DEF": 65, "AGG": 60, "END": 70, "S/P": 50, "FAC": 90 }
+    },
+    {
+      "info": { "team": "CGY", "number": 10, "position": "L", "firstName": "Gary", "lastName": "Roberts" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 60, "SHO": 75, "CHK": 80, "STI": 70, "ACC": 85, "PAS": 80, "OFF": 90, "DEF": 80, "AGG": 90, "END": 85, "S/P": 70, "FAC": 80 }
+    },
+    {
+      "info": { "team": "CGY", "number": 22, "position": "R", "firstName": "Ronnie", "lastName": "Stern" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 65, "SHO": 55, "CHK": 70, "STI": 45, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 50, "AGG": 90, "END": 55, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CGY", "number": 33, "position": "D", "firstName": "Zarley", "lastName": "Zalapski" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 90, "WGT": 75, "SHO": 75, "CHK": 70, "STI": 70, "ACC": 55, "PAS": 65, "OFF": 80, "DEF": 65, "AGG": 60, "END": 85, "S/P": 70, "FAC": 60 }
+    },
+    {
+      "info": { "team": "CGY", "number": 39, "position": "D", "firstName": "Dan", "lastName": "Keczmer" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 50, "CHK": 55, "STI": 60, "ACC": 55, "PAS": 45, "OFF": 45, "DEF": 65, "AGG": 65, "END": 60, "S/P": 85, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CGY", "number": 6, "position": "D", "firstName": "James", "lastName": "Patrick" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 85, "WGT": 70, "SHO": 70, "CHK": 70, "STI": 65, "ACC": 55, "PAS": 75, "OFF": 65, "DEF": 80, "AGG": 55, "END": 70, "S/P": 60, "FAC": 65 }
+    },
+    {
+      "info": { "team": "CGY", "number": 12, "position": "L", "firstName": "Paul", "lastName": "Kruse" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 70, "SHO": 60, "CHK": 70, "STI": 50, "ACC": 55, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 80, "END": 70, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "CGY", "number": 25, "position": "C", "firstName": "Joe", "lastName": "Nieuwendyk" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 65, "SHO": 80, "CHK": 70, "STI": 70, "ACC": 85, "PAS": 75, "OFF": 90, "DEF": 65, "AGG": 55, "END": 80, "S/P": 65, "FAC": 65 }
+    },
+    {
+      "info": { "team": "CGY", "number": 7, "position": "D", "firstName": "Michel", "lastName": "Petit" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 80, "CHK": 75, "STI": 60, "ACC": 45, "PAS": 60, "OFF": 55, "DEF": 65, "AGG": 70, "END": 65, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CGY", "number": 18, "position": "D", "firstName": "Trent", "lastName": "Yawney" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 60, "SHO": 60, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 55, "DEF": 75, "AGG": 55, "END": 65, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CGY", "number": 17, "position": "C", "firstName": "Wes", "lastName": "Walz" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 55, "WGT": 55, "SHO": 55, "CHK": 50, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 70, "AGG": 50, "END": 65, "S/P": 50, "FAC": 70 }
+    },
+    {
+      "info": { "team": "CGY", "number": 11, "position": "C", "firstName": "Kelly", "lastName": "Kisio" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 70, "CHK": 75, "STI": 55, "ACC": 65, "PAS": 70, "OFF": 70, "DEF": 80, "AGG": 65, "END": 80, "S/P": 50, "FAC": 85 }
+    },
+    {
+      "info": { "team": "CGY", "number": 32, "position": "C", "firstName": "Mike", "lastName": "Sullivan" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 45, "WGT": 75, "SHO": 50, "CHK": 45, "STI": 45, "ACC": 45, "PAS": 50, "OFF": 45, "DEF": 50, "AGG": 45, "END": 60, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "CGY", "number": 4, "position": "D", "firstName": "Kevin", "lastName": "Dahl" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 60, "SHO": 50, "CHK": 65, "STI": 55, "ACC": 45, "PAS": 70, "OFF": 50, "DEF": 75, "AGG": 55, "END": 65, "S/P": 50, "FAC": 50 }
+    },
+    {
+      "info": { "team": "CGY", "number": 21, "position": "D", "firstName": "Brad", "lastName": "Schlegel" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 60, "SHO": 60, "CHK": 55, "STI": 50, "ACC": 50, "PAS": 55, "OFF": 50, "DEF": 60, "AGG": 60, "END": 70, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 27, "position": "C", "firstName": "Jeremy", "lastName": "Roenick" },
+      "attributes": { "HND": "R", "SPD": 90, "AGI": 85, "WGT": 45, "SHO": 90, "CHK": 65, "STI": 75, "ACC": 90, "PAS": 90, "OFF": 90, "DEF": 80, "AGG": 70, "END": 90, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "CHI", "number": 15, "position": "R", "firstName": "Rich", "lastName": "Sutter" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 60, "SHO": 45, "CHK": 55, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 75, "AGG": 75, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 17, "position": "R", "firstName": "Joe", "lastName": "Murphy" },
+      "attributes": { "HND": "L", "SPD": 85, "AGI": 75, "WGT": 60, "SHO": 75, "CHK": 70, "STI": 55, "ACC": 65, "PAS": 80, "OFF": 75, "DEF": 65, "AGG": 70, "END": 80, "S/P": 65, "FAC": 75 }
+    },
+    {
+      "info": { "team": "CHI", "number": 10, "position": "R", "firstName": "Tony", "lastName": "Amonte" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 80, "WGT": 55, "SHO": 80, "CHK": 45, "STI": 55, "ACC": 65, "PAS": 65, "OFF": 75, "DEF": 65, "AGG": 60, "END": 75, "S/P": 85, "FAC": 65 }
+    },
+    {
+      "info": { "team": "CHI", "number": 19, "position": "L", "firstName": "Randy", "lastName": "Cunneyworth" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 55, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 55, "PAS": 70, "OFF": 55, "DEF": 65, "AGG": 65, "END": 70, "S/P": 85, "FAC": 65 }
+    },
+    {
+      "info": { "team": "CHI", "number": 7, "position": "D", "firstName": "Chris", "lastName": "Chelios" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 60, "SHO": 85, "CHK": 75, "STI": 65, "ACC": 60, "PAS": 75, "OFF": 80, "DEF": 95, "AGG": 85, "END": 100, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "CHI", "number": 12, "position": "C", "firstName": "Brent", "lastName": "Sutter" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 80, "STI": 70, "ACC": 65, "PAS": 65, "OFF": 65, "DEF": 85, "AGG": 75, "END": 90, "S/P": 45, "FAC": 80 }
+    },
+    {
+      "info": { "team": "CHI", "number": 23, "position": "D", "firstName": "Neil", "lastName": "Wilkinson" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 70, "STI": 60, "ACC": 40, "PAS": 65, "OFF": 50, "DEF": 70, "AGG": 65, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 14, "position": "L", "firstName": "Paul", "lastName": "Ysebaert" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 60, "ACC": 65, "PAS": 75, "OFF": 70, "DEF": 75, "AGG": 60, "END": 70, "S/P": 65, "FAC": 70 }
+    },
+    {
+      "info": { "team": "CHI", "number": 6, "position": "D", "firstName": "Robert", "lastName": "Dirk" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 50, "WGT": 75, "SHO": 45, "CHK": 70, "STI": 45, "ACC": 45, "PAS": 50, "OFF": 45, "DEF": 80, "AGG": 80, "END": 75, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 8, "position": "D", "firstName": "Cam", "lastName": "Russell" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 50, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 45, "PAS": 60, "OFF": 50, "DEF": 70, "AGG": 90, "END": 70, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 44, "position": "L", "firstName": "Patrick", "lastName": "Poulin" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 75, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 65, "OFF": 70, "DEF": 60, "AGG": 60, "END": 90, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 33, "position": "R", "firstName": "Dirk", "lastName": "Graham" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 80, "WGT": 65, "SHO": 65, "CHK": 75, "STI": 55, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 85, "AGG": 80, "END": 75, "S/P": 90, "FAC": 75 }
+    },
+    {
+      "info": { "team": "CHI", "number": 29, "position": "R", "firstName": "Darin", "lastName": "Kimble" },
+      "attributes": { "HND": "R", "SPD": 45, "AGI": 50, "WGT": 70, "SHO": 45, "CHK": 65, "STI": 40, "ACC": 80, "PAS": 50, "OFF": 60, "DEF": 50, "AGG": 85, "END": 45, "S/P": 70, "FAC": 60 }
+    },
+    {
+      "info": { "team": "CHI", "number": 2, "position": "D", "firstName": "Eric", "lastName": "Weinrich" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 75, "SHO": 70, "CHK": 65, "STI": 60, "ACC": 60, "PAS": 70, "OFF": 65, "DEF": 65, "AGG": 60, "END": 80, "S/P": 50, "FAC": 45 }
+    },
+    {
+      "info": { "team": "CHI", "number": 3, "position": "D", "firstName": "Greg", "lastName": "Smyth" },
+      "attributes": { "HND": "R", "SPD": 45, "AGI": 45, "WGT": 75, "SHO": 40, "CHK": 50, "STI": 40, "ACC": 50, "PAS": 40, "OFF": 45, "DEF": 50, "AGG": 90, "END": 50, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 5, "position": "D", "firstName": "Steve", "lastName": "Smith" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 80, "SHO": 65, "CHK": 80, "STI": 60, "ACC": 55, "PAS": 75, "OFF": 70, "DEF": 75, "AGG": 75, "END": 90, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 16, "position": "L", "firstName": "Michel", "lastName": "Goulet" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 65, "SHO": 60, "CHK": 55, "STI": 60, "ACC": 80, "PAS": 45, "OFF": 65, "DEF": 65, "AGG": 60, "END": 65, "S/P": 70, "FAC": 65 }
+    },
+    {
+      "info": { "team": "CHI", "number": 22, "position": "C", "firstName": "Christian", "lastName": "Ruuttu" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 65, "SHO": 65, "CHK": 80, "STI": 60, "ACC": 55, "PAS": 80, "OFF": 70, "DEF": 75, "AGG": 65, "END": 80, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "CHI", "number": 11, "position": "C", "firstName": "Jeff", "lastName": "Shantz" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 60, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 60, "ACC": 55, "PAS": 70, "OFF": 70, "DEF": 50, "AGG": 60, "END": 70, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "CHI", "number": 20, "position": "D", "firstName": "Gary", "lastName": "Suter" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 90, "WGT": 60, "SHO": 80, "CHK": 75, "STI": 70, "ACC": 55, "PAS": 80, "OFF": 75, "DEF": 75, "AGG": 75, "END": 85, "S/P": 55, "FAC": 60 }
+    },
+    {
+      "info": { "team": "CHI", "number": 4, "position": "D", "firstName": "Keith", "lastName": "Carney" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 50, "AGG": 80, "END": 45, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "CHI", "number": 32, "position": "C", "firstName": "Steve", "lastName": "Dubinsky" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 60, "SHO": 70, "CHK": 50, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 60, "DEF": 60, "AGG": 45, "END": 70, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DET", "number": 5, "position": "D", "firstName": "Nicklas", "lastName": "Lidstrom" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 50, "SHO": 75, "CHK": 55, "STI": 60, "ACC": 45, "PAS": 75, "OFF": 65, "DEF": 80, "AGG": 45, "END": 80, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DET", "number": 91, "position": "C", "firstName": "Sergei", "lastName": "Fedorov" },
+      "attributes": { "HND": "L", "SPD": 100, "AGI": 100, "WGT": 60, "SHO": 75, "CHK": 60, "STI": 75, "ACC": 90, "PAS": 90, "OFF": 100, "DEF": 90, "AGG": 65, "END": 90, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "DET", "number": 3, "position": "D", "firstName": "Steve", "lastName": "Chiasson" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 80, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 75, "DEF": 75, "AGG": 80, "END": 80, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DET", "number": 26, "position": "R", "firstName": "Ray", "lastName": "Sheppard" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 55, "SHO": 70, "CHK": 50, "STI": 55, "ACC": 85, "PAS": 60, "OFF": 90, "DEF": 45, "AGG": 50, "END": 70, "S/P": 75, "FAC": 70 }
+    },
+    {
+      "info": { "team": "DET", "number": 16, "position": "D", "firstName": "Vladimir", "lastName": "Konstantinov" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 55, "SHO": 65, "CHK": 80, "STI": 55, "ACC": 45, "PAS": 70, "OFF": 55, "DEF": 80, "AGG": 85, "END": 75, "S/P": 60, "FAC": 45 }
+    },
+    {
+      "info": { "team": "DET", "number": 77, "position": "D", "firstName": "Paul", "lastName": "Coffey" },
+      "attributes": { "HND": "L", "SPD": 85, "AGI": 95, "WGT": 70, "SHO": 80, "CHK": 60, "STI": 80, "ACC": 60, "PAS": 100, "OFF": 80, "DEF": 65, "AGG": 70, "END": 90, "S/P": 50, "FAC": 65 }
+    },
+    {
+      "info": { "team": "DET", "number": 55, "position": "L", "firstName": "Keith", "lastName": "Primeau" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 80, "SHO": 70, "CHK": 65, "STI": 60, "ACC": 90, "PAS": 60, "OFF": 75, "DEF": 65, "AGG": 75, "END": 65, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "DET", "number": 13, "position": "L", "firstName": "Vyacheslav", "lastName": "Kozlov" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 50, "SHO": 70, "CHK": 50, "STI": 65, "ACC": 75, "PAS": 70, "OFF": 75, "DEF": 55, "AGG": 60, "END": 70, "S/P": 85, "FAC": 70 }
+    },
+    {
+      "info": { "team": "DET", "number": 2, "position": "D", "firstName": "Terry", "lastName": "Carkner" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 50, "WGT": 75, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 50, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 80, "END": 70, "S/P": 40, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DET", "number": 25, "position": "R", "firstName": "Darren", "lastName": "McCarty" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 75, "SHO": 60, "CHK": 80, "STI": 50, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 65, "AGG": 95, "END": 80, "S/P": 70, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DET", "number": 22, "position": "R", "firstName": "Dino", "lastName": "Ciccarelli" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 85, "WGT": 50, "SHO": 85, "CHK": 55, "STI": 60, "ACC": 85, "PAS": 75, "OFF": 90, "DEF": 60, "AGG": 80, "END": 75, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "DET", "number": 24, "position": "R", "firstName": "Bob", "lastName": "Probert" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 80, "SHO": 70, "CHK": 80, "STI": 45, "ACC": 55, "PAS": 70, "OFF": 55, "DEF": 60, "AGG": 95, "END": 80, "S/P": 55, "FAC": 65 }
+    },
+    {
+      "info": { "team": "DET", "number": 12, "position": "C", "firstName": "Mike", "lastName": "Sillinger" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 55, "STI": 55, "ACC": 55, "PAS": 60, "OFF": 60, "DEF": 55, "AGG": 50, "END": 75, "S/P": 40, "FAC": 80 }
+    },
+    {
+      "info": { "team": "DET", "number": 15, "position": "R", "firstName": "Sheldon", "lastName": "Kennedy" },
+      "attributes": { "HND": "R", "SPD": 90, "AGI": 65, "WGT": 45, "SHO": 55, "CHK": 45, "STI": 50, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 50, "END": 60, "S/P": 85, "FAC": 75 }
+    },
+    {
+      "info": { "team": "DET", "number": 29, "position": "D", "firstName": "Sergei", "lastName": "Bautin" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 45, "STI": 50, "ACC": 50, "PAS": 55, "OFF": 50, "DEF": 65, "AGG": 50, "END": 60, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DET", "number": 27, "position": "C", "firstName": "Micah", "lastName": "Aivazoff" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 50, "END": 70, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DET", "number": 19, "position": "C", "firstName": "Steve", "lastName": "Yzerman" },
+      "attributes": { "HND": "R", "SPD": 85, "AGI": 95, "WGT": 55, "SHO": 75, "CHK": 50, "STI": 80, "ACC": 80, "PAS": 85, "OFF": 95, "DEF": 75, "AGG": 50, "END": 95, "S/P": 45, "FAC": 90 }
+    },
+    {
+      "info": { "team": "DET", "number": 23, "position": "C", "firstName": "Greg", "lastName": "Johnson" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 55, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 65, "DEF": 60, "AGG": 55, "END": 65, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DET", "number": 11, "position": "L", "firstName": "Shawn", "lastName": "Burr" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 55, "SHO": 55, "CHK": 65, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 60, "DEF": 80, "AGG": 80, "END": 65, "S/P": 50, "FAC": 80 }
+    },
+    {
+      "info": { "team": "DET", "number": 4, "position": "D", "firstName": "Mark", "lastName": "Howe" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 70, "CHK": 60, "STI": 55, "ACC": 45, "PAS": 70, "OFF": 65, "DEF": 80, "AGG": 45, "END": 65, "S/P": 40, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DET", "number": 33, "position": "C", "firstName": "Kris", "lastName": "Draper" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 55, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 55, "DEF": 80, "AGG": 55, "END": 80, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DET", "number": 21, "position": "D", "firstName": "Bob", "lastName": "Halkidis" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 45, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 50, "ACC": 55, "PAS": 55, "OFF": 50, "DEF": 55, "AGG": 75, "END": 65, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "EDM", "number": 39, "position": "C", "firstName": "Doug", "lastName": "Weight" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 70, "STI": 65, "ACC": 70, "PAS": 80, "OFF": 75, "DEF": 70, "AGG": 70, "END": 70, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "EDM", "number": 16, "position": "R", "firstName": "Kelly", "lastName": "Buchberger" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 75, "SHO": 55, "CHK": 75, "STI": 60, "ACC": 55, "PAS": 50, "OFF": 60, "DEF": 65, "AGG": 75, "END": 70, "S/P": 60, "FAC": 65 }
+    },
+    {
+      "info": { "team": "EDM", "number": 8, "position": "R", "firstName": "Zdeno", "lastName": "Ciger" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 60, "SHO": 75, "CHK": 60, "STI": 60, "ACC": 80, "PAS": 70, "OFF": 70, "DEF": 70, "AGG": 40, "END": 65, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "EDM", "number": 2, "position": "D", "firstName": "Bob", "lastName": "Beers" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 70, "SHO": 65, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 55, "OFF": 55, "DEF": 65, "AGG": 70, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "EDM", "number": 21, "position": "D", "firstName": "Igor", "lastName": "Kravchuk" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 90, "WGT": 70, "SHO": 80, "CHK": 65, "STI": 65, "ACC": 60, "PAS": 65, "OFF": 65, "DEF": 75, "AGG": 55, "END": 80, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "EDM", "number": 25, "position": "C", "firstName": "Mike", "lastName": "Stapleton" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 55, "DEF": 55, "AGG": 40, "END": 60, "S/P": 90, "FAC": 75 }
+    },
+    {
+      "info": { "team": "EDM", "number": 20, "position": "D", "firstName": "Boris", "lastName": "Mironov" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 80, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 60, "ACC": 45, "PAS": 60, "OFF": 55, "DEF": 60, "AGG": 70, "END": 55, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "EDM", "number": 7, "position": "C", "firstName": "Jason", "lastName": "Arnott" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 80, "CHK": 65, "STI": 65, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 80, "AGG": 65, "END": 70, "S/P": 70, "FAC": 90 }
+    },
+    {
+      "info": { "team": "EDM", "number": 15, "position": "D", "firstName": "Fredrik", "lastName": "Olausson" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 80, "WGT": 70, "SHO": 75, "CHK": 45, "STI": 70, "ACC": 60, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 50, "END": 65, "S/P": 45, "FAC": 65 }
+    },
+    {
+      "info": { "team": "EDM", "number": 33, "position": "L", "firstName": "Scott", "lastName": "Pearson" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 70, "SHO": 55, "CHK": 65, "STI": 45, "ACC": 55, "PAS": 60, "OFF": 45, "DEF": 55, "AGG": 70, "END": 70, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "EDM", "number": 22, "position": "D", "firstName": "Luke", "lastName": "Richardson" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 80, "SHO": 55, "CHK": 75, "STI": 55, "ACC": 40, "PAS": 65, "OFF": 50, "DEF": 65, "AGG": 80, "END": 55, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "EDM", "number": 18, "position": "R", "firstName": "Kirk", "lastName": "Maltby" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 60, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 55, "PAS": 55, "OFF": 60, "DEF": 65, "AGG": 65, "END": 80, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "EDM", "number": 9, "position": "L", "firstName": "Shayne", "lastName": "Corson" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 70, "SHO": 80, "CHK": 80, "STI": 55, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 75, "AGG": 80, "END": 80, "S/P": 70, "FAC": 85 }
+    },
+    {
+      "info": { "team": "EDM", "number": 12, "position": "R", "firstName": "Steven", "lastName": "Rice" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 80, "SHO": 55, "CHK": 60, "STI": 50, "ACC": 60, "PAS": 55, "OFF": 65, "DEF": 60, "AGG": 65, "END": 60, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "EDM", "number": 17, "position": "C", "firstName": "Scott", "lastName": "Thornton" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 70, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 55, "PAS": 55, "OFF": 45, "DEF": 65, "AGG": 65, "END": 70, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "EDM", "number": 35, "position": "D", "firstName": "Adam", "lastName": "Bennett" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 50, "CHK": 55, "STI": 45, "ACC": 40, "PAS": 50, "OFF": 50, "DEF": 55, "AGG": 60, "END": 50, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "EDM", "number": 29, "position": "L", "firstName": "Louie", "lastName": "DeBrusk" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 50, "WGT": 85, "SHO": 55, "CHK": 70, "STI": 45, "ACC": 65, "PAS": 45, "OFF": 55, "DEF": 45, "AGG": 90, "END": 50, "S/P": 90, "FAC": 60 }
+    },
+    {
+      "info": { "team": "EDM", "number": 37, "position": "C", "firstName": "Dean", "lastName": "McAmmond" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 60, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 75, "AGG": 45, "END": 70, "S/P": 55, "FAC": 70 }
+    },
+    {
+      "info": { "team": "EDM", "number": 10, "position": "D", "firstName": "Ilya", "lastName": "Byakin" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 40, "STI": 55, "ACC": 70, "PAS": 80, "OFF": 70, "DEF": 60, "AGG": 40, "END": 55, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "EDM", "number": 23, "position": "R", "firstName": "Vladimir", "lastName": "Vujtek" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 45, "WGT": 50, "SHO": 50, "CHK": 50, "STI": 45, "ACC": 50, "PAS": 55, "OFF": 60, "DEF": 50, "AGG": 40, "END": 70, "S/P": 45, "FAC": 75 }
+    },
+    {
+      "info": { "team": "EDM", "number": 26, "position": "R", "firstName": "Shjon", "lastName": "Podein" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 60, "STI": 45, "ACC": 80, "PAS": 45, "OFF": 65, "DEF": 55, "AGG": 60, "END": 60, "S/P": 90, "FAC": 75 }
+    },
+    {
+      "info": { "team": "EDM", "number": 34, "position": "L", "firstName": "Brent", "lastName": "Grieve" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 65, "WGT": 70, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 80, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 55, "END": 70, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "EDM", "number": 36, "position": "C", "firstName": "Todd", "lastName": "Marchant" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 60, "SHO": 70, "CHK": 40, "STI": 55, "ACC": 65, "PAS": 70, "OFF": 60, "DEF": 55, "AGG": 55, "END": 65, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "HFD", "number": 16, "position": "R", "firstName": "Pat", "lastName": "Verbeek" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 70, "WGT": 60, "SHO": 80, "CHK": 65, "STI": 70, "ACC": 80, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 75, "END": 80, "S/P": 75, "FAC": 75 }
+    },
+    {
+      "info": { "team": "HFD", "number": 22, "position": "C", "firstName": "Mark", "lastName": "Janssens" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 80, "SHO": 70, "CHK": 75, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 80, "AGG": 80, "END": 75, "S/P": 45, "FAC": 75 }
+    },
+    {
+      "info": { "team": "HFD", "number": 14, "position": "L", "firstName": "Paul", "lastName": "Ranheim" },
+      "attributes": { "HND": "R", "SPD": 90, "AGI": 75, "WGT": 65, "SHO": 65, "CHK": 50, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 65, "DEF": 70, "AGG": 50, "END": 65, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "HFD", "number": 8, "position": "L", "firstName": "Geoff", "lastName": "Sanderson" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 75, "WGT": 55, "SHO": 80, "CHK": 60, "STI": 60, "ACC": 80, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 50, "END": 75, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "HFD", "number": 23, "position": "L", "firstName": "Jocelyn", "lastName": "Lemieux" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 70, "SHO": 80, "CHK": 70, "STI": 60, "ACC": 55, "PAS": 50, "OFF": 65, "DEF": 65, "AGG": 75, "END": 70, "S/P": 70, "FAC": 80 }
+    },
+    {
+      "info": { "team": "HFD", "number": 44, "position": "D", "firstName": "Chris", "lastName": "Pronger" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 70, "STI": 65, "ACC": 55, "PAS": 70, "OFF": 65, "DEF": 70, "AGG": 80, "END": 65, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "HFD", "number": 21, "position": "C", "firstName": "Andrew", "lastName": "Cassels" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 60, "STI": 50, "ACC": 70, "PAS": 75, "OFF": 80, "DEF": 75, "AGG": 60, "END": 80, "S/P": 45, "FAC": 80 }
+    },
+    {
+      "info": { "team": "HFD", "number": 18, "position": "L", "firstName": "Robert", "lastName": "Kron" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 50, "SHO": 55, "CHK": 55, "STI": 70, "ACC": 65, "PAS": 65, "OFF": 70, "DEF": 75, "AGG": 40, "END": 70, "S/P": 65, "FAC": 80 }
+    },
+    {
+      "info": { "team": "HFD", "number": 4, "position": "D", "firstName": "Frantisek", "lastName": "Kucera" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 70, "CHK": 60, "STI": 55, "ACC": 50, "PAS": 60, "OFF": 60, "DEF": 75, "AGG": 60, "END": 65, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "HFD", "number": 5, "position": "D", "firstName": "Alexander", "lastName": "Godynyuk" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 55, "WGT": 75, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 60, "PAS": 50, "OFF": 55, "DEF": 65, "AGG": 60, "END": 70, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "HFD", "number": 24, "position": "L", "firstName": "Jim", "lastName": "Storm" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 55, "ACC": 55, "PAS": 70, "OFF": 55, "DEF": 65, "AGG": 55, "END": 80, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "HFD", "number": 10, "position": "D", "firstName": "Brad", "lastName": "McCrimmon" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 65, "SHO": 55, "CHK": 75, "STI": 50, "ACC": 40, "PAS": 70, "OFF": 50, "DEF": 75, "AGG": 65, "END": 70, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "HFD", "number": 26, "position": "L", "firstName": "Brian", "lastName": "Propp" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 65, "SHO": 70, "CHK": 65, "STI": 50, "ACC": 60, "PAS": 70, "OFF": 55, "DEF": 65, "AGG": 40, "END": 60, "S/P": 85, "FAC": 55 }
+    },
+    {
+      "info": { "team": "HFD", "number": 6, "position": "D", "firstName": "Adam", "lastName": "Burt" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 60, "SHO": 75, "CHK": 75, "STI": 55, "ACC": 50, "PAS": 70, "OFF": 55, "DEF": 70, "AGG": 80, "END": 75, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "HFD", "number": 27, "position": "D", "firstName": "Bryan", "lastName": "Marchment" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 65, "SHO": 55, "CHK": 80, "STI": 50, "ACC": 45, "PAS": 50, "OFF": 60, "DEF": 80, "AGG": 90, "END": 65, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "HFD", "number": 17, "position": "C", "firstName": "Ted", "lastName": "Drury" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 60, "SHO": 55, "CHK": 65, "STI": 65, "ACC": 60, "PAS": 65, "OFF": 60, "DEF": 70, "AGG": 60, "END": 70, "S/P": 55, "FAC": 70 }
+    },
+    {
+      "info": { "team": "HFD", "number": 32, "position": "C", "firstName": "Igor", "lastName": "Chibirev" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 70, "WGT": 50, "SHO": 70, "CHK": 50, "STI": 60, "ACC": 65, "PAS": 65, "OFF": 65, "DEF": 60, "AGG": 50, "END": 70, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "HFD", "number": 89, "position": "C", "firstName": "Darren", "lastName": "Turcotte" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 55, "SHO": 75, "CHK": 55, "STI": 65, "ACC": 55, "PAS": 70, "OFF": 80, "DEF": 65, "AGG": 45, "END": 75, "S/P": 70, "FAC": 80 }
+    },
+    {
+      "info": { "team": "HFD", "number": 41, "position": "R", "firstName": "Jim", "lastName": "Sandlak" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 50, "WGT": 80, "SHO": 65, "CHK": 55, "STI": 45, "ACC": 55, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 75, "END": 70, "S/P": 65, "FAC": 55 }
+    },
+    {
+      "info": { "team": "HFD", "number": 20, "position": "L", "firstName": "Kevin", "lastName": "Smyth" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 80, "SHO": 60, "CHK": 70, "STI": 45, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 75, "END": 80, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "HFD", "number": 33, "position": "D", "firstName": "Ted", "lastName": "Crowley" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 70, "AGG": 60, "END": 65, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "LA", "number": 4, "position": "D", "firstName": "Rob", "lastName": "Blake" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 75, "SHO": 80, "CHK": 80, "STI": 65, "ACC": 60, "PAS": 80, "OFF": 80, "DEF": 80, "AGG": 80, "END": 75, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "LA", "number": 25, "position": "D", "firstName": "Darryl", "lastName": "Sydor" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 70, "SHO": 65, "CHK": 70, "STI": 65, "ACC": 50, "PAS": 65, "OFF": 70, "DEF": 60, "AGG": 60, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "LA", "number": 20, "position": "L", "firstName": "Luc", "lastName": "Robitaille" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 60, "SHO": 85, "CHK": 60, "STI": 65, "ACC": 95, "PAS": 80, "OFF": 90, "DEF": 65, "AGG": 65, "END": 90, "S/P": 75, "FAC": 90 }
+    },
+    {
+      "info": { "team": "LA", "number": 11, "position": "L", "firstName": "Mike", "lastName": "Donnelly" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 55, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 65, "DEF": 70, "AGG": 60, "END": 80, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "LA", "number": 17, "position": "L", "firstName": "Jari", "lastName": "Kurri" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 65, "SHO": 80, "CHK": 55, "STI": 65, "ACC": 75, "PAS": 70, "OFF": 80, "DEF": 80, "AGG": 60, "END": 80, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "LA", "number": 2, "position": "D", "firstName": "Alexei", "lastName": "Zhitnik" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 90, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 70, "ACC": 55, "PAS": 80, "OFF": 70, "DEF": 70, "AGG": 65, "END": 80, "S/P": 50, "FAC": 50 }
+    },
+    {
+      "info": { "team": "LA", "number": 99, "position": "C", "firstName": "Wayne", "lastName": "Gretzky" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 95, "WGT": 45, "SHO": 70, "CHK": 45, "STI": 80, "ACC": 80, "PAS": 95, "OFF": 100, "DEF": 75, "AGG": 40, "END": 95, "S/P": 45, "FAC": 100 }
+    },
+    {
+      "info": { "team": "LA", "number": 10, "position": "L", "firstName": "Warren", "lastName": "Rychel" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 60, "SHO": 50, "CHK": 70, "STI": 50, "ACC": 55, "PAS": 45, "OFF": 55, "DEF": 45, "AGG": 90, "END": 45, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "LA", "number": 22, "position": "D", "firstName": "Charlie", "lastName": "Huddy" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 75, "SHO": 70, "CHK": 65, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 55, "DEF": 80, "AGG": 60, "END": 65, "S/P": 45, "FAC": 45 }
+    },
+    {
+      "info": { "team": "LA", "number": 15, "position": "C", "firstName": "Pat", "lastName": "Conacher" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 70, "PAS": 65, "OFF": 55, "DEF": 65, "AGG": 55, "END": 60, "S/P": 75, "FAC": 85 }
+    },
+    {
+      "info": { "team": "LA", "number": 9, "position": "R", "firstName": "Dixon", "lastName": "Ward" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 80, "PAS": 55, "OFF": 65, "DEF": 65, "AGG": 70, "END": 65, "S/P": 50, "FAC": 50 }
+    },
+    {
+      "info": { "team": "LA", "number": 33, "position": "D", "firstName": "Marty", "lastName": "McSorley" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 85, "SHO": 70, "CHK": 80, "STI": 60, "ACC": 55, "PAS": 65, "OFF": 60, "DEF": 75, "AGG": 95, "END": 85, "S/P": 75, "FAC": 45 }
+    },
+    {
+      "info": { "team": "LA", "number": 6, "position": "D", "firstName": "Doug", "lastName": "Houda" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 55, "CHK": 70, "STI": 50, "ACC": 45, "PAS": 45, "OFF": 50, "DEF": 60, "AGG": 80, "END": 55, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "LA", "number": 5, "position": "D", "firstName": "Tim", "lastName": "Watters" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 55, "SHO": 50, "CHK": 55, "STI": 40, "ACC": 40, "PAS": 60, "OFF": 45, "DEF": 60, "AGG": 55, "END": 55, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "LA", "number": 29, "position": "D", "firstName": "Donald", "lastName": "Dufresne" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 45, "WGT": 70, "SHO": 50, "CHK": 55, "STI": 45, "ACC": 45, "PAS": 55, "OFF": 45, "DEF": 45, "AGG": 55, "END": 65, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "LA", "number": 7, "position": "D", "firstName": "Jim", "lastName": "Paek" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 60, "WGT": 65, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 50, "PAS": 60, "OFF": 45, "DEF": 55, "AGG": 55, "END": 70, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "LA", "number": 14, "position": "R", "firstName": "Gary", "lastName": "Shuchuk" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 55, "SHO": 45, "CHK": 55, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 50, "AGG": 60, "END": 50, "S/P": 70, "FAC": 80 }
+    },
+    {
+      "info": { "team": "LA", "number": 19, "position": "R", "firstName": "John", "lastName": "Druce" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 65, "PAS": 60, "OFF": 70, "DEF": 75, "AGG": 55, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "LA", "number": 21, "position": "R", "firstName": "Tony", "lastName": "Granato" },
+      "attributes": { "HND": "R", "SPD": 85, "AGI": 80, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 65, "ACC": 75, "PAS": 65, "OFF": 80, "DEF": 80, "AGG": 90, "END": 65, "S/P": 70, "FAC": 65 }
+    },
+    {
+      "info": { "team": "LA", "number": 12, "position": "C", "firstName": "Kevin", "lastName": "Todd" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 55, "WGT": 50, "SHO": 70, "CHK": 60, "STI": 50, "ACC": 60, "PAS": 65, "OFF": 65, "DEF": 65, "AGG": 55, "END": 65, "S/P": 65, "FAC": 80 }
+    },
+    {
+      "info": { "team": "LA", "number": 13, "position": "C", "firstName": "Robert", "lastName": "Lang" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 60, "CHK": 45, "STI": 55, "ACC": 75, "PAS": 75, "OFF": 65, "DEF": 60, "AGG": 40, "END": 70, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "LA", "number": 26, "position": "C", "firstName": "Brian", "lastName": "McReynolds" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 65, "PAS": 70, "OFF": 45, "DEF": 65, "AGG": 55, "END": 70, "S/P": 55, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DAL", "number": 26, "position": "R", "firstName": "Russ", "lastName": "Courtnall" },
+      "attributes": { "HND": "R", "SPD": 100, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 55, "STI": 70, "ACC": 65, "PAS": 75, "OFF": 75, "DEF": 70, "AGG": 55, "END": 80, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "DAL", "number": 3, "position": "D", "firstName": "Craig", "lastName": "Ludwig" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 85, "SHO": 55, "CHK": 65, "STI": 50, "ACC": 40, "PAS": 60, "OFF": 50, "DEF": 75, "AGG": 75, "END": 70, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 12, "position": "D", "firstName": "Grant", "lastName": "Ledyard" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 70, "SHO": 45, "CHK": 65, "STI": 55, "ACC": 40, "PAS": 65, "OFF": 65, "DEF": 70, "AGG": 55, "END": 55, "S/P": 60, "FAC": 45 }
+    },
+    {
+      "info": { "team": "DAL", "number": 2, "position": "D", "firstName": "Derian", "lastName": "Hatcher" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 70, "SHO": 55, "CHK": 75, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 80, "AGG": 75, "END": 80, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 16, "position": "C", "firstName": "Dean", "lastName": "Evason" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 65, "PAS": 65, "OFF": 55, "DEF": 65, "AGG": 70, "END": 70, "S/P": 45, "FAC": 80 }
+    },
+    {
+      "info": { "team": "DAL", "number": 7, "position": "C", "firstName": "Neal", "lastName": "Broten" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 45, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 60, "PAS": 80, "OFF": 70, "DEF": 85, "AGG": 50, "END": 75, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "DAL", "number": 17, "position": "L", "firstName": "Mike", "lastName": "McPhee" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 70, "SHO": 70, "CHK": 80, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 70, "DEF": 75, "AGG": 55, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 9, "position": "C", "firstName": "Mike", "lastName": "Modano" },
+      "attributes": { "HND": "L", "SPD": 85, "AGI": 90, "WGT": 60, "SHO": 85, "CHK": 60, "STI": 75, "ACC": 75, "PAS": 80, "OFF": 95, "DEF": 75, "AGG": 60, "END": 90, "S/P": 65, "FAC": 85 }
+    },
+    {
+      "info": { "team": "DAL", "number": 15, "position": "C", "firstName": "Dave", "lastName": "Gagner" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 65, "ACC": 80, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 75, "END": 80, "S/P": 75, "FAC": 80 }
+    },
+    {
+      "info": { "team": "DAL", "number": 41, "position": "R", "firstName": "Brent", "lastName": "Gilchrist" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 55, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 65, "DEF": 60, "AGG": 55, "END": 60, "S/P": 85, "FAC": 75 }
+    },
+    {
+      "info": { "team": "DAL", "number": 5, "position": "D", "firstName": "Doug", "lastName": "Zmolek" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 65, "SHO": 55, "CHK": 70, "STI": 55, "ACC": 45, "PAS": 65, "OFF": 55, "DEF": 70, "AGG": 85, "END": 65, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DAL", "number": 14, "position": "D", "firstName": "Paul", "lastName": "Cavallini" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 75, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 55, "DEF": 75, "AGG": 60, "END": 70, "S/P": 85, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DAL", "number": 20, "position": "R", "firstName": "Mike", "lastName": "Craig" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 70, "PAS": 60, "OFF": 70, "DEF": 60, "AGG": 65, "END": 70, "S/P": 70, "FAC": 75 }
+    },
+    {
+      "info": { "team": "DAL", "number": 27, "position": "R", "firstName": "Shane", "lastName": "Churla" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 45, "CHK": 80, "STI": 45, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 60, "AGG": 85, "END": 60, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 21, "position": "R", "firstName": "Paul", "lastName": "Broten" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 45, "CHK": 60, "STI": 60, "ACC": 60, "PAS": 45, "OFF": 55, "DEF": 80, "AGG": 75, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 24, "position": "D", "firstName": "Mark", "lastName": "Tinordi" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 80, "CHK": 85, "STI": 55, "ACC": 70, "PAS": 55, "OFF": 65, "DEF": 75, "AGG": 85, "END": 75, "S/P": 70, "FAC": 45 }
+    },
+    {
+      "info": { "team": "DAL", "number": 29, "position": "R", "firstName": "Trent", "lastName": "Klatt" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 55, "CHK": 50, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 65, "DEF": 55, "AGG": 45, "END": 65, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 6, "position": "C", "firstName": "Pelle", "lastName": "Eklund" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 90, "WGT": 50, "SHO": 65, "CHK": 60, "STI": 70, "ACC": 65, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 50, "END": 75, "S/P": 40, "FAC": 45 }
+    },
+    {
+      "info": { "team": "DAL", "number": 23, "position": "R", "firstName": "Alan", "lastName": "May" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 70, "SHO": 70, "CHK": 65, "STI": 50, "ACC": 50, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 90, "END": 70, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "DAL", "number": 33, "position": "R", "firstName": "Mike", "lastName": "Needham" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 55, "SHO": 60, "CHK": 60, "STI": 50, "ACC": 70, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 45, "END": 60, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DAL", "number": 4, "position": "D", "firstName": "Richard", "lastName": "Matvichuk" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 65, "CHK": 70, "STI": 50, "ACC": 50, "PAS": 55, "OFF": 45, "DEF": 70, "AGG": 55, "END": 70, "S/P": 90, "FAC": 50 }
+    },
+    {
+      "info": { "team": "DAL", "number": 10, "position": "R", "firstName": "Dave", "lastName": "Barr" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 55, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 50, "DEF": 65, "AGG": 60, "END": 65, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "MTL", "number": 25, "position": "L", "firstName": "Vincent", "lastName": "Damphousse" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 55, "SHO": 80, "CHK": 50, "STI": 80, "ACC": 85, "PAS": 75, "OFF": 90, "DEF": 60, "AGG": 60, "END": 75, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "MTL", "number": 28, "position": "D", "firstName": "Eric", "lastName": "Desjardins" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 75, "WGT": 70, "SHO": 75, "CHK": 80, "STI": 60, "ACC": 60, "PAS": 70, "OFF": 65, "DEF": 90, "AGG": 65, "END": 75, "S/P": 70, "FAC": 45 }
+    },
+    {
+      "info": { "team": "MTL", "number": 12, "position": "R", "firstName": "Mike", "lastName": "Keane" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 70, "WGT": 50, "SHO": 55, "CHK": 75, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 75, "AGG": 70, "END": 80, "S/P": 40, "FAC": 55 }
+    },
+    {
+      "info": { "team": "MTL", "number": 24, "position": "D", "firstName": "Lyle", "lastName": "Odelein" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 70, "SHO": 70, "CHK": 80, "STI": 45, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 75, "AGG": 90, "END": 70, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "MTL", "number": 21, "position": "C", "firstName": "Guy", "lastName": "Carbonneau" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 55, "SHO": 55, "CHK": 75, "STI": 55, "ACC": 45, "PAS": 80, "OFF": 60, "DEF": 85, "AGG": 45, "END": 75, "S/P": 55, "FAC": 95 }
+    },
+    {
+      "info": { "team": "MTL", "number": 23, "position": "L", "firstName": "Brian", "lastName": "Bellows" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 65, "SHO": 75, "CHK": 55, "STI": 65, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 60, "AGG": 55, "END": 80, "S/P": 65, "FAC": 70 }
+    },
+    {
+      "info": { "team": "MTL", "number": 11, "position": "C", "firstName": "Kirk", "lastName": "Muller" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 70, "SHO": 75, "CHK": 75, "STI": 65, "ACC": 70, "PAS": 75, "OFF": 75, "DEF": 75, "AGG": 80, "END": 75, "S/P": 50, "FAC": 85 }
+    },
+    {
+      "info": { "team": "MTL", "number": 27, "position": "D", "firstName": "Matt", "lastName": "Schneider" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 60, "SHO": 75, "CHK": 60, "STI": 55, "ACC": 60, "PAS": 80, "OFF": 80, "DEF": 80, "AGG": 70, "END": 75, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "MTL", "number": 45, "position": "L", "firstName": "Gilbert", "lastName": "Dionne" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 65, "SHO": 60, "CHK": 70, "STI": 65, "ACC": 75, "PAS": 70, "OFF": 75, "DEF": 55, "AGG": 60, "END": 70, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "MTL", "number": 17, "position": "C", "firstName": "John", "lastName": "LeClair" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 80, "SHO": 90, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 55, "OFF": 65, "DEF": 65, "AGG": 60, "END": 65, "S/P": 45, "FAC": 80 }
+    },
+    {
+      "info": { "team": "MTL", "number": 22, "position": "L", "firstName": "Benoit", "lastName": "Brunet" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 55, "SHO": 55, "CHK": 55, "STI": 40, "ACC": 65, "PAS": 60, "OFF": 70, "DEF": 60, "AGG": 55, "END": 55, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "MTL", "number": 15, "position": "C", "firstName": "Paul", "lastName": "DiPietro" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 70, "DEF": 60, "AGG": 45, "END": 70, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "MTL", "number": 14, "position": "D", "firstName": "Kevin", "lastName": "Haller" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 65, "END": 75, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "MTL", "number": 48, "position": "D", "firstName": "J.J.", "lastName": "Daigneault" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 55, "SHO": 65, "CHK": 50, "STI": 60, "ACC": 55, "PAS": 55, "OFF": 55, "DEF": 70, "AGG": 50, "END": 75, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "MTL", "number": 31, "position": "R", "firstName": "Ed", "lastName": "Ronan" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 40, "ACC": 60, "PAS": 60, "OFF": 60, "DEF": 45, "AGG": 50, "END": 45, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "MTL", "number": 6, "position": "R", "firstName": "Oleg", "lastName": "Petrov" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 45, "SHO": 60, "CHK": 45, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 65, "DEF": 70, "AGG": 40, "END": 70, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "MTL", "number": 43, "position": "D", "firstName": "Patrice", "lastName": "Brisebois" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 50, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 70, "DEF": 65, "AGG": 55, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "MTL", "number": 8, "position": "C", "firstName": "Ron", "lastName": "Wilson" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 45, "CHK": 60, "STI": 45, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 75, "AGG": 55, "END": 75, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "MTL", "number": 34, "position": "D", "firstName": "Peter", "lastName": "Popovic" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 75, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 45, "PAS": 50, "OFF": 45, "DEF": 60, "AGG": 50, "END": 55, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "MTL", "number": 20, "position": "L", "firstName": "Pierre", "lastName": "Sevigny" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 60, "CHK": 50, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 50, "AGG": 65, "END": 45, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "MTL", "number": 32, "position": "L", "firstName": "Mario", "lastName": "Roberge" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 50, "WGT": 55, "SHO": 60, "CHK": 70, "STI": 50, "ACC": 60, "PAS": 50, "OFF": 45, "DEF": 50, "AGG": 80, "END": 45, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "MTL", "number": 44, "position": "D", "firstName": "Bryan", "lastName": "Fogarty" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 45, "WGT": 65, "SHO": 50, "CHK": 60, "STI": 60, "ACC": 40, "PAS": 45, "OFF": 60, "DEF": 45, "AGG": 50, "END": 45, "S/P": 40, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NJ", "number": 4, "position": "D", "firstName": "Scott", "lastName": "Stevens" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 80, "SHO": 75, "CHK": 90, "STI": 55, "ACC": 70, "PAS": 75, "OFF": 80, "DEF": 100, "AGG": 85, "END": 90, "S/P": 50, "FAC": 65 }
+    },
+    {
+      "info": { "team": "NJ", "number": 25, "position": "L", "firstName": "Valeri", "lastName": "Zelepukin" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 55, "SHO": 70, "CHK": 45, "STI": 70, "ACC": 75, "PAS": 70, "OFF": 80, "DEF": 80, "AGG": 60, "END": 65, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "NJ", "number": 27, "position": "D", "firstName": "Scott", "lastName": "Niedermayer" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 70, "CHK": 65, "STI": 70, "ACC": 55, "PAS": 75, "OFF": 65, "DEF": 70, "AGG": 60, "END": 70, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NJ", "number": 12, "position": "R", "firstName": "Bill", "lastName": "Guerin" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 70, "SHO": 90, "CHK": 80, "STI": 55, "ACC": 80, "PAS": 60, "OFF": 70, "DEF": 65, "AGG": 75, "END": 65, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NJ", "number": 44, "position": "L", "firstName": "Stephane", "lastName": "Richer" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 80, "WGT": 70, "SHO": 90, "CHK": 55, "STI": 75, "ACC": 80, "PAS": 65, "OFF": 80, "DEF": 65, "AGG": 60, "END": 75, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NJ", "number": 15, "position": "R", "firstName": "John", "lastName": "MacLean" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 70, "SHO": 75, "CHK": 65, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 85, "DEF": 80, "AGG": 80, "END": 80, "S/P": 90, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NJ", "number": 22, "position": "R", "firstName": "Claude", "lastName": "Lemieux" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 80, "WGT": 80, "SHO": 80, "CHK": 75, "STI": 55, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 70, "AGG": 80, "END": 80, "S/P": 65, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NJ", "number": 3, "position": "D", "firstName": "Ken", "lastName": "Daneyko" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 75, "SHO": 45, "CHK": 90, "STI": 45, "ACC": 40, "PAS": 50, "OFF": 50, "DEF": 90, "AGG": 80, "END": 75, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NJ", "number": 21, "position": "R", "firstName": "Randy", "lastName": "McKay" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 55, "SHO": 70, "CHK": 80, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 85, "END": 65, "S/P": 75, "FAC": 45 }
+    },
+    {
+      "info": { "team": "NJ", "number": 10, "position": "C", "firstName": "Corey", "lastName": "Millen" },
+      "attributes": { "HND": "R", "SPD": 85, "AGI": 70, "WGT": 45, "SHO": 55, "CHK": 50, "STI": 65, "ACC": 75, "PAS": 70, "OFF": 75, "DEF": 55, "AGG": 70, "END": 70, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NJ", "number": 19, "position": "C", "firstName": "Bob", "lastName": "Carpenter" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 50, "ACC": 45, "PAS": 65, "OFF": 55, "DEF": 75, "AGG": 70, "END": 65, "S/P": 65, "FAC": 65 }
+    },
+    {
+      "info": { "team": "NJ", "number": 17, "position": "L", "firstName": "Tom", "lastName": "Chorske" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 70, "SHO": 60, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 60, "OFF": 70, "DEF": 65, "AGG": 55, "END": 65, "S/P": 65, "FAC": 45 }
+    },
+    {
+      "info": { "team": "NJ", "number": 16, "position": "L", "firstName": "Bobby", "lastName": "Holik" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 60, "WGT": 75, "SHO": 75, "CHK": 70, "STI": 55, "ACC": 55, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 70, "END": 70, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NJ", "number": 8, "position": "L", "firstName": "Mike", "lastName": "Peluso" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 45, "WGT": 70, "SHO": 55, "CHK": 75, "STI": 40, "ACC": 50, "PAS": 45, "OFF": 60, "DEF": 55, "AGG": 85, "END": 80, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NJ", "number": 23, "position": "D", "firstName": "Bruce", "lastName": "Driver" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 55, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 75, "AGG": 60, "END": 80, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NJ", "number": 6, "position": "D", "firstName": "Tommy", "lastName": "Albelin" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 40, "PAS": 65, "OFF": 55, "DEF": 70, "AGG": 60, "END": 70, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NJ", "number": 9, "position": "C", "firstName": "Bernie", "lastName": "Nicholls" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 65, "ACC": 65, "PAS": 75, "OFF": 80, "DEF": 75, "AGG": 65, "END": 75, "S/P": 45, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NJ", "number": 20, "position": "C", "firstName": "Alexander", "lastName": "Semak" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 70, "CHK": 55, "STI": 70, "ACC": 70, "PAS": 65, "OFF": 65, "DEF": 65, "AGG": 55, "END": 70, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NJ", "number": 2, "position": "D", "firstName": "Viacheslav", "lastName": "Fetisov" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 75, "WGT": 80, "SHO": 55, "CHK": 55, "STI": 50, "ACC": 45, "PAS": 70, "OFF": 50, "DEF": 65, "AGG": 65, "END": 70, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NJ", "number": 5, "position": "D", "firstName": "Jaroslav", "lastName": "Modry" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 65, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 45, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 45, "END": 65, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NJ", "number": 26, "position": "D", "firstName": "Jason", "lastName": "Smith" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 45, "PAS": 65, "OFF": 45, "DEF": 70, "AGG": 55, "END": 65, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NJ", "number": 11, "position": "C", "firstName": "Jim", "lastName": "Dowd" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 70, "WGT": 60, "SHO": 55, "CHK": 45, "STI": 60, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 60, "AGG": 55, "END": 70, "S/P": 50, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NYI", "number": 33, "position": "L", "firstName": "Benoit", "lastName": "Hogue" },
+      "attributes": { "HND": "L", "SPD": 85, "AGI": 75, "WGT": 60, "SHO": 70, "CHK": 50, "STI": 55, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 65, "AGG": 65, "END": 80, "S/P": 50, "FAC": 75 }
+    },
+    {
+      "info": { "team": "NYI", "number": 39, "position": "C", "firstName": "Travis", "lastName": "Green" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 65, "SHO": 75, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 55, "OFF": 70, "DEF": 55, "AGG": 60, "END": 65, "S/P": 75, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYI", "number": 20, "position": "C", "firstName": "Ray", "lastName": "Ferraro" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 75, "CHK": 60, "STI": 65, "ACC": 70, "PAS": 65, "OFF": 65, "DEF": 70, "AGG": 65, "END": 75, "S/P": 80, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NYI", "number": 18, "position": "L", "firstName": "Marty", "lastName": "McInnis" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 45, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 80, "PAS": 60, "OFF": 70, "DEF": 75, "AGG": 60, "END": 70, "S/P": 40, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYI", "number": 32, "position": "R", "firstName": "Steve", "lastName": "Thomas" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 55, "SHO": 75, "CHK": 80, "STI": 60, "ACC": 75, "PAS": 70, "OFF": 80, "DEF": 70, "AGG": 80, "END": 75, "S/P": 60, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYI", "number": 27, "position": "L", "firstName": "Derek", "lastName": "King" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 70, "WGT": 70, "SHO": 80, "CHK": 40, "STI": 55, "ACC": 85, "PAS": 55, "OFF": 75, "DEF": 45, "AGG": 45, "END": 75, "S/P": 75, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYI", "number": 24, "position": "C", "firstName": "Keith", "lastName": "Acton" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 45, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 55, "PAS": 70, "OFF": 60, "DEF": 75, "AGG": 70, "END": 75, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "NYI", "number": 11, "position": "D", "firstName": "Darius", "lastName": "Kasparaitis" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 60, "SHO": 65, "CHK": 80, "STI": 55, "ACC": 45, "PAS": 70, "OFF": 55, "DEF": 65, "AGG": 80, "END": 55, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYI", "number": 23, "position": "D", "firstName": "Vladimir", "lastName": "Malakhov" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 75, "SHO": 75, "CHK": 60, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 75, "DEF": 65, "AGG": 65, "END": 75, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYI", "number": 7, "position": "D", "firstName": "Scott", "lastName": "Lachance" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 65, "SHO": 65, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 65, "OFF": 55, "DEF": 80, "AGG": 65, "END": 80, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYI", "number": 15, "position": "R", "firstName": "Brad", "lastName": "Dalgarno" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 55, "WGT": 80, "SHO": 45, "CHK": 70, "STI": 60, "ACC": 80, "PAS": 60, "OFF": 60, "DEF": 65, "AGG": 65, "END": 55, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYI", "number": 12, "position": "R", "firstName": "Mick", "lastName": "Vukota" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 65, "SHO": 45, "CHK": 65, "STI": 50, "ACC": 50, "PAS": 45, "OFF": 40, "DEF": 45, "AGG": 85, "END": 60, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYI", "number": 77, "position": "C", "firstName": "Pierre", "lastName": "Turgeon" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 80, "CHK": 40, "STI": 65, "ACC": 90, "PAS": 75, "OFF": 90, "DEF": 70, "AGG": 40, "END": 75, "S/P": 45, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NYI", "number": 28, "position": "D", "firstName": "Tom", "lastName": "Kurvers" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 65, "SHO": 75, "CHK": 60, "STI": 55, "ACC": 50, "PAS": 65, "OFF": 80, "DEF": 60, "AGG": 55, "END": 75, "S/P": 45, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NYI", "number": 37, "position": "D", "firstName": "Dennis", "lastName": "Vaske" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 45, "WGT": 75, "SHO": 60, "CHK": 60, "STI": 50, "ACC": 45, "PAS": 50, "OFF": 55, "DEF": 45, "AGG": 70, "END": 50, "S/P": 50, "FAC": 45 }
+    },
+    {
+      "info": { "team": "NYI", "number": 26, "position": "R", "firstName": "Patrick", "lastName": "Flatley" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 65, "SHO": 60, "CHK": 80, "STI": 45, "ACC": 60, "PAS": 75, "OFF": 70, "DEF": 75, "AGG": 80, "END": 80, "S/P": 50, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYI", "number": 8, "position": "L", "firstName": "David", "lastName": "Maley" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 50, "WGT": 65, "SHO": 55, "CHK": 70, "STI": 45, "ACC": 40, "PAS": 45, "OFF": 50, "DEF": 50, "AGG": 80, "END": 50, "S/P": 80, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYI", "number": 4, "position": "D", "firstName": "Uwe", "lastName": "Krupp" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 95, "SHO": 75, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 70, "OFF": 65, "DEF": 70, "AGG": 55, "END": 75, "S/P": 45, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYI", "number": 25, "position": "L", "firstName": "David", "lastName": "Volek" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 55, "SHO": 55, "CHK": 45, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 55, "AGG": 55, "END": 75, "S/P": 85, "FAC": 65 }
+    },
+    {
+      "info": { "team": "NYI", "number": 47, "position": "D", "firstName": "Richard", "lastName": "Pilon" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 80, "WGT": 70, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 45, "PAS": 45, "OFF": 40, "DEF": 60, "AGG": 85, "END": 55, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYI", "number": 17, "position": "R", "firstName": "Yan", "lastName": "Kaminsky" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 55, "SHO": 55, "CHK": 45, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 45, "AGG": 50, "END": 60, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYI", "number": 10, "position": "C", "firstName": "Claude", "lastName": "Loiselle" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 70, "WGT": 65, "SHO": 45, "CHK": 65, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 60, "DEF": 45, "AGG": 80, "END": 50, "S/P": 85, "FAC": 75 }
+    },
+    {
+      "info": { "team": "NYR", "number": 36, "position": "R", "firstName": "Glenn", "lastName": "Anderson" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 60, "ACC": 65, "PAS": 80, "OFF": 80, "DEF": 70, "AGG": 70, "END": 75, "S/P": 50, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NYR", "number": 9, "position": "L", "firstName": "Adam", "lastName": "Graves" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 65, "CHK": 90, "STI": 60, "ACC": 65, "PAS": 65, "OFF": 80, "DEF": 70, "AGG": 90, "END": 80, "S/P": 85, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NYR", "number": 2, "position": "D", "firstName": "Brian", "lastName": "Leetch" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 100, "WGT": 55, "SHO": 75, "CHK": 55, "STI": 80, "ACC": 60, "PAS": 90, "OFF": 85, "DEF": 75, "AGG": 60, "END": 85, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NYR", "number": 10, "position": "L", "firstName": "Esa", "lastName": "Tikkanen" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 85, "WGT": 70, "SHO": 85, "CHK": 80, "STI": 65, "ACC": 60, "PAS": 80, "OFF": 70, "DEF": 80, "AGG": 75, "END": 80, "S/P": 80, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NYR", "number": 24, "position": "D", "firstName": "Jay", "lastName": "Wells" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 75, "SHO": 60, "CHK": 75, "STI": 50, "ACC": 40, "PAS": 60, "OFF": 50, "DEF": 70, "AGG": 80, "END": 55, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYR", "number": 21, "position": "D", "firstName": "Sergei", "lastName": "Zubov" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 60, "SHO": 75, "CHK": 70, "STI": 70, "ACC": 60, "PAS": 75, "OFF": 90, "DEF": 75, "AGG": 60, "END": 70, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYR", "number": 14, "position": "C", "firstName": "Craig", "lastName": "MacTavish" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 65, "SHO": 55, "CHK": 75, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 70, "DEF": 90, "AGG": 70, "END": 85, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "NYR", "number": 32, "position": "L", "firstName": "Stephane", "lastName": "Matteau" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 65, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 65, "DEF": 80, "AGG": 65, "END": 70, "S/P": 60, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYR", "number": 16, "position": "R", "firstName": "Brian", "lastName": "Noonan" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 80, "CHK": 65, "STI": 55, "ACC": 75, "PAS": 65, "OFF": 75, "DEF": 80, "AGG": 65, "END": 80, "S/P": 85, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYR", "number": 27, "position": "R", "firstName": "Alexei", "lastName": "Kovalev" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 100, "WGT": 60, "SHO": 85, "CHK": 60, "STI": 75, "ACC": 75, "PAS": 65, "OFF": 75, "DEF": 60, "AGG": 65, "END": 65, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYR", "number": 13, "position": "C", "firstName": "Sergei", "lastName": "Nemchinov" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 55, "SHO": 70, "CHK": 80, "STI": 60, "ACC": 75, "PAS": 70, "OFF": 65, "DEF": 90, "AGG": 55, "END": 100, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "NYR", "number": 17, "position": "L", "firstName": "Greg", "lastName": "Gilbert" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 65, "PAS": 50, "OFF": 55, "DEF": 80, "AGG": 55, "END": 65, "S/P": 45, "FAC": 65 }
+    },
+    {
+      "info": { "team": "NYR", "number": 11, "position": "C", "firstName": "Mark", "lastName": "Messier" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 70, "SHO": 70, "CHK": 80, "STI": 70, "ACC": 70, "PAS": 85, "OFF": 80, "DEF": 65, "AGG": 65, "END": 80, "S/P": 60, "FAC": 90 }
+    },
+    {
+      "info": { "team": "NYR", "number": 4, "position": "D", "firstName": "Kevin", "lastName": "Lowe" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 50, "PAS": 70, "OFF": 60, "DEF": 80, "AGG": 70, "END": 65, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYR", "number": 26, "position": "L", "firstName": "Joey", "lastName": "Kocur" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 65, "SHO": 55, "CHK": 70, "STI": 45, "ACC": 45, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 75, "END": 55, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYR", "number": 28, "position": "R", "firstName": "Steve", "lastName": "Larmer" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 60, "SHO": 80, "CHK": 80, "STI": 55, "ACC": 75, "PAS": 80, "OFF": 80, "DEF": 100, "AGG": 55, "END": 100, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "NYR", "number": 23, "position": "D", "firstName": "Jeff", "lastName": "Beukeboom" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 80, "SHO": 55, "CHK": 80, "STI": 60, "ACC": 45, "PAS": 55, "OFF": 60, "DEF": 75, "AGG": 75, "END": 65, "S/P": 40, "FAC": 40 }
+    },
+    {
+      "info": { "team": "NYR", "number": 25, "position": "D", "firstName": "Alexander", "lastName": "Karpovtsev" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 55, "PAS": 70, "OFF": 60, "DEF": 70, "AGG": 60, "END": 65, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "NYR", "number": 19, "position": "L", "firstName": "Nick", "lastName": "Kypreos" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 80, "PAS": 45, "OFF": 60, "DEF": 60, "AGG": 90, "END": 70, "S/P": 75, "FAC": 60 }
+    },
+    {
+      "info": { "team": "NYR", "number": 15, "position": "C", "firstName": "Mike", "lastName": "Hudson" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 80, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 65, "AGG": 65, "END": 80, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "NYR", "number": 12, "position": "C", "firstName": "Ed", "lastName": "Olczyk" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 75, "CHK": 60, "STI": 60, "ACC": 70, "PAS": 80, "OFF": 70, "DEF": 65, "AGG": 60, "END": 70, "S/P": 80, "FAC": 75 }
+    },
+    {
+      "info": { "team": "NYR", "number": 6, "position": "D", "firstName": "Doug", "lastName": "Lidster" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 65, "CHK": 65, "STI": 55, "ACC": 45, "PAS": 80, "OFF": 55, "DEF": 70, "AGG": 60, "END": 75, "S/P": 45, "FAC": 45 }
+    },
+    {
+      "info": { "team": "OTT", "number": 91, "position": "C", "firstName": "Alexandre", "lastName": "Daigle" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 50, "SHO": 80, "CHK": 55, "STI": 70, "ACC": 70, "PAS": 80, "OFF": 70, "DEF": 45, "AGG": 55, "END": 70, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "OTT", "number": 19, "position": "C", "firstName": "Alexei", "lastName": "Yashin" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 80, "WGT": 60, "SHO": 75, "CHK": 50, "STI": 75, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 50, "AGG": 55, "END": 65, "S/P": 55, "FAC": 95 }
+    },
+    {
+      "info": { "team": "OTT", "number": 18, "position": "L", "firstName": "Troy", "lastName": "Mallette" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 45, "ACC": 65, "PAS": 50, "OFF": 60, "DEF": 55, "AGG": 75, "END": 60, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "OTT", "number": 6, "position": "D", "firstName": "Gord", "lastName": "Dineen" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 50, "WGT": 65, "SHO": 45, "CHK": 60, "STI": 50, "ACC": 40, "PAS": 50, "OFF": 60, "DEF": 55, "AGG": 65, "END": 55, "S/P": 85, "FAC": 40 }
+    },
+    {
+      "info": { "team": "OTT", "number": 34, "position": "D", "firstName": "Darren", "lastName": "Rumble" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 45, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 40, "PAS": 60, "OFF": 60, "DEF": 45, "AGG": 70, "END": 70, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 17, "position": "C", "firstName": "Dave", "lastName": "McLlwain" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 60, "SHO": 55, "CHK": 70, "STI": 55, "ACC": 70, "PAS": 65, "OFF": 65, "DEF": 70, "AGG": 60, "END": 70, "S/P": 90, "FAC": 75 }
+    },
+    {
+      "info": { "team": "OTT", "number": 4, "position": "D", "firstName": "Brad", "lastName": "Shaw" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 65, "CHK": 60, "STI": 55, "ACC": 50, "PAS": 70, "OFF": 65, "DEF": 55, "AGG": 60, "END": 85, "S/P": 60, "FAC": 45 }
+    },
+    {
+      "info": { "team": "OTT", "number": 28, "position": "L", "firstName": "Bill", "lastName": "Huard" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 50, "WGT": 80, "SHO": 50, "CHK": 65, "STI": 50, "ACC": 50, "PAS": 50, "OFF": 45, "DEF": 40, "AGG": 65, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 5, "position": "D", "firstName": "Kerry", "lastName": "Huffman" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 70, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 45, "PAS": 55, "OFF": 55, "DEF": 60, "AGG": 60, "END": 65, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 26, "position": "C", "firstName": "Scott", "lastName": "Levins" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 50, "AGG": 55, "END": 65, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "OTT", "number": 11, "position": "L", "firstName": "Evgeny", "lastName": "Davydov" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 45, "STI": 55, "ACC": 65, "PAS": 70, "OFF": 70, "DEF": 60, "AGG": 50, "END": 65, "S/P": 85, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 20, "position": "R", "firstName": "Andrew", "lastName": "McBain" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 55, "WGT": 70, "SHO": 65, "CHK": 55, "STI": 55, "ACC": 55, "PAS": 55, "OFF": 65, "DEF": 55, "AGG": 60, "END": 55, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "OTT", "number": 21, "position": "D", "firstName": "Dennis", "lastName": "Vial" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 80, "STI": 50, "ACC": 50, "PAS": 50, "OFF": 45, "DEF": 65, "AGG": 80, "END": 65, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "OTT", "number": 22, "position": "D", "firstName": "Norm", "lastName": "Maciver" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 60, "STI": 70, "ACC": 55, "PAS": 70, "OFF": 80, "DEF": 60, "AGG": 65, "END": 80, "S/P": 50, "FAC": 60 }
+    },
+    {
+      "info": { "team": "OTT", "number": 61, "position": "L", "firstName": "Sylvain", "lastName": "Turgeon" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 70, "SHO": 80, "CHK": 40, "STI": 50, "ACC": 65, "PAS": 55, "OFF": 80, "DEF": 55, "AGG": 70, "END": 65, "S/P": 85, "FAC": 40 }
+    },
+    {
+      "info": { "team": "OTT", "number": 38, "position": "C", "firstName": "Vladimir", "lastName": "Ruzicka" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 75, "SHO": 60, "CHK": 45, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 40, "AGG": 40, "END": 55, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "OTT", "number": 15, "position": "C", "firstName": "Dave", "lastName": "Archibald" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 50, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 70, "DEF": 70, "AGG": 55, "END": 70, "S/P": 85, "FAC": 75 }
+    },
+    {
+      "info": { "team": "OTT", "number": 16, "position": "R", "firstName": "Brad", "lastName": "Lauer" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 65, "SHO": 60, "CHK": 55, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 60, "DEF": 50, "AGG": 55, "END": 60, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 55, "position": "D", "firstName": "Dimitri", "lastName": "Filimonov" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 70, "SHO": 60, "CHK": 55, "STI": 60, "ACC": 50, "PAS": 55, "OFF": 50, "DEF": 60, "AGG": 45, "END": 60, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 33, "position": "C", "firstName": "Troy", "lastName": "Murray" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 75, "WGT": 65, "SHO": 60, "CHK": 80, "STI": 60, "ACC": 45, "PAS": 70, "OFF": 60, "DEF": 80, "AGG": 65, "END": 65, "S/P": 90, "FAC": 90 }
+    },
+    {
+      "info": { "team": "OTT", "number": 27, "position": "L", "firstName": "Phil", "lastName": "Bourque" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 70, "WGT": 65, "SHO": 60, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 60, "END": 85, "S/P": 70, "FAC": 45 }
+    },
+    {
+      "info": { "team": "OTT", "number": 24, "position": "R", "firstName": "Robert", "lastName": "Burakovsky" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 45, "WGT": 55, "SHO": 55, "CHK": 40, "STI": 50, "ACC": 55, "PAS": 45, "OFF": 55, "DEF": 40, "AGG": 40, "END": 55, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "OTT", "number": 7, "position": "C", "firstName": "Dan", "lastName": "Quinn" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 55, "SHO": 60, "CHK": 40, "STI": 70, "ACC": 70, "PAS": 45, "OFF": 65, "DEF": 50, "AGG": 40, "END": 70, "S/P": 100, "FAC": 70 }
+    },
+    {
+      "info": { "team": "PHI", "number": 22, "position": "C", "firstName": "Mark", "lastName": "Lamb" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 55, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 50, "PAS": 70, "OFF": 55, "DEF": 80, "AGG": 65, "END": 65, "S/P": 65, "FAC": 75 }
+    },
+    {
+      "info": { "team": "PHI", "number": 8, "position": "R", "firstName": "Mark", "lastName": "Recchi" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 65, "STI": 65, "ACC": 90, "PAS": 75, "OFF": 85, "DEF": 70, "AGG": 65, "END": 80, "S/P": 65, "FAC": 85 }
+    },
+    {
+      "info": { "team": "PHI", "number": 17, "position": "C", "firstName": "Rod", "lastName": "Brind'Amour" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 70, "SHO": 75, "CHK": 65, "STI": 65, "ACC": 75, "PAS": 75, "OFF": 80, "DEF": 75, "AGG": 65, "END": 80, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "PHI", "number": 19, "position": "L", "firstName": "Mikael", "lastName": "Renberg" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 60, "SHO": 75, "CHK": 70, "STI": 70, "ACC": 90, "PAS": 80, "OFF": 85, "DEF": 70, "AGG": 60, "END": 65, "S/P": 55, "FAC": 60 }
+    },
+    {
+      "info": { "team": "PHI", "number": 3, "position": "D", "firstName": "Garry", "lastName": "Galley" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 65, "STI": 65, "ACC": 50, "PAS": 70, "OFF": 70, "DEF": 75, "AGG": 65, "END": 70, "S/P": 55, "FAC": 45 }
+    },
+    {
+      "info": { "team": "PHI", "number": 42, "position": "L", "firstName": "Josef", "lastName": "Beranek" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 50, "STI": 70, "ACC": 75, "PAS": 70, "OFF": 75, "DEF": 65, "AGG": 70, "END": 65, "S/P": 75, "FAC": 45 }
+    },
+    {
+      "info": { "team": "PHI", "number": 2, "position": "D", "firstName": "Dimitri", "lastName": "Yushkevich" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 60, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 50, "PAS": 65, "OFF": 70, "DEF": 75, "AGG": 70, "END": 85, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "PHI", "number": 26, "position": "D", "firstName": "Rob", "lastName": "Zettler" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 70, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 45, "ACC": 45, "PAS": 65, "OFF": 45, "DEF": 55, "AGG": 80, "END": 70, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PHI", "number": 14, "position": "C", "firstName": "Dave", "lastName": "Tippett" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 60, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 50, "DEF": 65, "AGG": 55, "END": 65, "S/P": 45, "FAC": 85 }
+    },
+    {
+      "info": { "team": "PHI", "number": 18, "position": "L", "firstName": "Brent", "lastName": "Fedyk" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 65, "SHO": 70, "CHK": 55, "STI": 55, "ACC": 65, "PAS": 60, "OFF": 70, "DEF": 70, "AGG": 60, "END": 65, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PHI", "number": 21, "position": "R", "firstName": "Dave", "lastName": "Brown" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 45, "WGT": 70, "SHO": 50, "CHK": 55, "STI": 50, "ACC": 40, "PAS": 45, "OFF": 40, "DEF": 70, "AGG": 75, "END": 60, "S/P": 85, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PHI", "number": 11, "position": "R", "firstName": "Kevin", "lastName": "Dineen" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 75, "WGT": 60, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 80, "AGG": 75, "END": 75, "S/P": 85, "FAC": 85 }
+    },
+    {
+      "info": { "team": "PHI", "number": 29, "position": "D", "firstName": "Yves", "lastName": "Racine" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 55, "SHO": 80, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 65, "DEF": 65, "AGG": 55, "END": 75, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PHI", "number": 23, "position": "D", "firstName": "Stewart", "lastName": "Malgunas" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 50, "SHO": 45, "CHK": 70, "STI": 55, "ACC": 40, "PAS": 60, "OFF": 45, "DEF": 55, "AGG": 60, "END": 70, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "PHI", "number": 88, "position": "C", "firstName": "Eric", "lastName": "Lindros" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 85, "SHO": 90, "CHK": 85, "STI": 65, "ACC": 95, "PAS": 75, "OFF": 80, "DEF": 80, "AGG": 80, "END": 90, "S/P": 65, "FAC": 90 }
+    },
+    {
+      "info": { "team": "PHI", "number": 15, "position": "C", "firstName": "Allan", "lastName": "Conroy" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 50, "SHO": 60, "CHK": 55, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 65, "AGG": 60, "END": 65, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PHI", "number": 28, "position": "D", "firstName": "Jason", "lastName": "Bowen" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 75, "SHO": 70, "CHK": 75, "STI": 60, "ACC": 55, "PAS": 55, "OFF": 50, "DEF": 65, "AGG": 55, "END": 70, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "PHI", "number": 25, "position": "D", "firstName": "Jeff", "lastName": "Finley" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 40, "PAS": 60, "OFF": 50, "DEF": 60, "AGG": 55, "END": 55, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "PHI", "number": 20, "position": "C", "firstName": "Rob", "lastName": "DiMaio" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 65, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 65, "END": 75, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "PHI", "number": 27, "position": "D", "firstName": "Ryan", "lastName": "McGill" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 55, "WGT": 65, "SHO": 60, "CHK": 70, "STI": 50, "ACC": 45, "PAS": 50, "OFF": 55, "DEF": 65, "AGG": 75, "END": 65, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PHI", "number": 36, "position": "C", "firstName": "Andre", "lastName": "Faust" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 55, "ACC": 75, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 60, "END": 65, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "PHI", "number": 5, "position": "D", "firstName": "Rob", "lastName": "Ramage" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 65, "CHK": 80, "STI": 45, "ACC": 50, "PAS": 60, "OFF": 45, "DEF": 65, "AGG": 80, "END": 65, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 55, "position": "D", "firstName": "Larry", "lastName": "Murphy" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 80, "WGT": 75, "SHO": 75, "CHK": 70, "STI": 70, "ACC": 55, "PAS": 90, "OFF": 90, "DEF": 90, "AGG": 55, "END": 90, "S/P": 45, "FAC": 75 }
+    },
+    {
+      "info": { "team": "PIT", "number": 82, "position": "C", "firstName": "Martin", "lastName": "Straka" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 65, "WGT": 50, "SHO": 65, "CHK": 50, "STI": 65, "ACC": 70, "PAS": 80, "OFF": 80, "DEF": 70, "AGG": 50, "END": 70, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "PIT", "number": 7, "position": "R", "firstName": "Joe", "lastName": "Mullen" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 75, "WGT": 55, "SHO": 70, "CHK": 70, "STI": 55, "ACC": 90, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 45, "END": 80, "S/P": 80, "FAC": 80 }
+    },
+    {
+      "info": { "team": "PIT", "number": 25, "position": "L", "firstName": "Kevin", "lastName": "Stevens" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 80, "SHO": 85, "CHK": 70, "STI": 55, "ACC": 90, "PAS": 75, "OFF": 85, "DEF": 55, "AGG": 75, "END": 85, "S/P": 75, "FAC": 100 }
+    },
+    {
+      "info": { "team": "PIT", "number": 10, "position": "C", "firstName": "Ron", "lastName": "Francis" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 70, "SHO": 65, "CHK": 75, "STI": 65, "ACC": 65, "PAS": 85, "OFF": 85, "DEF": 85, "AGG": 55, "END": 85, "S/P": 50, "FAC": 95 }
+    },
+    {
+      "info": { "team": "PIT", "number": 5, "position": "D", "firstName": "Ulf", "lastName": "Samuelsson" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 65, "SHO": 65, "CHK": 85, "STI": 55, "ACC": 40, "PAS": 70, "OFF": 60, "DEF": 75, "AGG": 100, "END": 75, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 68, "position": "R", "firstName": "Jaromir", "lastName": "Jagr" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 75, "SHO": 75, "CHK": 80, "STI": 80, "ACC": 65, "PAS": 90, "OFF": 90, "DEF": 65, "AGG": 60, "END": 100, "S/P": 45, "FAC": 70 }
+    },
+    {
+      "info": { "team": "PIT", "number": 17, "position": "R", "firstName": "Tomas", "lastName": "Sandstrom" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 70, "SHO": 90, "CHK": 55, "STI": 55, "ACC": 70, "PAS": 70, "OFF": 85, "DEF": 65, "AGG": 75, "END": 80, "S/P": 80, "FAC": 60 }
+    },
+    {
+      "info": { "team": "PIT", "number": 24, "position": "L", "firstName": "Doug", "lastName": "Brown" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 55, "CHK": 65, "STI": 60, "ACC": 65, "PAS": 70, "OFF": 55, "DEF": 80, "AGG": 70, "END": 75, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 15, "position": "C", "firstName": "Shawn", "lastName": "McEachern" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 60, "SHO": 75, "CHK": 50, "STI": 55, "ACC": 70, "PAS": 70, "OFF": 65, "DEF": 65, "AGG": 55, "END": 75, "S/P": 75, "FAC": 75 }
+    },
+    {
+      "info": { "team": "PIT", "number": 29, "position": "L", "firstName": "Markus", "lastName": "Naslund" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 55, "ACC": 55, "PAS": 55, "OFF": 55, "DEF": 60, "AGG": 45, "END": 55, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "PIT", "number": 33, "position": "L", "firstName": "Jim", "lastName": "McKenzie" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 50, "WGT": 75, "SHO": 55, "CHK": 70, "STI": 45, "ACC": 50, "PAS": 50, "OFF": 45, "DEF": 50, "AGG": 90, "END": 70, "S/P": 65, "FAC": 65 }
+    },
+    {
+      "info": { "team": "PIT", "number": 6, "position": "D", "firstName": "Mike", "lastName": "Ramsey" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 65, "WGT": 65, "SHO": 60, "CHK": 80, "STI": 50, "ACC": 45, "PAS": 60, "OFF": 40, "DEF": 65, "AGG": 70, "END": 70, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 4, "position": "D", "firstName": "Greg", "lastName": "Hawgood" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 60, "STI": 55, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 55, "AGG": 60, "END": 70, "S/P": 45, "FAC": 55 }
+    },
+    {
+      "info": { "team": "PIT", "number": 3, "position": "D", "firstName": "Grant", "lastName": "Jennings" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 40, "PAS": 45, "OFF": 45, "DEF": 65, "AGG": 75, "END": 60, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 32, "position": "D", "firstName": "Peter", "lastName": "Taglianetti" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 50, "WGT": 70, "SHO": 70, "CHK": 75, "STI": 50, "ACC": 40, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 80, "END": 75, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 28, "position": "D", "firstName": "Kjell", "lastName": "Samuelsson" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 95, "SHO": 80, "CHK": 75, "STI": 50, "ACC": 45, "PAS": 60, "OFF": 50, "DEF": 65, "AGG": 70, "END": 80, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 22, "position": "R", "firstName": "Rick", "lastName": "Tocchet" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 55, "WGT": 70, "SHO": 80, "CHK": 75, "STI": 55, "ACC": 75, "PAS": 65, "OFF": 80, "DEF": 65, "AGG": 75, "END": 70, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "PIT", "number": 19, "position": "C", "firstName": "Bryan", "lastName": "Trottier" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 65, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 60, "AGG": 55, "END": 60, "S/P": 45, "FAC": 100 }
+    },
+    {
+      "info": { "team": "PIT", "number": 34, "position": "D", "firstName": "Greg", "lastName": "Brown" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 70, "DEF": 55, "AGG": 60, "END": 70, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "PIT", "number": 44, "position": "R", "firstName": "Ed", "lastName": "Patterson" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 45, "WGT": 75, "SHO": 45, "CHK": 50, "STI": 45, "ACC": 55, "PAS": 50, "OFF": 50, "DEF": 50, "AGG": 40, "END": 60, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "PIT", "number": 66, "position": "C", "firstName": "Mario", "lastName": "Lemieux" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 90, "WGT": 75, "SHO": 85, "CHK": 55, "STI": 75, "ACC": 100, "PAS": 95, "OFF": 100, "DEF": 65, "AGG": 60, "END": 100, "S/P": 50, "FAC": 100 }
+    },
+    {
+      "info": { "team": "PIT", "number": 2, "position": "D", "firstName": "Chris", "lastName": "Tamer" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 60, "SHO": 60, "CHK": 70, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 60, "DEF": 55, "AGG": 45, "END": 55, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "QUE", "number": 13, "position": "C", "firstName": "Mats", "lastName": "Sundin" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 60, "SHO": 75, "CHK": 50, "STI": 65, "ACC": 85, "PAS": 75, "OFF": 90, "DEF": 75, "AGG": 65, "END": 75, "S/P": 50, "FAC": 90 }
+    },
+    {
+      "info": { "team": "QUE", "number": 19, "position": "C", "firstName": "Joe", "lastName": "Sakic" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 80, "ACC": 90, "PAS": 100, "OFF": 85, "DEF": 75, "AGG": 55, "END": 85, "S/P": 60, "FAC": 90 }
+    },
+    {
+      "info": { "team": "QUE", "number": 28, "position": "C", "firstName": "Bob", "lastName": "Bassen" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 45, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 65, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 65, "END": 70, "S/P": 65, "FAC": 75 }
+    },
+    {
+      "info": { "team": "QUE", "number": 9, "position": "C", "firstName": "Mike", "lastName": "Ricci" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 60, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 90, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 90, "END": 65, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "QUE", "number": 29, "position": "D", "firstName": "Steven", "lastName": "Finn" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 65, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 75, "END": 65, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 55, "position": "D", "firstName": "Garth", "lastName": "Butcher" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 85, "STI": 55, "ACC": 50, "PAS": 70, "OFF": 45, "DEF": 80, "AGG": 85, "END": 80, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 5, "position": "D", "firstName": "Alexei", "lastName": "Gusarov" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 70, "PAS": 65, "OFF": 70, "DEF": 65, "AGG": 55, "END": 80, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 31, "position": "L", "firstName": "Valeri", "lastName": "Kamensky" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 75, "WGT": 65, "SHO": 90, "CHK": 60, "STI": 65, "ACC": 80, "PAS": 90, "OFF": 80, "DEF": 60, "AGG": 55, "END": 80, "S/P": 50, "FAC": 70 }
+    },
+    {
+      "info": { "team": "QUE", "number": 48, "position": "R", "firstName": "Scott", "lastName": "Young" },
+      "attributes": { "HND": "R", "SPD": 85, "AGI": 65, "WGT": 60, "SHO": 90, "CHK": 50, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 75, "AGG": 45, "END": 70, "S/P": 75, "FAC": 70 }
+    },
+    {
+      "info": { "team": "QUE", "number": 22, "position": "C", "firstName": "Ron", "lastName": "Sutter" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 55, "SHO": 60, "CHK": 75, "STI": 60, "ACC": 65, "PAS": 75, "OFF": 70, "DEF": 75, "AGG": 80, "END": 80, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "QUE", "number": 7, "position": "D", "firstName": "Curtis", "lastName": "Leschyshyn" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 80, "PAS": 70, "OFF": 65, "DEF": 75, "AGG": 60, "END": 90, "S/P": 45, "FAC": 45 }
+    },
+    {
+      "info": { "team": "QUE", "number": 6, "position": "D", "firstName": "Craig", "lastName": "Wolanin" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 50, "CHK": 65, "STI": 45, "ACC": 45, "PAS": 50, "OFF": 50, "DEF": 75, "AGG": 55, "END": 75, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 25, "position": "L", "firstName": "Martin", "lastName": "Rucinsky" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 50, "SHO": 70, "CHK": 45, "STI": 60, "ACC": 70, "PAS": 65, "OFF": 70, "DEF": 55, "AGG": 60, "END": 70, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 59, "position": "D", "firstName": "Dave", "lastName": "Karpa" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 65, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 75, "END": 70, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 38, "position": "C", "firstName": "Iain", "lastName": "Fraser" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 55, "ACC": 70, "PAS": 60, "OFF": 65, "DEF": 65, "AGG": 60, "END": 65, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "QUE", "number": 47, "position": "C", "firstName": "Claude", "lastName": "Lapointe" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 50, "SHO": 60, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 70, "DEF": 75, "AGG": 75, "END": 65, "S/P": 50, "FAC": 70 }
+    },
+    {
+      "info": { "team": "QUE", "number": 51, "position": "R", "firstName": "Andrei", "lastName": "Kovalenko" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 70, "WGT": 40, "SHO": 65, "CHK": 70, "STI": 70, "ACC": 75, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 55, "END": 80, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "QUE", "number": 15, "position": "L", "firstName": "Tony", "lastName": "Twist" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 50, "WGT": 75, "SHO": 45, "CHK": 65, "STI": 40, "ACC": 40, "PAS": 50, "OFF": 45, "DEF": 40, "AGG": 75, "END": 45, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "QUE", "number": 17, "position": "L", "firstName": "Chris", "lastName": "Lindberg" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 45, "ACC": 65, "PAS": 60, "OFF": 60, "DEF": 65, "AGG": 50, "END": 55, "S/P": 65, "FAC": 45 }
+    },
+    {
+      "info": { "team": "QUE", "number": 12, "position": "L", "firstName": "Chris", "lastName": "Simon" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 55, "WGT": 90, "SHO": 50, "CHK": 65, "STI": 50, "ACC": 50, "PAS": 55, "OFF": 50, "DEF": 60, "AGG": 90, "END": 40, "S/P": 85, "FAC": 50 }
+    },
+    {
+      "info": { "team": "QUE", "number": 2, "position": "D", "firstName": "Tommy", "lastName": "Sjodin" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 80, "WGT": 55, "SHO": 80, "CHK": 60, "STI": 65, "ACC": 60, "PAS": 70, "OFF": 65, "DEF": 55, "AGG": 50, "END": 65, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "QUE", "number": 27, "position": "D", "firstName": "Brad", "lastName": "Werenka" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 60, "CHK": 50, "STI": 55, "ACC": 70, "PAS": 60, "OFF": 70, "DEF": 55, "AGG": 55, "END": 60, "S/P": 90, "FAC": 60 }
+    },
+    {
+      "info": { "team": "QUE", "number": 11, "position": "R", "firstName": "Owen", "lastName": "Nolan" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 70, "WGT": 65, "SHO": 90, "CHK": 55, "STI": 40, "ACC": 85, "PAS": 70, "OFF": 80, "DEF": 55, "AGG": 80, "END": 80, "S/P": 65, "FAC": 70 }
+    },
+    {
+      "info": { "team": "STL", "number": 16, "position": "R", "firstName": "Brett", "lastName": "Hull" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 95, "CHK": 65, "STI": 70, "ACC": 80, "PAS": 65, "OFF": 85, "DEF": 70, "AGG": 60, "END": 80, "S/P": 80, "FAC": 95 }
+    },
+    {
+      "info": { "team": "STL", "number": 19, "position": "L", "firstName": "Brendan", "lastName": "Shanahan" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 75, "SHO": 85, "CHK": 65, "STI": 65, "ACC": 85, "PAS": 75, "OFF": 85, "DEF": 80, "AGG": 75, "END": 75, "S/P": 60, "FAC": 65 }
+    },
+    {
+      "info": { "team": "STL", "number": 36, "position": "L", "firstName": "Philippe", "lastName": "Bozon" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 55, "SHO": 60, "CHK": 45, "STI": 60, "ACC": 45, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 70, "END": 60, "S/P": 90, "FAC": 70 }
+    },
+    {
+      "info": { "team": "STL", "number": 34, "position": "D", "firstName": "Murray", "lastName": "Baron" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 75, "SHO": 60, "CHK": 60, "STI": 55, "ACC": 50, "PAS": 50, "OFF": 50, "DEF": 55, "AGG": 70, "END": 60, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "STL", "number": 14, "position": "R", "firstName": "Kevin", "lastName": "Miller" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 75, "WGT": 60, "SHO": 65, "CHK": 65, "STI": 60, "ACC": 70, "PAS": 65, "OFF": 80, "DEF": 75, "AGG": 65, "END": 75, "S/P": 65, "FAC": 75 }
+    },
+    {
+      "info": { "team": "STL", "number": 4, "position": "D", "firstName": "Rick", "lastName": "Zombo" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 65, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 40, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 60, "END": 80, "S/P": 40, "FAC": 40 }
+    },
+    {
+      "info": { "team": "STL", "number": 38, "position": "L", "firstName": "Igor", "lastName": "Korolev" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 60, "STI": 60, "ACC": 50, "PAS": 60, "OFF": 60, "DEF": 65, "AGG": 50, "END": 70, "S/P": 40, "FAC": 50 }
+    },
+    {
+      "info": { "team": "STL", "number": 15, "position": "C", "firstName": "Craig", "lastName": "Janney" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 60, "SHO": 65, "CHK": 55, "STI": 80, "ACC": 80, "PAS": 95, "OFF": 90, "DEF": 80, "AGG": 40, "END": 80, "S/P": 40, "FAC": 80 }
+    },
+    {
+      "info": { "team": "STL", "number": 39, "position": "R", "firstName": "Kelly", "lastName": "Chase" },
+      "attributes": { "HND": "R", "SPD": 45, "AGI": 45, "WGT": 65, "SHO": 50, "CHK": 60, "STI": 50, "ACC": 45, "PAS": 50, "OFF": 50, "DEF": 50, "AGG": 90, "END": 60, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "STL", "number": 10, "position": "C", "firstName": "Jim", "lastName": "Montgomery" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 70, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 60, "ACC": 60, "PAS": 70, "OFF": 70, "DEF": 60, "AGG": 60, "END": 65, "S/P": 55, "FAC": 70 }
+    },
+    {
+      "info": { "team": "STL", "number": 7, "position": "D", "firstName": "Alexei", "lastName": "Kasatonov" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 75, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 50, "PAS": 75, "OFF": 55, "DEF": 70, "AGG": 60, "END": 65, "S/P": 45, "FAC": 50 }
+    },
+    {
+      "info": { "team": "STL", "number": 12, "position": "R", "firstName": "Vitali", "lastName": "Karamnov" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 60, "AGG": 45, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "STL", "number": 25, "position": "L", "firstName": "Vitali", "lastName": "Prokhorov" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 50, "STI": 60, "ACC": 65, "PAS": 65, "OFF": 70, "DEF": 50, "AGG": 45, "END": 60, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "STL", "number": 32, "position": "D", "firstName": "Doug", "lastName": "Crossman" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 60, "CHK": 60, "STI": 60, "ACC": 55, "PAS": 70, "OFF": 70, "DEF": 55, "AGG": 50, "END": 75, "S/P": 40, "FAC": 40 }
+    },
+    {
+      "info": { "team": "STL", "number": 20, "position": "D", "firstName": "Tom", "lastName": "Tilley" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 45, "CHK": 55, "STI": 45, "ACC": 60, "PAS": 60, "OFF": 45, "DEF": 60, "AGG": 45, "END": 55, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "STL", "number": 17, "position": "L", "firstName": "Basil", "lastName": "McRae" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 60, "CHK": 70, "STI": 50, "ACC": 45, "PAS": 50, "OFF": 45, "DEF": 55, "AGG": 90, "END": 70, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "STL", "number": 28, "position": "D", "firstName": "Steve", "lastName": "Duchesne" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 65, "SHO": 75, "CHK": 45, "STI": 65, "ACC": 60, "PAS": 75, "OFF": 80, "DEF": 75, "AGG": 55, "END": 75, "S/P": 55, "FAC": 60 }
+    },
+    {
+      "info": { "team": "STL", "number": 23, "position": "L", "firstName": "Dave", "lastName": "Mackey" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 70, "SHO": 65, "CHK": 55, "STI": 50, "ACC": 55, "PAS": 60, "OFF": 60, "DEF": 60, "AGG": 65, "END": 55, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "STL", "number": 6, "position": "D", "firstName": "Phil", "lastName": "Housley" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 100, "WGT": 55, "SHO": 65, "CHK": 60, "STI": 80, "ACC": 60, "PAS": 100, "OFF": 90, "DEF": 70, "AGG": 60, "END": 75, "S/P": 40, "FAC": 80 }
+    },
+    {
+      "info": { "team": "STL", "number": 93, "position": "C", "firstName": "Petr", "lastName": "Nedved" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 50, "SHO": 70, "CHK": 50, "STI": 75, "ACC": 85, "PAS": 75, "OFF": 75, "DEF": 70, "AGG": 60, "END": 75, "S/P": 70, "FAC": 85 }
+    },
+    {
+      "info": { "team": "STL", "number": 26, "position": "C", "firstName": "Peter", "lastName": "Stastny" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 70, "SHO": 65, "CHK": 65, "STI": 65, "ACC": 75, "PAS": 75, "OFF": 75, "DEF": 70, "AGG": 50, "END": 65, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "STL", "number": 9, "position": "L", "firstName": "Denny", "lastName": "Felsner" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 65, "SHO": 55, "CHK": 60, "STI": 50, "ACC": 70, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 55, "END": 60, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "SJ", "number": 37, "position": "R", "firstName": "Rob", "lastName": "Gaudreau" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 55, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 70, "PAS": 65, "OFF": 65, "DEF": 70, "AGG": 50, "END": 75, "S/P": 80, "FAC": 70 }
+    },
+    {
+      "info": { "team": "SJ", "number": 11, "position": "L", "firstName": "Gaetan", "lastName": "Duchesne" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 70, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 65, "PAS": 55, "OFF": 55, "DEF": 80, "AGG": 45, "END": 75, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "SJ", "number": 17, "position": "R", "firstName": "Pat", "lastName": "Falloon" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 80, "WGT": 60, "SHO": 65, "CHK": 45, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 80, "DEF": 60, "AGG": 40, "END": 80, "S/P": 85, "FAC": 60 }
+    },
+    {
+      "info": { "team": "SJ", "number": 6, "position": "D", "firstName": "Sandis", "lastName": "Ozolinsh" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 65, "WGT": 60, "SHO": 75, "CHK": 60, "STI": 65, "ACC": 80, "PAS": 75, "OFF": 75, "DEF": 65, "AGG": 55, "END": 75, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "SJ", "number": 36, "position": "R", "firstName": "Jeff", "lastName": "Odgers" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 45, "WGT": 70, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 65, "PAS": 45, "OFF": 55, "DEF": 55, "AGG": 85, "END": 70, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "SJ", "number": 10, "position": "L", "firstName": "Johan", "lastName": "Garpenlov" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 55, "CHK": 45, "STI": 60, "ACC": 80, "PAS": 65, "OFF": 65, "DEF": 70, "AGG": 45, "END": 70, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "SJ", "number": 24, "position": "R", "firstName": "Sergei", "lastName": "Makarov" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 90, "WGT": 55, "SHO": 65, "CHK": 45, "STI": 65, "ACC": 85, "PAS": 85, "OFF": 80, "DEF": 70, "AGG": 60, "END": 65, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "SJ", "number": 27, "position": "C", "firstName": "Todd", "lastName": "Elik" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 70, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 65, "DEF": 70, "AGG": 70, "END": 65, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "SJ", "number": 22, "position": "R", "firstName": "Ulf", "lastName": "Dahlen" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 65, "SHO": 75, "CHK": 70, "STI": 70, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 70, "AGG": 40, "END": 85, "S/P": 70, "FAC": 65 }
+    },
+    {
+      "info": { "team": "SJ", "number": 41, "position": "D", "firstName": "Tom", "lastName": "Pederson" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 50, "WGT": 45, "SHO": 60, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 70, "AGG": 55, "END": 60, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "SJ", "number": 13, "position": "C", "firstName": "Jamie", "lastName": "Baker" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 60, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 65, "PAS": 70, "OFF": 70, "DEF": 80, "AGG": 60, "END": 75, "S/P": 60, "FAC": 70 }
+    },
+    {
+      "info": { "team": "SJ", "number": 12, "position": "L", "firstName": "Bob", "lastName": "Errey" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 55, "SHO": 60, "CHK": 80, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 80, "AGG": 65, "END": 80, "S/P": 85, "FAC": 65 }
+    },
+    {
+      "info": { "team": "SJ", "number": 8, "position": "D", "firstName": "Jeff", "lastName": "Norton" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 85, "WGT": 65, "SHO": 60, "CHK": 45, "STI": 55, "ACC": 55, "PAS": 65, "OFF": 75, "DEF": 65, "AGG": 55, "END": 80, "S/P": 45, "FAC": 55 }
+    },
+    {
+      "info": { "team": "SJ", "number": 14, "position": "L", "firstName": "Ray", "lastName": "Whitney" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 45, "SHO": 70, "CHK": 50, "STI": 55, "ACC": 75, "PAS": 70, "OFF": 70, "DEF": 60, "AGG": 50, "END": 70, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "SJ", "number": 7, "position": "C", "firstName": "Igor", "lastName": "Larionov" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 90, "WGT": 45, "SHO": 70, "CHK": 50, "STI": 70, "ACC": 90, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 50, "END": 65, "S/P": 80, "FAC": 95 }
+    },
+    {
+      "info": { "team": "SJ", "number": 9, "position": "C", "firstName": "Vyacheslav", "lastName": "Butsayev" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 55, "SHO": 70, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 70, "DEF": 60, "AGG": 65, "END": 55, "S/P": 50, "FAC": 70 }
+    },
+    {
+      "info": { "team": "SJ", "number": 33, "position": "C", "firstName": "Dale", "lastName": "Craigwell" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 45, "END": 70, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "SJ", "number": 4, "position": "D", "firstName": "Jay", "lastName": "More" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 80, "STI": 45, "ACC": 55, "PAS": 65, "OFF": 50, "DEF": 65, "AGG": 75, "END": 65, "S/P": 90, "FAC": 50 }
+    },
+    {
+      "info": { "team": "SJ", "number": 40, "position": "D", "firstName": "Mike", "lastName": "Rathje" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 65, "SHO": 60, "CHK": 70, "STI": 60, "ACC": 45, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 70, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "SJ", "number": 44, "position": "D", "firstName": "Shawn", "lastName": "Cronin" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 50, "WGT": 75, "SHO": 45, "CHK": 55, "STI": 40, "ACC": 60, "PAS": 45, "OFF": 40, "DEF": 50, "AGG": 80, "END": 45, "S/P": 85, "FAC": 40 }
+    },
+    {
+      "info": { "team": "SJ", "number": 26, "position": "D", "firstName": "Vlastimil", "lastName": "Kroupa" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 60, "CHK": 50, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 70, "DEF": 60, "AGG": 45, "END": 70, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TB", "number": 77, "position": "C", "firstName": "Chris", "lastName": "Gratton" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 55, "WGT": 70, "SHO": 80, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 70, "DEF": 55, "AGG": 80, "END": 70, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "TB", "number": 25, "position": "D", "firstName": "Marc", "lastName": "Bergevin" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 55, "WGT": 55, "SHO": 55, "CHK": 45, "STI": 60, "ACC": 40, "PAS": 60, "OFF": 55, "DEF": 65, "AGG": 60, "END": 65, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 24, "position": "R", "firstName": "Danton", "lastName": "Cole" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 60, "SHO": 65, "CHK": 55, "STI": 55, "ACC": 70, "PAS": 55, "OFF": 65, "DEF": 70, "AGG": 45, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 19, "position": "C", "firstName": "Brian", "lastName": "Bradley" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 45, "SHO": 80, "CHK": 60, "STI": 55, "ACC": 75, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 65, "END": 75, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "TB", "number": 34, "position": "L", "firstName": "Mikael", "lastName": "Andersson" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 55, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 55, "DEF": 70, "AGG": 45, "END": 80, "S/P": 85, "FAC": 55 }
+    },
+    {
+      "info": { "team": "TB", "number": 23, "position": "D", "firstName": "Chris", "lastName": "Joseph" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 75, "SHO": 70, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 50, "AGG": 80, "END": 70, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 28, "position": "R", "firstName": "Marc", "lastName": "Bureau" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 70, "END": 65, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 85, "position": "R", "firstName": "Petr", "lastName": "Klima" },
+      "attributes": { "HND": "R", "SPD": 85, "AGI": 90, "WGT": 60, "SHO": 75, "CHK": 50, "STI": 70, "ACC": 90, "PAS": 65, "OFF": 80, "DEF": 50, "AGG": 65, "END": 75, "S/P": 90, "FAC": 65 }
+    },
+    {
+      "info": { "team": "TB", "number": 9, "position": "C", "firstName": "Denis", "lastName": "Savard" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 85, "WGT": 50, "SHO": 65, "CHK": 55, "STI": 75, "ACC": 70, "PAS": 80, "OFF": 80, "DEF": 70, "AGG": 70, "END": 65, "S/P": 40, "FAC": 80 }
+    },
+    {
+      "info": { "team": "TB", "number": 20, "position": "R", "firstName": "Rudy", "lastName": "Poeschek" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 75, "SHO": 55, "CHK": 70, "STI": 50, "ACC": 50, "PAS": 60, "OFF": 45, "DEF": 55, "AGG": 75, "END": 65, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TB", "number": 15, "position": "R", "firstName": "Pat", "lastName": "Elynuik" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 60, "WGT": 55, "SHO": 70, "CHK": 45, "STI": 55, "ACC": 85, "PAS": 60, "OFF": 65, "DEF": 45, "AGG": 45, "END": 65, "S/P": 70, "FAC": 65 }
+    },
+    {
+      "info": { "team": "TB", "number": 22, "position": "D", "firstName": "Shawn", "lastName": "Chambers" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 60, "OFF": 70, "DEF": 70, "AGG": 60, "END": 65, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 14, "position": "R", "firstName": "John", "lastName": "Tucker" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 55, "WGT": 70, "SHO": 65, "CHK": 65, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 65, "DEF": 75, "AGG": 65, "END": 75, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TB", "number": 44, "position": "D", "firstName": "Roman", "lastName": "Hamrlik" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 65, "CHK": 65, "STI": 60, "ACC": 45, "PAS": 55, "OFF": 60, "DEF": 60, "AGG": 65, "END": 70, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TB", "number": 7, "position": "L", "firstName": "Rob", "lastName": "Zamuner" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 55, "PAS": 55, "OFF": 55, "DEF": 65, "AGG": 65, "END": 75, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 39, "position": "D", "firstName": "Enrico", "lastName": "Ciccone" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 55, "WGT": 70, "SHO": 50, "CHK": 60, "STI": 40, "ACC": 50, "PAS": 50, "OFF": 50, "DEF": 55, "AGG": 85, "END": 70, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 10, "position": "C", "firstName": "Adam", "lastName": "Creighton" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 70, "WGT": 75, "SHO": 55, "CHK": 60, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 55, "AGG": 55, "END": 70, "S/P": 80, "FAC": 85 }
+    },
+    {
+      "info": { "team": "TB", "number": 17, "position": "L", "firstName": "Gerard", "lastName": "Gallant" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 55, "SHO": 55, "CHK": 80, "STI": 50, "ACC": 55, "PAS": 70, "OFF": 55, "DEF": 65, "AGG": 80, "END": 65, "S/P": 50, "FAC": 65 }
+    },
+    {
+      "info": { "team": "TB", "number": 12, "position": "R", "firstName": "Jim", "lastName": "Cummins" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 45, "WGT": 70, "SHO": 45, "CHK": 60, "STI": 40, "ACC": 50, "PAS": 45, "OFF": 50, "DEF": 50, "AGG": 90, "END": 55, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TB", "number": 3, "position": "D", "firstName": "Eric", "lastName": "Charron" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 55, "WGT": 65, "SHO": 50, "CHK": 60, "STI": 40, "ACC": 45, "PAS": 45, "OFF": 50, "DEF": 60, "AGG": 80, "END": 55, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TOR", "number": 2, "position": "D", "firstName": "Sylvain", "lastName": "Lefebvre" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 70, "SHO": 50, "CHK": 70, "STI": 55, "ACC": 40, "PAS": 65, "OFF": 50, "DEF": 70, "AGG": 65, "END": 75, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 93, "position": "C", "firstName": "Doug", "lastName": "Gilmour" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 85, "WGT": 45, "SHO": 75, "CHK": 75, "STI": 80, "ACC": 80, "PAS": 75, "OFF": 90, "DEF": 85, "AGG": 70, "END": 95, "S/P": 40, "FAC": 95 }
+    },
+    {
+      "info": { "team": "TOR", "number": 14, "position": "L", "firstName": "Dave", "lastName": "Andreychuk" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 80, "SHO": 80, "CHK": 65, "STI": 70, "ACC": 85, "PAS": 65, "OFF": 90, "DEF": 65, "AGG": 60, "END": 85, "S/P": 75, "FAC": 80 }
+    },
+    {
+      "info": { "team": "TOR", "number": 10, "position": "L", "firstName": "Bill", "lastName": "Berg" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 80, "STI": 60, "ACC": 70, "PAS": 60, "OFF": 55, "DEF": 65, "AGG": 80, "END": 75, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 34, "position": "D", "firstName": "Jamie", "lastName": "Macoun" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 80, "CHK": 75, "STI": 60, "ACC": 45, "PAS": 75, "OFF": 55, "DEF": 80, "AGG": 55, "END": 80, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 11, "position": "R", "firstName": "Mike", "lastName": "Gartner" },
+      "attributes": { "HND": "R", "SPD": 90, "AGI": 85, "WGT": 60, "SHO": 90, "CHK": 55, "STI": 60, "ACC": 65, "PAS": 90, "OFF": 80, "DEF": 55, "AGG": 55, "END": 85, "S/P": 90, "FAC": 75 }
+    },
+    {
+      "info": { "team": "TOR", "number": 15, "position": "D", "firstName": "Dmitri", "lastName": "Mironov" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 60, "SHO": 65, "CHK": 50, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 65, "DEF": 65, "AGG": 60, "END": 65, "S/P": 45, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TOR", "number": 21, "position": "L", "firstName": "Mark", "lastName": "Osborne" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 55, "CHK": 65, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 80, "AGG": 70, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 4, "position": "D", "firstName": "Dave", "lastName": "Ellett" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 70, "SHO": 85, "CHK": 65, "STI": 70, "ACC": 50, "PAS": 75, "OFF": 70, "DEF": 80, "AGG": 60, "END": 75, "S/P": 55, "FAC": 55 }
+    },
+    {
+      "info": { "team": "TOR", "number": 12, "position": "R", "firstName": "Rob", "lastName": "Pearson" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 55, "SHO": 70, "CHK": 55, "STI": 55, "ACC": 70, "PAS": 55, "OFF": 65, "DEF": 65, "AGG": 90, "END": 75, "S/P": 90, "FAC": 70 }
+    },
+    {
+      "info": { "team": "TOR", "number": 18, "position": "L", "firstName": "Kent", "lastName": "Manderville" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 55, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 70, "AGG": 45, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TOR", "number": 17, "position": "L", "firstName": "Wendel", "lastName": "Clark" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 95, "CHK": 75, "STI": 55, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 65, "AGG": 80, "END": 80, "S/P": 80, "FAC": 70 }
+    },
+    {
+      "info": { "team": "TOR", "number": 22, "position": "L", "firstName": "Ken", "lastName": "Baumgartner" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 40, "ACC": 50, "PAS": 55, "OFF": 40, "DEF": 55, "AGG": 85, "END": 60, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 3, "position": "D", "firstName": "Bob", "lastName": "Rouse" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 75, "SHO": 60, "CHK": 80, "STI": 55, "ACC": 45, "PAS": 55, "OFF": 50, "DEF": 75, "AGG": 75, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 26, "position": "C", "firstName": "Mike", "lastName": "Krushelnyski" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 70, "SHO": 55, "CHK": 65, "STI": 55, "ACC": 70, "PAS": 55, "OFF": 65, "DEF": 75, "AGG": 60, "END": 80, "S/P": 65, "FAC": 80 }
+    },
+    {
+      "info": { "team": "TOR", "number": 32, "position": "C", "firstName": "Mike", "lastName": "Eastwood" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 55, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 65, "DEF": 70, "AGG": 60, "END": 70, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "TOR", "number": 19, "position": "C", "firstName": "John", "lastName": "Cullen" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 60, "SHO": 70, "CHK": 60, "STI": 55, "ACC": 75, "PAS": 75, "OFF": 65, "DEF": 70, "AGG": 70, "END": 80, "S/P": 50, "FAC": 85 }
+    },
+    {
+      "info": { "team": "TOR", "number": 55, "position": "D", "firstName": "Drake", "lastName": "Berehowsky" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 75, "SHO": 60, "CHK": 70, "STI": 45, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 70, "END": 70, "S/P": 50, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 16, "position": "R", "firstName": "Nikolai", "lastName": "Borschevsky" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 70, "ACC": 80, "PAS": 75, "OFF": 80, "DEF": 60, "AGG": 50, "END": 75, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "TOR", "number": 23, "position": "D", "firstName": "Todd", "lastName": "Gill" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 55, "SHO": 55, "CHK": 70, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 65, "DEF": 70, "AGG": 65, "END": 80, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "TOR", "number": 25, "position": "C", "firstName": "Peter", "lastName": "Zezel" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 70, "SHO": 70, "CHK": 80, "STI": 55, "ACC": 65, "PAS": 80, "OFF": 60, "DEF": 80, "AGG": 50, "END": 80, "S/P": 45, "FAC": 85 }
+    },
+    {
+      "info": { "team": "TOR", "number": 33, "position": "D", "firstName": "Matt", "lastName": "Martin" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 60, "PAS": 70, "OFF": 60, "DEF": 60, "AGG": 60, "END": 65, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "VAN", "number": 16, "position": "R", "firstName": "Trevor", "lastName": "Linden" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 70, "SHO": 75, "CHK": 70, "STI": 65, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 80, "AGG": 60, "END": 75, "S/P": 65, "FAC": 80 }
+    },
+    {
+      "info": { "team": "VAN", "number": 21, "position": "D", "firstName": "Jyrki", "lastName": "Lumme" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 60, "SHO": 70, "CHK": 45, "STI": 70, "ACC": 50, "PAS": 80, "OFF": 80, "DEF": 80, "AGG": 60, "END": 75, "S/P": 50, "FAC": 50 }
+    },
+    {
+      "info": { "team": "VAN", "number": 14, "position": "L", "firstName": "Geoff", "lastName": "Courtnall" },
+      "attributes": { "HND": "L", "SPD": 85, "AGI": 85, "WGT": 60, "SHO": 80, "CHK": 45, "STI": 55, "ACC": 60, "PAS": 80, "OFF": 75, "DEF": 80, "AGG": 75, "END": 70, "S/P": 65, "FAC": 65 }
+    },
+    {
+      "info": { "team": "VAN", "number": 5, "position": "D", "firstName": "Dana", "lastName": "Murzyn" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 75, "CHK": 65, "STI": 60, "ACC": 45, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 70, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 32, "position": "C", "firstName": "Murray", "lastName": "Craven" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 80, "PAS": 70, "OFF": 70, "DEF": 70, "AGG": 50, "END": 70, "S/P": 50, "FAC": 85 }
+    },
+    {
+      "info": { "team": "VAN", "number": 24, "position": "D", "firstName": "Jiri", "lastName": "Slegr" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 70, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 45, "PAS": 70, "OFF": 65, "DEF": 65, "AGG": 80, "END": 75, "S/P": 45, "FAC": 50 }
+    },
+    {
+      "info": { "team": "VAN", "number": 29, "position": "L", "firstName": "Gino", "lastName": "Odjick" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 70, "WGT": 75, "SHO": 65, "CHK": 75, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 65, "AGG": 95, "END": 70, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 7, "position": "C", "firstName": "Cliff", "lastName": "Ronning" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 85, "WGT": 50, "SHO": 60, "CHK": 50, "STI": 75, "ACC": 70, "PAS": 75, "OFF": 75, "DEF": 70, "AGG": 50, "END": 90, "S/P": 50, "FAC": 95 }
+    },
+    {
+      "info": { "team": "VAN", "number": 10, "position": "R", "firstName": "Pavel", "lastName": "Bure" },
+      "attributes": { "HND": "L", "SPD": 95, "AGI": 100, "WGT": 50, "SHO": 85, "CHK": 60, "STI": 75, "ACC": 85, "PAS": 75, "OFF": 100, "DEF": 55, "AGG": 55, "END": 80, "S/P": 85, "FAC": 70 }
+    },
+    {
+      "info": { "team": "VAN", "number": 22, "position": "D", "firstName": "Jeff", "lastName": "Brown" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 70, "SHO": 85, "CHK": 60, "STI": 70, "ACC": 65, "PAS": 90, "OFF": 75, "DEF": 75, "AGG": 55, "END": 90, "S/P": 50, "FAC": 60 }
+    },
+    {
+      "info": { "team": "VAN", "number": 44, "position": "D", "firstName": "Dave", "lastName": "Babych" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 75, "SHO": 65, "CHK": 60, "STI": 55, "ACC": 40, "PAS": 70, "OFF": 70, "DEF": 80, "AGG": 55, "END": 80, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 3, "position": "D", "firstName": "Bret", "lastName": "Hedican" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 65, "SHO": 55, "CHK": 60, "STI": 55, "ACC": 40, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 55, "END": 65, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 27, "position": "L", "firstName": "Sergio", "lastName": "Momesso" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 75, "SHO": 80, "CHK": 85, "STI": 55, "ACC": 55, "PAS": 60, "OFF": 65, "DEF": 70, "AGG": 80, "END": 80, "S/P": 75, "FAC": 60 }
+    },
+    {
+      "info": { "team": "VAN", "number": 8, "position": "L", "firstName": "Greg", "lastName": "Adams" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 60, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 80, "PAS": 70, "OFF": 75, "DEF": 70, "AGG": 60, "END": 75, "S/P": 50, "FAC": 75 }
+    },
+    {
+      "info": { "team": "VAN", "number": 28, "position": "D", "firstName": "Brian", "lastName": "Glynn" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 50, "WGT": 80, "SHO": 45, "CHK": 60, "STI": 50, "ACC": 45, "PAS": 45, "OFF": 50, "DEF": 40, "AGG": 55, "END": 65, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 23, "position": "L", "firstName": "Martin", "lastName": "Gelinas" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 65, "SHO": 65, "CHK": 55, "STI": 55, "ACC": 70, "PAS": 65, "OFF": 60, "DEF": 55, "AGG": 55, "END": 55, "S/P": 75, "FAC": 75 }
+    },
+    {
+      "info": { "team": "VAN", "number": 15, "position": "C", "firstName": "John", "lastName": "McIntyre" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 60, "SHO": 60, "CHK": 65, "STI": 55, "ACC": 50, "PAS": 55, "OFF": 45, "DEF": 70, "AGG": 55, "END": 75, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "VAN", "number": 17, "position": "C", "firstName": "Jimmy", "lastName": "Carson" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 70, "SHO": 65, "CHK": 45, "STI": 55, "ACC": 80, "PAS": 65, "OFF": 80, "DEF": 60, "AGG": 50, "END": 80, "S/P": 65, "FAC": 80 }
+    },
+    {
+      "info": { "team": "VAN", "number": 19, "position": "R", "firstName": "Tim", "lastName": "Hunter" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 50, "DEF": 60, "AGG": 90, "END": 60, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 4, "position": "D", "firstName": "Gerald", "lastName": "Diduck" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 60, "CHK": 75, "STI": 60, "ACC": 50, "PAS": 65, "OFF": 50, "DEF": 65, "AGG": 75, "END": 70, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "VAN", "number": 18, "position": "L", "firstName": "Shawn", "lastName": "Antoski" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 45, "WGT": 85, "SHO": 55, "CHK": 65, "STI": 40, "ACC": 50, "PAS": 60, "OFF": 45, "DEF": 50, "AGG": 90, "END": 60, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "VAN", "number": 25, "position": "C", "firstName": "Nathan", "lastName": "Lafayette" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 45, "WGT": 60, "SHO": 60, "CHK": 45, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 45, "DEF": 50, "AGG": 45, "END": 65, "S/P": 70, "FAC": 60 }
+    },
+    {
+      "info": { "team": "VAN", "number": 6, "position": "D", "firstName": "Adrien", "lastName": "Plavsic" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 60, "DEF": 65, "AGG": 70, "END": 70, "S/P": 45, "FAC": 55 }
+    },
+    {
+      "info": { "team": "VAN", "number": 20, "position": "R", "firstName": "Jose", "lastName": "Charbonneau" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 55, "WGT": 65, "SHO": 65, "CHK": 60, "STI": 60, "ACC": 75, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 65, "END": 55, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WSH", "number": 29, "position": "D", "firstName": "Joe", "lastName": "Reekie" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 75, "SHO": 55, "CHK": 65, "STI": 55, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 70, "AGG": 65, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WSH", "number": 3, "position": "D", "firstName": "Sylvain", "lastName": "Cote" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 65, "WGT": 55, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 55, "PAS": 65, "OFF": 65, "DEF": 80, "AGG": 65, "END": 75, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WSH", "number": 27, "position": "L", "firstName": "Craig", "lastName": "Berube" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 70, "STI": 45, "ACC": 55, "PAS": 50, "OFF": 60, "DEF": 45, "AGG": 85, "END": 55, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WSH", "number": 6, "position": "D", "firstName": "Calle", "lastName": "Johansson" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 70, "SHO": 70, "CHK": 55, "STI": 55, "ACC": 55, "PAS": 80, "OFF": 65, "DEF": 75, "AGG": 60, "END": 80, "S/P": 50, "FAC": 60 }
+    },
+    {
+      "info": { "team": "WSH", "number": 10, "position": "L", "firstName": "Kelly", "lastName": "Miller" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 75, "WGT": 65, "SHO": 70, "CHK": 55, "STI": 60, "ACC": 65, "PAS": 80, "OFF": 65, "DEF": 70, "AGG": 55, "END": 80, "S/P": 50, "FAC": 65 }
+    },
+    {
+      "info": { "team": "WSH", "number": 8, "position": "L", "firstName": "Dimitri", "lastName": "Khristich" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 65, "STI": 65, "ACC": 100, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 55, "END": 75, "S/P": 60, "FAC": 70 }
+    },
+    {
+      "info": { "team": "WSH", "number": 20, "position": "C", "firstName": "Michal", "lastName": "Pivonka" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 65, "WGT": 65, "SHO": 65, "CHK": 70, "STI": 70, "ACC": 65, "PAS": 75, "OFF": 80, "DEF": 65, "AGG": 60, "END": 65, "S/P": 40, "FAC": 75 }
+    },
+    {
+      "info": { "team": "WSH", "number": 17, "position": "C", "firstName": "Mike", "lastName": "Ridley" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 70, "CHK": 60, "STI": 65, "ACC": 90, "PAS": 75, "OFF": 75, "DEF": 65, "AGG": 60, "END": 75, "S/P": 40, "FAC": 80 }
+    },
+    {
+      "info": { "team": "WSH", "number": 18, "position": "L", "firstName": "Randy", "lastName": "Burridge" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 65, "CHK": 65, "STI": 55, "ACC": 90, "PAS": 70, "OFF": 65, "DEF": 65, "AGG": 65, "END": 70, "S/P": 70, "FAC": 75 }
+    },
+    {
+      "info": { "team": "WSH", "number": 90, "position": "L", "firstName": "Joe", "lastName": "Juneau" },
+      "attributes": { "HND": "R", "SPD": 90, "AGI": 80, "WGT": 50, "SHO": 80, "CHK": 55, "STI": 75, "ACC": 70, "PAS": 90, "OFF": 90, "DEF": 65, "AGG": 45, "END": 80, "S/P": 40, "FAC": 65 }
+    },
+    {
+      "info": { "team": "WSH", "number": 4, "position": "D", "firstName": "Kevin", "lastName": "Hatcher" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 80, "SHO": 90, "CHK": 90, "STI": 60, "ACC": 60, "PAS": 75, "OFF": 75, "DEF": 75, "AGG": 80, "END": 80, "S/P": 80, "FAC": 55 }
+    },
+    {
+      "info": { "team": "WSH", "number": 12, "position": "R", "firstName": "Peter", "lastName": "Bondra" },
+      "attributes": { "HND": "L", "SPD": 100, "AGI": 80, "WGT": 55, "SHO": 70, "CHK": 50, "STI": 65, "ACC": 75, "PAS": 65, "OFF": 80, "DEF": 70, "AGG": 60, "END": 80, "S/P": 80, "FAC": 60 }
+    },
+    {
+      "info": { "team": "WSH", "number": 26, "position": "R", "firstName": "Keith", "lastName": "Jones" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 55, "WGT": 60, "SHO": 55, "CHK": 75, "STI": 60, "ACC": 65, "PAS": 65, "OFF": 70, "DEF": 65, "AGG": 90, "END": 65, "S/P": 60, "FAC": 70 }
+    },
+    {
+      "info": { "team": "WSH", "number": 21, "position": "L", "firstName": "Todd", "lastName": "Krygier" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 55, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 60, "PAS": 50, "OFF": 60, "DEF": 65, "AGG": 60, "END": 65, "S/P": 85, "FAC": 45 }
+    },
+    {
+      "info": { "team": "WSH", "number": 9, "position": "C", "firstName": "Dave", "lastName": "Poulin" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 70, "STI": 55, "ACC": 55, "PAS": 65, "OFF": 55, "DEF": 80, "AGG": 55, "END": 70, "S/P": 50, "FAC": 80 }
+    },
+    {
+      "info": { "team": "WSH", "number": 22, "position": "C", "firstName": "Steve", "lastName": "Konowalchuk" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 55, "SHO": 60, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 60, "AGG": 55, "END": 55, "S/P": 70, "FAC": 75 }
+    },
+    {
+      "info": { "team": "WSH", "number": 2, "position": "D", "firstName": "Jim", "lastName": "Johnson" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 60, "SHO": 65, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 65, "OFF": 45, "DEF": 75, "AGG": 70, "END": 80, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WSH", "number": 11, "position": "R", "firstName": "Tim", "lastName": "Bergland" },
+      "attributes": { "HND": "R", "SPD": 45, "AGI": 50, "WGT": 60, "SHO": 45, "CHK": 50, "STI": 50, "ACC": 45, "PAS": 45, "OFF": 45, "DEF": 40, "AGG": 50, "END": 65, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WSH", "number": 32, "position": "C", "firstName": "Dale", "lastName": "Hunter" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 65, "SHO": 65, "CHK": 75, "STI": 60, "ACC": 75, "PAS": 80, "OFF": 80, "DEF": 75, "AGG": 100, "END": 75, "S/P": 50, "FAC": 85 }
+    },
+    {
+      "info": { "team": "WSH", "number": 36, "position": "D", "firstName": "Shawn", "lastName": "Anderson" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 50, "PAS": 60, "OFF": 45, "DEF": 55, "AGG": 50, "END": 55, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WSH", "number": 14, "position": "C", "firstName": "Pat", "lastName": "Peake" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 75, "WGT": 65, "SHO": 70, "CHK": 50, "STI": 55, "ACC": 70, "PAS": 60, "OFF": 65, "DEF": 55, "AGG": 50, "END": 65, "S/P": 80, "FAC": 60 }
+    },
+    {
+      "info": { "team": "WSH", "number": 28, "position": "D", "firstName": "John", "lastName": "Slaney" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 65, "CHK": 55, "STI": 60, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 45, "END": 60, "S/P": 90, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 7, "position": "L", "firstName": "Keith", "lastName": "Tkachuk" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 75, "CHK": 80, "STI": 65, "ACC": 75, "PAS": 65, "OFF": 80, "DEF": 80, "AGG": 80, "END": 75, "S/P": 80, "FAC": 45 }
+    },
+    {
+      "info": { "team": "WPG", "number": 17, "position": "L", "firstName": "Kris", "lastName": "King" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 70, "WGT": 75, "SHO": 55, "CHK": 75, "STI": 70, "ACC": 60, "PAS": 60, "OFF": 60, "DEF": 75, "AGG": 80, "END": 80, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WPG", "number": 19, "position": "C", "firstName": "Nelson", "lastName": "Emerson" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 80, "WGT": 45, "SHO": 75, "CHK": 60, "STI": 65, "ACC": 75, "PAS": 80, "OFF": 75, "DEF": 70, "AGG": 55, "END": 75, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "WPG", "number": 20, "position": "R", "firstName": "Tie", "lastName": "Domi" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 65, "WGT": 70, "SHO": 70, "CHK": 70, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 55, "DEF": 65, "AGG": 100, "END": 80, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WPG", "number": 4, "position": "D", "firstName": "Stephane", "lastName": "Quintal" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 80, "SHO": 55, "CHK": 75, "STI": 60, "ACC": 50, "PAS": 65, "OFF": 45, "DEF": 70, "AGG": 70, "END": 80, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WPG", "number": 34, "position": "L", "firstName": "Darrin", "lastName": "Shannon" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 70, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 65, "AGG": 55, "END": 75, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 26, "position": "D", "firstName": "Dean", "lastName": "Kennedy" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 55, "WGT": 70, "SHO": 55, "CHK": 70, "STI": 45, "ACC": 40, "PAS": 55, "OFF": 50, "DEF": 70, "AGG": 70, "END": 80, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WPG", "number": 25, "position": "C", "firstName": "Thomas", "lastName": "Steen" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 65, "SHO": 65, "CHK": 65, "STI": 65, "ACC": 80, "PAS": 90, "OFF": 70, "DEF": 70, "AGG": 65, "END": 65, "S/P": 40, "FAC": 75 }
+    },
+    {
+      "info": { "team": "WPG", "number": 38, "position": "C", "firstName": "Luciano", "lastName": "Borsato" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 45, "SHO": 55, "CHK": 60, "STI": 60, "ACC": 70, "PAS": 65, "OFF": 55, "DEF": 65, "AGG": 50, "END": 70, "S/P": 55, "FAC": 55 }
+    },
+    {
+      "info": { "team": "WPG", "number": 5, "position": "D", "firstName": "Igor", "lastName": "Ulanov" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 70, "WGT": 70, "SHO": 60, "CHK": 80, "STI": 55, "ACC": 40, "PAS": 60, "OFF": 60, "DEF": 75, "AGG": 80, "END": 80, "S/P": 40, "FAC": 45 }
+    },
+    {
+      "info": { "team": "WPG", "number": 36, "position": "C", "firstName": "Mike", "lastName": "Eagles" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 60, "CHK": 75, "STI": 55, "ACC": 55, "PAS": 55, "OFF": 45, "DEF": 75, "AGG": 70, "END": 85, "S/P": 45, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WPG", "number": 3, "position": "D", "firstName": "Dave", "lastName": "Manson" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 80, "WGT": 70, "SHO": 90, "CHK": 75, "STI": 60, "ACC": 45, "PAS": 70, "OFF": 70, "DEF": 55, "AGG": 75, "END": 90, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 18, "position": "L", "firstName": "Dallas", "lastName": "Drake" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 80, "WGT": 45, "SHO": 65, "CHK": 60, "STI": 70, "ACC": 70, "PAS": 65, "OFF": 65, "DEF": 80, "AGG": 75, "END": 80, "S/P": 45, "FAC": 75 }
+    },
+    {
+      "info": { "team": "WPG", "number": 10, "position": "C", "firstName": "Alexei", "lastName": "Zhamnov" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 85, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 70, "ACC": 65, "PAS": 75, "OFF": 75, "DEF": 80, "AGG": 60, "END": 75, "S/P": 50, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 15, "position": "C", "firstName": "Randy", "lastName": "Gilhen" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 55, "CHK": 70, "STI": 55, "ACC": 50, "PAS": 60, "OFF": 45, "DEF": 80, "AGG": 60, "END": 80, "S/P": 80, "FAC": 80 }
+    },
+    {
+      "info": { "team": "WPG", "number": 27, "position": "D", "firstName": "Teppo", "lastName": "Numminen" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 80, "WGT": 60, "SHO": 70, "CHK": 70, "STI": 55, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 70, "AGG": 60, "END": 75, "S/P": 45, "FAC": 45 }
+    },
+    {
+      "info": { "team": "WPG", "number": 13, "position": "R", "firstName": "Teemu", "lastName": "Selanne" },
+      "attributes": { "HND": "R", "SPD": 100, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 65, "STI": 80, "ACC": 90, "PAS": 75, "OFF": 85, "DEF": 55, "AGG": 60, "END": 85, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 6, "position": "D", "firstName": "Wayne", "lastName": "McBean" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 70, "CHK": 60, "STI": 50, "ACC": 45, "PAS": 55, "OFF": 55, "DEF": 50, "AGG": 55, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 21, "position": "L", "firstName": "Russ", "lastName": "Romaniuk" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 55, "SHO": 60, "CHK": 70, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 50, "DEF": 55, "AGG": 60, "END": 60, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "WPG", "number": 24, "position": "D", "firstName": "Darryl", "lastName": "Shannon" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 55, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 40, "PAS": 60, "OFF": 40, "DEF": 45, "AGG": 60, "END": 65, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "WPG", "number": 37, "position": "L", "firstName": "John", "lastName": "LeBlanc" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 70, "CHK": 55, "STI": 55, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 45, "AGG": 55, "END": 60, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 14, "position": "L", "firstName": "Joe", "lastName": "Sacco" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 65, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 70, "PAS": 55, "OFF": 70, "DEF": 55, "AGG": 60, "END": 70, "S/P": 70, "FAC": 55 }
+    },
+    {
+      "info": { "team": "ANA", "number": 25, "position": "C", "firstName": "Terry", "lastName": "Yake" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 70, "WGT": 55, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 80, "PAS": 65, "OFF": 75, "DEF": 55, "AGG": 55, "END": 75, "S/P": 60, "FAC": 80 }
+    },
+    {
+      "info": { "team": "ANA", "number": 29, "position": "D", "firstName": "Randy", "lastName": "Ladouceur" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 80, "SHO": 45, "CHK": 65, "STI": 55, "ACC": 45, "PAS": 50, "OFF": 45, "DEF": 75, "AGG": 75, "END": 80, "S/P": 90, "FAC": 40 }
+    },
+    {
+      "info": { "team": "ANA", "number": 23, "position": "D", "firstName": "Bill", "lastName": "Houlder" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 50, "WGT": 80, "SHO": 70, "CHK": 55, "STI": 60, "ACC": 70, "PAS": 60, "OFF": 55, "DEF": 55, "AGG": 55, "END": 70, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 22, "position": "C", "firstName": "Shaun", "lastName": "Van Allen" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 55, "AGG": 60, "END": 70, "S/P": 50, "FAC": 70 }
+    },
+    {
+      "info": { "team": "ANA", "number": 8, "position": "L", "firstName": "Tim", "lastName": "Sweeney" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 70, "WGT": 60, "SHO": 65, "CHK": 45, "STI": 55, "ACC": 65, "PAS": 60, "OFF": 70, "DEF": 70, "AGG": 50, "END": 65, "S/P": 75, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ANA", "number": 18, "position": "L", "firstName": "Garry", "lastName": "Valk" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 55, "WGT": 60, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 65, "AGG": 70, "END": 65, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "ANA", "number": 2, "position": "D", "firstName": "Bobby", "lastName": "Dollas" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 75, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 55, "PAS": 60, "OFF": 60, "DEF": 80, "AGG": 60, "END": 65, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 32, "position": "L", "firstName": "Stu", "lastName": "Grimson" },
+      "attributes": { "HND": "L", "SPD": 45, "AGI": 50, "WGT": 80, "SHO": 45, "CHK": 55, "STI": 40, "ACC": 50, "PAS": 50, "OFF": 40, "DEF": 60, "AGG": 85, "END": 55, "S/P": 90, "FAC": 45 }
+    },
+    {
+      "info": { "team": "ANA", "number": 36, "position": "R", "firstName": "Todd", "lastName": "Ewen" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 50, "WGT": 80, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 55, "PAS": 45, "OFF": 60, "DEF": 50, "AGG": 85, "END": 60, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "ANA", "number": 20, "position": "C", "firstName": "Bob", "lastName": "Corkum" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 70, "WGT": 75, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 70, "DEF": 65, "AGG": 55, "END": 70, "S/P": 90, "FAC": 70 }
+    },
+    {
+      "info": { "team": "ANA", "number": 16, "position": "R", "firstName": "Peter", "lastName": "Douris" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 70, "WGT": 65, "SHO": 65, "CHK": 55, "STI": 50, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 50, "END": 55, "S/P": 80, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ANA", "number": 21, "position": "L", "firstName": "Patrik", "lastName": "Carnback" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 60, "SHO": 55, "CHK": 40, "STI": 60, "ACC": 55, "PAS": 55, "OFF": 65, "DEF": 60, "AGG": 60, "END": 55, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ANA", "number": 6, "position": "D", "firstName": "Sean", "lastName": "Hill" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 65, "SHO": 60, "CHK": 55, "STI": 55, "ACC": 60, "PAS": 60, "OFF": 55, "DEF": 60, "AGG": 80, "END": 65, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 24, "position": "L", "firstName": "Troy", "lastName": "Loney" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 55, "WGT": 75, "SHO": 60, "CHK": 80, "STI": 55, "ACC": 45, "PAS": 50, "OFF": 60, "DEF": 65, "AGG": 55, "END": 65, "S/P": 55, "FAC": 40 }
+    },
+    {
+      "info": { "team": "ANA", "number": 4, "position": "D", "firstName": "David", "lastName": "Williams" },
+      "attributes": { "HND": "R", "SPD": 60, "AGI": 60, "WGT": 65, "SHO": 55, "CHK": 55, "STI": 45, "ACC": 60, "PAS": 60, "OFF": 60, "DEF": 60, "AGG": 65, "END": 55, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 47, "position": "C", "firstName": "Stephan", "lastName": "Lebeau" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 50, "SHO": 65, "CHK": 60, "STI": 55, "ACC": 80, "PAS": 65, "OFF": 80, "DEF": 65, "AGG": 50, "END": 80, "S/P": 55, "FAC": 80 }
+    },
+    {
+      "info": { "team": "ANA", "number": 3, "position": "D", "firstName": "Mark", "lastName": "Ferner" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 55, "WGT": 65, "SHO": 55, "CHK": 55, "STI": 45, "ACC": 55, "PAS": 55, "OFF": 60, "DEF": 55, "AGG": 60, "END": 55, "S/P": 70, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 19, "position": "C", "firstName": "Anatoli", "lastName": "Semenov" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 65, "WGT": 60, "SHO": 70, "CHK": 60, "STI": 55, "ACC": 65, "PAS": 70, "OFF": 70, "DEF": 75, "AGG": 55, "END": 75, "S/P": 40, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ANA", "number": 17, "position": "R", "firstName": "Steven", "lastName": "King" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 60, "SHO": 60, "CHK": 55, "STI": 55, "ACC": 65, "PAS": 60, "OFF": 70, "DEF": 55, "AGG": 60, "END": 65, "S/P": 80, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ANA", "number": 39, "position": "D", "firstName": "Don", "lastName": "McSween" },
+      "attributes": { "HND": "L", "SPD": 50, "AGI": 60, "WGT": 65, "SHO": 70, "CHK": 60, "STI": 60, "ACC": 60, "PAS": 55, "OFF": 55, "DEF": 55, "AGG": 60, "END": 55, "S/P": 55, "FAC": 50 }
+    },
+    {
+      "info": { "team": "FLA", "number": 22, "position": "R", "firstName": "Bob", "lastName": "Kudelski" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 60, "WGT": 70, "SHO": 80, "CHK": 60, "STI": 55, "ACC": 80, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 60, "END": 70, "S/P": 75, "FAC": 65 }
+    },
+    {
+      "info": { "team": "FLA", "number": 5, "position": "D", "firstName": "Gord", "lastName": "Murphy" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 90, "WGT": 65, "SHO": 80, "CHK": 70, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 65, "DEF": 65, "AGG": 65, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 11, "position": "L", "firstName": "Bill", "lastName": "Lindsay" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 45, "WGT": 55, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 50, "PAS": 55, "OFF": 60, "DEF": 65, "AGG": 55, "END": 55, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 21, "position": "R", "firstName": "Tom", "lastName": "Fitzgerald" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 55, "WGT": 65, "SHO": 70, "CHK": 70, "STI": 60, "ACC": 70, "PAS": 55, "OFF": 55, "DEF": 65, "AGG": 55, "END": 65, "S/P": 60, "FAC": 75 }
+    },
+    {
+      "info": { "team": "FLA", "number": 10, "position": "L", "firstName": "Dave", "lastName": "Lowry" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 60, "WGT": 65, "SHO": 60, "CHK": 70, "STI": 60, "ACC": 55, "PAS": 60, "OFF": 70, "DEF": 70, "AGG": 80, "END": 65, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 27, "position": "R", "firstName": "Scott", "lastName": "Mellanby" },
+      "attributes": { "HND": "R", "SPD": 50, "AGI": 50, "WGT": 70, "SHO": 70, "CHK": 80, "STI": 60, "ACC": 75, "PAS": 55, "OFF": 65, "DEF": 70, "AGG": 75, "END": 70, "S/P": 70, "FAC": 60 }
+    },
+    {
+      "info": { "team": "FLA", "number": 20, "position": "C", "firstName": "Brian", "lastName": "Skrudland" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 65, "SHO": 60, "CHK": 75, "STI": 60, "ACC": 70, "PAS": 70, "OFF": 55, "DEF": 85, "AGG": 80, "END": 80, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 18, "position": "L", "firstName": "Mike", "lastName": "Hough" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 65, "WGT": 60, "SHO": 65, "CHK": 70, "STI": 60, "ACC": 60, "PAS": 70, "OFF": 60, "DEF": 65, "AGG": 65, "END": 65, "S/P": 55, "FAC": 55 }
+    },
+    {
+      "info": { "team": "FLA", "number": 14, "position": "C", "firstName": "Stu", "lastName": "Barnes" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 55, "WGT": 50, "SHO": 70, "CHK": 55, "STI": 65, "ACC": 70, "PAS": 70, "OFF": 80, "DEF": 65, "AGG": 45, "END": 70, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 25, "position": "D", "firstName": "Geoff", "lastName": "Smith" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 80, "WGT": 70, "SHO": 45, "CHK": 55, "STI": 65, "ACC": 50, "PAS": 65, "OFF": 45, "DEF": 65, "AGG": 50, "END": 70, "S/P": 60, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 19, "position": "L", "firstName": "Andrei", "lastName": "Lomakin" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 80, "WGT": 60, "SHO": 70, "CHK": 45, "STI": 65, "ACC": 65, "PAS": 75, "OFF": 65, "DEF": 70, "AGG": 60, "END": 70, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "FLA", "number": 7, "position": "D", "firstName": "Brian", "lastName": "Benning" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 70, "WGT": 65, "SHO": 65, "CHK": 55, "STI": 60, "ACC": 60, "PAS": 65, "OFF": 70, "DEF": 60, "AGG": 80, "END": 75, "S/P": 55, "FAC": 55 }
+    },
+    {
+      "info": { "team": "FLA", "number": 26, "position": "C", "firstName": "Jesse", "lastName": "Belanger" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 65, "WGT": 50, "SHO": 65, "CHK": 55, "STI": 70, "ACC": 75, "PAS": 75, "OFF": 75, "DEF": 70, "AGG": 50, "END": 65, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "FLA", "number": 23, "position": "L", "firstName": "Jeff", "lastName": "Daniels" },
+      "attributes": { "HND": "L", "SPD": 55, "AGI": 60, "WGT": 70, "SHO": 55, "CHK": 60, "STI": 45, "ACC": 65, "PAS": 55, "OFF": 45, "DEF": 60, "AGG": 50, "END": 60, "S/P": 80, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 12, "position": "R", "firstName": "Jody", "lastName": "Hull" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 70, "SHO": 60, "CHK": 65, "STI": 50, "ACC": 55, "PAS": 60, "OFF": 55, "DEF": 70, "AGG": 45, "END": 70, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 24, "position": "D", "firstName": "Brent", "lastName": "Severyn" },
+      "attributes": { "HND": "L", "SPD": 60, "AGI": 60, "WGT": 75, "SHO": 70, "CHK": 80, "STI": 45, "ACC": 55, "PAS": 55, "OFF": 45, "DEF": 70, "AGG": 85, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "FLA", "number": 44, "position": "C", "firstName": "Rob", "lastName": "Niedermayer" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 80, "WGT": 70, "SHO": 65, "CHK": 70, "STI": 55, "ACC": 65, "PAS": 60, "OFF": 60, "DEF": 60, "AGG": 55, "END": 70, "S/P": 80, "FAC": 70 }
+    },
+    {
+      "info": { "team": "FLA", "number": 2, "position": "D", "firstName": "Joe", "lastName": "Cirella" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 55, "WGT": 75, "SHO": 65, "CHK": 70, "STI": 45, "ACC": 55, "PAS": 60, "OFF": 45, "DEF": 65, "AGG": 65, "END": 70, "S/P": 65, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 4, "position": "D", "firstName": "Keith", "lastName": "Brown" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 60, "SHO": 60, "CHK": 65, "STI": 45, "ACC": 45, "PAS": 70, "OFF": 55, "DEF": 65, "AGG": 70, "END": 65, "S/P": 75, "FAC": 40 }
+    },
+    {
+      "info": { "team": "FLA", "number": 17, "position": "R", "firstName": "Mike", "lastName": "Foligno" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 60, "WGT": 65, "SHO": 55, "CHK": 75, "STI": 50, "ACC": 65, "PAS": 55, "OFF": 60, "DEF": 70, "AGG": 65, "END": 65, "S/P": 80, "FAC": 45 }
+    },
+    {
+      "info": { "team": "FLA", "number": 3, "position": "D", "firstName": "Paul", "lastName": "Laus" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 70, "SHO": 60, "CHK": 75, "STI": 40, "ACC": 50, "PAS": 55, "OFF": 40, "DEF": 55, "AGG": 90, "END": 70, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "FLA", "number": 6, "position": "D", "firstName": "Peter", "lastName": "Andersson" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 65, "WGT": 70, "SHO": 55, "CHK": 55, "STI": 65, "ACC": 60, "PAS": 80, "OFF": 65, "DEF": 55, "AGG": 55, "END": 65, "S/P": 65, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ASW", "number": 4, "position": "D", "firstName": "Rob", "lastName": "Blake" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 75, "SHO": 80, "CHK": 80, "STI": 65, "ACC": 60, "PAS": 80, "OFF": 80, "DEF": 80, "AGG": 80, "END": 75, "S/P": 70, "FAC": 40 }
+    },
+    {
+      "info": { "team": "ASW", "number": 27, "position": "C", "firstName": "Jeremy", "lastName": "Roenick" },
+      "attributes": { "HND": "R", "SPD": 90, "AGI": 85, "WGT": 45, "SHO": 90, "CHK": 65, "STI": 75, "ACC": 90, "PAS": 90, "OFF": 90, "DEF": 80, "AGG": 70, "END": 90, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASW", "number": 26, "position": "R", "firstName": "Russ", "lastName": "Courtnall" },
+      "attributes": { "HND": "R", "SPD": 100, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 55, "STI": 70, "ACC": 65, "PAS": 75, "OFF": 75, "DEF": 70, "AGG": 55, "END": 80, "S/P": 65, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ASW", "number": 93, "position": "C", "firstName": "Doug", "lastName": "Gilmour" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 85, "WGT": 45, "SHO": 75, "CHK": 75, "STI": 80, "ACC": 80, "PAS": 75, "OFF": 90, "DEF": 85, "AGG": 70, "END": 95, "S/P": 40, "FAC": 95 }
+    },
+    {
+      "info": { "team": "ASW", "number": 14, "position": "L", "firstName": "Dave", "lastName": "Andreychuk" },
+      "attributes": { "HND": "R", "SPD": 55, "AGI": 65, "WGT": 80, "SHO": 80, "CHK": 65, "STI": 70, "ACC": 85, "PAS": 65, "OFF": 90, "DEF": 65, "AGG": 60, "END": 85, "S/P": 75, "FAC": 80 }
+    },
+    {
+      "info": { "team": "ASW", "number": 91, "position": "C", "firstName": "Sergei", "lastName": "Fedorov" },
+      "attributes": { "HND": "L", "SPD": 100, "AGI": 100, "WGT": 60, "SHO": 75, "CHK": 60, "STI": 75, "ACC": 90, "PAS": 90, "OFF": 100, "DEF": 90, "AGG": 65, "END": 90, "S/P": 60, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASW", "number": 99, "position": "C", "firstName": "Wayne", "lastName": "Gretzky" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 95, "WGT": 45, "SHO": 70, "CHK": 45, "STI": 80, "ACC": 80, "PAS": 95, "OFF": 100, "DEF": 75, "AGG": 40, "END": 95, "S/P": 45, "FAC": 100 }
+    },
+    {
+      "info": { "team": "ASW", "number": 19, "position": "L", "firstName": "Brendan", "lastName": "Shanahan" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 65, "WGT": 75, "SHO": 85, "CHK": 65, "STI": 65, "ACC": 85, "PAS": 75, "OFF": 85, "DEF": 80, "AGG": 75, "END": 75, "S/P": 60, "FAC": 65 }
+    },
+    {
+      "info": { "team": "ASW", "number": 6, "position": "D", "firstName": "Sandis", "lastName": "Ozolinsh" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 65, "WGT": 60, "SHO": 75, "CHK": 60, "STI": 65, "ACC": 80, "PAS": 75, "OFF": 75, "DEF": 65, "AGG": 55, "END": 75, "S/P": 60, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ASW", "number": 16, "position": "R", "firstName": "Brett", "lastName": "Hull" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 95, "CHK": 65, "STI": 70, "ACC": 80, "PAS": 65, "OFF": 85, "DEF": 70, "AGG": 60, "END": 80, "S/P": 80, "FAC": 95 }
+    },
+    {
+      "info": { "team": "ASW", "number": 77, "position": "D", "firstName": "Paul", "lastName": "Coffey" },
+      "attributes": { "HND": "L", "SPD": 85, "AGI": 95, "WGT": 70, "SHO": 80, "CHK": 60, "STI": 80, "ACC": 60, "PAS": 100, "OFF": 80, "DEF": 65, "AGG": 70, "END": 90, "S/P": 50, "FAC": 65 }
+    },
+    {
+      "info": { "team": "ASW", "number": 10, "position": "R", "firstName": "Pavel", "lastName": "Bure" },
+      "attributes": { "HND": "L", "SPD": 95, "AGI": 100, "WGT": 50, "SHO": 85, "CHK": 60, "STI": 75, "ACC": 85, "PAS": 75, "OFF": 100, "DEF": 55, "AGG": 55, "END": 80, "S/P": 85, "FAC": 70 }
+    },
+    {
+      "info": { "team": "ASW", "number": 17, "position": "D", "firstName": "Chris", "lastName": "Chelios" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 60, "SHO": 85, "CHK": 75, "STI": 65, "ACC": 60, "PAS": 75, "OFF": 80, "DEF": 95, "AGG": 85, "END": 100, "S/P": 60, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ASW", "number": 2, "position": "D", "firstName": "Al", "lastName": "MacInnis" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 65, "SHO": 95, "CHK": 70, "STI": 65, "ACC": 55, "PAS": 80, "OFF": 75, "DEF": 80, "AGG": 70, "END": 85, "S/P": 70, "FAC": 75 }
+    },
+    {
+      "info": { "team": "ASW", "number": 9, "position": "L", "firstName": "Shayne", "lastName": "Corson" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 70, "WGT": 70, "SHO": 80, "CHK": 80, "STI": 55, "ACC": 70, "PAS": 70, "OFF": 70, "DEF": 75, "AGG": 80, "END": 80, "S/P": 70, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASW", "number": 25, "position": "C", "firstName": "Joe", "lastName": "Nieuwendyk" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 75, "WGT": 65, "SHO": 80, "CHK": 70, "STI": 70, "ACC": 85, "PAS": 75, "OFF": 90, "DEF": 65, "AGG": 55, "END": 80, "S/P": 65, "FAC": 65 }
+    },
+    {
+      "info": { "team": "ASW", "number": 7, "position": "D", "firstName": "Alexei", "lastName": "Kasatonov" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 80, "WGT": 75, "SHO": 70, "CHK": 65, "STI": 55, "ACC": 50, "PAS": 75, "OFF": 55, "DEF": 70, "AGG": 60, "END": 65, "S/P": 45, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ASW", "number": 13, "position": "R", "firstName": "Teemu", "lastName": "Selanne" },
+      "attributes": { "HND": "R", "SPD": 100, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 65, "STI": 80, "ACC": 90, "PAS": 75, "OFF": 85, "DEF": 55, "AGG": 60, "END": 85, "S/P": 75, "FAC": 50 }
+    },
+    {
+      "info": { "team": "ASE", "number": 22, "position": "R", "firstName": "Bob", "lastName": "Kudelski" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 60, "WGT": 70, "SHO": 80, "CHK": 60, "STI": 55, "ACC": 80, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 60, "END": 70, "S/P": 75, "FAC": 65 }
+    },
+    {
+      "info": { "team": "ASE", "number": 8, "position": "R", "firstName": "Mark", "lastName": "Recchi" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 55, "SHO": 75, "CHK": 65, "STI": 65, "ACC": 90, "PAS": 75, "OFF": 85, "DEF": 70, "AGG": 65, "END": 80, "S/P": 65, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASE", "number": 7, "position": "R", "firstName": "Joe", "lastName": "Mullen" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 75, "WGT": 55, "SHO": 70, "CHK": 70, "STI": 55, "ACC": 90, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 45, "END": 80, "S/P": 80, "FAC": 80 }
+    },
+    {
+      "info": { "team": "ASE", "number": 55, "position": "D", "firstName": "Larry", "lastName": "Murphy" },
+      "attributes": { "HND": "R", "SPD": 65, "AGI": 80, "WGT": 75, "SHO": 75, "CHK": 70, "STI": 70, "ACC": 55, "PAS": 90, "OFF": 90, "DEF": 90, "AGG": 55, "END": 90, "S/P": 45, "FAC": 75 }
+    },
+    {
+      "info": { "team": "ASE", "number": 9, "position": "L", "firstName": "Adam", "lastName": "Graves" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 65, "CHK": 90, "STI": 60, "ACC": 65, "PAS": 65, "OFF": 80, "DEF": 70, "AGG": 90, "END": 80, "S/P": 85, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ASE", "number": 2, "position": "D", "firstName": "Brian", "lastName": "Leetch" },
+      "attributes": { "HND": "L", "SPD": 70, "AGI": 100, "WGT": 55, "SHO": 75, "CHK": 55, "STI": 80, "ACC": 60, "PAS": 90, "OFF": 85, "DEF": 75, "AGG": 60, "END": 85, "S/P": 55, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASE", "number": 16, "position": "C", "firstName": "Joe", "lastName": "Sakic" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 75, "WGT": 55, "SHO": 65, "CHK": 55, "STI": 80, "ACC": 90, "PAS": 100, "OFF": 85, "DEF": 75, "AGG": 55, "END": 85, "S/P": 60, "FAC": 90 }
+    },
+    {
+      "info": { "team": "ASE", "number": 4, "position": "D", "firstName": "Scott", "lastName": "Stevens" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 80, "SHO": 75, "CHK": 90, "STI": 55, "ACC": 70, "PAS": 75, "OFF": 80, "DEF": 100, "AGG": 85, "END": 90, "S/P": 50, "FAC": 65 }
+    },
+    {
+      "info": { "team": "ASE", "number": 91, "position": "C", "firstName": "Alexei", "lastName": "Yashin" },
+      "attributes": { "HND": "R", "SPD": 75, "AGI": 80, "WGT": 60, "SHO": 75, "CHK": 50, "STI": 75, "ACC": 80, "PAS": 80, "OFF": 75, "DEF": 50, "AGG": 55, "END": 65, "S/P": 55, "FAC": 95 }
+    },
+    {
+      "info": { "team": "ASE", "number": 18, "position": "L", "firstName": "Geoff", "lastName": "Sanderson" },
+      "attributes": { "HND": "L", "SPD": 90, "AGI": 75, "WGT": 55, "SHO": 80, "CHK": 60, "STI": 60, "ACC": 80, "PAS": 65, "OFF": 75, "DEF": 70, "AGG": 50, "END": 75, "S/P": 70, "FAC": 70 }
+    },
+    {
+      "info": { "team": "ASE", "number": 3, "position": "D", "firstName": "Garry", "lastName": "Galley" },
+      "attributes": { "HND": "L", "SPD": 65, "AGI": 65, "WGT": 60, "SHO": 55, "CHK": 65, "STI": 65, "ACC": 50, "PAS": 70, "OFF": 70, "DEF": 75, "AGG": 65, "END": 70, "S/P": 55, "FAC": 45 }
+    },
+    {
+      "info": { "team": "ASE", "number": 68, "position": "R", "firstName": "Jaromir", "lastName": "Jagr" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 75, "SHO": 75, "CHK": 80, "STI": 80, "ACC": 65, "PAS": 90, "OFF": 90, "DEF": 65, "AGG": 60, "END": 100, "S/P": 45, "FAC": 70 }
+    },
+    {
+      "info": { "team": "ASE", "number": 43, "position": "D", "firstName": "Al", "lastName": "Iafrate" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 80, "SHO": 100, "CHK": 80, "STI": 65, "ACC": 60, "PAS": 80, "OFF": 80, "DEF": 80, "AGG": 80, "END": 65, "S/P": 65, "FAC": 55 }
+    },
+    {
+      "info": { "team": "ASE", "number": 19, "position": "C", "firstName": "Brian", "lastName": "Bradley" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 75, "WGT": 45, "SHO": 80, "CHK": 60, "STI": 55, "ACC": 75, "PAS": 75, "OFF": 80, "DEF": 70, "AGG": 65, "END": 75, "S/P": 55, "FAC": 75 }
+    },
+    {
+      "info": { "team": "ASE", "number": 12, "position": "C", "firstName": "Adam", "lastName": "Oates" },
+      "attributes": { "HND": "R", "SPD": 80, "AGI": 85, "WGT": 60, "SHO": 65, "CHK": 65, "STI": 45, "ACC": 75, "PAS": 95, "OFF": 100, "DEF": 90, "AGG": 45, "END": 90, "S/P": 40, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASE", "number": 11, "position": "C", "firstName": "Mark", "lastName": "Messier" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 85, "WGT": 70, "SHO": 70, "CHK": 80, "STI": 70, "ACC": 70, "PAS": 85, "OFF": 80, "DEF": 65, "AGG": 65, "END": 80, "S/P": 60, "FAC": 90 }
+    },
+    {
+      "info": { "team": "ASE", "number": 77, "position": "D", "firstName": "Ray", "lastName": "Bourque" },
+      "attributes": { "HND": "L", "SPD": 80, "AGI": 90, "WGT": 75, "SHO": 90, "CHK": 75, "STI": 80, "ACC": 85, "PAS": 90, "OFF": 90, "DEF": 85, "AGG": 55, "END": 95, "S/P": 75, "FAC": 60 }
+    },
+    {
+      "info": { "team": "ASE", "number": 17, "position": "C", "firstName": "Pierre", "lastName": "Turgeon" },
+      "attributes": { "HND": "L", "SPD": 75, "AGI": 75, "WGT": 70, "SHO": 80, "CHK": 40, "STI": 65, "ACC": 90, "PAS": 75, "OFF": 90, "DEF": 70, "AGG": 40, "END": 75, "S/P": 45, "FAC": 85 }
+    },
+    {
+      "info": { "team": "ASE", "number": 89, "position": "R", "firstName": "Alexander", "lastName": "Mogilny" },
+      "attributes": { "HND": "L", "SPD": 100, "AGI": 100, "WGT": 60, "SHO": 80, "CHK": 45, "STI": 65, "ACC": 80, "PAS": 90, "OFF": 95, "DEF": 70, "AGG": 50, "END": 75, "S/P": 80, "FAC": 75 }
+    },
+    {
+      "info": { "team": "ASE", "number": 88, "position": "C", "firstName": "Eric", "lastName": "Lindros" },
+      "attributes": { "HND": "R", "SPD": 70, "AGI": 75, "WGT": 85, "SHO": 90, "CHK": 85, "STI": 65, "ACC": 95, "PAS": 75, "OFF": 80, "DEF": 80, "AGG": 80, "END": 90, "S/P": 65, "FAC": 90 }
+    },
+  ]
+}
